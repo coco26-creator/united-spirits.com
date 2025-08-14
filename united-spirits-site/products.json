@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "United Reserve Whiskey",
+    "category": "whiskey",
+    "description": "Smooth, rich, and aged to perfection. A blend of tradition and innovation.",
+    "alcohol": "40% ABV",
+    "volume": "750ml",
+    "origin": "Distilled & Bottled in China",
+    "notes": "Vanilla, oak, caramel, with a warm finish.",
+    "image": "assets/img/placeholder.png",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Solaris Vodka",
+    "category": "vodka",
+    "description": "Ultra-pure, triple-filtered vodka with a silky finish.",
+    "alcohol": "40% ABV",
+    "volume": "750ml",
+    "origin": "Russia",
+    "notes": "Clean, crisp, with subtle minerality.",
+    "image": "assets/img/placeholder.png",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Corazón de Sol Wine",
+    "category": "wine",
+    "description": "Vibrant, bold wines from southern vineyards.",
+    "alcohol": "13.5% ABV",
+    "volume": "750ml",
+    "origin": "Spain",
+    "notes": "Berry, spice, and earthy notes.",
+    "image": "assets/img/placeholder.png",
+    "featured": false
+  }
+]
