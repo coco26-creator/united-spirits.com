@@ -79,20 +79,14 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Static Image) -->
   <section class="relative h-screen w-full overflow-hidden" aria-label="Hero Section">
-    <!-- Video background -->
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-      <source src="assets/videos/hero.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Fallback image -->
+    <!-- Background Image -->
     <img loading="lazy" src="assets/images/hero-fallback.jpg" alt="Hero Background"
          class="absolute inset-0 w-full h-full object-cover">
 
-    <!-- Overlay with accessibility and transitions -->
-    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center
                 transition-opacity duration-700 ease-in-out"
          role="dialog" aria-modal="true" aria-labelledby="hero-title">
       <h1 id="hero-title"
