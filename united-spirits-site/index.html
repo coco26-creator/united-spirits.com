@@ -1,223 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>United Spirits</title>
-  <meta name="description" content="Premium wines, whiskeys, brandies and vodka. United Spirits.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #b91c1c;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    }
+    .chat {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      width: 300px;
+      max-height: 400px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .chat.hidden { display: none; }
+    .chat-header {
+      background: #b91c1c;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px 12px 0 0;
+    }
+    .chat-body {
+      padding: 10px;
+      flex: 1;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: none;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: inherit;
+    }
+    .chat-message.system { font-style: italic; color: gray; }
+    .chat-message.user { text-align: right; background: #f3f4f6; margin: 5px; padding: 5px; border-radius: 6px; }
+    .chat-message.assistant { text-align: left; background: #fef3c7; margin: 5px; padding: 5px; border-radius: 6px; }
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <div class="brand">United <span>Spirits</span></div>
-      <nav class="menu">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#visitors">Visitors</a>
-        <a href="#contact">Contact</a>
-        <a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/85269346630">WhatsApp</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open menu">
-        <i data-lucide="menu"></i>
-      </button>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-red-700">United Spirits</h1>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container grid-2">
-        <div>
-          <h1 class="display">Crafted Elegance in Every Drop</h1>
-          <p class="lead">Discover our premium collection of wines, whiskeys, brandies, and vodka—made with care, served with pride.</p>
-          <div class="actions">
-            <a href="#products" class="btn primary">Explore Collection</a>
-            <a href="#contact" class="btn outline">Contact Us</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <img src="assets/img/placeholder.png" alt="Bottles" />
-        </div>
-      </div>
-    </section>
+  <!-- Hero Section (Static Image) -->
+  <section class="relative h-screen w-full overflow-hidden" aria-label="Hero Section">
+    <!-- Background Image -->
+    <img loading="lazy" src="assets/images/hero-fallback.jpg" alt="Hero Background"
+         class="absolute inset-0 w-full h-full object-cover">
 
-    <!-- Products -->
-    <section id="products" class="section">
-      <div class="container">
-        <div class="center">
-          <span class="badge">Our Premium Collection</span>
-          <h2 class="headline">Exceptional Spirits</h2>
-          <p class="subhead">Carefully crafted wines, whiskeys, brandies and vodka.</p>
-        </div>
-
-        <div class="filters">
-          <button class="chip active" data-filter="all">All</button>
-          <button class="chip" data-filter="wine">Wines</button>
-          <button class="chip" data-filter="whiskey">Whiskey</button>
-          <button class="chip" data-filter="brandy">Brandy</button>
-          <button class="chip" data-filter="vodka">Vodka</button>
-        </div>
-
-        <div id="product-grid" class="grid-3"></div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section tint">
-      <div class="container grid-2">
-        <div>
-          <h2 class="headline">About United Spirits</h2>
-          <p>We blend tradition with innovation to create spirits that celebrate craftsmanship and community. From the vineyards to your glass, quality is our promise.</p>
-          <ul class="checklist">
-            <li>Premium ingredients & meticulous aging</li>
-            <li>Sustainable sourcing & production</li>
-            <li>Award‑winning blends and vintages</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Why Choose Us</h3>
-          <p>Our portfolio caters to connoisseurs and newcomers alike. Whether you love the warmth of whiskey or the vibrance of wine, you'll find something unforgettable.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Visitors -->
-    <section id="visitors" class="section">
-      <div class="container grid-3 equal">
-        <div class="stat card">
-          <div class="stat-num">2500</div>
-          <div class="stat-label">Product SKUs</div>
-        </div>
-        <div class="stat card">
-          <div class="stat-num">156</div>
-          <div class="stat-label">Countries Sourced</div>
-        </div>
-        <div class="stat card">
-          <div class="stat-num">24/7</div>
-          <div class="stat-label">Support</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section tint">
-      <div class="container">
-        <div class="center">
-          <span class="badge">Get In Touch</span>
-          <h2 class="headline">Connect With United Spirits</h2>
-          <p class="subhead">Wholesale inquiries, private tastings, or product questions—we’d love to hear from you.</p>
-        </div>
-        <div class="grid-3 contact-cards">
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="map-pin"></i></div>
-            <h3>Visit Our Facility</h3>
-            <p>123 Distillery Lane<br>Premium Valley, CA 90210</p>
-            <a href="#" class="btn outline">Get Directions</a>
-          </div>
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="phone"></i></div>
-            <h3>Call Us</h3>
-            <p>+85 (269) 346‑630<br>+85 (269) 346‑630</p>
-            <a href="tel:+85269346630" class="btn outline">Call Now</a>
-          </div>
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="mail"></i></div>
-            <h3>Email Us</h3>
-            <p>info@unitedspiritshk.com<br>sales@unitedspiritshk.com</p>
-            <a href="mailto:info@unitedspirits.com" class="btn outline">Send Email</a>
-          </div>
-        </div>
-
-        <div class="socials">
-          <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61579254602509" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-          <a target="_blank" rel="noopener" href="https://www.instagram.com/sunny_hocha/" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a target="_blank" rel="noopener" href="https://x.com/SunnyHocha" aria-label="X / Twitter"><i data-lucide="twitter"></i></a>
-          <a target="_blank" rel="noopener" href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" aria-label="TikTok"><i data-lucide="music"></i></a>
-          <a target="_blank" rel="noopener" href="https://wa.me/85269346630" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Floating chat widget -->
-<button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
-
-<div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
-  <div class="chat-header">
-    <div class="chat-title"><i data-lucide="wine"></i><span id="chat-title">United Spirits Assistant</span></div>
-    <button id="chat-close" class="icon-btn" aria-label="Close chat"><i data-lucide="x"></i></button>
-  </div>
-  <div id="chat-messages" class="chat-body">
-    <!-- Welcome message or system message -->
-    <div class="chat-message system">
-      <p>Welcome to United Spirits! Ask about our wines, whiskeys, brandies, or upcoming events. We're here to help you discover our premium spirits and the latest collections!</p>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center
+                transition-opacity duration-700 ease-in-out"
+         role="dialog" aria-modal="true" aria-labelledby="hero-title">
+      <h1 id="hero-title"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
+        Premium Wines, Whiskeys & Brandies
+      </h1>
     </div>
-  </div>
-  <div class="chat-input">
-    <input id="chat-text" type="text" placeholder="Ask about our wines, whiskeys, or brandies..." />
-    <button id="chat-send" class="icon-btn" aria-label="Send"><i data-lucide="send"></i></button>
-  </div>
-</div>
+  </section>
 
-<script>
-  // Open chat
-  document.getElementById('chat-open').addEventListener('click', function() {
-    document.getElementById('chat').classList.remove('hidden');
-  });
+  <!-- Products Section -->
+  <section class="py-12 px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Our Collections</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/wine.jpg" alt="Premium Wines" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Premium Wines</h4>
+        <p>Red, white, and sparkling wines sourced from the world's top vineyards.</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/whiskey.jpg" alt="Whiskey Collection" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Whiskey Collection</h4>
+        <p>Single malts, blends, and aged whiskeys for refined tastes.</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/brandy.jpg" alt="Brandy Selection" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Brandy Selection</h4>
+        <p>Crafted from the finest distilleries, perfect for special occasions.</p>
+      </div>
+    </div>
+  </section>
 
-  // Close chat
-  document.getElementById('chat-close').addEventListener('click', function() {
-    document.getElementById('chat').classList.add('hidden');
-  });
-
-  // Handle sending a message
-  document.getElementById('chat-send').addEventListener('click', function() {
-    const message = document.getElementById('chat-text').value;
-    if (message) {
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('chat-message', 'user');
-      messageElement.innerHTML = `<p>${message}</p>`;
-      document.getElementById('chat-messages').appendChild(messageElement);
-
-      // Clear input
-      document.getElementById('chat-text').value = '';
-
-      // Auto reply based on message
-      const replyElement = document.createElement('div');
-      replyElement.classList.add('chat-message', 'assistant');
-      let replyMessage = '';
-
-      if (message.toLowerCase().includes('wine')) {
-        replyMessage = 'We offer a wide range of premium wines, including red, white, and mixed varieties. Would you like to know about our top-selling wines?';
-      } else if (message.toLowerCase().includes('whiskey')) {
-        replyMessage = 'Our whiskey collection includes single malt, blended, and premium aged whiskeys. Let me know if you want to explore more!';
-      } else if (message.toLowerCase().includes('brandy')) {
-        replyMessage = 'Our brandies come from the finest distilleries. Would you like to know about our collection?';
-      } else {
-        replyMessage = 'I can assist you with information about wines, whiskeys, brandies, or even our events. How can I help you today?';
-      }
-
-      replyElement.innerHTML = `<p>${replyMessage}</p>`;
-      document.getElementById('chat-messages').appendChild(replyElement);
-      
-      // Scroll to the bottom of chat
-      document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
-    }
-  });
-</script>
-
-  <footer class="site-footer">
-    <div class="container small">
-      <p>© <span id="year"></span> United Spirits. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center space-y-4">
+      <p class="text-lg">📞 WhatsApp: <a href="https://wa.me/85269346630" class="text-green-400">+85269346630</a></p>
+      <div class="flex justify-center space-x-6">
+        <a href="http://x.com/unitedspiritshk" target="_blank"><i data-lucide="twitter"></i></a>
+        <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank"><i data-lucide="music"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank"><i data-lucide="facebook"></i></a>
+        <a href="#" target="_blank"><i data-lucide="instagram"></i></a>
+        <a href="#" target="_blank"><i data-lucide="linkedin"></i></a>
+        <a href="#" target="_blank"><i data-lucide="youtube"></i></a>
+      </div>
+      <p class="text-sm">&copy; 2025 United Spirits. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="assets/js/app.js" defer></script>
+  <!-- Floating chat widget -->
+  <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
+
+  <div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
+    <div class="chat-header">
+      <div class="chat-title"><i data-lucide="wine"></i><span id="chat-title">United Spirits Assistant</span></div>
+      <button id="chat-close" class="icon-btn" aria-label="Close chat"><i data-lucide="x"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-body">
+      <div class="chat-message system">
+        <p>Welcome to United Spirits! Ask about our wines, whiskeys, brandies, or upcoming events. We're here to help you discover our premium spirits and the latest collections!</p>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input id="chat-text" type="text" placeholder="Ask about our wines, whiskeys, or brandies..." />
+      <button id="chat-send" class="icon-btn" aria-label="Send"><i data-lucide="send"></i></button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('chat-open').addEventListener('click', () => {
+      document.getElementById('chat').classList.remove('hidden');
+    });
+    document.getElementById('chat-close').addEventListener('click', () => {
+      document.getElementById('chat').classList.add('hidden');
+    });
+    document.getElementById('chat-send').addEventListener('click', () => {
+      const message = document.getElementById('chat-text').value;
+      if (message) {
+        const userMsg = document.createElement('div');
+        userMsg.classList.add('chat-message', 'user');
+        userMsg.innerHTML = `<p>${message}</p>`;
+        document.getElementById('chat-messages').appendChild(userMsg);
+        document.getElementById('chat-text').value = '';
+
+        const reply = document.createElement('div');
+        reply.classList.add('chat-message', 'assistant');
+        let text = '';
+        if (message.toLowerCase().includes('wine')) {
+          text = 'We offer a wide range of premium wines. Would you like to know our top picks?';
+        } else if (message.toLowerCase().includes('whiskey')) {
+          text = 'Our whiskey collection is world-class. Want to explore the best sellers?';
+        } else if (message.toLowerCase().includes('brandy')) {
+          text = 'We have exquisite brandies from top distilleries. Would you like details?';
+        } else {
+          text = 'I can help you with wines, whiskeys, brandies, or events. What would you like to know?';
+        }
+        reply.innerHTML = `<p>${text}</p>`;
+        document.getElementById('chat-messages').appendChild(reply);
+        document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+      }
+    });
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
+
