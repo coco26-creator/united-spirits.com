@@ -1,101 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>United Spirits</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #b91c1c;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    }
+    .chat {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      width: 300px;
+      max-height: 400px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .chat.hidden { display: none; }
+    .chat-header {
+      background: #b91c1c;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px 12px 0 0;
+    }
+    .chat-body {
+      padding: 10px;
+      flex: 1;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: none;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: inherit;
+    }
+    .chat-message.system { font-style: italic; color: gray; }
+    .chat-message.user { text-align: right; background: #f3f4f6; margin: 5px; padding: 5px; border-radius: 6px; }
+    .chat-message.assistant { text-align: left; background: #fef3c7; margin: 5px; padding: 5px; border-radius: 6px; }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Hero Section -->
-  <section class="relative h-screen w-full overflow-hidden">
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-      <source src="assets/videos/hero.mp4" type="video/mp4">
-      <!-- fallback -->
-      <img src="assets/images/hero-fallback.jpg" alt="Hero Background" class="w-full h-full object-cover">
-    </video>
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <h1 class="text-5xl font-bold text-white">United Spirits</h1>
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-red-700">United Spirits</h1>
+    </div>
+  </header>
+
+  <!-- Hero Section (Static Image) -->
+  <section class="relative h-screen w-full overflow-hidden" aria-label="Hero Section">
+    <!-- Background Image -->
+    <img loading="lazy" src="assets/images/hero-fallback.jpg" alt="Hero Background"
+         class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center
+                transition-opacity duration-700 ease-in-out"
+         role="dialog" aria-modal="true" aria-labelledby="hero-title">
+      <h1 id="hero-title"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
+        Premium Wines, Whiskeys & Brandies
+      </h1>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8">Our Products</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white shadow rounded-lg p-4">
-          <img src="assets/images/product1.jpg" alt="Corazón de Lolita" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Corazón de Lolita</h3>
-        </div>
-        
-        <div class="bg-white shadow rounded-lg p-4">
-          <img src="assets/images/product2.jpg" alt="Honney Conti XO" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Honney Conti XO</h3>
-        </div>
-        
-        <div class="bg-white shadow rounded-lg p-4">
-          <img src="assets/images/product3.jpg" alt="Planet 1 Cognac" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Planet 1 Cognac</h3>
-        </div>
-        
+  <!-- Products Section -->
+  <section class="py-12 px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Our Collections</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/wine.jpg" alt="Premium Wines" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Premium Wines</h4>
+        <p>Red, white, and sparkling wines sourced from the world's top vineyards.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Events & Visits -->
-  <section id="events" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8">Events & Visits</h2>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event1.jpg" alt="Trade Show" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Brand Collaborations</h3>
-          <p>Trade Show Product Review</p>
-        </div>
-
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event2.jpg" alt="Chile Wine Promotion" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Diplomatic Visits</h3>
-          <p>Chile Wine Promotion</p>
-        </div>
-
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event3.jpg" alt="Wine Festival" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Education Events</h3>
-          <p>Wine Festival Presentation</p>
-        </div>
-
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event4.jpg" alt="Winery Tour" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Facility Tours</h3>
-          <p>Winery Barrel Room Tour</p>
-        </div>
-
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event5.jpg" alt="Ambassador Visit" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Meetings</h3>
-          <p>Ambassador Visit</p>
-        </div>
-
-        <div class="bg-gray-50 shadow rounded-lg p-4">
-          <img src="assets/images/event6.jpg" alt="Strategic Partnership" class="rounded-lg mb-3">
-          <h3 class="font-semibold">Products</h3>
-          <p>Honney Conti XO Launch</p>
-        </div>
-
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/whiskey.jpg" alt="Whiskey Collection" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Whiskey Collection</h4>
+        <p>Single malts, blends, and aged whiskeys for refined tastes.</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4">
+        <img src="assets/images/brandy.jpg" alt="Brandy Selection" class="w-full h-auto rounded-lg mb-4 shadow">
+        <h4 class="text-xl font-semibold mb-2">Brandy Selection</h4>
+        <p>Crafted from the finest distilleries, perfect for special occasions.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-gray-900 text-white text-center">
-    <p>© 2025 United Spirits. All Rights Reserved.</p>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center space-y-4">
+      <p class="text-lg">📞 WhatsApp: <a href="https://wa.me/85269346630" class="text-green-400">+85269346630</a></p>
+      <div class="flex justify-center space-x-6">
+        <a href="http://x.com/unitedspiritshk" target="_blank"><i data-lucide="twitter"></i></a>
+        <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank"><i data-lucide="music"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank"><i data-lucide="facebook"></i></a>
+        <a href="#" target="_blank"><i data-lucide="instagram"></i></a>
+        <a href="#" target="_blank"><i data-lucide="linkedin"></i></a>
+        <a href="#" target="_blank"><i data-lucide="youtube"></i></a>
+      </div>
+      <p class="text-sm">&copy; 2025 United Spirits. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Floating chat widget -->
+  <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
+
+  <div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
+    <div class="chat-header">
+      <div class="chat-title"><i data-lucide="wine"></i><span id="chat-title">United Spirits Assistant</span></div>
+      <button id="chat-close" class="icon-btn" aria-label="Close chat"><i data-lucide="x"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-body">
+      <div class="chat-message system">
+        <p>Welcome to United Spirits! Ask about our wines, whiskeys, brandies, or upcoming events. We're here to help you discover our premium spirits and the latest collections!</p>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input id="chat-text" type="text" placeholder="Ask about our wines, whiskeys, or brandies..." />
+      <button id="chat-send" class="icon-btn" aria-label="Send"><i data-lucide="send"></i></button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('chat-open').addEventListener('click', () => {
+      document.getElementById('chat').classList.remove('hidden');
+    });
+    document.getElementById('chat-close').addEventListener('click', () => {
+      document.getElementById('chat').classList.add('hidden');
+    });
+    document.getElementById('chat-send').addEventListener('click', () => {
+      const message = document.getElementById('chat-text').value;
+      if (message) {
+        const userMsg = document.createElement('div');
+        userMsg.classList.add('chat-message', 'user');
+        userMsg.innerHTML = `<p>${message}</p>`;
+        document.getElementById('chat-messages').appendChild(userMsg);
+        document.getElementById('chat-text').value = '';
+
+        const reply = document.createElement('div');
+        reply.classList.add('chat-message', 'assistant');
+        let text = '';
+        if (message.toLowerCase().includes('wine')) {
+          text = 'We offer a wide range of premium wines. Would you like to know our top picks?';
+        } else if (message.toLowerCase().includes('whiskey')) {
+          text = 'Our whiskey collection is world-class. Want to explore the best sellers?';
+        } else if (message.toLowerCase().includes('brandy')) {
+          text = 'We have exquisite brandies from top distilleries. Would you like details?';
+        } else {
+          text = 'I can help you with wines, whiskeys, brandies, or events. What would you like to know?';
+        }
+        reply.innerHTML = `<p>${text}</p>`;
+        document.getElementById('chat-messages').appendChild(reply);
+        document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+      }
+    });
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
+
