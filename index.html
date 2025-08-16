@@ -9,17 +9,25 @@
 <body class="bg-white text-gray-800">
 
   <!-- Hero Section -->
-  <section class="relative h-screen w-full overflow-hidden">
+  <section class="relative h-screen w-full overflow-hidden" aria-label="Hero Section">
+    <!-- Video background -->
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
       <source src="assets/videos/hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <!-- Fallback image if video fails -->
-    <img src="assets/images/hero-fallback.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover">
-    
-    <!-- Overlay text -->
-    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-      <h1 class="text-3xl md:text-5xl font-bold text-white">United Spirits</h1>
+
+    <!-- Fallback image -->
+    <img loading="lazy" src="assets/images/hero-fallback.jpg" alt="Hero Background"
+         class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay with accessibility and transitions -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center
+                transition-opacity duration-700 ease-in-out"
+         role="dialog" aria-modal="true" aria-labelledby="hero-title">
+      <h1 id="hero-title"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
+        United Spirits
+      </h1>
     </div>
   </section>
 
@@ -28,22 +36,18 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8">Our Products</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        
         <div class="bg-white shadow rounded-lg p-4">
           <img src="assets/images/product1.jpg" alt="Corazón de Lolita" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Corazón de Lolita</h3>
         </div>
-        
         <div class="bg-white shadow rounded-lg p-4">
           <img src="assets/images/product2.jpg" alt="Honney Conti XO" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Honney Conti XO</h3>
         </div>
-        
         <div class="bg-white shadow rounded-lg p-4">
           <img src="assets/images/product3.jpg" alt="Planet 1 Cognac" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Planet 1 Cognac</h3>
         </div>
-        
       </div>
     </div>
   </section>
@@ -53,43 +57,36 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8">Events & Visits</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event1.jpg" alt="Trade Show" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Brand Collaborations</h3>
           <p>Trade Show Product Review</p>
         </div>
-
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event2.jpg" alt="Chile Wine Promotion" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Diplomatic Visits</h3>
           <p>Chile Wine Promotion</p>
         </div>
-
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event3.jpg" alt="Wine Festival" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Education Events</h3>
           <p>Wine Festival Presentation</p>
         </div>
-
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event4.jpg" alt="Winery Tour" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Facility Tours</h3>
           <p>Winery Barrel Room Tour</p>
         </div>
-
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event5.jpg" alt="Ambassador Visit" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Meetings</h3>
           <p>Ambassador Visit</p>
         </div>
-
         <div class="bg-gray-50 shadow rounded-lg p-4">
           <img src="assets/images/event6.jpg" alt="Strategic Partnership" class="w-full h-auto rounded-lg mb-3 shadow">
           <h3 class="font-semibold">Products</h3>
           <p>Honney Conti XO Launch</p>
         </div>
-
       </div>
     </div>
   </section>
