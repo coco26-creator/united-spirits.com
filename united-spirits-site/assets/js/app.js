@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   // initial bot greeting
-  addMsg("bot", "Welcome to Sunny Hocha! I can help you discover our wines, whiskeys, brandies and vodka. What can I help you with today?");
+  addMsg("bot", "Welcome to United spirits! I can help you discover our wines, whiskeys, brandies and vodka. What can I help you with today?");
 
   openBtn?.addEventListener("click", () => {
     panel.classList.remove("hidden");
