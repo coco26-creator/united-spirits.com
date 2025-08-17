@@ -8,7 +8,7 @@
     "volume": "750ml",
     "origin": "Spain",
     "notes": "Red fruit, floral, semi-sweet, smooth finish",
-    "image": "assets/img/products/product-corazon-de-lolita-white-wine-front.jpg",
+    "image": "united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg",
     "featured": true
   },
   {
@@ -20,7 +20,7 @@
     "volume": "750ml",
     "origin": "France",
     "notes": "Honeyed layers, toasted oak, dried fruit complexity",
-    "image": "assets/img/products/product-honney-conti-xo-royal.jpg",
+    "image": "united-spirits-site/assets/img/products/product-honney-conti-xo-royal.jpg",
     "featured": true
   },
   {
@@ -32,7 +32,7 @@
     "volume": "750ml",
     "origin": "Scotland",
     "notes": "Smoky, oaky, with hints of dried fruit and spice",
-    "image": "assets/img/products/product-sunny-land-single-malt-s25.jpg",
+    "image": "united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg",
     "featured": true
   },
   {
@@ -44,7 +44,7 @@
     "volume": "750ml",
     "origin": "Chile",
     "notes": "Blackcurrant, dark chocolate, tobacco, long finish",
-    "image": "assets/img/products/product-anderra-reserva-cabernet-sauvignon-2022.jpg",
+    "image": "united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-2022.jpg",
     "featured": false
   },
   {
@@ -56,7 +56,7 @@
     "volume": "750ml",
     "origin": "USA",
     "notes": "Caramel, vanilla, oak, with a warm, spicy finish",
-    "image": "assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg",
+    "image": "united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg",
     "featured": false
   },
   {
@@ -68,7 +68,7 @@
     "volume": "250ml",
     "origin": "Spain / Australia / Chile",
     "notes": "Juicy, fruity, easy-drinking",
-    "image": "assets/img/products/product-lolita-rtd-red-wine-cans.jpg",
+    "image": "united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.jpg",
     "featured": false
   }
 ]
