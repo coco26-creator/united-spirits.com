@@ -9,69 +9,166 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <meta name="theme-color" content="#0a0a0a" />
 
   <style>
     :root {
-      --gold:#c9a227;
-      --coal:#0a0a0a;
-      --ink:#111827;
+      --gold: #c9a227;
+      --coal: #0a0a0a;
+      --ink: #111827;
     }
-    html,body { scroll-behavior: smooth; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
-    .font-lux { font-family: "Playfair Display", Georgia, serif; }
-    .gold { color: var(--gold); }
-    .bg-gold { background: var(--gold); }
-    .ring-gold:focus { outline: 0; box-shadow: 0 0 0 3px rgba(201,162,39,.35); }
+    html, body {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    .font-lux {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+    .gold {
+      color: var(--gold);
+    }
+    .bg-gold {
+      background: var(--gold);
+    }
+    .ring-gold:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(201, 162, 39, .35);
+    }
     .card {
       border-radius: 1rem;
-      background: rgba(255,255,255,.02);
-      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid rgba(255, 255, 255, .08);
       backdrop-filter: blur(4px);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .elevate { box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+    }
+    .elevate {
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
     .btn {
-      display:inline-flex;align-items:center;gap:.5rem;
-      padding:.8rem 1.1rem;border-radius:999px;font-weight:600;
-      border:1px solid rgba(255,255,255,.15);
-      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .8rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, .15);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
     /* Chat widget */
     .fab {
-      position: fixed; right: 20px; bottom: 20px;
-      background: var(--gold); color:#111; border: none; border-radius: 999px;
-      padding: 14px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--gold);
+      color: #111;
+      border: none;
+      border-radius: 999px;
+      padding: 14px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
       z-index: 60;
     }
     .chat {
-      position: fixed; right: 20px; bottom: 90px; width: 340px; max-height: 520px;
-      display: flex; flex-direction: column; border-radius: 16px; overflow: hidden;
-      background: #0e0e0e; color: #e5e7eb; border: 1px solid rgba(255,255,255,.12);
-      box-shadow: 0 20px 50px rgba(0,0,0,.45); z-index: 60;
+      position: fixed;
+      right: 20px;
+      bottom: 90px;
+      width: 340px;
+      max-height: 520px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #0e0e0e;
+      color: #e5e7eb;
+      border: 1px solid rgba(255, 255, 255, .12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+      z-index: 60;
     }
-    .chat.hidden { display: none; }
-    .chat-header { background: #111; color:#f9fafb; padding: 12px 14px; display:flex; align-items:center; justify-content:space-between; }
-    .chat-body { padding: 12px; flex:1; overflow-y:auto; font-size: 14px; background: #0b0b0b; }
-    .chat-input { display:flex; border-top: 1px solid rgba(255,255,255,.1); }
-    .chat-input input { flex:1; padding: 12px; border:0; outline:0; background:#0e0e0e; color:#e5e7eb; }
-    .icon-btn { background: transparent; border:0; color:#f3f4f6; padding: 10px; cursor:pointer; }
-    .msg { margin: 8px 0; padding: 10px 12px; border-radius: 12px; line-height: 1.35; }
-    .msg.system { font-style: italic; color:#9ca3af; background: transparent; padding:0; }
-    .msg.user { background:#101826; text-align:right; }
-    .msg.assistant { background:#17130a; border:1px solid rgba(201,162,39,.25); }
-    /* Simple reveal animations */
-    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.on { opacity: 1; transform: none; }
+    .chat.hidden {
+      display: none;
+    }
+    .chat-header {
+      background: #111;
+      color: #f9fafb;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chat-body {
+      padding: 12px;
+      flex: 1;
+      overflow-y: auto;
+      font-size: 14px;
+      background: #0b0b0b;
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 12px;
+      border: 0;
+      outline: 0;
+      background: #0e0e0e;
+      color: #e5e7eb;
+    }
+    .icon-btn {
+      background: transparent;
+      border: 0;
+      color: #f3f4f6;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .msg {
+      margin: 8px 0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      line-height: 1.35;
+    }
+    .msg.system {
+      font-style: italic;
+      color: #9ca3af;
+      background: transparent;
+      padding: 0;
+    }
+    .msg.user {
+      background: #101826;
+      text-align: right;
+    }
+    .msg.assistant {
+      background: #17130a;
+      border: 1px solid rgba(201, 162, 39, .25);
+    }
+    /* Reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.on {
+      opacity: 1;
+      transform: none;
+    }
   </style>
 </head>
-
 <body class="bg-black text-gray-100 selection:bg-yellow-200 selection:text-black">
 
   <!-- ===================== NAVBAR ===================== -->
@@ -93,9 +190,8 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-    <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
+    <img src="assets/img/products/product-hero-fallback.jfif" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black"></div>
-
     <div class="relative max-w-7xl mx-auto px-6 py-24 w-full">
       <div class="max-w-3xl reveal on">
         <h1 class="font-lux text-4xl sm:text-5xl md:text-6xl leading-tight">
@@ -123,14 +219,23 @@
           We partner with producers who share our obsession for quality, craft, and character.
         </p>
         <div class="mt-6 grid grid-cols-3 gap-4 text-center">
-          <div class="card p-5"><div class="text-2xl font-semibold gold">50+</div><div class="text-xs text-gray-400 mt-1">Labels</div></div>
-          <div class="card p-5"><div class="text-2xl font-semibold gold">12</div><div class="text-xs text-gray-400 mt-1">Origins</div></div>
-          <div class="card p-5"><div class="text-2xl font-semibold gold">A+</div><div class="text-xs text-gray-400 mt-1">Cellar Rated</div></div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold gold">50+</div>
+            <div class="text-xs text-gray-400 mt-1">Labels</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold gold">12</div>
+            <div class="text-xs text-gray-400 mt-1">Origins</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold gold">A+</div>
+            <div class="text-xs text-gray-400 mt-1">Cellar Rated</div>
+          </div>
         </div>
       </div>
       <div class="reveal">
         <div class="relative elevate rounded-2xl overflow-hidden">
-          <img src="united-spirits-site/assets/img/products/product-wine.jfif" alt="Pouring red wine into a glass" class="w-full h-full object-cover" />
+          <img src="assets/img/products/product-wine.jfif" alt="Pouring red wine into a glass" class="w-full h-full object-cover" />
           <div class="absolute inset-0 ring-1 ring-white ring-opacity-10"></div>
         </div>
       </div>
@@ -142,79 +247,80 @@
     <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0b] to-black"></div>
     <div class="relative max-w-7xl mx-auto px-6">
       <h2 class="font-lux text-3xl sm:text-4xl mb-10">Our <span class="gold">Collections</span></h2>
-
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Premium Wines -->
-<article class="card reveal overflow-hidden group">
-  <img src="assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Premium Wines - Corazón de Lolita White Wine" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">Premium Wines</h3>
-    <p class="mt-2 text-gray-300">Red, white, and sparkling wines sourced from the world’s top vineyards.</p>
-    <div class="mt-4 flex items-center justify-between">
-      <a href="/collections/wines.html" class="text-sm gold font-medium">Explore</a>
-      <i data-lucide="chevron-right" aria-hidden="true"></i>
-    </div>
-  </div>
-</article>
+        <!-- Premium Wines -->
+        <article class="card reveal overflow-hidden group">
+          <img src="assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Premium Wines - Corazón de Lolita White Wine" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Premium Wines</h3>
+            <p class="mt-2 text-gray-300">Red, white, and sparkling wines sourced from the world’s top vineyards.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/collections/wines.html" class="text-sm gold font-medium">Explore</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-<!-- Brandy Selection -->
-<article class="card reveal overflow-hidden group">
-  <img src="assets/img/products/product-honney-conti-xo-royal.jpg" alt="Brandy Selection - Honney Conti XO Royal Brandy" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">Brandy Selection</h3>
-    <p class="mt-2 text-gray-300">Exquisite brandies from top distilleries — perfect for special occasions.</p>
-    <div class="mt-4 flex items-center justify-between">
-      <a href="/collections/brandy.html" class="text-sm gold font-medium">Explore</a>
-      <i data-lucide="chevron-right" aria-hidden="true"></i>
-    </div>
-  </div>
-</article>
+        <!-- Whiskey Collection -->
+        <article class="card reveal overflow-hidden group">
+          <img src="assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Whiskey Collection - Sunny Land Single Malt Scotch" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Whiskey Collection</h3>
+            <p class="mt-2 text-gray-300">Single malts, blends, and aged whiskeys for refined tastes.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/collections/whiskey.html" class="text-sm gold font-medium">Explore</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-<!-- Whiskey Collection -->
-<article class="card reveal overflow-hidden group">
-  <img src="assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Whiskey Collection - Sunny Land Single Malt Scotch" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">Whiskey Collection</h3>
-    <p class="mt-2 text-gray-300">Single malts, blends, and aged whiskeys for refined tastes.</p>
-    <div class="mt-4 flex items-center justify-between">
-      <a href="/collections/whiskey.html" class="text-sm gold font-medium">Explore</a>
-      <i data-lucide="chevron-right" aria-hidden="true"></i>
+        <!-- Brandy Selection -->
+        <article class="card reveal overflow-hidden group">
+          <img src="assets/img/products/product-honey-conti-vsop-colorful.png" alt="Brandy Selection - Honney Conti VSOP Colorful Edition" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Brandy Selection</h3>
+            <p class="mt-2 text-gray-300">Exquisite brandies from top distilleries — perfect for special occasions.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/collections/brandy.html" class="text-sm gold font-medium">Explore</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</article>
+  </section>
 
   <!-- ===================== FEATURED BOTTLES ===================== -->
   <section id="featured" class="relative py-20 border-t border-white border-opacity-10">
     <div class="absolute inset-0 bg-gradient-to-b from-black to-[#0b0b0b]"></div>
     <div class="relative max-w-7xl mx-auto px-6">
       <h2 class="font-lux text-3xl sm:text-4xl mb-10">Featured <span class="gold">Bottles</span></h2>
-
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Corazón de Lolita -->
-        <article class="card reveal p-6">
-          <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita" class="w-full h-56 object-cover rounded-lg" />
-          <div class="mt-4">
-            <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
-            <p class="mt-2 text-gray-300">Silky texture with ripe berry notes, lifted spice, and a long finish.</p>
-          </div>
+        <article class="card reveal p-6 flex flex-col items-center text-center">
+          <img src="assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita" class="w-full h-56 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
+          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+            Silky texture with ripe berry notes, lifted spice, and a long finish.
+          </p>
         </article>
 
-      <!-- honney conti xo royal-->
-      <article class="card reveal p-6">
-        <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.jpg" alt="Honney Conti Xo Royal" class="w-full h-56 object-cover rounded-lg" />
-        <div class="mt-4">
-          <h3 class="text-xl font-semibold">honney conti xo royal</h3>
-          <p class="mt-2 text-gray-300">Rich, honeyed layers with toasted oak and dried fruit complexity.</p>
-        </div>
-      </article>
+        <!-- Honney Conti XO Royal -->
+        <article class="card reveal p-6 flex flex-col items-center text-center">
+          <img src="assets/img/products/product-honney-conti-xo-royal.jpg" alt="Honney Conti XO Royal" class="w-full h-56 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Honney Conti XO Royal</h3>
+          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+            Rich, honeyed layers with toasted oak and dried fruit complexity.
+          </p>
+        </article>
 
         <!-- Sunny Land Single Malt Scotch -->
-        <article class="card reveal p-6">
-          <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt Scotch" class="w-full h-56 object-cover rounded-lg" />
-          <div class="mt-4">
-            <h3 class="text-xl font-semibold">Sunny Land Single Malt Scotch</h3>
-            <p class="mt-2 text-gray-300">Single malts, blends, and aged whiskeys for refined tastes.</p>
-          </div>
+        <article class="card reveal p-6 flex flex-col items-center text-center">
+          <img src="assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt Scotch" class="w-full h-56 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Sunny Land Single Malt Scotch</h3>
+          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+            Single malts, blends, and aged whiskeys for refined tastes.
+          </p>
         </article>
       </div>
     </div>
@@ -227,13 +333,11 @@
       <div class="reveal">
         <h2 class="font-lux text-3xl sm:text-4xl">Let’s Talk <span class="gold">Cellar-worthy</span> Bottles</h2>
         <p class="mt-4 text-gray-300">Tell us what you’re looking for — we’ll curate a list tailored to your taste and occasion.</p>
-
         <ul class="mt-6 space-y-3 text-gray-300">
           <li class="flex items-center gap-3"><i data-lucide="phone"></i> <a href="https://wa.me/85269346630" class="underline">+852 6934 6630</a></li>
           <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> Hong Kong • Worldwide partners</li>
           <li class="flex items-center gap-3"><i data-lucide="clock"></i> Mon–Sat, 10:00–19:00 HKT</li>
         </ul>
-
         <div class="mt-6 flex gap-4">
           <a href="http://x.com/unitedspiritshk" target="_blank" aria-label="X (Twitter)" class="hover:opacity-80"><i data-lucide="twitter"></i></a>
           <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank" aria-label="TikTok" class="hover:opacity-80"><i data-lucide="music"></i></a>
@@ -243,7 +347,6 @@
           <a href="#" target="_blank" aria-label="YouTube" class="hover:opacity-80"><i data-lucide="youtube"></i></a>
         </div>
       </div>
-
       <form class="reveal card p-6 space-y-4" aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch.');">
         <div>
           <label for="name" class="text-sm text-gray-300">Name</label>
@@ -272,7 +375,6 @@
 
   <!-- ===================== CHATBOT ===================== -->
   <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
-
   <div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
     <div class="chat-header">
       <div class="flex items-center gap-2">
@@ -294,44 +396,45 @@
 
   <!-- ===================== SCRIPTS ===================== -->
   <script>
-    // Icons
+    // Initialize Lucide icons
     lucide.createIcons();
 
     // Reveal on scroll
     const rev = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
+    const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
     }, { threshold: 0.15 });
-    rev.forEach(el=>io.observe(el));
+    rev.forEach(el => io.observe(el));
 
-    // Chatbot logic
+    // Chatbot Logic
     const productData = [
-      { 
-        key: 'corazon', 
-        name: 'Corazón de Lolita', 
-        notes: 'Silky texture • ripe berries • spice • long finish', 
-        image: 'united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg' 
+      {
+        key: 'corazon',
+        name: 'Corazón de Lolita',
+        notes: 'Silky texture • ripe berries • spice • long finish',
+        image: 'assets/img/products/product-corazon-de-lolita-white-wine-front.jpg'
       },
-      { 
-        key: 'honey conti xo Royal', 
-        name: 'Honney Conti Xo Royal', 
-        notes: 'Honeyed layers • Exquisite brandies from top distilleries — perfect for special occasions',
-        image: 'united-spirits-site/assets/img/products/product-honney-conti-xo-royal.jpg' 
+      {
+        key: 'honey conti xo',
+        name: 'Honney Conti XO',
+        notes: 'Honeyed layers • toasted oak • dried fruit complexity',
+        image: 'assets/img/products/product-honney-conti-xo-royal.jpg'
       },
-      { 
-        key: 'Sunny Land Single Malt Scotch', 
-        name: 'Sunny Land Single Malt Scotch', 
-        notes: 'Rich, smoky notes with hints of oak, dried fruit', 
-        image: 'united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg' 
+      {
+        key: 'royal brandy',
+        name: 'Honney Conti XO Royal Brandy',
+        notes: 'Deep amber • vanilla • spice • collector’s choice',
+        image: 'assets/img/products/product-honney-conti-xo-royal.jpg'
       }
     ];
+
     const faq = [
-      { q: ['hours','open','time'], a: 'We’re available Mon–Sat, 10:00–19:00 HKT.' },
-      { q: ['contact','whatsapp','phone'], a: 'You can WhatsApp us at +852 6934 6630.' },
-      { q: ['shipping','deliver','delivery'], a: 'We arrange local and international deliveries via trusted partners.' },
-      { q: ['wine','wines'], a: 'Our wine program features red, white, and sparkling labels from top vineyards.' },
-      { q: ['whiskey','whisky'], a: 'We carry single malts, blends, and age-statement expressions.' },
-      { q: ['brandy','cognac'], a: 'Explore XO and VSOP styles with depth and finesse.' }
+      { q: ['hours', 'open', 'time'], a: 'We’re available Mon–Sat, 10:00–19:00 HKT.' },
+      { q: ['contact', 'whatsapp', 'phone'], a: 'You can WhatsApp us at +852 6934 6630.' },
+      { q: ['shipping', 'deliver', 'delivery'], a: 'We arrange local and international deliveries via trusted partners.' },
+      { q: ['wine', 'wines'], a: 'Our wine program features red, white, and sparkling labels from top vineyards.' },
+      { q: ['whiskey', 'whisky'], a: 'We carry single malts, blends, and age-statement expressions.' },
+      { q: ['brandy', 'cognac'], a: 'Explore XO and VSOP styles with depth and finesse.' }
     ];
 
     const elOpen = document.getElementById('chat-open');
@@ -351,7 +454,9 @@
     }
     elOpen.addEventListener('click', openChat);
     elClose.addEventListener('click', closeChat);
-    document.addEventListener('keydown', (e)=>{ if(!elChat.classList.contains('hidden') && e.key==='Escape'){ closeChat(); } });
+    document.addEventListener('keydown', (e) => {
+      if (!elChat.classList.contains('hidden') && e.key === 'Escape') closeChat();
+    });
 
     function appendMsg(role, text, image) {
       const div = document.createElement('div');
@@ -370,26 +475,22 @@
 
     function assistantReply(input) {
       const msg = input.trim().toLowerCase();
-
       for (const p of productData) {
         if (msg.includes(p.key) || msg.includes(p.name.toLowerCase())) {
           appendMsg('assistant', `<strong>${p.name}</strong><br>${p.notes}`, p.image);
           return;
         }
       }
-
       for (const f of faq) {
         if (f.q.some(k => msg.includes(k))) {
           appendMsg('assistant', f.a);
           return;
         }
       }
-
-      if (/(wine|wines)/.test(msg)) return appendMsg('assistant','Top wine picks? Try Corazón de Lolita for a silky, berry-driven profile.');
-      if (/(whisky|whiskey)/.test(msg)) return appendMsg('assistant','For whiskey lovers, explore our age-statement single malts and balanced blends.');
-      if (/(brandy|cognac)/.test(msg)) return appendMsg('assistant','Honney Conti XO Royal offers rich, honeyed layers with vanilla, spice, and a long finish — perfect for collectors.');
-
-      appendMsg('assistant','I can help with tasting notes, food pairings, gift ideas, and availability. Ask me about “Honney Conti XO”.');
+      if (/(wine|wines)/.test(msg)) return appendMsg('assistant', 'Top wine picks? Try Corazón de Lolita for a silky, berry-driven profile.');
+      if (/(whisky|whiskey)/.test(msg)) return appendMsg('assistant', 'For whiskey lovers, explore our age-statement single malts and balanced blends.');
+      if (/(brandy|cognac)/.test(msg)) return appendMsg('assistant', 'Honney Conti XO Royal Brandy offers rich, honeyed layers with vanilla, spice, and a long finish — perfect for collectors.');
+      appendMsg('assistant', 'I can help with tasting notes, food pairings, gift ideas, and availability. Ask me about “Honney Conti XO” or “Corazón de Lolita”.');
     }
 
     function handleSend() {
@@ -397,7 +498,7 @@
       if (!val.trim()) return;
       appendMsg('user', val);
       elInput.value = '';
-      setTimeout(()=>assistantReply(val), 200);
+      setTimeout(() => assistantReply(val), 200);
     }
 
     elSend.addEventListener('click', handleSend);
@@ -405,18 +506,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
