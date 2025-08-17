@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brandy Selection | United Spirits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root { --gold:#c9a227; }
+    body { font-family: Inter, sans-serif; }
+    .font-lux { font-family: "Playfair Display", serif; }
+    .gold { color: var(--gold); }
+    .card { border-radius: 1rem; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(4px); }
+  </style>
+</head>
+<body class="bg-black text-gray-100">
+  <header class="p-6">
+    <a href="/" class="font-lux text-xl text-gold">← Back to Home</a>
+  </header>
+
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="font-lux text-4xl mb-6">Brandy Selection</h1>
+      <p class="text-gray-300 mb-10">Exquisite brandies from top distilleries — perfect for special occasions.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Honney Conti XO -->
+        <article class="card p-6">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.jpg" alt="Honney Conti XO" class="w-full h-56 object-cover rounded-lg" />
+          <h3 class="text-xl font-semibold mt-4">Honney Conti XO</h3>
+          <p class="text-gray-300 mt-2">Rich, honeyed layers with toasted oak and dried fruit complexity.</p>
+        </article>
+
+        <!-- Honney Conti XO Royal Brandy -->
+        <article class="card p-6">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.jpg" alt="Honney Conti XO Royal Brandy" class="w-full h-56 object-cover rounded-lg" />
+          <h3 class="text-xl font-semibold mt-4">Honney Conti XO Royal Brandy</h3>
+          <p class="text-gray-300 mt-2">Deep amber color, vanilla, and spice — perfect for collectors.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-gray-400 text-sm">
+    &copy; 2025 United Spirits. All rights reserved.
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
