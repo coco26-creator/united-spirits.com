@@ -6,50 +6,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
   <style>
-    :root { --gold:#c9a227; }
-    body { font-family: Inter, sans-serif; background: #000; color: #e5e7eb; }
-    .font-lux { font-family: "Playfair Display", serif; }
-    .gold { color: var(--gold); }
-    .card { border-radius: 1rem; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(4px); }
+    :root { --gold: #c9a227; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #e5e7eb;
+    }
+    .font-lux {
+      font-family: "Playfair Display", serif;
+    }
+    .gold {
+      color: var(--gold);
+    }
+    .card {
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: var(--gold);
+      color: #111;
+    }
+    .btn:hover {
+      background: #d4b02c;
+    }
   </style>
 </head>
 <body class="min-h-screen">
-  <header class="p-6 border-b border-gray-800">
-    <a href="/united-spirits.com/" class="font-lux text-xl gold hover:underline">
-      ← Back to Home
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="px-6 py-6 border-b border-gray-800">
+    <a href="/united-spirits.com/" class="font-lux text-xl gold hover:underline flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Home
     </a>
   </header>
 
+  <!-- ===================== MAIN CONTENT ===================== -->
   <section class="py-20 px-6 max-w-7xl mx-auto">
-    <h1 class="font-lux text-4xl mb-6">Premium Wines</h1>
-    <p class="text-gray-300 mb-10">Red, white, and sparkling wines sourced from the world’s top vineyards.</p>
+    <h1 class="font-lux text-4xl sm:text-5xl mb-6 text-white">Premium Wines</h1>
+    <p class="text-gray-300 mb-12 max-w-3xl">
+      Red, white, and sparkling wines sourced from the world’s top vineyards — crafted for discerning palates.
+    </p>
 
+    <!-- Wine Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Corazón de Lolita -->
-      <article class="card p-6 text-center">
-        <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita" class="w-full h-56 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
-        <p class="text-gray-300 mt-2">Silky texture with ripe berry notes and a long finish.</p>
+      <!-- 1. Corazón de Lolita White Wine -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Silky texture with ripe berry notes, lifted spice, and a long finish.
+          </p>
+        </div>
       </article>
 
-      <!-- Lolita RTD Cans -->
-      <article class="card p-6 text-center">
-        <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Lolita Ready-to-Drink Cans" class="w-full h-56 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Lolita Ready-to-Drink Cans</h3>
-        <p class="text-gray-300 mt-2">Convenient red wine in stylish cans — perfect for outdoor events.</p>
+      <!-- 2. Corazón de Lolita Red Wine -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-red-wine.jpg" alt="Corazón de Lolita Red Wine" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Red</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Bold and structured with dark cherry, plum, and oak complexity.
+          </p>
+        </div>
       </article>
+
+      <!-- 3. Corazón de Lolita Rosé -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-rose.jpg" alt="Corazón de Lolita Rosé" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Rosé</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Crisp and refreshing — strawberry, citrus, and delicate florals.
+          </p>
+        </div>
+      </article>
+
+      <!-- 4. Corazón de Lolita Sparkling -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-sparkling.jpg" alt="Corazón de Lolita Sparkling" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Sparkling</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Elegant bubbles with apple, pear, and a hint of brioche.
+          </p>
+        </div>
+      </article>
+
+      <!-- 5. Corazón de Lolita Reserve -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-reserve.jpg" alt="Corazón de Lolita Reserve" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Reserve</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Limited edition — aged for depth, with layers of fruit and spice.
+          </p>
+        </div>
+      </article>
+
+      <!-- 6. Corazón de Lolita Organic -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-organic.jpg" alt="Corazón de Lolita Organic" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Organic</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Sustainably farmed grapes — pure, expressive, and naturally balanced.
+          </p>
+        </div>
+      </article>
+
+      <!-- 7. Corazón de Lolita Late Harvest -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-late-harvest.jpg" alt="Corazón de Lolita Late Harvest" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Late Harvest</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Luscious dessert wine — honey, apricot, and orange blossom.
+          </p>
+        </div>
+      </article>
+
+      <!-- 8. Corazón de Lolita Cuvée -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-cuvee.jpg" alt="Corazón de Lolita Cuvée" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Cuvée</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Master blend — complexity, balance, and elegance in every bottle.
+          </p>
+        </div>
+      </article>
+
+      <!-- 9. Corazón de Lolita Signature -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-corazon-de-lolita-signature.jpg" alt="Corazón de Lolita Signature" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Corazón de Lolita Signature</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Flagship wine — bold, refined, and unforgettable.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <a href="https://wa.me/85269346630" class="btn">
+        <i data-lucide="message-circle"></i> Inquire Now
+      </a>
     </div>
   </section>
 
-  <footer class="py-8 text-center text-gray-400 text-sm">
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="py-8 text-center text-gray-400 text-sm border-t border-gray-800">
     &copy; 2025 United Spirits. All rights reserved.
   </footer>
 
-  <script>lucide.createIcons();</script>
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
-
-
-
