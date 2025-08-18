@@ -172,21 +172,25 @@
 <body class="bg-black text-gray-100 selection:bg-yellow-200 selection:text-black">
 
   <!-- ===================== NAVBAR ===================== -->
-  <header class="sticky top-0 z-40 bg-black bg-opacity-70 backdrop-filter backdrop-blur border-b border-white border-opacity-10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 focus:ring-gold">
-        <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gold text-black font-bold">US</span>
-        <span class="font-lux text-xl tracking-wide">United <span class="gold">Spirits</span></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm">
-        <a href="#about" class="hover:text-gray-300">About</a>
-        <a href="#collections" class="hover:text-gray-300">Collections</a>
-        <a href="#featured" class="hover:text-gray-300">Featured</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
-        <a href="https://wa.me/85269346630" class="btn bg-gold text-black hover:bg-yellow-500">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
+<header class="sticky top-0 z-40 bg-black bg-opacity-70 backdrop-filter backdrop-blur border-b border-white border-opacity-10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo + Brand -->
+    <a href="#" class="flex items-center gap-3 focus:ring-gold">
+      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
+      <span class="font-lux text-xl tracking-wide">United <span class="gold">Spirits</span></span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#about" class="hover:text-gray-300">About</a>
+      <a href="#collections" class="hover:text-gray-300">Collections</a>
+      <a href="#featured" class="hover:text-gray-300">Featured</a>
+      <a href="#contact" class="hover:text-gray-300">Contact</a>
+      <a href="https://wa.me/85269346630" class="btn bg-gold text-black hover:bg-yellow-500">WhatsApp</a>
+    </nav>
+  </div>
+</header>
 
   <!-- ===================== HERO ===================== -->
   <section class="relative min-h-screen flex items-center" aria-label="Hero Section">
@@ -365,13 +369,14 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="border-t border-white border-opacity-10">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-      <p>&copy; 2025 United Spirits. All rights reserved.</p>
-      <p>Crafted with care — Hong Kong</p>
-    </div>
-  </footer>
+  <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+    <p>&copy; 2025 United Spirits. All rights reserved.</p>
+    <p>Crafted with care — Hong Kong</p>
+    <!-- Add Logo -->
+    <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Supply Chain Co., Limited" class="w-32 h-auto" />
+  </div>
+</footer>
 
   <!-- ===================== CHATBOT ===================== -->
   <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
@@ -506,6 +511,7 @@
   </script>
 </body>
 </html>
+
 
 
 
