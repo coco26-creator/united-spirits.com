@@ -13,24 +13,29 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
 
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#8e2d25" />
 
   <style>
     :root {
-      --gold: #c9a227;
-      --coal: #0a0a0a;
-      --ink: #111827;
-    }
-    html, body {
-      scroll-behavior: smooth;
+      --burgundy: #8e2d25;
+      --indigo: #2d1b69;
+      --gold: #daa520;
+      --text: #1c1917;
+      --light-bg: #fafaf9;
+      --stone: #78716c;
     }
     body {
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
     }
     .font-lux {
       font-family: "Playfair Display", Georgia, serif;
+    }
+    .luxury-gradient {
+      background: linear-gradient(135deg, #8e2d25 0%, #2d1b69 100%);
     }
     .gold {
       color: var(--gold);
@@ -38,23 +43,16 @@
     .bg-gold {
       background: var(--gold);
     }
-    .ring-gold:focus {
-      outline: 0;
-      box-shadow: 0 0 0 3px rgba(201, 162, 39, .35);
-    }
     .card {
       border-radius: 1rem;
-      background: rgba(255, 255, 255, .02);
-      border: 1px solid rgba(255, 255, 255, .08);
-      backdrop-filter: blur(4px);
+      background: white;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
       transition: transform .2s ease, box-shadow .2s ease;
     }
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.3);
-    }
-    .elevate {
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
     }
     .btn {
       display: inline-flex;
@@ -63,12 +61,16 @@
       padding: .8rem 1.1rem;
       border-radius: 999px;
       font-weight: 600;
-      border: 1px solid rgba(255, 255, 255, .15);
+      border: 1px solid #e0e0e0;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover {
+    .btn-gold {
+      background: var(--gold);
+      color: #1c1917;
+    }
+    .btn-gold:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      box-shadow: 0 8px 24px rgba(218, 165, 32, .25);
     }
     /* Chat widget */
     .fab {
@@ -76,12 +78,12 @@
       right: 20px;
       bottom: 20px;
       background: var(--gold);
-      color: #111;
+      color: #1c1917;
       border: none;
       border-radius: 999px;
       padding: 14px;
       cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+      box-shadow: 0 10px 25px rgba(218, 165, 32, .3);
       z-index: 60;
     }
     .chat {
@@ -94,18 +96,18 @@
       flex-direction: column;
       border-radius: 16px;
       overflow: hidden;
-      background: #0e0e0e;
-      color: #e5e7eb;
-      border: 1px solid rgba(255, 255, 255, .12);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+      background: white;
+      color: #1c1917;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 20px 50px rgba(0,0,0,.15);
       z-index: 60;
     }
     .chat.hidden {
       display: none;
     }
     .chat-header {
-      background: #111;
-      color: #f9fafb;
+      background: linear-gradient(135deg, #8e2d25, #2d1b69);
+      color: white;
       padding: 12px 14px;
       display: flex;
       align-items: center;
@@ -116,24 +118,24 @@
       flex: 1;
       overflow-y: auto;
       font-size: 14px;
-      background: #0b0b0b;
+      background: #fafaf9;
     }
     .chat-input {
       display: flex;
-      border-top: 1px solid rgba(255, 255, 255, .1);
+      border-top: 1px solid #e0e0e0;
     }
     .chat-input input {
       flex: 1;
       padding: 12px;
       border: 0;
       outline: 0;
-      background: #0e0e0e;
-      color: #e5e7eb;
+      background: #fafaf9;
+      color: #1c1917;
     }
     .icon-btn {
       background: transparent;
       border: 0;
-      color: #f3f4f6;
+      color: #1c1917;
       padding: 10px;
       cursor: pointer;
     }
@@ -145,17 +147,15 @@
     }
     .msg.system {
       font-style: italic;
-      color: #9ca3af;
-      background: transparent;
-      padding: 0;
+      color: #6b7280;
     }
     .msg.user {
-      background: #101826;
+      background: #f0f9ff;
       text-align: right;
     }
     .msg.assistant {
-      background: #17130a;
-      border: 1px solid rgba(201, 162, 39, .25);
+      background: #f0f0f0;
+      border: 1px solid #e0e0e0;
     }
     /* Reveal animations */
     .reveal {
@@ -167,69 +167,84 @@
       opacity: 1;
       transform: none;
     }
+    .gold-shimmer {
+      background: linear-gradient(90deg, #daa520, #ffd700, #daa520);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .heading-gradient {
+      background: linear-gradient(to right, #8e2d25, #2d1b69);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
 </head>
-<body class="bg-black text-gray-100 selection:bg-yellow-200 selection:text-black">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- ===================== NAVBAR ===================== -->
-<header class="sticky top-0 z-40 bg-black bg-opacity-70 backdrop-filter backdrop-blur border-b border-white border-opacity-10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
-    <!-- Logo + Brand -->
-    <a href="#" class="flex items-center gap-3 focus:ring-gold">
-      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
-      <span class="font-lux text-xl tracking-wide">United <span class="gold">Spirits</span></span>
-    </a>
+  <header class="sticky top-0 z-40 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Brand -->
+      <a href="/united-spirits.com/" class="flex items-center gap-3 focus:ring-gold">
+        <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto" />
+        <span class="font-lux text-xl tracking-wide">United <span class="heading-gradient">Spirits</span></span>
+      </a>
 
-    <!-- Navigation -->
-    <nav class="hidden md:flex items-center gap-8 text-sm">
-      <a href="#about" class="hover:text-gray-300">About</a>
-      <a href="#collections" class="hover:text-gray-300">Collections</a>
-      <a href="#featured" class="hover:text-gray-300">Featured</a>
-      <a href="#contact" class="hover:text-gray-300">Contact</a>
-      <a href="https://wa.me/85269346630" class="btn bg-gold text-black hover:bg-yellow-500">WhatsApp</a>
-    </nav>
-  </div>
-</header>
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#about" class="hover:text-stone-600">About</a>
+        <a href="#collections" class="hover:text-stone-600">Collections</a>
+        <a href="#featured" class="hover:text-stone-600">Featured</a>
+        <a href="#contact" class="hover:text-stone-600">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-gold hover:bg-yellow-500">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-  <!-- Background Image -->
-  <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-screen flex items-center" aria-label="Hero Section">
+    <!-- Background Image -->
+    <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
 
-  <!-- Overlay Gradient -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black"></div>
+    <!-- Overlay Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
-  <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full">
-    <div class="max-w-3xl reveal on text-center">
-      
-      <!-- Title -->
-      <h1 class="font-lux text-4xl sm:text-5xl md:text-6xl leading-tight text-white">
-        Crafting <span class="gold">Spirits</span> of Distinction
-      </h1>
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
+      <div class="max-w-3xl reveal on">
+        <!-- Title -->
+        <h1 class="font-lux text-4xl sm:text-5xl md:text-6xl leading-tight text-white">
+          <span class="gold-shimmer">Crafting Spirits</span><br>
+          <span class="text-white">of Distinction</span>
+        </h1>
 
-      <!-- Subtitle -->
-      <p class="mt-5 text-gray-300 text-lg max-w-xl mx-auto">
-        Premium wines, whiskeys, and brandies curated for discerning palates. Born from heritage, perfected for today.
-      </p>
+        <!-- Subtitle -->
+        <p class="mt-5 text-gray-300 text-lg max-w-xl mx-auto">
+          Premium wines, whiskeys, and brandies curated for discerning palates. Born from heritage, perfected for today.
+        </p>
 
-      <!-- Buttons -->
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="#collections" class="btn bg-gold text-black">Explore Our Collection</a>
-        <a href="#featured" class="btn text-white">View Featured Bottles</a>
+        <!-- Buttons -->
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="#collections" class="btn btn-gold hover:bg-yellow-500">Explore Our Collection</a>
+          <a href="#featured" class="btn text-white border-white hover:bg-white/10">View Featured Bottles</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===================== ABOUT ===================== -->
   <section id="about" class="relative py-20">
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-[#0b0b0b]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
     <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div class="reveal">
-        <h2 class="font-lux text-3xl sm:text-4xl">Heritage Meets <span class="gold">Excellence</span></h2>
-        <p class="mt-5 text-gray-300">
+        <h2 class="font-lux text-3xl sm:text-4xl">Heritage Meets <span class="heading-gradient">Excellence</span></h2>
+        <p class="mt-5 text-gray-600">
           United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
           We partner with producers who share our obsession for quality, craft, and character.
         </p>
@@ -258,19 +273,18 @@
   </section>
 
   <!-- ===================== COLLECTIONS ===================== -->
-  <section id="collections" class="relative py-20 border-t border-white border-opacity-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0b] to-black"></div>
+  <section id="collections" class="relative py-20 border-t border-gray-200">
     <div class="relative max-w-7xl mx-auto px-6">
-      <h2 class="font-lux text-3xl sm:text-4xl mb-10">Our <span class="gold">Collections</span></h2>
+      <h2 class="font-lux text-3xl sm:text-4xl mb-10">Our <span class="heading-gradient">Collections</span></h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Premium Wines -->
         <article class="card reveal overflow-hidden group">
           <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Premium Wines - Corazón de Lolita White Wine" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
           <div class="p-6">
             <h3 class="text-xl font-semibold">Premium Wines</h3>
-            <p class="mt-2 text-gray-300">Red, white, and sparkling wines sourced from the world’s top vineyards.</p>
+            <p class="mt-2 text-gray-600">Red, white, and sparkling wines sourced from the world’s top vineyards.</p>
             <div class="mt-4 flex items-center justify-between">
-              <a href="collections/wines.html" class="text-sm gold font-medium">Explore</a>
+              <a href="/united-spirits.com/collections/wines.html" class="text-sm gold font-medium">Explore</a>
               <i data-lucide="chevron-right" aria-hidden="true"></i>
             </div>
           </div>
@@ -281,9 +295,9 @@
           <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Whiskey Collection - Sunny Land Single Malt Scotch" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
           <div class="p-6">
             <h3 class="text-xl font-semibold">Whiskey Collection</h3>
-            <p class="mt-2 text-gray-300">Single malts, blends, and aged whiskeys for refined tastes.</p>
+            <p class="mt-2 text-gray-600">Single malts, blends, and aged whiskeys for refined tastes.</p>
             <div class="mt-4 flex items-center justify-between">
-              <a href="collections/whiskey.html" class="text-sm gold font-medium">Explore</a>
+              <a href="/united-spirits.com/collections/whiskey.html" class="text-sm gold font-medium">Explore</a>
               <i data-lucide="chevron-right" aria-hidden="true"></i>
             </div>
           </div>
@@ -294,9 +308,9 @@
           <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Brandy Selection - Honney Conti VSOP Colorful" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-105" />
           <div class="p-6">
             <h3 class="text-xl font-semibold">Brandy Selection</h3>
-            <p class="mt-2 text-gray-300">Exquisite brandies from top distilleries — perfect for special occasions.</p>
+            <p class="mt-2 text-gray-600">Exquisite brandies from top distilleries — perfect for special occasions.</p>
             <div class="mt-4 flex items-center justify-between">
-              <a href="collections/brandy.html" class="text-sm gold font-medium">Explore</a>
+              <a href="/united-spirits.com/collections/brandy.html" class="text-sm gold font-medium">Explore</a>
               <i data-lucide="chevron-right" aria-hidden="true"></i>
             </div>
           </div>
@@ -306,16 +320,15 @@
   </section>
 
   <!-- ===================== FEATURED BOTTLES ===================== -->
-  <section id="featured" class="relative py-20 border-t border-white border-opacity-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-[#0b0b0b]"></div>
+  <section id="featured" class="relative py-20 border-t border-gray-200">
     <div class="relative max-w-7xl mx-auto px-6">
-      <h2 class="font-lux text-3xl sm:text-4xl mb-10">Featured <span class="gold">Bottles</span></h2>
+      <h2 class="font-lux text-3xl sm:text-4xl mb-10">Featured <span class="heading-gradient">Bottles</span></h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Corazón de Lolita -->
         <article class="card reveal p-6 flex flex-col items-center text-center">
           <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita" class="w-full h-56 object-cover rounded-lg mb-4" />
           <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
             Silky texture with ripe berry notes, lifted spice, and a long finish.
           </p>
         </article>
@@ -324,7 +337,7 @@
         <article class="card reveal p-6 flex flex-col items-center text-center">
           <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP Colorful" class="w-full h-56 object-cover rounded-lg mb-4" />
           <h3 class="text-xl font-semibold">Honney Conti VSOP Colorful</h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
             Vibrant, smooth brandy with fruity notes — perfect for gifting and celebrations.
           </p>
         </article>
@@ -333,7 +346,7 @@
         <article class="card reveal p-6 flex flex-col items-center text-center">
           <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt Scotch" class="w-full h-56 object-cover rounded-lg mb-4" />
           <h3 class="text-xl font-semibold">Sunny Land Single Malt Scotch</h3>
-          <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
             Single malts, blends, and aged whiskeys for refined tastes.
           </p>
         </article>
@@ -342,19 +355,18 @@
   </section>
 
   <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="relative py-20 border-t border-white border-opacity-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0b] to-black"></div>
+  <section id="contact" class="relative py-20 border-t border-gray-200">
     <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <div class="reveal">
-        <h2 class="font-lux text-3xl sm:text-4xl">Let’s Talk <span class="gold">Cellar-worthy</span> Bottles</h2>
-        <p class="mt-4 text-gray-300">Tell us what you’re looking for — we’ll curate a list tailored to your taste and occasion.</p>
-        <ul class="mt-6 space-y-3 text-gray-300">
+        <h2 class="font-lux text-3xl sm:text-4xl">Let’s Talk <span class="heading-gradient">Cellar-worthy</span> Bottles</h2>
+        <p class="mt-4 text-gray-600">Tell us what you’re looking for — we’ll curate a list tailored to your taste and occasion.</p>
+        <ul class="mt-6 space-y-3 text-gray-600">
           <li class="flex items-center gap-3"><i data-lucide="phone"></i> <a href="https://wa.me/85269346630" class="underline">+852 6934 6630</a></li>
           <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> Hong Kong • Worldwide partners</li>
           <li class="flex items-center gap-3"><i data-lucide="clock"></i> Mon–Sat, 10:00–19:00 HKT</li>
         </ul>
         <div class="mt-6 flex gap-4">
-          <a href="http://x.com/unitedspiritshk" target="_blank" aria-label="X (Twitter)" class="hover:opacity-80"><i data-lucide="twitter"></i></a>
+          <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X (Twitter)" class="hover:opacity-80"><i data-lucide="twitter"></i></a>
           <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank" aria-label="TikTok" class="hover:opacity-80"><i data-lucide="music"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="hover:opacity-80"><i data-lucide="facebook"></i></a>
           <a href="#" target="_blank" aria-label="Instagram" class="hover:opacity-80"><i data-lucide="instagram"></i></a>
@@ -364,30 +376,30 @@
       </div>
       <form class="reveal card p-6 space-y-4" aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch.');">
         <div>
-          <label for="name" class="text-sm text-gray-300">Name</label>
-          <input id="name" type="text" required class="mt-1 w-full rounded-lg bg-black border border-white border-opacity-10 px-3 py-2 ring-gold" />
+          <label for="name" class="text-sm text-gray-600">Name</label>
+          <input id="name" type="text" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 ring-gold" />
         </div>
         <div>
-          <label for="email" class="text-sm text-gray-300">Email</label>
-          <input id="email" type="email" required class="mt-1 w-full rounded-lg bg-black border border-white border-opacity-10 px-3 py-2 ring-gold" />
+          <label for="email" class="text-sm text-gray-600">Email</label>
+          <input id="email" type="email" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 ring-gold" />
         </div>
         <div>
-          <label for="message" class="text-sm text-gray-300">Message</label>
-          <textarea id="message" rows="4" required class="mt-1 w-full rounded-lg bg-black border border-white border-opacity-10 px-3 py-2 ring-gold"></textarea>
+          <label for="message" class="text-sm text-gray-600">Message</label>
+          <textarea id="message" rows="4" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 ring-gold"></textarea>
         </div>
-        <button type="submit" class="btn bg-gold text-black w-full justify-center">Send</button>
+        <button type="submit" class="btn btn-gold w-full justify-center">Send</button>
       </form>
     </div>
   </section>
 
-  <footer class="border-t border-white border-opacity-10">
-  <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-    <p>&copy; 2025 United Spirits. All rights reserved.</p>
-    <p>Crafted with care — Hong Kong</p>
-    <!-- Add Logo -->
-    <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Supply Chain Co., Limited" class="w-32 h-auto" />
-  </div>
-</footer>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+      <p>&copy; 2025 United Spirits. All rights reserved.</p>
+      <p>Crafted with care — Hong Kong</p>
+      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Supply Chain Co., Limited" class="h-8 w-auto" />
+    </div>
+  </footer>
 
   <!-- ===================== CHATBOT ===================== -->
   <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
@@ -434,7 +446,7 @@
         key: 'honney conti vsop',
         name: 'Honney Conti VSOP',
         notes: 'Vibrant • fruity • smooth • perfect for gifting',
-        image: 'uunited-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png'
+        image: 'united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png'
       },
       {
         key: 'sunny land',
@@ -522,10 +534,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
