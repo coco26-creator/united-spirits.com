@@ -172,16 +172,14 @@
 <body class="bg-black text-gray-100 selection:bg-yellow-200 selection:text-black">
 
   <!-- ===================== NAVBAR ===================== -->
-<header class="sticky top-0 z-40 bg-white border-b border-gray-200">
+<header class="sticky top-0 z-40 bg-black bg-opacity-70 backdrop-filter backdrop-blur border-b border-white border-opacity-10">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     
     <!-- Logo + Brand -->
     <a href="#" class="flex items-center gap-3 focus:ring-gold">
       <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
-      <span class="font-lux text-xl tracking-wide text-black">
-  United <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Spirits</span>
-</span>
-
+      <span class="font-lux text-xl tracking-wide">United <span class="gold">Spirits</span></span>
+    </a>
 
     <!-- Navigation -->
     <nav class="hidden md:flex items-center gap-8 text-sm">
@@ -195,14 +193,7 @@
 </header>
 
 <!-- ===================== HERO ===================== -->
-<section class="relative h-screen bg-cover bg-center" style="background-image: url('./assets/hero.jpg');">
-  <div class="absolute inset-0 bg-gradient-to-r from-purple-600/70 to-pink-600/70"></div>
-  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-    <h1 class="text-6xl font-bold mb-6">United Spirits</h1>
-    <p class="text-xl mb-8 max-w-2xl">Crafting excellence across whisky, brandy, rum, tequila, and beyond.</p>
-    <a href="#collections" class="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg">Explore Collections</a>
-  </div>
-</section>
+<section class="relative min-h-screen flex items-center" aria-label="Hero Section">
   <!-- Background Image -->
   <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
 
@@ -270,9 +261,7 @@
   <section id="collections" class="relative py-20 border-t border-white border-opacity-10">
     <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0b] to-black"></div>
     <div class="relative max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-6 text-black">
-  Our <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Collections</span>
-</h2>
+      <h2 class="font-lux text-3xl sm:text-4xl mb-10">Our <span class="gold">Collections</span></h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Premium Wines -->
         <article class="card reveal overflow-hidden group">
@@ -386,7 +375,8 @@
           <label for="message" class="text-sm text-gray-300">Message</label>
           <textarea id="message" rows="4" required class="mt-1 w-full rounded-lg bg-black border border-white border-opacity-10 px-3 py-2 ring-gold"></textarea>
         </div>
-        <button type="submit" <a href="..." class="px-4 py-2 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold shadow-md">WhatsApp</a>
+        <button type="submit" class="btn bg-gold text-black w-full justify-center">Send</button>
+      </form>
     </div>
   </section>
 
