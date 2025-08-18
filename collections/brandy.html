@@ -6,51 +6,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
   <style>
-    :root { --gold:#c9a227; }
-    body { font-family: Inter, sans-serif; background: #000; color: #e5e7eb; }
-    .font-lux { font-family: "Playfair Display", serif; }
-    .gold { color: var(--gold); }
-    .card { border-radius: 1rem; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(4px); }
+    :root { --gold: #c9a227; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #e5e7eb;
+    }
+    .font-lux {
+      font-family: "Playfair Display", serif;
+    }
+    .gold {
+      color: var(--gold);
+    }
+    .card {
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: var(--gold);
+      color: #111;
+    }
+    .btn:hover {
+      background: #d4b02c;
+    }
   </style>
 </head>
 <body class="min-h-screen">
-  <header class="p-6 border-b border-gray-800">
-    <a href="/united-spirits.com/" class="font-lux text-xl gold hover:underline">
-      ← Back to Home
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="px-6 py-6 border-b border-gray-800">
+    <a href="/united-spirits.com/" class="font-lux text-xl gold hover:underline flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Home
     </a>
   </header>
 
+  <!-- ===================== MAIN CONTENT ===================== -->
   <section class="py-20 px-6 max-w-7xl mx-auto">
-    <h1 class="font-lux text-4xl mb-6">Brandy Selection</h1>
-    <p class="text-gray-300 mb-10">Exquisite brandies from top distilleries — perfect for special occasions.</p>
+    <h1 class="font-lux text-4xl sm:text-5xl mb-6 text-white">Brandy Selection</h1>
+    <p class="text-gray-300 mb-12 max-w-3xl">
+      Exquisite brandies from top distilleries — aged to perfection, rich in aroma, and ideal for gifting or savoring on special occasions.
+    </p>
 
+    <!-- Brandy Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Honney Conti VSOP -->
-      <article class="card p-6 text-center">
-        <img src="assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP Colorful" class="w-full h-56 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
-        <p class="text-gray-300 mt-2"> Vibrant, smooth brandy with fruity notes — perfect for gifting and celebrations..</p>
+      <!-- 1. Honney Conti VSOP Colorful -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP Colorful" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti VSOP</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Vibrant, smooth brandy with fruity notes — perfect for gifting.
+          </p>
+        </div>
       </article>
 
-      <!-- Honney Conti Xo Royal -->
-      <article class="card p-6 text-center">
-        <img src="assets/img/products/product-honney-conti-xo-royal.png" alt="Honney Conti Xo Royal" class="w-full h-56 object-cover rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold">Honney Conti Xo Royal</h3>
-        <p class="text-gray-300 mt-2">Rich, honeyed layers with toasted oak and dried fruit complexity.</p>
+      <!-- 2. Honney Conti XO Royal -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Royal</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Rich, honeyed layers with toasted oak and dried fruit complexity.
+          </p>
+        </div>
       </article>
+
+      <!-- 3. Honney Conti XO -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo.png" alt="Honney Conti XO" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Aged to perfection — deep amber color with notes of vanilla and spice.
+          </p>
+        </div>
+      </article>
+
+      <!-- 4. Honney Conti XO Black -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-black.png" alt="Honney Conti XO Black" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Black</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Bold and intense with dark fruit, chocolate, and a long finish.
+          </p>
+        </div>
+      </article>
+
+      <!-- 5. Honney Conti XO Gold -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-gold.png" alt="Honney Conti XO Gold" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Gold</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Luxurious gold bottle with a silky, floral, and honeyed profile.
+          </p>
+        </div>
+      </article>
+
+      <!-- 6. Honney Conti XO Red -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-red.png" alt="Honney Conti XO Red" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Red</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Deep red bottle, bold character — ripe plum, cinnamon, and caramel.
+          </p>
+        </div>
+      </article>
+
+      <!-- 7. Honney Conti XO Blue -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-blue.png" alt="Honney Conti XO Blue" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Blue</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Crisp and elegant with citrus zest, oak, and a smooth finish.
+          </p>
+        </div>
+      </article>
+
+      <!-- 8. Honney Conti XO Green -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-green.png" alt="Honney Conti XO Green" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Green</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Fresh and aromatic — green apple, pear, and a hint of spice.
+          </p>
+        </div>
+      </article>
+
+      <!-- 9. Honney Conti XO Purple -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-purple.png" alt="Honney Conti XO Purple" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Purple</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Royal purple bottle — rich, velvety, with dark cherry and vanilla.
+          </p>
+        </div>
+      </article>
+
+      <!-- 10. Honney Conti XO Silver -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-silver.png" alt="Honney Conti XO Silver" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Silver</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Elegant silver bottle — crisp, clean, with a refined finish.
+          </p>
+        </div>
+      </article>
+
+      <!-- 11. Honney Conti XO Platinum -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-platinum.png" alt="Honney Conti XO Platinum" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Platinum</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Premium platinum edition — complex, luxurious, and rare.
+          </p>
+        </div>
+      </article>
+
+      <!-- 12. Honney Conti XO Limited Edition -->
+      <article class="card hover:shadow-lg transition-shadow">
+        <img src="/united-spirits.com/assets/img/products/product-honney-conti-xo-limited-edition.png" alt="Honney Conti XO Limited Edition" class="w-full h-56 object-cover rounded-t-lg" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Honney Conti XO Limited</h3>
+          <p class="text-gray-300 mt-2 text-sm leading-relaxed">
+            Exclusive release — handcrafted, limited production, exceptional quality.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <a href="https://wa.me/85269346630" class="btn">
+        <i data-lucide="message-circle"></i> Inquire Now
+      </a>
     </div>
   </section>
 
-  <footer class="py-8 text-center text-gray-400 text-sm">
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="py-8 text-center text-gray-400 text-sm border-t border-gray-800">
     &copy; 2025 United Spirits. All rights reserved.
-  <!-- Add Logo -->
-    <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Supply Chain Co., Limited" class="w-32 h-auto" />
-  <script>lucide.createIcons();</script>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
-
-
-
-
