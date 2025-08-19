@@ -272,23 +272,31 @@
   </header>
 
   <!-- ===================== HERO ===================== -->
-  <section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-    <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover opacity-20" />
-    <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
-      <div class="max-w-3xl reveal on">
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
-          Crafting <span class="accent-text">Spirits</span> of Distinction
-        </h1>
-        <p class="mt-5 text-gray-600 text-lg max-w-xl mx-auto">
-          Premium wines, whiskeys, and brandies curated for discerning palates. Born from heritage, perfected for today.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#collections" class="btn btn-purple">Explore Collection</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
+<section class="relative min-h-screen flex items-center" aria-label="Hero Section">
+  <!-- Background Image - Now CLEAR and visible -->
+  <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" 
+       alt="Barrel room ambiance" 
+       class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- Overlay Gradient (Optional) - Lighter for clarity -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-white/30 to-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
+    <div class="max-w-3xl reveal on">
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight text-white">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
+      </h1>
+      <p class="mt-5 text-gray-300 text-lg max-w-xl mx-auto">
+        Premium wines, whiskeys, and brandies curated for discerning palates. Born from heritage, perfected for today.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="#collections" class="btn btn-purple">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   
   <!-- ===================== ABOUT ===================== -->
 <section id="about" class="section">
@@ -377,47 +385,98 @@
 </section>
 
   <!-- ===================== FEATURED BOTTLES ===================== -->
-  <section id="featured" class="section">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Featured Bottles</span></h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="reveal text-center">
-          <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita" class="w-full h-56 object-contain rounded-lg mx-auto mb-4" />
-          <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
-          <p class="text-gray-600 text-sm">Silky texture with ripe berry notes and a long finish.</p>
-        </div>
-        <div class="reveal text-center">
-          <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-56 object-contain rounded-lg mx-auto mb-4" />
-          <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
-          <p class="text-gray-600 text-sm">Vibrant, smooth, with fruity notes — perfect for gifting.</p>
-        </div>
-        <div class="reveal text-center">
-          <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt" class="w-full h-56 object-contain rounded-lg mx-auto mb-4" />
-          <h3 class="text-xl font-semibold">Sunny Land Single Malt</h3>
-          <p class="text-gray-600 text-sm">25-year-old Scotch — smoky, oaky, and deeply complex.</p>
-        </div>
+<section id="featured" class="section">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Featured Bottles</span></h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Corazón de Lolita -->
+      <div class="reveal text-center cursor-pointer group" 
+           data-img="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" 
+           data-title="Corazón de Lolita White Wine">
+        <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" 
+             alt="Corazón de Lolita" 
+             loading="lazy"
+             class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-xl font-semibold">Corazón de Lolita</h3>
+        <p class="text-gray-600 text-sm">Silky texture with ripe berry notes and a long finish.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== EVENTS & VISITS ===================== -->
-  <section id="events" class="section bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Events & Visits</span></h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <article class="card p-6">
-          <h3 class="text-xl font-semibold">Private Facility Tour – Hong Kong Warehouse</h3>
-          <p class="text-gray-600 mt-2">Hosted VIP clients and distributors for an exclusive behind-the-scenes look at our temperature-controlled storage and rare bottle archive.</p>
-          <div class="text-sm text-gray-500 mt-2">Date: May 10, 2025</div>
-        </article>
-        <article class="card p-6">
-          <h3 class="text-xl font-semibold">Asia Spirits Conference – Shanghai</h3>
-          <p class="text-gray-600 mt-2">Represented United Spirits at the annual trade event, connecting with producers and importers across Asia.</p>
-          <div class="text-sm text-gray-500 mt-2">Date: March 18–20, 2025</div>
-        </article>
+      <!-- Honney Conti VSOP -->
+      <div class="reveal text-center cursor-pointer group" 
+           data-img="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" 
+           data-title="Honney Conti VSOP">
+        <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" 
+             alt="Honney Conti VSOP" 
+             loading="lazy"
+             class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
+        <p class="text-gray-600 text-sm">Vibrant, smooth, with fruity notes — perfect for gifting.</p>
+      </div>
+
+      <!-- Sunny Land Single Malt -->
+      <div class="reveal text-center cursor-pointer group" 
+           data-img="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" 
+           data-title="Sunny Land Single Malt Scotch">
+        <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" 
+             alt="Sunny Land Single Malt" 
+             loading="lazy"
+             class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-xl font-semibold">Sunny Land Single Malt</h3>
+        <p class="text-gray-600 text-sm">25-year-old Scotch — smoky, oaky, and deeply complex.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+ <!-- ===================== EVENTS & VISITS ===================== -->
+<section id="events" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Events & Visits</span></h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- 1. Brand Collaborations -->
+      <article class="card p-6 reveal">
+        <img src="united-spirits-site/assets/img/brand-collaborations.jpg" alt="Brand Collaborations" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Brand Collaborations</h3>
+        <p class="text-gray-600 mt-2">Exclusive partnerships with luxury brands and designers to launch limited-edition bottles and experiences.</p>
+        <div class="text-sm text-gray-500 mt-2">Recent: Corazón de Lolita x Artisan Design Studio</div>
+      </article>
+
+      <!-- 2. Diplomatic Visits -->
+      <article class="card p-6 reveal">
+        <img src="united-spirits-site/assets/img/diplomatic-visits.jpg" alt="Diplomatic Visits" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Diplomatic Visits</h3>
+        <p class="text-gray-600 mt-2">Hosting embassy officials and cultural delegations for curated tastings and cultural exchange events.</p>
+        <div class="text-sm text-gray-500 mt-2">Latest: French Consul Visit – May 2025</div>
+      </article>
+
+      <!-- 3. Education Events -->
+      <article class="card p-6 reveal">
+        <img src="united-spirits-site/assets/img/education-events.jpg" alt="Education Events" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Education Events</h3>
+        <p class="text-gray-600 mt-2">Masterclasses and seminars on wine & spirit appreciation, led by sommeliers and master blenders.</p>
+        <div class="text-sm text-gray-500 mt-2">Upcoming: "The Art of Aged Whiskey" – June 15, 2025</div>
+      </article>
+
+      <!-- 4. Facility Tours -->
+      <article class="card p-6 reveal">
+        <img src="united-spirits-site/assets/img/facility-tours.jpg" alt="Facility Tours" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Facility Tours</h3>
+        <p class="text-gray-600 mt-2">Private access to our temperature-controlled warehouse and rare bottle archive for VIP clients and partners.</p>
+        <div class="text-sm text-gray-500 mt-2">Location: Hong Kong • By Appointment</div>
+      </article>
+
+      <!-- 5. Meetings -->
+      <article class="card p-6 reveal">
+        <img src="united-spirits-site/assets/img/meetings.jpg" alt="Client & Supplier Meetings" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Client & Supplier Meetings</h3>
+        <p class="text-gray-600 mt-2">One-on-one consultations with distributors, importers, and producers to curate bespoke collections.</p>
+        <div class="text-sm text-gray-500 mt-2">Recent: Honney Conti Distillery Cask Selection</div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="section">
@@ -587,3 +646,4 @@
   </script>
 </body>
 </html>
+
