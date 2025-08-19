@@ -13,250 +13,179 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <meta name="theme-color" content="#0a0a0a" />
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
 
   <style>
     :root {
-      --gold: #c9a227;
-      --coal: #0a0a0a;
-      --ink: #111827;
-    }
-    html, body {
-      scroll-behavior: smooth;
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+      --light: #f9f9f9;
+      --dark: #000000;
     }
     body {
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: var(--dark);
     }
-    .font-lux {
-      font-family: "Playfair Display", Georgia, serif;
+    .font-serif {
+      font-family: "Playfair Display", serif;
     }
-    .gold {
-      color: var(--gold);
-    }
-    .bg-gold {
-      background: var(--gold);
-    }
-    .ring-gold:focus {
-      outline: 0;
-      box-shadow: 0 0 0 3px rgba(201, 162, 39, .35);
-    }
-    .card {
-      border-radius: 1rem;
-      background: rgba(255, 255, 255, .02);
-      border: 1px solid rgba(255, 255, 255, .08);
-      backdrop-filter: blur(4px);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.3);
-    }
-    .elevate {
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: .5rem;
-      padding: .8rem 1.1rem;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
       border-radius: 999px;
       font-weight: 600;
-      border: 1px solid rgba(255, 255, 255, .15);
-      transition: transform .2s ease, box-shadow .2s ease;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    .btn-purple {
+      background: var(--purple);
+      color: white;
     }
-    /* Chat widget */
-    .fab {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: var(--gold);
-      color: #111;
-      border: none;
-      border-radius: 999px;
-      padding: 14px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
-      z-index: 60;
+    .btn-pink {
+      background: var(--pink);
+      color: white;
     }
-    .chat {
-      position: fixed;
-      right: 20px;
-      bottom: 90px;
-      width: 340px;
-      max-height: 520px;
-      display: flex;
-      flex-direction: column;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #0e0e0e;
-      color: #e5e7eb;
-      border: 1px solid rgba(255, 255, 255, .12);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
-      z-index: 60;
+    .btn-outline {
+      border: 1px solid var(--dark);
+      color: var(--dark);
     }
-    .chat.hidden {
-      display: none;
+    .btn-outline:hover {
+      background: var(--dark);
+      color: white;
     }
-    .chat-header {
-      background: #111;
-      color: #f9fafb;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .card {
+      border-radius: 1rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
-    .chat-body {
-      padding: 12px;
-      flex: 1;
-      overflow-y: auto;
-      font-size: 14px;
-      background: #0b0b0b;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
     }
-    .chat-input {
-      display: flex;
-      border-top: 1px solid rgba(255, 255, 255, .1);
+    .section {
+      padding: 6rem 0;
     }
-    .chat-input input {
-      flex: 1;
-      padding: 12px;
-      border: 0;
-      outline: 0;
-      background: #0e0e0e;
-      color: #e5e7eb;
-    }
-    .icon-btn {
-      background: transparent;
-      border: 0;
-      color: #f3f4f6;
-      padding: 10px;
-      cursor: pointer;
-    }
-    .msg {
-      margin: 8px 0;
-      padding: 10px 12px;
-      border-radius: 12px;
-      line-height: 1.35;
-    }
-    .msg.system {
-      font-style: italic;
-      color: #9ca3af;
-      background: transparent;
-      padding: 0;
-    }
-    .msg.user {
-      background: #101826;
-      text-align: right;
-    }
-    .msg.assistant {
-      background: #17130a;
-      border: 1px solid rgba(201, 162, 39, .25);
-    }
-    /* Reveal animations */
     .reveal {
       opacity: 0;
-      transform: translateY(12px);
-      transition: opacity .6s ease, transform .6s ease;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
     .reveal.on {
       opacity: 1;
       transform: none;
     }
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 2rem 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    /* Chatbot */
+    .chat-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--pink);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+      cursor: pointer;
+      z-index: 50;
+    }
+    .chat-window {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 340px;
+      max-height: 500px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      z-index: 50;
+      display: none;
+    }
+    .chat-header {
+      background: var(--purple);
+      color: white;
+      padding: 12px 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chat-body {
+      padding: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 14px;
+      color: #333;
+    }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #e0e0e0;
+    }
+    .chat-input input {
+      flex: 1;
+      background: #f9f9f9;
+      border: 0;
+      outline: 0;
+      padding: 12px;
+      color: #111;
+    }
+    .chat-input button {
+      background: var(--pink);
+      color: white;
+      border: 0;
+      padding: 0 12px;
+      cursor: pointer;
+    }
   </style>
 </head>
-<body class="bg-black text-gray-100 selection:bg-yellow-200 selection:text-black">
+<body class="text-black">
 
-  <!-- ===================== NAVBAR ===================== -->
-<header class="sticky top-0 z-40 bg-black bg-opacity-70 backdrop-filter backdrop-blur border-b border-white border-opacity-10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
-    <!-- Logo + Brand -->
-    <a href="#" class="flex items-center gap-3 focus:ring-gold">
-      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
-      <span class="font-lux text-xl tracking-wide">United <span class="gold">Spirits</span></span>
-    </a>
-
-    <!-- Navigation -->
-    <nav class="hidden md:flex items-center gap-8 text-sm">
-      <a href="#about" class="hover:text-gray-300">About</a>
-      <a href="#collections" class="hover:text-gray-300">Collections</a>
-      <a href="#featured" class="hover:text-gray-300">Featured</a>
-      <a href="#contact" class="hover:text-gray-300">Contact</a>
-      <a href="https://wa.me/85269346630" class="btn bg-gold text-black hover:bg-yellow-500">WhatsApp</a>
+  <!-- ===================== HEADER ===================== -->
+  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+    <a href="index.html" class="font-serif text-2xl"><span class="accent-text">United Spirits</span></a>
+    <nav class="hidden md:flex gap-8">
+      <a href="#collections" class="hover:text-purple-600">Collections</a>
+      <a href="#featured" class="hover:text-purple-600">Featured</a>
+      <a href="#events" class="hover:text-purple-600">Events</a>
+      <a href="#contact" class="hover:text-purple-600">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-  <!-- Background Image -->
-  <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
-
-  <!-- Overlay Gradient -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black"></div>
-
-  <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full">
-    <div class="max-w-3xl reveal on text-center">
-      
-      <!-- Title -->
-      <h1 class="font-lux text-4xl sm:text-5xl md:text-6xl leading-tight text-white">
-        Crafting <span class="gold">Spirits</span> of Distinction
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="mt-5 text-gray-300 text-lg max-w-xl mx-auto">
-        Premium wines, whiskeys, and brandies curated for discerning palates. Born from heritage, perfected for today.
+  <!-- ===================== HERO ===================== -->
+  <section class="relative section text-center" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <img src="assets/img/products/product-hero-fallback.jpg" alt="Barrel Room" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="relative max-w-4xl mx-auto px-6 text-center z-10">
+      <h1 class="text-5xl md:text-7xl font-serif mb-6">Crafting <span class="accent-text">Spirits</span> of Distinction</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Premium wines, whiskeys, and brandies curated for discerning palates.
       </p>
-
-      <!-- Buttons -->
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="#collections" class="btn bg-gold text-black">Explore Our Collection</a>
-        <a href="#featured" class="btn text-white">View Featured Bottles</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="relative py-20">
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-[#0b0b0b]"></div>
-    <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div class="reveal">
-        <h2 class="font-lux text-3xl sm:text-4xl">Heritage Meets <span class="gold">Excellence</span></h2>
-        <p class="mt-5 text-gray-300">
-          United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
-          We partner with producers who share our obsession for quality, craft, and character.
-        </p>
-        <div class="mt-6 grid grid-cols-3 gap-4 text-center">
-          <div class="card p-5">
-            <div class="text-2xl font-semibold gold">50+</div>
-            <div class="text-xs text-gray-400 mt-1">Labels</div>
-          </div>
-          <div class="card p-5">
-            <div class="text-2xl font-semibold gold">12</div>
-            <div class="text-xs text-gray-400 mt-1">Origins</div>
-          </div>
-          <div class="card p-5">
-            <div class="text-2xl font-semibold gold">A+</div>
-            <div class="text-xs text-gray-400 mt-1">Cellar Rated</div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="relative elevate rounded-2xl overflow-hidden">
-          <img src="united-spirits-site/assets/img/products/product-wine.jpg" alt="Pouring red wine into a glass" class="w-full h-full object-cover" />
-          <div class="absolute inset-0 ring-1 ring-white ring-opacity-10"></div>
-        </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#collections" class="btn btn-purple">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
   </section>
-
   <!-- ===================== COLLECTIONS ===================== -->
   <section id="collections" class="relative py-20 border-t border-white border-opacity-10">
     <div class="absolute inset-0 bg-gradient-to-b from-[#0b0b0b] to-black"></div>
@@ -522,6 +451,7 @@
   </script>
 </body>
 </html>
+
 
 
 
