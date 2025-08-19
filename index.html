@@ -20,26 +20,12 @@
       --pink: #ec4899;
       --purple: #a855f7;
       --accent: linear-gradient(135deg, #ec4899, #a855f7);
-      --light: #f9f9f9;
-      --dark: #000000;
     }
 
     body {
       font-family: 'Inter', sans-serif;
       background: white;
-      color: var(--dark);
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    body.dark {
-      background: #0a0a0a;
-      color: #e5e7eb;
-    }
-
-    body.dark footer,
-    body.dark .text-gray-600,
-    body.dark .text-gray-500 {
-      color: #9ca3af;
+      color: #000;
     }
 
     .font-serif {
@@ -51,11 +37,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-    }
-
-    body.dark .accent-text {
-      background: var(--accent);
-      -webkit-text-fill-color: transparent;
     }
 
     .btn {
@@ -79,22 +60,12 @@
     }
 
     .btn-outline {
-      border: 1px solid var(--dark);
-      color: var(--dark);
-    }
-
-    body.dark .btn-outline {
-      border: 1px solid #e5e7eb;
-      color: #e5e7eb;
-    }
-
-    body.dark .btn-outline:hover {
-      background: #e5e7eb;
-      color: #0a0a0a;
+      border: 1px solid #000;
+      color: #000;
     }
 
     .btn-outline:hover {
-      background: var(--dark);
+      background: #000;
       color: white;
     }
 
@@ -103,23 +74,12 @@
       background: white;
       border: 1px solid #e0e0e0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      backdrop-filter: blur(4px);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    body.dark .card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #e5e7eb;
     }
 
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-    }
-
-    body.dark .card:hover {
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
     .section {
@@ -213,12 +173,6 @@
       z-index: 60;
     }
 
-    body.dark .chat {
-      background: #0e0e0e;
-      color: #e5e7eb;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
     .chat.hidden {
       display: none;
     }
@@ -240,17 +194,9 @@
       background: #f9f9f9;
     }
 
-    body.dark .chat-body {
-      background: #0b0b0b;
-    }
-
     .chat-input {
       display: flex;
       border-top: 1px solid #e0e0e0;
-    }
-
-    body.dark .chat-input {
-      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .chat-input input {
@@ -260,11 +206,6 @@
       outline: 0;
       background: #f9f9f9;
       color: #111;
-    }
-
-    body.dark .chat-input input {
-      background: #0e0e0e;
-      color: #e5e7eb;
     }
 
     .icon-btn {
@@ -290,23 +231,14 @@
     }
 
     .msg.user {
-      background: var(--dark);
+      background: #000;
       color: white;
       text-align: right;
-    }
-
-    body.dark .msg.user {
-      background: #101826;
     }
 
     .msg.assistant {
       background: #f3e8ff;
       border: 1px solid #ddd;
-    }
-
-    body.dark .msg.assistant {
-      background: #17130a;
-      border: 1px solid rgba(201, 162, 39, 0.25);
     }
 
     footer {
@@ -315,16 +247,12 @@
       color: #6b7280;
       font-size: 0.9rem;
     }
-
-    body.dark footer {
-      border-color: #333;
-    }
   </style>
 </head>
 <body class="text-black">
 
   <!-- ===================== HEADER ===================== -->
-  <header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200 dark:bg-black dark:border-gray-700">
+  <header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
         <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
@@ -336,9 +264,6 @@
         <a href="#events" class="hover:text-purple-600" data-i18n="menu.events">Events</a>
         <a href="#contact" class="hover:text-purple-600" data-i18n="menu.contact">Contact</a>
         <a href="https://wa.me/85269346630" class="btn btn-pink" data-i18n="menu.whatsapp">WhatsApp</a>
-        <button id="darkModeToggle" class="ml-4 text-gray-600 dark:text-gray-300" aria-label="Toggle Dark Mode">
-          <i data-lucide="moon" class="w-5 h-5"></i>
-        </button>
         <!-- Language Switcher -->
         <div class="flex items-center gap-2 ml-4">
           <button class="lang-btn text-sm hover:text-purple-600" data-lang="en">EN</button>
@@ -353,8 +278,13 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-    <img src="united-spirits-site/assets/img/products/product-hero-fallback.jpg" alt="Barrel room ambiance" class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Hero Image -->
+    <img src="https://images.unsplash.com/photo-1585105591553-7b8935f0c513?auto=format&fit=crop&w=1920&q=80" 
+         alt="Premium spirits collection with wine, whiskey, and brandy" 
+         class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-black/30"></div>
+    <!-- Content -->
     <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
       <div class="max-w-3xl reveal on">
         <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight text-white" data-i18n="hero.title">
@@ -376,7 +306,7 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div class="reveal">
         <h2 class="text-3xl sm:text-4xl font-serif" data-i18n="about.title">Heritage Meets <span class="accent-text">Excellence</span></h2>
-        <p class="mt-5 text-gray-600 dark:text-gray-300" data-i18n="about.text">
+        <p class="mt-5 text-gray-600" data-i18n="about.text">
           United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
           We partner with producers who share our obsession for quality, craft, and character.
         </p>
@@ -563,10 +493,10 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <div class="reveal">
         <h2 class="text-3xl sm:text-4xl font-serif" data-i18n="contact.title">Let’s Talk <span class="accent-text">Cellar-worthy</span> Bottles</h2>
-        <p class="mt-4 text-gray-600 dark:text-gray-300" data-i18n="contact.text">
+        <p class="mt-4 text-gray-600" data-i18n="contact.text">
           We’ll help you find the perfect bottle for any occasion.
         </p>
-        <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-300">
+        <ul class="mt-6 space-y-3 text-gray-600">
           <li class="flex items-center gap-3"><i data-lucide="phone"></i> <a href="https://wa.me/85269346630" class="hover:underline">+852 6934 6630</a></li>
           <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> <span data-i18n="contact.location">Hong Kong • Worldwide</span></li>
           <li class="flex items-center gap-3"><i data-lucide="clock"></i> <span data-i18n="contact.hours">Mon–Sat, 10:00–19:00 HKT</span></li>
@@ -581,15 +511,15 @@
       </div>
       <form class="reveal card p-6 space-y-4" onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch.');">
         <div>
-          <label for="name" class="text-sm text-gray-600 dark:text-gray-300" data-i18n="form.name">Name</label>
+          <label for="name" class="text-sm text-gray-600" data-i18n="form.name">Name</label>
           <input id="name" type="text" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" />
         </div>
         <div>
-          <label for="email" class="text-sm text-gray-600 dark:text-gray-300" data-i18n="form.email">Email</label>
+          <label for="email" class="text-sm text-gray-600" data-i18n="form.email">Email</label>
           <input id="email" type="email" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" />
         </div>
         <div>
-          <label for="message" class="text-sm text-gray-600 dark:text-gray-300" data-i18n="form.message">Message</label>
+          <label for="message" class="text-sm text-gray-600" data-i18n="form.message">Message</label>
           <textarea id="message" rows="4" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none"></textarea>
         </div>
         <button type="submit" class="btn btn-purple w-full" data-i18n="form.send">Send Message</button>
@@ -770,27 +700,6 @@
     // Initialize Lucide
     lucide.createIcons();
 
-    // Dark Mode
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const icon = darkModeToggle.querySelector('i');
-
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark');
-      icon.setAttribute('data-lucide', 'sun');
-    }
-
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        localStorage.setItem('darkMode', 'enabled');
-        icon.setAttribute('data-lucide', 'sun');
-      } else {
-        localStorage.setItem('darkMode', 'disabled');
-        icon.setAttribute('data-lucide', 'moon');
-      }
-      lucide.createIcons();
-    });
-
     // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
@@ -868,4 +777,3 @@
   </script>
 </body>
 </html>
-
