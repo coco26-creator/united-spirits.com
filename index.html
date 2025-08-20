@@ -284,12 +284,37 @@
   </header>
 
   <!-- ===================== HERO ===================== -->
-<section class="relative min-h-screen flex items-center" aria-label="Hero Section">
-  <!-- Background Image -->
-  <img src="united-spirits-site/assets/img/Mountain.mp4" alt="Empereur Cognac" class="absolute inset-0 w-full h-full object-cover" style="max-width: 1440px; max-height: 810px;" />
+<section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
+  <!-- Background Video -->
+  <video 
+    class="absolute inset-0 w-full h-full object-cover" 
+    style="min-width: 100%; min-height: 100%; z-index: -1;" 
+    autoplay 
+    loop 
+    muted 
+    playsinline>
+    <source src="united-spirits-site/assets/img/Mountain.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Dark Overlay for future readability (optional, currently subtle) -->
+  <!-- Dark Overlay for Readability -->
   <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
+    <div class="max-w-3xl mx-auto reveal on">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
+      </h1>
+      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+        Premium wines, whiskeys, and brandies curated for discerning palates.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+      </div>
+    </div>
+  </div>
 </section>
   <!-- ===================== ABOUT ===================== -->
 <section id="about" class="section bg-white">
@@ -841,6 +866,7 @@
   </script>
 </body>
 </html>
+
 
 
 
