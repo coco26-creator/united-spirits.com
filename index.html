@@ -281,63 +281,55 @@
   <!-- Background Image -->
   <img src="united-spirits-site/assets/img/empereur.jpg" alt="Empereur Cognac" class="absolute inset-0 w-full h-full object-cover" />
 
-  <!-- Dark Overlay for Readability -->
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
-    <div class="max-w-3xl mx-auto reveal on">
-      <!-- Main Headline -->
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+  <!-- Dark Overlay for future readability (optional, currently subtle) -->
+  <div class="absolute inset-0 bg-black/40"></div>
+</section>
+  
+  <!-- ===================== ABOUT ===================== -->
+<section id="about" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Text Content -->
+    <div class="reveal">
+      <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
         Crafting <span class="accent-text">Spirits</span> of Distinction
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
-        Premium wines, whiskeys, and brandies curated for discerning palates.
+      </h2>
+      <p class="text-lg text-gray-700 mb-8">
+        United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
+        We partner with producers who share our obsession for quality, craft, and character.
       </p>
 
       <!-- Buttons -->
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-wrap gap-4 mb-8">
         <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+        <a href="#contact" class="btn btn-outline border-black text-black hover:bg-black hover:text-white">Get in Touch</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="card p-5">
+          <div class="text-2xl font-semibold accent-text">50+</div>
+          <div class="text-xs text-gray-500 mt-1">Labels</div>
+        </div>
+        <div class="card p-5">
+          <div class="text-2xl font-semibold accent-text">12</div>
+          <div class="text-xs text-gray-500 mt-1">Origins</div>
+        </div>
+        <div class="card p-5">
+          <div class="text-2xl font-semibold accent-text">A+</div>
+          <div class="text-xs text-gray-500 mt-1">Cellar Rated</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="reveal">
+      <div class="relative rounded-2xl overflow-hidden shadow-lg">
+        <img src="united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" alt="Pouring red wine into a glass" class="w-full h-auto object-cover" />
+        <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
       </div>
     </div>
   </div>
 </section>
-
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="section">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div class="reveal">
-        <h2 class="text-3xl sm:text-4xl font-serif" data-i18n="about.title">Heritage Meets <span class="accent-text">Excellence</span></h2>
-        <p class="mt-5 text-gray-600" data-i18n="about.text">
-          United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
-          We partner with producers who share our obsession for quality, craft, and character.
-        </p>
-        <div class="mt-6 grid grid-cols-3 gap-4 text-center">
-          <div class="card p-5">
-            <div class="text-2xl font-semibold accent-text">50+</div>
-            <div class="text-xs text-gray-500 mt-1" data-i18n="about.labels">Labels</div>
-          </div>
-          <div class="card p-5">
-            <div class="text-2xl font-semibold accent-text">12</div>
-            <div class="text-xs text-gray-500 mt-1" data-i18n="about.origins">Origins</div>
-          </div>
-          <div class="card p-5">
-            <div class="text-2xl font-semibold accent-text">A+</div>
-            <div class="text-xs text-gray-500 mt-1" data-i18n="about.rating">Cellar Rated</div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="relative rounded-2xl overflow-hidden shadow-lg">
-          <img src="united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" alt="Pouring red wine into a glass" class="w-full h-auto object-cover" />
-          <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===================== COLLECTIONS ===================== -->
 <section id="collections" class="section bg-gray-50">
@@ -778,6 +770,7 @@
   </script>
 </body>
 </html>
+
 
 
 
