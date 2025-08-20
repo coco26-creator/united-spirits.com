@@ -521,13 +521,75 @@
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-      <p>&copy; 2025 United Spirits. All rights reserved.</p>
-      <p data-i18n="footer.crafted">Crafted with care — Hong Kong</p>
-      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Supply Chain Co., Limited" class="w-32 h-auto" />
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <!-- Company Info -->
+    <div>
+      <a href="#" class="flex items-center gap-3 mb-6">
+        <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
+        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+      </a>
+      <p class="text-gray-400 mb-6">
+        Premium wines, whiskeys, and brandies curated for discerning palates. 
+        We partner with elite producers to bring you the finest spirits from around the world.
+      </p>
+      <div class="flex gap-4">
+        <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <i data-lucide="X" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank" aria-label="TikTok" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <i data-lucide="tiktok" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+      </div>
     </div>
-  </footer>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+      <ul class="space-y-3">
+        <li><a href="#collections" class="text-gray-400 hover:text-pink-400 transition-colors">Collections</a></li>
+        <li><a href="#featured" class="text-gray-400 hover:text-pink-400 transition-colors">Featured Bottles</a></li>
+        <li><a href="#events" class="text-gray-400 hover:text-pink-400 transition-colors">Events & Visits</a></li>
+        <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contact Us</a></li>
+        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-pink-400 transition-colors flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> Privacy Policy</a></li>
+        <li><a href="terms-of-use.html" class="text-gray-400 hover:text-pink-400 transition-colors flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4"></i> Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+      <ul class="space-y-3 text-gray-400">
+        <li class="flex items-center gap-3">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <a href="https://wa.me/85269346630" class="hover:text-pink-400 transition-colors">+852 6934 6630</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+          Hong Kong • Worldwide
+        </li>
+        <li class="flex items-center gap-3">
+          <i data-lucide="clock" class="w-5 h-5"></i>
+          Mon–Fri, 08:30–17:00 HKT
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
+    <p>&copy; 2025 United Spirits. All rights reserved. Crafted with care — Hong Kong</p>
+  </div>
+</footer>
 
   <!-- ===================== LIGHTBOX ===================== -->
   <div id="lightbox" class="hidden">
@@ -770,8 +832,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
