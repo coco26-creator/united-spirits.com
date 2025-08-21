@@ -95,74 +95,79 @@
 </head>
 <body class="text-black">
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- ===================== HEADER + HERO ===================== -->
+<section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section with Header">
+  <!-- Background Video -->
+  <video 
+    id="heroVideo" 
+    class="absolute inset-0 w-full h-full object-cover" 
+    style="min-width: 100%; min-height: 100%; z-index: -1;" 
+    autoplay 
+    loop 
+    muted 
+    playsinline>
+    <source src="united-spirits-site/assets/img/Mountain.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay for Readability -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Transparent Header -->
+  <div class="absolute top-0 left-0 w-full z-40">
+    <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
         <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
-        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+        <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
-        <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
-        <a href="index.html#events" class="hover:text-purple-600">Events</a>
-        <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
+        <a href="index.html#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+        <a href="index.html#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+        <a href="index.html#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
+        <a href="index.html#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
         <a href="https://wa.me/85269346630" class="btn btn-pink">WhatsApp</a>
       </nav>
 
       <!-- Mobile Menu Button -->
       <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
+        <i data-lucide="menu" class="w-6 h-6 text-white"></i>
       </button>
-    </div>
+    </header>
 
     <!-- Mobile Menu -->
-    <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 flex flex-col gap-4">
-      <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
-      <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
-      <a href="index.html#events" class="hover:text-purple-600">Events</a>
-      <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
+    <nav id="mobileMenu" class="hidden md:hidden bg-black/80 text-white border-t border-gray-700 px-6 py-4 flex flex-col gap-4">
+      <a href="index.html#collections" class="hover:text-pink-300">Collections</a>
+      <a href="index.html#featured" class="hover:text-pink-300">Featured</a>
+      <a href="index.html#events" class="hover:text-pink-300">Events</a>
+      <a href="index.html#contact" class="hover:text-pink-300">Contact</a>
       <a href="https://wa.me/85269346630" class="btn btn-pink w-fit">WhatsApp</a>
     </nav>
-  </header>
+  </div>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
-    <!-- Background Video -->
-    <video 
-      id="heroVideo" 
-      class="absolute inset-0 w-full h-full object-cover" 
-      style="min-width: 100%; min-height: 100%; z-index: -1;" 
-      autoplay 
-      loop 
-      muted 
-      playsinline>
-      <source src="united-spirits-site/assets/img/Mountain.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Dark Overlay for Readability -->
-    <div class="absolute inset-0 bg-black/40"></div>
-
-    <!-- Content -->
-    <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
-      <div class="max-w-3xl mx-auto reveal on">
-        <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
-          Crafting <span class="accent-text">Spirits</span> of Distinction
-        </h1>
-        <p class="text-xl text-white mb-8 max-w-xl mx-auto">
-          Premium wines, whiskeys, and brandies curated for discerning palates.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#collections" class="btn btn-purple">Explore Collection</a>
-          <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
-        </div>
+  <!-- Hero Content -->
+  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
+    <div class="max-w-3xl mx-auto reveal on">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
+      </h1>
+      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+        Premium wines, whiskeys, and brandies curated for discerning palates.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Play/Pause Toggle -->
+  <button id="videoToggle" class="absolute bottom-6 right-6 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-20" aria-label="Toggle video playback">
+    <i data-lucide="pause" class="w-5 h-5"></i>
+  </button>
+</section>
 
   <!-- ===================== ABOUT ===================== -->
   <section id="about" class="section bg-white">
@@ -584,6 +589,7 @@
   </script>
 </body>
 </html>
+
 
 
 
