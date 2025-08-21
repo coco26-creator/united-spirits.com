@@ -130,236 +130,223 @@
   </header>
 
   <!-- ===================== HERO ===================== -->
-<section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
-  <!-- Background Video -->
-  <video 
-    class="absolute inset-0 w-full h-full object-cover" 
-    style="min-width: 100%; min-height: 100%; z-index: -1;" 
-    autoplay 
-    loop 
-    muted 
-    playsinline>
-    <source src="united-spirits-site/assets/img/Mountain.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
+    <!-- Background Video -->
+    <video 
+      id="heroVideo" 
+      class="absolute inset-0 w-full h-full object-cover" 
+      style="min-width: 100%; min-height: 100%; z-index: -1;" 
+      autoplay 
+      loop 
+      muted 
+      playsinline>
+      <source src="united-spirits-site/assets/img/Mountain.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Dark Overlay for Readability -->
-  <div class="absolute inset-0 bg-black/40"></div>
+    <!-- Dark Overlay for Readability -->
+    <div class="absolute inset-0 bg-black/40"></div>
 
-  <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
-    <div class="max-w-3xl mx-auto reveal on">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
-        Crafting <span class="accent-text">Spirits</span> of Distinction
-      </h1>
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
-        Premium wines, whiskeys, and brandies curated for discerning palates.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center">
+      <div class="max-w-3xl mx-auto reveal on">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+          Crafting <span class="accent-text">Spirits</span> of Distinction
+        </h1>
+        <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+          Premium wines, whiskeys, and brandies curated for discerning palates.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#collections" class="btn btn-purple">Explore Collection</a>
+          <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Play/Pause Toggle -->
+    <button id="videoToggle" class="absolute bottom-6 right-6 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-colors z-20" aria-label="Toggle video playback">
+      <i data-lucide="pause" class="w-5 h-5"></i>
+    </button>
+  </section>
+
   <!-- ===================== ABOUT ===================== -->
-<section id="about" class="section bg-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-    <!-- Text Content -->
-    <div class="reveal">
-      <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
-        Crafting <span class="accent-text">Spirits</span> of Distinction
-      </h2>
-      <p class="text-lg text-gray-700 mb-8">
-        United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
-        We partner with producers who share our obsession for quality, craft, and character.
-      </p>
+  <section id="about" class="section bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="reveal">
+        <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
+          Crafting <span class="accent-text">Spirits</span> of Distinction
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world.
+          We partner with producers who share our obsession for quality, craft, and character.
+        </p>
 
-      <!-- Buttons -->
-      <div class="flex flex-wrap gap-4 mb-8">
-        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-black text-black hover:bg-black hover:text-white">Get in Touch</a>
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
+          <a href="#contact" class="btn btn-outline border-black text-black hover:bg-black hover:text-white">Get in Touch</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">50+</div>
+            <div class="text-xs text-gray-500 mt-1">Labels</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">12</div>
+            <div class="text-xs text-gray-500 mt-1">Origins</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">A+</div>
+            <div class="text-xs text-gray-500 mt-1">Cellar Rated</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Stats -->
-      <div class="grid grid-cols-3 gap-4 text-center">
-        <div class="card p-5">
-          <div class="text-2xl font-semibold accent-text">50+</div>
-          <div class="text-xs text-gray-500 mt-1">Labels</div>
-        </div>
-        <div class="card p-5">
-          <div class="text-2xl font-semibold accent-text">12</div>
-          <div class="text-xs text-gray-500 mt-1">Origins</div>
-        </div>
-        <div class="card p-5">
-          <div class="text-2xl font-semibold accent-text">A+</div>
-          <div class="text-xs text-gray-500 mt-1">Cellar Rated</div>
+      <!-- Image -->
+      <div class="reveal">
+        <div class="relative rounded-2xl overflow-hidden shadow-lg">
+          <img src="united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" alt="Pouring red wine into a glass" class="w-full h-auto object-cover" />
+          <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
         </div>
       </div>
     </div>
-
-    <!-- Image -->
-    <div class="reveal">
-      <div class="relative rounded-2xl overflow-hidden shadow-lg">
-        <img src="united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" alt="Pouring red wine into a glass" class="w-full h-auto object-cover" />
-        <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===================== COLLECTIONS ===================== -->
-<section id="collections" class="section bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-serif"><span class="accent-text">Our Collections</span></h2>
-      <p class="text-gray-600 mt-4 max-w-xl mx-auto">
-        Discover our curated selection of world-class spirits.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Premium Wines - Anderra Reserva Cabernet Sauvignon Blanc 2023 -->
-<article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" data-title="Anderra Reserva Cabernet Sauvignon Blanc 2023">
-  <img src="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" 
-       alt="Premium Wines - Anderra Reserva Cabernet Sauvignon Blanc" 
-       loading="lazy"
-       class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-  <h3 class="text-xl font-semibold">Premium Wines</h3>
-  <p class="text-gray-600 mt-2 text-sm">Rare white Cabernet — crisp, aromatic, and exquisitely balanced.</p>
-  <a href="collections/wines.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
-</article>
+  <section id="collections" class="section bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-serif"><span class="accent-text">Our Collections</span></h2>
+        <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+          Discover our curated selection of world-class spirits.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Premium Wines -->
+        <article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" data-title="Anderra Reserva Cabernet Sauvignon Blanc 2023">
+          <img src="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" alt="Premium Wines" loading="lazy" class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Premium Wines</h3>
+          <p class="text-gray-600 mt-2 text-sm">Rare white Cabernet — crisp, aromatic, and exquisitely balanced.</p>
+          <a href="collections/wines.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
+        </article>
 
-      <!-- Whiskey Collection - Caribbean Blaze Bourbon 18 -->
-      <article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" data-title="Caribbean Blaze Bourbon 18">
-        <img src="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" 
-             alt="Whiskey Collection - Caribbean Blaze Bourbon 18" 
-             loading="lazy"
-             class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Whiskey Collection</h3>
-        <p class="text-gray-600 mt-2 text-sm">Rich, spicy bourbon — aged 18 years for deep oak and caramel notes.</p>
-        <a href="collections/whiskey.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
-      </article>
+        <!-- Whiskey Collection -->
+        <article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" data-title="Caribbean Blaze Bourbon 18">
+          <img src="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" alt="Whiskey Collection" loading="lazy" class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Whiskey Collection</h3>
+          <p class="text-gray-600 mt-2 text-sm">Rich, spicy bourbon — aged 18 years for deep oak and caramel notes.</p>
+          <a href="collections/whiskey.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
+        </article>
 
-      <!-- Brandy Selection - Honney Conti XO Royal -->
-      <article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" data-title="Honney Conti XO Royal">
-        <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" 
-             alt="Brandy Selection - Honney Conti XO Royal" 
-             loading="lazy"
-             class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Brandy Selection</h3>
-        <p class="text-gray-600 mt-2 text-sm">XO Cognac — luxurious, complex, and perfect for gifting.</p>
-        <a href="collections/brandy.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
-      </article>
+        <!-- Brandy Selection -->
+        <article class="card reveal p-6 text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" data-title="Honney Conti XO Royal">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" alt="Brandy Selection" loading="lazy" class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Brandy Selection</h3>
+          <p class="text-gray-600 mt-2 text-sm">XO Cognac — luxurious, complex, and perfect for gifting.</p>
+          <a href="collections/brandy.html" class="btn btn-outline mt-4 inline-block w-auto px-4 py-2 text-sm">Explore</a>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===================== FEATURED BOTTLES ===================== -->
-<section id="featured" class="section">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Featured Bottles</span></h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Corazón de Lolita White Wine -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" data-title="Corazón de Lolita White Wine">
-        <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Corazón de Lolita White Wine</h3>
-        <p class="text-gray-600 text-sm">Silky texture with ripe berry notes and a long finish.</p>
-      </div>
-
-      <!-- Honney Conti VSOP -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" data-title="Honney Conti VSOP">
-        <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
-        <p class="text-gray-600 text-sm">Vibrant, smooth, with fruity notes — perfect for gifting.</p>
-      </div>
-
-      <!-- Sunny Land Single Malt -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" data-title="Sunny Land Single Malt Scotch">
-        <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Sunny Land Single Malt</h3>
-        <p class="text-gray-600 text-sm">25-year-old Scotch — smoky, oaky, and deeply complex.</p>
-      </div>
-
-      <!-- Lolita RTD Spain -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-lolita-rtd-spain.jpg" data-title="Lolita RTD Spain">
-        <img src="united-spirits-site/assets/img/products/product-lolita-rtd-spain.jpg" alt="Lolita RTD Spain" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Lolita RTD Spain</h3>
-        <p class="text-gray-600 text-sm">Ready-to-Drink red wine — convenient, refreshing, and authentic.</p>
-      </div>
-
-      <!-- Royal Honney Conti Soda Water -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-royal-honney-conti-soda-water.png" data-title="Royal Honney Conti Soda Water">
-        <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-soda-water.png" alt="Royal Honney Conti Soda Water" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Royal Honney Conti Soda Water</h3>
-        <p class="text-gray-600 text-sm">Premium mixer — crisp, clean, perfect for highballs and cocktails.</p>
-      </div>
-
-      <!-- Royal Honney Conti Mixologist Spirits -->
-      <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-royal-honney-conti-mixologist-spirits.jpg" data-title="Royal Honney Conti Mixologist Spirits">
-        <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-mixologist-spirits.jpg" alt="Royal Honney Conti Mixologist Spirits" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
-        <h3 class="text-xl font-semibold">Royal Honney Conti Mixologist Spirits</h3>
-        <p class="text-gray-600 text-sm">Craft spirits for cocktail enthusiasts — bold, balanced, bar-ready.</p>
+  <section id="featured" class="section">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Featured Bottles</span></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" data-title="Corazón de Lolita White Wine">
+          <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Corazón de Lolita White Wine</h3>
+          <p class="text-gray-600 text-sm">Silky texture with ripe berry notes and a long finish.</p>
+        </div>
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" data-title="Honney Conti VSOP">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
+          <p class="text-gray-600 text-sm">Vibrant, smooth, with fruity notes — perfect for gifting.</p>
+        </div>
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" data-title="Sunny Land Single Malt Scotch">
+          <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Sunny Land Single Malt</h3>
+          <p class="text-gray-600 text-sm">25-year-old Scotch — smoky, oaky, and deeply complex.</p>
+        </div>
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-lolita-rtd-spain.jpg" data-title="Lolita RTD Spain">
+          <img src="united-spirits-site/assets/img/products/product-lolita-rtd-spain.jpg" alt="Lolita RTD Spain" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Lolita RTD Spain</h3>
+          <p class="text-gray-600 text-sm">Ready-to-Drink red wine — convenient, refreshing, and authentic.</p>
+        </div>
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-royal-honney-conti-soda-water.png" data-title="Royal Honney Conti Soda Water">
+          <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-soda-water.png" alt="Royal Honney Conti Soda Water" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Royal Honney Conti Soda Water</h3>
+          <p class="text-gray-600 text-sm">Premium mixer — crisp, clean, perfect for highballs and cocktails.</p>
+        </div>
+        <div class="reveal text-center cursor-pointer group" data-img="united-spirits-site/assets/img/products/product-royal-honney-conti-mixologist-spirits.jpg" data-title="Royal Honney Conti Mixologist Spirits">
+          <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-mixologist-spirits.jpg" alt="Royal Honney Conti Mixologist Spirits" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Royal Honney Conti Mixologist Spirits</h3>
+          <p class="text-gray-600 text-sm">Craft spirits for cocktail enthusiasts — bold, balanced, bar-ready.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-  
+  </section>
+
   <!-- ===================== EVENTS & VISITS ===================== -->
   <section id="events" class="section bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-12"><span class="accent-text" data-i18n="events.title">Events & Visits</span></h2>
+      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-12"><span class="accent-text">Events & Visits</span></h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
           <img src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Brand Collaborations" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.brand">Brand Collaborations</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.brand.desc">
+          <h3 class="text-xl font-semibold">Brand Collaborations</h3>
+          <p class="text-gray-600 mt-2 text-sm">
             Exclusive partnerships with luxury brands and designers.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">May 10</div>
         </article>
         <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
           <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="Diplomatic Visits" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.diplomatic">Diplomatic Visits</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.diplomatic.desc">
+          <h3 class="text-xl font-semibold">Diplomatic Visits</h3>
+          <p class="text-gray-600 mt-2 text-sm">
             Hosting embassy officials and cultural delegations.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">May 5</div>
         </article>
         <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
           <img src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="Education Events" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.education">Education Events</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.education.desc">
+          <h3 class="text-xl font-semibold">Education Events</h3>
+          <p class="text-gray-600 mt-2 text-sm">
             Masterclasses and seminars on spirit appreciation.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">June 15</div>
         </article>
         <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
           <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" alt="Facility Tours" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.facility">Facility Tours</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.facility.desc">
+          <h3 class="text-xl font-semibold">Facility Tours</h3>
+          <p class="text-gray-600 mt-2 text-sm">
             Private access to our temperature-controlled warehouse.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">By Appointment</div>
         </article>
-          <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300">
           <img src="united-spirits-site/assets/img/team-visit-2025.jpg" alt="Global Partnerships" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.Global">Global Partnerships</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.Global.desc">
-            Connecting world-class producers, distributors, and collectors through exclusive collaborations and experiences..
+          <h3 class="text-xl font-semibold">Global Partnerships</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Connecting world-class producers, distributors, and collectors through exclusive collaborations and experiences.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">Ongoing</div>
         </article>
         <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 col-span-1 md:col-span-2 lg:col-span-1">
           <img src="united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg" alt="Client & Supplier Meetings" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold" data-i18n="events.meetings">Client & Supplier Meetings</h3>
-          <p class="text-gray-600 mt-2 text-sm" data-i18n="events.meetings.desc">
+          <h3 class="text-xl font-semibold">Client & Supplier Meetings</h3>
+          <p class="text-gray-600 mt-2 text-sm">
             One-on-one consultations with distributors and producers.
           </p>
           <div class="text-xs text-purple-600 font-medium mt-3">Ongoing</div>
         </article>
       </div>
       <div class="text-center mt-10">
-        <a href="events.html" class="btn btn-purple inline-flex items-center gap-2" data-i18n="btn.view-events">
+        <a href="events.html" class="btn btn-purple inline-flex items-center gap-2">
           <i data-lucide="calendar"></i> View All Events
         </a>
       </div>
@@ -370,129 +357,131 @@
   <section id="contact" class="section">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
       <div class="reveal">
-        <h2 class="text-3xl sm:text-4xl font-serif" data-i18n="contact.title">Let’s Talk <span class="accent-text">Cellar-worthy</span> Bottles</h2>
-        <p class="mt-4 text-gray-600" data-i18n="contact.text">
+        <h2 class="text-3xl sm:text-4xl font-serif">Let’s Talk <span class="accent-text">Cellar-worthy</span> Bottles</h2>
+        <p class="mt-4 text-gray-600">
           We’ll help you find the perfect bottle for any occasion.
         </p>
         <ul class="mt-6 space-y-3 text-gray-600">
           <li class="flex items-center gap-3"><i data-lucide="phone"></i> <a href="https://wa.me/85269346630" class="hover:underline">+852 6934 6630</a></li>
-          <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> <span data-i18n="contact.location">Hong Kong • Worldwide</span></li>
-          <li class="flex items-center gap-3"><i data-lucide="clock"></i> <span data-i18n="contact.hours">Mon–Sat, 10:00–19:00 HKT</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> Hong Kong • Worldwide</li>
+          <li class="flex items-center gap-3"><i data-lucide="clock"></i> Mon–fri, 08:30–17:00 HKT</li>
         </ul>
         <div class="mt-6 flex gap-4">
           <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="hover:opacity-80"><i data-lucide="X"></i></a>
-          <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank" aria-label="TikTok" class="hover:opacity-80"><i data-lucide="music"></i></a>
+          <a href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" target="_blank" aria-label="TikTok" class="hover:opacity-80"><i data-lucide="tiktok"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="hover:opacity-80"><i data-lucide="facebook"></i></a>
-          <a href="#" target="_blank" aria-label="Instagram" class="hover:opacity-80"><i data-lucide="instagram"></i></a>
-          <a href="#" target="_blank" aria-label="YouTube" class="hover:opacity-80"><i data-lucide="youtube"></i></a>
+          <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="hover:opacity-80"><i data-lucide="instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="hover:opacity-80"><i data-lucide="youtube"></i></a>
         </div>
       </div>
       <form class="reveal card p-6 space-y-4" onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch.');">
         <div>
-          <label for="name" class="text-sm text-gray-600" data-i18n="form.name">Name</label>
+          <label for="name" class="text-sm text-gray-600">Name</label>
           <input id="name" type="text" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" />
         </div>
         <div>
-          <label for="email" class="text-sm text-gray-600" data-i18n="form.email">Email</label>
+          <label for="email" class="text-sm text-gray-600">Email</label>
           <input id="email" type="email" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" />
         </div>
         <div>
-          <label for="message" class="text-sm text-gray-600" data-i18n="form.message">Message</label>
+          <label for="message" class="text-sm text-gray-600">Message</label>
           <textarea id="message" rows="4" required class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none"></textarea>
         </div>
-        <button type="submit" class="btn btn-purple w-full" data-i18n="form.send">Send Message</button>
+        <button type="submit" class="btn btn-purple w-full">Send Message</button>
       </form>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-<footer class="bg-gray-900 text-white py-12">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-    <!-- Company Info -->
-    <div>
-      <a href="#" class="flex items-center gap-3 mb-6">
-  <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto invert dark:invert-5" />
-  <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
-</a>
-      <p class="text-gray-400 mb-6">
-        Premium wines, whiskeys, and brandies curated for discerning palates. 
-        We partner with elite producers to bring you the finest spirits from around the world.
-      </p>
-      <div class="flex gap-4">
-        <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-          <i data-lucide="X" class="w-5 h-5"></i>
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      <!-- Company Info -->
+      <div>
+        <a href="#" class="flex items-center gap-3 mb-6">
+          <img src="united-spirits-site/assets/img/logo-white.png" alt="United Spirits Logo" class="h-10 w-auto glow-logo" />
+          <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
         </a>
-            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-          <i data-lucide="youtube" class="w-5 h-5"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-          <i data-lucide="facebook" class="w-5 h-5"></i>
-        </a>
-        <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-          <i data-lucide="instagram" class="w-5 h-5"></i>
-        </a>
+        <p class="text-gray-400 mb-6">
+          Premium wines, whiskeys, and brandies curated for discerning palates. 
+          We partner with elite producers to bring you the finest spirits from around the world.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <i data-lucide="X" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <i data-lucide="youtube" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+          <li><a href="#collections" class="text-gray-400 hover:text-pink-400 transition-colors">Collections</a></li>
+          <li><a href="#featured" class="text-gray-400 hover:text-pink-400 transition-colors">Featured Bottles</a></li>
+          <li><a href="#events" class="text-gray-400 hover:text-pink-400 transition-colors">Events & Visits</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            <a href="https://wa.me/85269346630" class="hover:text-pink-400 transition-colors">+852 6934 6630</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+            Hong Kong • Worldwide
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+            Mon–fri, 08:30–17:00 HKT
+          </li>
+        </ul>
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-      <ul class="space-y-3">
-        <li><a href="#collections" class="text-gray-400 hover:text-pink-400 transition-colors">Collections</a></li>
-        <li><a href="#featured" class="text-gray-400 hover:text-pink-400 transition-colors">Featured Bottles</a></li>
-        <li><a href="#events" class="text-gray-400 hover:text-pink-400 transition-colors">Events & Visits</a></li>
-        <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contact Us</a></li>
-      </ul>
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
+      <p>&copy; 2025 United Spirits. All rights reserved. Crafted with care — Hong Kong</p>
     </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
-      <ul class="space-y-3 text-gray-400">
-        <li class="flex items-center gap-3">
-          <i data-lucide="phone" class="w-5 h-5"></i>
-          <a href="https://wa.me/85269346630" class="hover:text-pink-400 transition-colors">+852 6934 6630</a>
-        </li>
-        <li class="flex items-center gap-3">
-          <i data-lucide="map-pin" class="w-5 h-5"></i>
-          Hong Kong • Worldwide
-        </li>
-        <li class="flex items-center gap-3">
-          <i data-lucide="clock" class="w-5 h-5"></i>
-          Mon–fri, 08:30–17:00 HKT
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
-    <p>&copy; 2025 United Spirits. All rights reserved. Crafted with care — Hong Kong</p>
-  </div>
-</footer>
+  </footer>
 
   <!-- ===================== LIGHTBOX ===================== -->
-  <div id="lightbox" class="hidden">
-    <button id="close-lightbox">&times;</button>
-    <img id="lightbox-img" src="" alt="" />
+  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+    <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl font-bold z-10">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
   </div>
 
   <!-- ===================== CHATBOT ===================== -->
-  <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle" class="w-6 h-6"></i></button>
-  <div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
-    <div class="chat-header">
+  <button id="chat-open" class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" aria-label="Open chat">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </button>
+  <div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-full bg-white rounded-lg shadow-xl z-50 overflow-hidden" role="dialog">
+    <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <i data-lucide="wine" class="w-5 h-5"></i>
-        <span id="chat-title" class="font-semibold">Spirit Assistant</span>
+        <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
+        <span class="font-semibold">Spirit Assistant</span>
       </div>
-      <button id="chat-close" class="icon-btn"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <button id="chat-close" class="p-1 hover:bg-gray-200 rounded"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
-    <div id="chat-messages" class="chat-body">
-      <div class="msg system">Welcome! Ask about wines, whiskeys, or brandies.</div>
+    <div id="chat-messages" class="chat-body p-4 h-64 overflow-y-auto bg-gray-50">
+      <div class="msg system text-sm text-gray-600">Welcome! Ask about wines, whiskeys, or brandies.</div>
     </div>
-    <div class="chat-input">
-      <input id="chat-text" type="text" placeholder="Ask me anything..." />
-      <button id="chat-send" class="icon-btn"><i data-lucide="send" class="w-5 h-5"></i></button>
+    <div class="chat-input p-3 border-t flex gap-2">
+      <input id="chat-text" type="text" placeholder="Ask me anything..." class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200" />
+      <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700"><i data-lucide="send" class="w-5 h-5"></i></button>
     </div>
   </div>
 
@@ -557,184 +546,6 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox.click();
     });
-  </script>
-</body>
-</html>
-    // Translations
-    const translations = {
-      en: {
-        "hero.title": "Crafting <span class='accent-text'>Spirits</span> of Distinction",
-        "hero.subtitle": "Premium wines, whiskeys, and brandies curated for discerning palates.",
-        "hero.explore": "Explore Collection",
-        "hero.contact": "Get in Touch",
-        "collections.title": "Our Collections",
-        "collections.desc": "Discover our curated selection of world-class spirits.",
-        "collections.wines": "Premium Wines",
-        "collections.wines.desc": "From bold reds to crisp whites — sourced from elite vineyards.",
-        "collections.whiskey": "Whiskey Collection",
-        "collections.whiskey.desc": "Aged single malts and rare blends for the true connoisseur.",
-        "collections.brandy": "Brandy Selection",
-        "collections.brandy.desc": "Luxurious brandies, perfect for gifting or savoring.",
-        "btn.explore": "Explore",
-        "featured.title": "Featured Bottles",
-        "featured.corazon": "Silky texture with ripe berry notes and a long finish.",
-        "featured.honney": "Vibrant, smooth, with fruity notes — perfect for gifting.",
-        "featured.sunny": "25-year-old Scotch — smoky, oaky, and deeply complex.",
-        "events.title": "Events & Visits",
-        "events.brand": "Brand Collaborations",
-        "events.brand.desc": "Exclusive partnerships with luxury brands and designers.",
-        "events.diplomatic": "Diplomatic Visits",
-        "events.diplomatic.desc": "Hosting embassy officials and cultural delegations.",
-        "events.education": "Education Events",
-        "events.education.desc": "Masterclasses and seminars on spirit appreciation.",
-        "events.facility": "Facility Tours",
-        "events.facility.desc": "Private access to our temperature-controlled warehouse.",
-        "events.meetings": "Client & Supplier Meetings",
-        "events.meetings.desc": "One-on-one consultations with distributors and producers.",
-        "btn.view-events": "View All Events",
-        "contact.title": "Let’s Talk Cellar-worthy Bottles",
-        "contact.text": "We’ll help you find the perfect bottle for any occasion.",
-        "contact.location": "Hong Kong • Worldwide",
-        "contact.hours": "Mon–Sat, 10:00–19:00 HKT",
-        "form.name": "Name",
-        "form.email": "Email",
-        "form.message": "Message",
-        "form.send": "Send Message",
-        "footer.crafted": "Crafted with care — Hong Kong",
-        "menu.collections": "Collections",
-        "menu.featured": "Featured",
-        "menu.events": "Events",
-        "menu.contact": "Contact",
-        "menu.whatsapp": "WhatsApp",
-        "about.title": "Heritage Meets Excellence",
-        "about.text": "United Spirits curates award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world. We partner with producers who share our obsession for quality, craft, and character.",
-        "about.labels": "Labels",
-        "about.origins": "Origins",
-        "about.rating": "Cellar Rated"
-      },
-      zh: {
-        "hero.title": "酿造<span class='accent-text'>卓越佳酿</span>",
-        "hero.subtitle": "为鉴赏家精选的优质葡萄酒、威士忌和白兰地。",
-        "hero.explore": "探索系列",
-        "hero.contact": "联系我们",
-        "collections.title": "我们的系列",
-        "collections.desc": "探索我们精心挑选的世界级烈酒。",
-        "btn.explore": "探索",
-        "featured.title": "精选酒款",
-        "btn.view-events": "查看所有活动",
-        "contact.title": "让我们谈谈珍藏佳酿",
-        "contact.text": "我们将帮助您找到适合任何场合的完美酒款。",
-        "contact.location": "香港 • 全球",
-        "contact.hours": "周一至周六，10:00–19:00 HKT",
-        "form.name": "姓名",
-        "form.email": "邮箱",
-        "form.message": "留言",
-        "form.send": "发送消息",
-        "footer.crafted": "精心打造 — 香港",
-        "menu.collections": "系列",
-        "menu.featured": "精选",
-        "menu.events": "活动",
-        "menu.contact": "联系",
-        "menu.whatsapp": "WhatsApp",
-        "about.title": "传承与卓越",
-        "about.text": "United Spirits 从世界各地历史悠久的酒庄精选获奖葡萄酒、精致威士忌和非凡白兰地。我们与追求品质、工艺和个性的生产商合作。"
-      },
-      fr: {
-        "hero.title": "Créer des <span class='accent-text'>Spiritueux d'Exception</span>",
-        "hero.subtitle": "Vins, whiskys et brandys de luxe sélectionnés pour les palais les plus exigeants.",
-        "hero.explore": "Découvrir la Collection",
-        "hero.contact": "Contactez-nous",
-        "collections.title": "Nos Collections",
-        "collections.desc": "Découvrez notre sélection de spiritueux d'exception.",
-        "btn.explore": "Explorer",
-        "featured.title": "Bouteilles Phares",
-        "btn.view-events": "Voir Tous les Événements",
-        "contact.title": "Parlons des Bouteilles de Cave",
-        "contact.text": "Nous vous aiderons à trouver la bouteille parfaite pour chaque occasion.",
-        "contact.location": "Hong Kong • Monde entier",
-        "contact.hours": "Lun–Sam, 10:00–19:00 HKT",
-        "form.name": "Nom",
-        "form.email": "Email",
-        "form.message": "Message",
-        "form.send": "Envoyer",
-        "footer.crafted": "Créé avec soin — Hong Kong",
-        "menu.collections": "Collections",
-        "menu.featured": "Phares",
-        "menu.events": "Événements",
-        "menu.contact": "Contact",
-        "menu.whatsapp": "WhatsApp"
-      }
-    };
-
-    // Set language
-    function setLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = translations[lang][key];
-          } else {
-            el.innerHTML = translations[lang][key];
-          }
-        }
-      });
-      lucide.createIcons();
-    }
-
-    // Language Switcher
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
-        localStorage.setItem('language', lang);
-      });
-    });
-
-    // Load saved language
-    const savedLang = localStorage.getItem('language') || 'en';
-    setLanguage(savedLang);
-
-    // Initialize Lucide
-    lucide.createIcons();
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('on');
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    document.querySelectorAll('[data-img]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A' || e.target.closest('a')) return;
-        lightboxImg.src = el.getAttribute('data-img');
-        lightboxImg.alt = el.getAttribute('data-title');
-        lightbox.classList.remove('hidden');
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox.click();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox.click();
-    });
 
     // Chatbot
     const chatOpen = document.getElementById('chat-open');
@@ -744,12 +555,17 @@
     const chatInput = document.getElementById('chat-text');
     const chatSend = document.getElementById('chat-send');
 
-    chatOpen.addEventListener('click', () => chatBox.classList.remove('hidden'));
-    chatClose.addEventListener('click', () => chatBox.classList.add('hidden'));
+    chatOpen.addEventListener('click', () => {
+      chatBox.classList.remove('hidden');
+    });
+
+    chatClose.addEventListener('click', () => {
+      chatBox.classList.add('hidden');
+    });
 
     function addMessage(role, text) {
       const div = document.createElement('div');
-      div.className = `msg ${role}`;
+      div.className = `msg ${role} text-sm mb-2`;
       div.innerHTML = `<div>${text}</div>`;
       chatMsgs.appendChild(div);
       chatMsgs.scrollTop = chatMsgs.scrollHeight;
@@ -761,10 +577,15 @@
       addMessage('user', val);
       chatInput.value = '';
       setTimeout(() => {
-        if (val.includes('wine')) addMessage('assistant', 'Try <strong>Corazón de Lolita</strong> — silky, berry-driven, long finish.');
-        else if (val.includes('whiskey')) addMessage('assistant', 'Our <strong>Sunny Land 25-year-old</strong> is smoky, oaky, and deeply complex.');
-        else if (val.includes('brandy')) addMessage('assistant', '<strong>Honney Conti VSOP</strong> is vibrant and perfect for gifting.');
-        else addMessage('assistant', 'I can help with tasting notes or availability. Ask about a specific bottle.');
+        if (val.toLowerCase().includes('wine')) {
+          addMessage('assistant', '<strong>Corazón de Lolita</strong> — silky, berry-driven, long finish.');
+        } else if (val.toLowerCase().includes('whiskey')) {
+          addMessage('assistant', '<strong>Sunny Land 25-year-old</strong> is smoky, oaky, and deeply complex.');
+        } else if (val.toLowerCase().includes('brandy')) {
+          addMessage('assistant', '<strong>Honney Conti VSOP</strong> is vibrant and perfect for gifting.');
+        } else {
+          addMessage('assistant', 'I can help with tasting notes or availability. Ask about a specific bottle.');
+        }
       }, 200);
     });
 
@@ -774,20 +595,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
