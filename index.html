@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>United Spirits — Crafting Spirits of Distinction</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>United Spirits — Premium Wines, Whiskeys & Brandies</title>
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -59,16 +59,6 @@
       color: white;
     }
 
-    .btn-outline {
-      border: 1px solid #000;
-      color: #000;
-    }
-
-    .btn-outline:hover {
-      background: #000;
-      color: white;
-    }
-
     .card {
       border-radius: 1rem;
       background: white;
@@ -86,211 +76,58 @@
       padding: 6rem 0;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Animated Glow for Logo */
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px rgba(236, 72, 153, 0.3); }
+      50% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 30px rgba(168, 85, 247, 0.4); }
+      100% { box-shadow: 0 0 10px rgba(236, 72, 153, 0.3); }
     }
 
-    .reveal.on {
-      opacity: 1;
-      transform: none;
+    .glow-logo:hover,
+    .glow-logo:focus {
+      animation: glowPulse 2s infinite;
     }
 
-    /* Lightbox */
-    #lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 50;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    #lightbox.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    #lightbox-img {
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    }
-
-    /* Mobile: Adjust Hero Image Size */
-@media (max-width: 768px) {
-  .hero-image {
-    max-height: 60vh;
-    object-fit: cover;
-  }
-}
-    #close-lightbox {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    /* Chatbot */
-    .fab {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: var(--pink);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      padding: 14px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
-      z-index: 60;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .chat {
-      position: fixed;
-      right: 20px;
-      bottom: 90px;
-      width: 340px;
-      max-height: 520px;
-      display: flex;
-      flex-direction: column;
-      border-radius: 16px;
-      overflow: hidden;
-      background: white;
-      color: #333;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-      z-index: 60;
-    }
-
-    .chat.hidden {
-      display: none;
-    }
-
-    .chat-header {
-      background: var(--purple);
-      color: white;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .chat-body {
-      padding: 12px;
-      flex: 1;
-      overflow-y: auto;
-      font-size: 14px;
-      background: #f9f9f9;
-    }
-
-    .chat-input {
-      display: flex;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .chat-input input {
-      flex: 1;
-      padding: 12px;
-      border: 0;
-      outline: 0;
-      background: #f9f9f9;
-      color: #111;
-    }
-
-    .icon-btn {
-      background: transparent;
-      border: 0;
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    .msg {
-      margin: 8px 0;
-      padding: 10px 12px;
-      border-radius: 12px;
-      line-height: 1.35;
-    }
-
-    .msg.system {
-      font-style: italic;
-      color: #6b7280;
-      background: transparent;
-      padding: 0;
-    }
-
-    .msg.user {
-      background: #000;
-      color: white;
-      text-align: right;
-    }
-
-    .msg.assistant {
-      background: #f3e8ff;
-      border: 1px solid #ddd;
-    }
-
-    footer {
-      border-top: 1px solid #e0e0e0;
-      padding: 2rem 0;
-      color: #6b7280;
-      font-size: 0.9rem;
+    .glow-logo:hover {
+      animation-play-state: paused;
     }
   </style>
 </head>
 <body class="text-black">
 
   <!-- ===================== HEADER ===================== -->
-<header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
-      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
-    </a>
+  <header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="united-spirits-site/assets/img/logo.png" alt="United Spirits Logo" class="h-10 w-auto">
+        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+      </a>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-8">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
+        <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
+        <a href="index.html#events" class="hover:text-purple-600">Events</a>
+        <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-pink">WhatsApp</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 flex flex-col gap-4">
       <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
       <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
       <a href="index.html#events" class="hover:text-purple-600">Events</a>
       <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
-      <a href="https://wa.me/85269346630" class="btn btn-pink">WhatsApp</a>
+      <a href="https://wa.me/85269346630" class="btn btn-pink w-fit">WhatsApp</a>
     </nav>
-
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
-      <i data-lucide="menu" class="w-6 h-6"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 flex flex-col gap-4">
-    <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
-    <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
-    <a href="index.html#events" class="hover:text-purple-600">Events</a>
-    <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
-    <a href="https://wa.me/85269346630" class="btn btn-pink w-fit">WhatsApp</a>
-  </nav>
-</header>
+  </header>
 
   <!-- ===================== HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
@@ -875,6 +712,7 @@
   </script>
 </body>
 </html>
+
 
 
 
