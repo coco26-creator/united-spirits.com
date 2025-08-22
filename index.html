@@ -21,7 +21,14 @@
       --purple: #a855f7;
       --accent: linear-gradient(135deg, #ec4899, #a855f7);
     }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
     body {
       font-family: 'Inter', sans-serif;
       background: white;
@@ -425,36 +432,48 @@
         <!-- Repeat logos for seamless loop -->
         <div class="flex gap-12 whitespace-nowrap">
           <!-- Partner 1 -->
-          <img src="united-spirits-site/assets/img/partners/bernard-moyet-logo.png" alt="Bernard Moyet" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/bernard-mayet.webp" alt="Bernard Moyet" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 2 -->
-          <img src="united-spirits-site/assets/img/partners/wickham-estate-logo.png" alt="Wickham Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/wickham-estate.webp" alt="Wickham Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 3 -->
-          <img src="united-spirits-site/assets/img/partners/louis-xiii-logo.png" alt="Louis XIII" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/louis-xiii.jpg" alt="Louis XIII" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 4 -->
-          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard-logo.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 5 -->
-          <img src="united-spirits-site/assets/img/partners/kingston-estate-logo.png" alt="Kingston Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 6 -->
-          <img src="united-spirits-site/assets/img/partners/vinous-australis-logo.png" alt="Vinous Australis" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 7 -->
-          <img src="united-spirits-site/assets/img/partners/u-ci-logo.png" alt="U.C.I." class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 8 -->
-          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild-logo.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.jpg" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
           <!-- Partner 9 -->
-          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855-logo.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.webp" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <!-- Partner 10 -->
+          <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <!-- Partner 11 -->
+          <img src="united-spirits-site/assets/img/partners/eurovins.jpg" alt="Eurovins" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <!-- Partner 12 -->
+          <img src="united-spirits-site/assets/img/partners/mw-wines-spain.jpg" alt="MW Wines Spain" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <!-- Partner 13 -->
+          <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="flex gap-12 whitespace-nowrap">
           <!-- Same logos repeated -->
-          <img src="united-spirits-site/assets/img/partners/bernard-moyet-logo.png" alt="Bernard Moyet" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/wickham-estate-logo.png" alt="Wickham Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/louis-xiii-logo.png" alt="Louis XIII" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard-logo.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/kingston-estate-logo.png" alt="Kingston Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/vinous-australis-logo.png" alt="Vinous Australis" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/u-ci-logo.png" alt="U.C.I." class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild-logo.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855-logo.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/bernard-mayet.webp" alt="Bernard Mayet" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/wickham-estate.webp" alt="Wickham Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/louis-xiii.jpg" alt="Louis XIII" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.jpg" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.webp" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/mw-wines-spain.jpg" alt="MW Wines Spain" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/eurovins.jpg" alt="Eurovins" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
         </div>
       </div>
     </div>
@@ -596,6 +615,7 @@
     </div>
   </div>
 
+  <!-- ===================== SCRIPTS ===================== -->
 <script>
   // Initialize Lucide Icons
   lucide.createIcons();
@@ -643,4 +663,3 @@
 </script>
 </body>
 </html>
-
