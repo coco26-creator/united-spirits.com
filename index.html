@@ -21,17 +21,7 @@
       --purple: #a855f7;
       --accent: linear-gradient(135deg, #ec4899, #a855f7);
     }
-    
-    @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 
-.animate-scroll {
-  animation: scroll 60s linear infinite; /* 60 seconds for smooth, full scroll */
-  will-change: transform;
-}
-    
     body {
       font-family: 'Inter', sans-serif;
       background: white;
@@ -60,7 +50,7 @@
     }
 
     .btn-purple {
-      background: var(--purple);
+      background: var(--accent);
       color: white;
     }
 
@@ -101,10 +91,25 @@
     .glow-logo:hover {
       animation-play-state: paused;
     }
+
+    /* Infinite Scroll Animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      animation: scroll 60s linear infinite;
+      will-change: transform;
+    }
+
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="text-black">
-
+  
 <!-- ===================== HEADER + HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden">
   <!-- Background Image -->
@@ -415,54 +420,52 @@
     </div>
   </section>
 
-<!-- ===================== BRAND PARTNERS (AUTO-SCROLLING) ===================== -->
-<section id="partners" class="section bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- Section Title -->
-    <div class="text-center mb-12 reveal">
-      <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
-        Our <span class="accent-text">Global Partners</span>
-      </h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        We collaborate with world-class producers, wineries, and luxury brands to bring you exceptional spirits and experiences.
-      </p>
-    </div>
+ <!-- ===================== BRAND PARTNERS (INFINITE SCROLL) ===================== -->
+  <section id="partners" class="section bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
+          Our <span class="accent-text">Global Partners</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We collaborate with world-class producers, wineries, and luxury brands to bring you exceptional spirits and experiences.
+        </p>
+      </div>
+      <div class="overflow-hidden relative">
+        <div class="flex animate-scroll gap-16 whitespace-nowrap">
+          <!-- Partner Logos (Repeat Twice) -->
+          <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
 
-    <!-- Partner Logos (Auto-Scrolling) -->
-    <div class="overflow-hidden relative">
-      <!-- Scrolling Container -->
-      <div class="flex animate-scroll gap-14.5 whitespace-nowrap">
-        <!-- First Set -->
-        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-
-        <!-- Second Set (Duplicate) -->
-        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
-        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <!-- Duplicate for seamless loop -->
+          <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+          <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+        </div>
       </div>
     </div>
+  </section>
 
     <!-- Call to Action -->
     <div class="text-center mt-16">
@@ -649,13 +652,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
