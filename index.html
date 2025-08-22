@@ -596,113 +596,51 @@
     </div>
   </div>
 
-  <!-- ===================== SCRIPTS ===================== -->
-  <script>
-    lucide.createIcons();
+<script>
+  // Initialize Lucide Icons
+  lucide.createIcons();
 
-    // Mobile Menu Toggle
-    const menuButton = document.getElementById('mobileMenuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuButton && mobileMenu) {
-      menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
-
-    // Video Toggle
-    const video = document.getElementById('heroVideo');
-    const videoToggle = document.getElementById('videoToggle');
-    const toggleIcon = videoToggle.querySelector('i');
-    if (video && videoToggle) {
-      videoToggle.addEventListener('click', () => {
-        if (video.paused) {
-          video.play();
-          toggleIcon.setAttribute('data-lucide', 'pause');
-        } else {
-          video.pause();
-          toggleIcon.setAttribute('data-lucide', 'play');
-        }
-        lucide.createIcons();
-      });
-    }
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    document.querySelectorAll('[data-img]').forEach(el => {
-      el.addEventListener('click', () => {
-        lightboxImg.src = el.getAttribute('data-img');
-        lightboxImg.alt = el.getAttribute('data-title');
-        document.body.style.overflow = 'hidden';
-        lightbox.classList.remove('hidden');
+  // Mobile Menu
+  const menuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
     });
+  }
 
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = '';
+  // Lightbox (Remove if not needed)
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeLightbox = document.getElementById('close-lightbox');
+
+  document.querySelectorAll('[data-img]').forEach(el => {
+    el.addEventListener('click', () => {
+      lightboxImg.src = el.getAttribute('data-img');
+      lightboxImg.alt = el.getAttribute('data-title');
+      document.body.style.overflow = 'hidden';
+      lightbox.classList.remove('hidden');
     });
+  });
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox.click();
-    });
+  closeLightbox.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox.click();
-    });
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox.click();
+  });
 
-    // Chatbot
-    const chatOpen = document.getElementById('chat-open');
-    const chatClose = document.getElementById('chat-close');
-    const chatBox = document.getElementById('chat');
-    const chatMsgs = document.getElementById('chat-messages');
-    const chatInput = document.getElementById('chat-text');
-    const chatSend = document.getElementById('chat-send');
-
-    chatOpen.addEventListener('click', () => {
-      chatBox.classList.remove('hidden');
-    });
-
-    chatClose.addEventListener('click', () => {
-      chatBox.classList.add('hidden');
-    });
-
-    function addMessage(role, text) {
-      const div = document.createElement('div');
-      div.className = `msg ${role} text-sm mb-2`;
-      div.innerHTML = `<div>${text}</div>`;
-      chatMsgs.appendChild(div);
-      chatMsgs.scrollTop = chatMsgs.scrollHeight;
-    }
-
-    chatSend.addEventListener('click', () => {
-      const val = chatInput.value.trim();
-      if (!val) return;
-      addMessage('user', val);
-      chatInput.value = '';
-      setTimeout(() => {
-        if (val.toLowerCase().includes('wine')) {
-          addMessage('assistant', '<strong>Corazón de Lolita</strong> — silky, berry-driven, long finish.');
-        } else if (val.toLowerCase().includes('whiskey')) {
-          addMessage('assistant', '<strong>Sunny Land 25-year-old</strong> is smoky, oaky, and deeply complex.');
-        } else if (val.toLowerCase().includes('brandy')) {
-          addMessage('assistant', '<strong>Honney Conti VSOP</strong> is vibrant and perfect for gifting.');
-        } else {
-          addMessage('assistant', 'I can help with tasting notes or availability. Ask about a specific bottle.');
-        }
-      }, 200);
-    });
-
-    chatInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') chatSend.click();
-    });
-  </script>
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox.click();
+  });
+</script>
 </body>
 </html>
+
