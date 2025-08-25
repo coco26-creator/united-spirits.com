@@ -671,80 +671,35 @@
     chat.classList.add('hidden');
   });
 
-  // Send Message
-  function sendMessage() {
-    const text = chatText.value.trim();
-    if (!text) return;
+  // Conversation history for memory
+let conversation = [
+  { role: "system", content: "You are Spirit Assistant, a helpful guide for United Spirits website visitors. Be friendly, professional, and concise." }
+];
 
-    // Add user message
-    addMessage('user', text);
-    chatText.value = '';
+// Send Message
+function sendMessage() {
+  const text = chatText.value.trim();
+  if (!text) return;
 
-    // Simulate bot reply
-    setTimeout(() => {
-      const response = getBotResponse(text.toLowerCase());
-      addMessage('bot', response);
-    }, 600);
-  }
+  // Add user message
+  addMessage('user', text);
+  conversation.push({ role: "user", content: text });
+  chatText.value = '';
 
-  chatSend.addEventListener('click', sendMessage);
-  chatText.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') sendMessage();
-  });
-
-  // Add Message
-  function addMessage(sender, text) {
-    const msg = document.createElement('div');
-    msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
-      sender === 'user' 
-        ? 'ml-auto bg-purple-600 text-white' 
-        : 'bg-white text-gray-800 shadow'
-    }`;
-    msg.innerHTML = marked.parse(text);
-    chatMessages.appendChild(msg);
-    scrollToBottom();
-  }
-
-  // Scroll to bottom
-  function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  // Bot Response Logic
-  function getBotResponse(input) {
-    const has = (keywords) => keywords.some(kw => input.includes(kw));
-
-    if (has(['about', 'company', 'us', 'who are you'])) {
-      return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**.`;
-    }
-
-    if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production'])) {
-      return `We leverage **Hong Kong** as a trade hub and **China's supply chain** for end-to-end production and global distribution.`;
-    }
-
-    if (has(['business', 'model', 'how do you work'])) {
-      return `Our model: Curate → Co-brand → Produce in China → Distribute via Hong Kong.`;
-    }
-
-    if (has(['product', 'products', 'wine', 'whiskey', 'brandy'])) {
-      return `Our featured products:\n- **Honney Conti XO Royal**\n- **Caribbean Blaze Bourbon 18**\n- **Anderra Reserva**\n- **Corazón de Lolita**\n- **Sunny Land Single Malt S25**`;
-    }
-
-    if (has(['partner', 'partners', 'collaborate'])) {
-      return `We partner with world-class brands:\n- Louis XIII\n- Baron Philippe de Rothschild\n- Groupe Bernard Lucien Bernard\n- Kingston Estate\n- Vinous Australis`;
-    }
-
-    if (has(['event', 'visit', 'tasting', 'tour'])) {
-      return `We host private tastings, VIP events, and tours in Hong Kong and China. DM us on WhatsApp to schedule a visit.`;
-    }
-
-    if (has(['contact', 'whatsapp', 'phone', 'email'])) {
-      return `Get in touch:\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)`;
-    }
-
-    return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, or **contact info**.`;
-  }
-
-  // Initial scroll
-  scrollToBottom();
-</script>
+  // Call backend API for ChatGPT response
+  fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ conversation }),
+  })
+    .then(res => res.json())
+    .then(data => {
+      const reply = data.reply;
+      addMessage('bot', reply);
+      conversation.push({ role: "assistant", content: reply });
+    })
+    .catch(err => {
+      console.error(err);
+      addMessage('bot', "⚠️ Sorry, something went wrong. Try again later.");
+    });
+}
