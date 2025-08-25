@@ -602,26 +602,128 @@
     <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
   </div>
 
-  <!-- ===================== CHATBOT ===================== -->
-  <button id="chat-open" class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" aria-label="Open chat">
-    <i data-lucide="message-circle" class="w-6 h-6"></i>
-  </button>
-  <div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-full bg-white rounded-lg shadow-xl z-50 overflow-hidden" role="dialog">
-    <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
-        <span class="font-semibold">Spirit Assistant</span>
-      </div>
-      <button id="chat-close" class="p-1 hover:bg-gray-200 rounded"><i data-lucide="x" class="w-5 h-5"></i></button>
+ <!-- ===================== CHATBOT ===================== -->
+<button id="chat-open" class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" aria-label="Open chat">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+</button>
+
+<div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-[90vw] bg-white rounded-lg shadow-xl z-50 overflow-hidden" style="height: 400px;">
+  <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
+      <span class="font-semibold">Spirit Assistant</span>
     </div>
-    <div id="chat-messages" class="chat-body p-4 h-64 overflow-y-auto bg-gray-50">
-      <div class="msg system text-sm text-gray-600">Welcome! Ask about wines, whiskeys, or brandies.</div>
-    </div>
-    <div class="chat-input p-3 border-t flex gap-2">
-      <input id="chat-text" type="text" placeholder="Ask me anything..." class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200" />
-      <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700"><i data-lucide="send" class="w-5 h-5"></i></button>
-    </div>
+    <button id="chat-close" class="p-1 hover:bg-gray-200 rounded"><i data-lucide="x" class="w-5 h-5"></i></button>
   </div>
+
+  <div id="chat-messages" class="chat-body p-4 h-3/4 overflow-y-auto bg-gray-50 space-y-2">
+    <div class="msg system text-sm text-gray-600">Hi! I'm your Spirit Assistant. Ask me about our wines, whiskeys, brandies, partners, or how to visit. How can I help?</div>
+  </div>
+
+  <div class="chat-input p-3 border-t flex gap-2">
+    <input id="chat-text" type="text" placeholder="Ask me anything..." class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 text-sm" />
+    <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700"><i data-lucide="send" class="w-5 h-5"></i></button>
+  </div>
+</div>
+
+<script>
+  // Initialize Lucide Icons
+  lucide.createIcons();
+
+  // DOM Elements
+  const chatOpen = document.getElementById('chat-open');
+  const chatClose = document.getElementById('chat-close');
+  const chat = document.getElementById('chat');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatText = document.getElementById('chat-text');
+  const chatSend = document.getElementById('chat-send');
+
+  // Open/Close Chat
+  chatOpen.addEventListener('click', () => chat.classList.remove('hidden'));
+  chatClose.addEventListener('click', () => chat.classList.add('hidden'));
+
+  // Send Message
+  function sendMessage() {
+    const text = chatText.value.trim();
+    if (!text) return;
+
+    // Add user message
+    addMessage('user', text);
+    chatText.value = '';
+
+    // Get and add bot response
+    setTimeout(() => {
+      const response = getBotResponse(text.toLowerCase());
+      addMessage('bot', response);
+      scrollToBottom();
+    }, 600);
+  }
+
+  chatSend.addEventListener('click', sendMessage);
+  chatText.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  // Add Message to Chat
+  function addMessage(sender, text) {
+    const msg = document.createElement('div');
+    msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${sender === 'user' ? 'ml-auto bg-purple-600 text-white' : 'bg-white text-gray-800 shadow'}`;
+    msg.innerHTML = marked.parse(text);
+    chatMessages.appendChild(msg);
+  }
+
+  // Auto-scroll to bottom
+  function scrollToBottom() {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Bot Response Logic
+  function getBotResponse(input) {
+    // Keywords
+    const has = (keywords) => keywords.some(kw => input.includes(kw));
+
+    // Company Info
+    if (has(['about', 'company', 'us', 'who are you'])) {
+      return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
+    }
+
+    // Supply Chain
+    if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production'])) {
+      return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, and ISO-certified quality. Products are distributed worldwide from HK.`;
+    }
+
+    // Business Model
+    if (has(['business', 'model', 'how do you work'])) {
+      return `Our model: Curate → Co-brand → Produce in China → Distribute via Hong Kong. We offer private label, custom packaging, and global logistics.`;
+    }
+
+    // Products
+    if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy'])) {
+      return `Our featured products:\n- **Honney Conti XO Royal**: Luxurious cognac\n- **Caribbean Blaze Bourbon 18**: Aged 18 years\n- **Anderra Reserva**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine\n- **Sunny Land Single Malt S25**: 25-year-old Scotch`;
+    }
+
+    // Brand Partners
+    if (has(['partner', 'partners', 'collaborate', 'work with'])) {
+      return `We partner with world-class brands:\n- Louis XIII\n- Baron Philippe de Rothschild\n- MW Wines Spain\n- Australian Premium Wine Group (APWG)\n- Eurovins\n- Groupe Bernard Lucien Bernard\n- Kingston Estate\n- Vinous Australis\n- U.C.I.`;
+    }
+
+    // Events & Visits
+    if (has(['event', 'visit', 'tasting', 'tour', 'experience'])) {
+      return `We host private tastings, VIP events, and facility tours in Hong Kong and China. DM us on WhatsApp to schedule a visit.`;
+    }
+
+    // Contact
+    if (has(['contact', 'whatsapp', 'phone', 'email', 'message'])) {
+      return `Get in touch:\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@sunnyhocha0](https://www.tiktok.com/@sunnyhocha0)`;
+    }
+
+    // Default
+    return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, or **contact info**.`;
+  }
+
+  // Initial scroll
+  scrollToBottom();
+</script>
 
  <!-- ===================== SCRIPTS ===================== -->
 <script>
@@ -664,15 +766,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
