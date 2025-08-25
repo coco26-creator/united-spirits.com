@@ -21,7 +21,7 @@
       --purple: #a855f7;
       --accent: linear-gradient(135deg, #ec4899, #a855f7);
     }
-
+      
     body {
       font-family: 'Inter', sans-serif;
       background: white;
@@ -117,6 +117,7 @@
     src="united-spirits-site/assets/img/hocha.jpg" 
     alt="Premium Wines & Spirits" 
     class="absolute inset-0 w-full h-full object-cover" 
+    loading="lazy"
   />
 
   <!-- Dark Overlay for Readability -->
@@ -133,10 +134,10 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
-        <a href="index.html#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
-        <a href="index.html#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
-        <a href="index.html#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+        <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
         <a href="https://wa.me/85269346630" class="btn btn-pink">WhatsApp</a>
       </nav>
 
@@ -148,10 +149,10 @@
 
     <!-- Mobile Menu -->
     <nav id="mobileMenu" class="hidden md:hidden bg-black/80 text-white border-t border-gray-700 px-6 py-4 flex flex-col gap-4">
-      <a href="index.html#collections" class="hover:text-pink-300">Collections</a>
-      <a href="index.html#featured" class="hover:text-pink-300">Featured</a>
-      <a href="index.html#events" class="hover:text-pink-300">Events</a>
-      <a href="index.html#contact" class="hover:text-pink-300">Contact</a>
+      <a href="#collections" class="hover:text-pink-300">Collections</a>
+      <a href="#featured" class="hover:text-pink-300">Featured</a>
+      <a href="#events" class="hover:text-pink-300">Events</a>
+      <a href="#contact" class="hover:text-pink-300">Contact</a>
       <a href="https://wa.me/85269346630" class="btn btn-pink w-fit">WhatsApp</a>
     </nav>
   </div>
@@ -626,18 +627,21 @@
     </div>
   </div>
 
-  <!-- ===================== SCRIPTS ===================== -->
+ <!-- ===================== SCRIPTS ===================== -->
 <script>
   // Initialize Lucide Icons
   lucide.createIcons();
 
-  // Mobile Menu
+  // Mobile Menu Toggle
   const menuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
+
   if (menuButton && mobileMenu) {
     menuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    // Close mobile menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
@@ -645,40 +649,23 @@
     });
   }
 
-  // Lightbox (Remove if not needed)
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeLightbox = document.getElementById('close-lightbox');
+  // Optional: Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
 
-  document.querySelectorAll('[data-img]').forEach(el => {
-    el.addEventListener('click', () => {
-      lightboxImg.src = el.getAttribute('data-img');
-      lightboxImg.alt = el.getAttribute('data-title');
-      document.body.style.overflow = 'hidden';
-      lightbox.classList.remove('hidden');
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     });
-  });
-
-  closeLightbox.addEventListener('click', () => {
-    lightbox.classList.add('hidden');
-    document.body.style.overflow = '';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox.click();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox.click();
   });
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
