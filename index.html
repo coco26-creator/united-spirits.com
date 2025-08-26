@@ -603,103 +603,137 @@
   </div>
 
 <!-- ===================== CHATBOT ===================== -->
-<!-- Floating Action Button -->
-<button id="chat-open" 
-  class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" 
-  aria-label="Open chat">
-  <i data-lucide="message-circle" class="w-6 h-6"></i>
-</button>
+  <!-- Floating Action Button -->
+  <button id="chat-open" 
+    class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" 
+    aria-label="Open chat">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </button>
 
-<!-- Chat Window -->
-<div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-[90vw] bg-white rounded-lg shadow-xl z-50 overflow-hidden" style="height: 400px;">
-  <!-- Header -->
-  <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
-      <span class="font-semibold">Spirit Assistant</span>
+  <!-- Chat Window -->
+  <div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-[90vw] bg-white rounded-lg shadow-xl z-50 overflow-hidden" style="height: 400px;">
+    <!-- Header -->
+    <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
+        <span class="font-semibold">Spirit Assistant</span>
+      </div>
+      <button id="chat-close" class="p-1 hover:bg-gray-200 rounded">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
     </div>
-    <button id="chat-close" class="p-1 hover:bg-gray-200 rounded">
-      <i data-lucide="x" class="w-5 h-5"></i>
-    </button>
-  </div>
 
-  <!-- Messages -->
-  <div id="chat-messages" class="chat-body p-4 h-3/4 overflow-y-auto bg-gray-50 space-y-2">
-    <div class="msg system text-sm text-gray-600">
-      Hi! I'm your Spirit Assistant. Ask me about our wines, whiskeys, brandies, partners, or how to visit. How can I help?
+    <!-- Messages -->
+    <div id="chat-messages" class="chat-body p-4 h-3/4 overflow-y-auto bg-gray-50 space-y-2">
+      <div class="msg system text-sm text-gray-600">
+        Hi! I'm your Spirit Assistant. Ask me about our wines, whiskeys, brandies, partners, or how to visit. How can I help?
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input p-3 border-t flex gap-2">
+      <input id="chat-text" 
+        type="text" 
+        placeholder="Ask me anything..." 
+        class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 text-sm" />
+      <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700">
+        <i data-lucide="send" class="w-5 h-5"></i>
+      </button>
     </div>
   </div>
 
-  <!-- Input -->
-  <div class="chat-input p-3 border-t flex gap-2">
-    <input id="chat-text" 
-      type="text" 
-      placeholder="Ask me anything..." 
-      class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 text-sm" />
-    <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700">
-      <i data-lucide="send" class="w-5 h-5"></i>
-    </button>
-  </div>
-</div>
+  <!-- ============ SCRIPTS ============ -->
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-<!-- ============ SCRIPTS ============ -->
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<!-- Marked.js for Markdown rendering -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
 
-<script>
-  // Initialize Lucide Icons
-  lucide.createIcons();
+    // DOM Elements
+    const chatOpen = document.getElementById('chat-open');
+    const chatClose = document.getElementById('chat-close');
+    const chat = document.getElementById('chat');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatText = document.getElementById('chat-text');
+    const chatSend = document.getElementById('chat-send');
 
-  // DOM Elements
-  const chatOpen = document.getElementById('chat-open');
-  const chatClose = document.getElementById('chat-close');
-  const chat = document.getElementById('chat');
-  const chatMessages = document.getElementById('chat-messages');
-  const chatText = document.getElementById('chat-text');
-  const chatSend = document.getElementById('chat-send');
-
-  // Open Chat
-  chatOpen.addEventListener('click', () => {
-    chat.classList.remove('hidden');
-    chatText.focus();
-  });
-
-  // Close Chat
-  chatClose.addEventListener('click', () => {
-    chat.classList.add('hidden');
-  });
-
-  // Conversation history for memory
-let conversation = [
-  { role: "system", content: "You are Spirit Assistant, a helpful guide for United Spirits website visitors. Be friendly, professional, and concise." }
-];
-
-// Send Message
-function sendMessage() {
-  const text = chatText.value.trim();
-  if (!text) return;
-
-  // Add user message
-  addMessage('user', text);
-  conversation.push({ role: "user", content: text });
-  chatText.value = '';
-
-  // Call backend API for ChatGPT response
-  fetch("/api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ conversation }),
-  })
-    .then(res => res.json())
-    .then(data => {
-      const reply = data.reply;
-      addMessage('bot', reply);
-      conversation.push({ role: "assistant", content: reply });
-    })
-    .catch(err => {
-      console.error(err);
-      addMessage('bot', "⚠️ Sorry, something went wrong. Try again later.");
+    // Open Chat
+    chatOpen.addEventListener('click', () => {
+      chat.classList.remove('hidden');
+      chatText.focus();
     });
-}
+
+    // Close Chat
+    chatClose.addEventListener('click', () => {
+      chat.classList.add('hidden');
+    });
+
+    // Fetch bot reply from API
+    async function fetchBotReply(message) {
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message }),
+        });
+        const data = await res.json();
+        return data.reply;
+      } catch (err) {
+        console.error(err);
+        return "⚠️ Sorry, I couldn't reach the assistant.";
+      }
+    }
+
+    // Send Message
+    async function sendMessage() {
+      const text = chatText.value.trim();
+      if (!text) return;
+
+      // Add user message
+      addMessage('user', text);
+      chatText.value = '';
+
+      // Show typing...
+      addMessage('bot', "⏳ Thinking...");
+
+      // Get AI reply
+      const response = await fetchBotReply(text);
+
+      // Replace last bot message with actual reply
+      const lastMsg = chatMessages.lastChild;
+      lastMsg.innerHTML = marked.parse(response);
+      scrollToBottom();
+    }
+
+    chatSend.addEventListener('click', sendMessage);
+    chatText.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    // Add Message
+    function addMessage(sender, text) {
+      const msg = document.createElement('div');
+      msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
+        sender === 'user' 
+          ? 'ml-auto bg-purple-600 text-white' 
+          : 'bg-white text-gray-800 shadow'
+      }`;
+      msg.innerHTML = marked.parse(text);
+      chatMessages.appendChild(msg);
+      scrollToBottom();
+    }
+
+    // Scroll to bottom
+    function scrollToBottom() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Initial scroll
+    scrollToBottom();
+  </script>
+</body>
+</html>
+
