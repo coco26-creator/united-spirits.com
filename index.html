@@ -11,6 +11,9 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -603,159 +606,133 @@
   </div>
 
 <!-- ===================== CHATBOT ===================== -->
-  <!-- Floating Action Button -->
-  <button id="chat-open" 
-    class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" 
-    aria-label="Open chat">
+  <button id="chat-open" class="fab fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50" aria-label="Open chat">
     <i data-lucide="message-circle" class="w-6 h-6"></i>
   </button>
-
-  <!-- Chat Window -->
   <div id="chat" class="chat hidden fixed bottom-24 left-6 w-80 max-w-[90vw] bg-white rounded-lg shadow-xl z-50 overflow-hidden" style="height: 400px;">
-    <!-- Header -->
     <div class="chat-header bg-gray-100 p-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <i data-lucide="wine" class="w-5 h-5 text-purple-600"></i>
         <span class="font-semibold">Spirit Assistant</span>
       </div>
-      <button id="chat-close" class="p-1 hover:bg-gray-200 rounded">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
+      <button id="chat-close" class="p-1 hover:bg-gray-200 rounded"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
-
-    <!-- Messages -->
     <div id="chat-messages" class="chat-body p-4 h-3/4 overflow-y-auto bg-gray-50 space-y-2">
-      <div class="msg system text-sm text-gray-600">
-        Hi! I'm your Spirit Assistant. Ask me about our wines, whiskeys, brandies, partners, or how to visit. How can I help?
-      </div>
+      <div class="msg system text-sm text-gray-600">Hi! I'm your Spirit Assistant. Ask me about our wines, whiskeys, brandies, partners, or how to visit. How can I help?</div>
     </div>
-
-    <!-- Input -->
     <div class="chat-input p-3 border-t flex gap-2">
-      <input id="chat-text" 
-        type="text" 
-        placeholder="Ask me anything..." 
-        class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 text-sm" />
-      <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700">
-        <i data-lucide="send" class="w-5 h-5"></i>
-      </button>
+      <input id="chat-text" type="text" placeholder="Ask me anything..." class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 text-sm" />
+      <button id="chat-send" class="bg-purple-600 text-white p-2 rounded-lg hover:bg-purple-700"><i data-lucide="send" class="w-5 h-5"></i></button>
     </div>
   </div>
+  
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
 
-  <!-- ============ SCRIPTS ============ -->
- <script>
-  // Initialize Lucide Icons
-  lucide.createIcons();
+    // Mobile Menu
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
 
-  // DOM Elements
-  const chatOpen = document.getElementById('chat-open');
-  const chatClose = document.getElementById('chat-close');
-  const chat = document.getElementById('chat');
-  const chatMessages = document.getElementById('chat-messages');
-  const chatText = document.getElementById('chat-text');
-  const chatSend = document.getElementById('chat-send');
+    // Chatbot
+    const chatOpen = document.getElementById('chat-open');
+    const chatClose = document.getElementById('chat-close');
+    const chat = document.getElementById('chat');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatText = document.getElementById('chat-text');
+    const chatSend = document.getElementById('chat-send');
 
-  // Open Chat
-  chatOpen.addEventListener('click', () => {
-    chat.classList.remove('hidden');
-    chatText.focus();
-  });
-
-  // Close Chat
-  chatClose.addEventListener('click', () => {
-    chat.classList.add('hidden');
-  });
-
-  // Send Message
-  function sendMessage() {
-    const text = chatText.value.trim();
-    if (!text) return;
-
-    // Add user message
-    addMessage('user', text);
-    chatText.value = '';
-
-    // Simulate bot reply
-    setTimeout(() => {
-      const response = getBotResponse(text.toLowerCase());
-      addMessage('bot', response);
-      scrollToBottom();
-    }, 600);
-  }
-
-  chatSend.addEventListener('click', sendMessage);
-  chatText.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') sendMessage();
-  });
-
-  // Add Message
-  function addMessage(sender, text) {
-    const msg = document.createElement('div');
-    msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
-      sender === 'user' 
-        ? 'ml-auto bg-purple-600 text-white' 
-        : 'bg-white text-gray-800 shadow'
-    }`;
-    msg.innerHTML = marked.parse(text);
-    
-    // Make links open in new tab
-    msg.querySelectorAll('a').forEach(link => {
-      link.target = '_blank';
-      link.rel = 'noopener';
+    chatOpen.addEventListener('click', () => {
+      chat.classList.remove('hidden');
+      chatText.focus();
     });
-    
-    chatMessages.appendChild(msg);
+
+    chatClose.addEventListener('click', () => {
+      chat.classList.add('hidden');
+    });
+
+    function sendMessage() {
+      const text = chatText.value.trim();
+      if (!text) return;
+
+      addMessage('user', text);
+      chatText.value = '';
+
+      setTimeout(() => {
+        const response = getBotResponse(text.toLowerCase());
+        addMessage('bot', response);
+      }, 600);
+    }
+
+    chatSend.addEventListener('click', sendMessage);
+    chatText.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    function addMessage(sender, text) {
+      const msg = document.createElement('div');
+      msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
+        sender === 'user' 
+          ? 'ml-auto bg-purple-600 text-white' 
+          : 'bg-white text-gray-800 shadow'
+      }`;
+      msg.innerHTML = marked.parse(text);
+      
+      msg.querySelectorAll('a').forEach(link => {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      });
+      
+      chatMessages.appendChild(msg);
+      scrollToBottom();
+    }
+
+    function scrollToBottom() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function getBotResponse(input) {
+      const has = (keywords) => keywords.some(kw => input.includes(kw));
+
+      if (has(['about', 'company', 'us', 'who are you'])) {
+        return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
+      }
+
+      if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production'])) {
+        return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
+      }
+
+      if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy'])) {
+        return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex`;
+      }
+
+      if (has(['partner', 'partners', 'collaborate', 'work with'])) {
+        return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines**`;
+      }
+
+      if (has(['event', 'visit', 'tasting', 'tour'])) {
+        return `We host private tastings, VIP events, and facility tours in Hong Kong and China. DM us on WhatsApp to schedule a visit.`;
+      }
+
+      if (has(['contact', 'whatsapp', 'phone', 'email'])) {
+        return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@sunnyhocha0](https://www.tiktok.com/@sunnyhocha0)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
+      }
+
+      return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, or **contact info**.`;
+    }
+
     scrollToBottom();
-  }
-
-  // Scroll to bottom
-  function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  // Bot Response Logic
-  function getBotResponse(input) {
-    const has = (keywords) => keywords.some(kw => input.includes(kw));
-
-    // ===================== COMPANY INFO =====================
-    if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
-      return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
-    }
-
-    // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
-    if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
-      return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
-    }
-
-    // ===================== PRODUCTS =====================
-    if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
-      return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex\n- **Planet1**: Premium RTD cocktail\n- **Caribbean Blaze Bourbon 18 Box**: Collector’s edition\n- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
-    }
-
-    // ===================== BRAND PARTNERS =====================
-    if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
-      return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines**`;
-    }
-
-    // ===================== EVENTS & VISITS =====================
-    if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
-      return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
-    }
-
-    // ===================== CONTACT & SOCIALS =====================
-    if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
-      return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@sunnyhocha0](https://www.tiktok.com/@sunnyhocha0)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
-    }
-
-    // ===================== LOCATION =====================
-    if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
-      return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
-    }
-
-    // ===================== DEFAULT RESPONSE =====================
-    return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
-  }
-
-  // Initial scroll
-  scrollToBottom();
-</script>
+  </script>
+</body>
+</html>
