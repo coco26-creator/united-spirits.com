@@ -1,6 +1,8 @@
+import fetch from "node-fetch";
+
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   const { message } = req.body;
@@ -10,23 +12,28 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini", // light & cheap, good for chat
+        model: "gpt-4o-mini",
         messages: [
-          { role: "system", content: "You are Spirit Assistant, an expert in wines and spirits." },
+          { role: "system", content: "You are Spirit Assistant, a helpful guide for United Spirits visitors." },
           { role: "user", content: message }
         ],
       }),
     });
 
     const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || "⚠️ No response.";
 
-    res.status(200).json({ reply });
+    if (!data.choices || !data.choices[0]) {
+      console.error("OpenAI API Error:", data);
+      return res.status(500).json({ reply: "⚠️ No response from API" });
+    }
+
+    res.status(200).json({ reply: data.choices[0].message.content });
+
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Something went wrong' });
+    console.error("Chat API Error:", error);
+    res.status(500).json({ reply: "⚠️ Server error" });
   }
 }
