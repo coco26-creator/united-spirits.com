@@ -627,72 +627,133 @@
   </div>
 
  <!-- ===================== SCRIPTS ===================== -->
-      msg.querySelectorAll('a').forEach(link => {
-        link.target = '_blank';
-        link.rel = 'noopener';
+      <script>
+  // Initialize Lucide Icons
+  lucide.createIcons();
+
+  // Mobile Menu
+  const menuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
-      
-      chatMessages.appendChild(msg);
-      scrollToBottom();
-    }
+    });
+  }
 
-    function scrollToBottom() {
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
+  // Chatbot
+  const chatOpen = document.getElementById('chat-open');
+  const chatClose = document.getElementById('chat-close');
+  const chat = document.getElementById('chat');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatText = document.getElementById('chat-text');
+  const chatSend = document.getElementById('chat-send');
 
-    function getBotResponse(input) {
-      const has = (keywords) => keywords.some(kw => input.includes(kw));
+  chatOpen.addEventListener('click', () => {
+    chat.classList.remove('hidden');
+    chatText.focus();
+  });
 
-      // ===================== GREETINGS =====================
-      if (has(['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'])) {
-        return `Hello! 👋 I'm your Spirit Assistant. How can I help you today?\n\nAsk me about our wines, whiskeys, brandies, partners, or how to visit.`;
-      }
+  chatClose.addEventListener('click', () => {
+    chat.classList.add('hidden');
+  });
 
-      // ===================== GOODBYE =====================
-      if (has(['bye', 'goodbye', 'see you', 'thanks', 'thank you'])) {
-        return `You're very welcome! 🥂 If you have any more questions about our spirits, partners, or how to schedule a visit, feel free to ask. Have a wonderful day!`;
-      }
+  function sendMessage() {
+    const text = chatText.value.trim();
+    if (!text) return;
 
-      // ===================== COMPANY INFO =====================
-      if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
-        return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
-      }
+    addMessage('user', text);
+    chatText.value = '';
 
-      // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
-      if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
-        return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
-      }
+    setTimeout(() => {
+      const response = getBotResponse(text.toLowerCase());
+      addMessage('bot', response);
+    }, 600);
+  }
 
-      // ===================== PRODUCTS =====================
-      if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
-        return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex\n- **Planet1**: Premium RTD cocktail\n- **Caribbean Blaze Bourbon 18 Box**: Collector’s edition\n- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
-      }
+  chatSend.addEventListener('click', sendMessage);
+  chatText.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
 
-      // ===================== BRAND PARTNERS =====================
-      if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
-        return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines`;
-
-
-      // ===================== EVENTS & VISITS =====================
-      if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
-        return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
-      }
-
-      // ===================== CONTACT & SOCIALS =====================
-      if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
-        return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@sunnyhocha0](https://www.tiktok.com/@sunnyhocha0)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
-      }
-
-      // ===================== LOCATION =====================
-      if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
-        return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
-      }
-
-      // ===================== DEFAULT RESPONSE =====================
-      return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
-    }
-
+  function addMessage(sender, text) {
+    const msg = document.createElement('div');
+    msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
+      sender === 'user' 
+        ? 'ml-auto bg-purple-600 text-white' 
+        : 'bg-white text-gray-800 shadow'
+    }`;
+    msg.innerHTML = marked.parse(text);
+    
+    msg.querySelectorAll('a').forEach(link => {
+      link.target = '_blank';
+      link.rel = 'noopener';
+    });
+    
+    chatMessages.appendChild(msg);
     scrollToBottom();
-  </script>
-</body>
-</html>
+  }
+
+  function scrollToBottom() {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function getBotResponse(input) {
+    const has = (keywords) => keywords.some(kw => input.includes(kw));
+
+    // ===================== GREETINGS =====================
+    if (has(['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'])) {
+      return `Hello! 👋 I'm your Spirit Assistant. How can I help you today?\n\nAsk me about our wines, whiskeys, brandies, partners, or how to visit.`;
+    }
+
+    // ===================== GOODBYE =====================
+    if (has(['bye', 'goodbye', 'see you', 'thanks', 'thank you'])) {
+      return `You're very welcome! 🥂 If you have any more questions about our spirits, partners, or how to schedule a visit, feel free to ask. Have a wonderful day!`;
+    }
+
+    // ===================== COMPANY INFO =====================
+    if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
+      return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
+    }
+
+    // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
+    if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
+      return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
+    }
+
+    // ===================== PRODUCTS =====================
+    if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
+      return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex\n- **Planet1**: Premium RTD cocktail\n- **Caribbean Blaze Bourbon 18 Box**: Collector’s edition\n- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
+    }
+
+    // ===================== BRAND PARTNERS =====================
+    if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
+      return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines**`;
+    }
+
+    // ===================== EVENTS & VISITS =====================
+    if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
+      return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
+    }
+
+    // ===================== CONTACT & SOCIALS =====================
+    if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
+      return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@sunnyhocha0](https://www.tiktok.com/@sunnyhocha0)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
+    }
+
+    // ===================== LOCATION =====================
+    if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
+      return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
+    }
+
+    // ===================== DEFAULT RESPONSE =====================
+    return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
+  }
+
+  // Initial scroll
+  scrollToBottom();
+</script>
