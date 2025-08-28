@@ -114,9 +114,6 @@
 <body class="text-black">
   
 <!-- ===================== HEADER + HERO ===================== -->
-<section class="relative min-h-screen flex items-center overflow-hidden"
-  style="background-image: url('united-spirits-site/assets/img/wine-showcase-final.jpg');
-         background-size: cover;
          background-position: center;
          background-repeat: no-repeat;">
   <!-- Dark Overlay for Readability -->
@@ -137,6 +134,7 @@
         <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
         <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
         <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-pink text-sm px-3 py-1.5">WhatsApp</a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -145,12 +143,20 @@
       </button>
     </header>
 
-    <!-- Mobile Menu (Transparent) -->
-    <nav id="mobileMenu" class="hidden md:hidden bg-black/40 backdrop-blur-sm text-white border-t border-white/20 px-6 py-4 flex flex-col gap-4">
-      <a href="#collections" class="hover:text-pink-300 transition-colors">Collections</a>
-      <a href="#featured" class="hover:text-pink-300 transition-colors">Featured</a>
-      <a href="#events" class="hover:text-pink-300 transition-colors">Events</a>
-      <a href="#contact" class="hover:text-pink-300 transition-colors">Contact</a>
+    <!-- Mobile Menu (Slides in from the right) -->
+    <nav id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 w-80 h-full bg-black/40 backdrop-blur-sm z-50 flex flex-col gap-6 px-6 py-12 transform translate-x-full transition-transform duration-300">
+      <div class="flex justify-end">
+        <button id="closeMobileMenu" class="text-white hover:text-pink-300">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="flex flex-col items-center space-y-8">
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-xl">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-xl">Featured</a>
+        <a href="#events" class="text-white hover:text-pink-300 transition-colors text-xl">Events</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-xl">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-pink text-sm px-4 py-2">WhatsApp</a>
+      </div>
     </nav>
   </div>
 
@@ -663,19 +669,50 @@
   // Initialize Lucide Icons
   lucide.createIcons();
 
-  // Mobile Menu
+ <!-- JavaScript for Mobile Menu -->
+<script>
+  // Initialize Lucide Icons
+  lucide.createIcons();
+
+  // Mobile Menu Toggle
   const menuButton = document.getElementById('mobileMenuButton');
+  const closeMenuButton = document.getElementById('closeMobileMenu');
   const mobileMenu = document.getElementById('mobileMenu');
+
   if (menuButton && mobileMenu) {
+    // Open the menu
     menuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.remove('hidden');
+      // Trigger reflow to ensure the initial state is applied
+      void mobileMenu.offsetWidth;
+      // Slide in from the right
+      mobileMenu.classList.remove('translate-x-full');
     });
+  }
+
+  // Close the menu (using the X button)
+  if (closeMenuButton && mobileMenu) {
+    closeMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      // Wait for animation to finish before hiding
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+    });
+  }
+
+  // Close menu when a link is clicked
+  if (mobileMenu) {
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.add('translate-x-full');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
       });
     });
   }
+</script>
 
   // Chatbot
   const chatOpen = document.getElementById('chat-open');
@@ -789,6 +826,7 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
 
