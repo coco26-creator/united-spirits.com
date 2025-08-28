@@ -124,19 +124,20 @@
 
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
-    <header class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-8 sm:h-10 w-auto">
-        <span class="font-serif text-lg sm:text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto">
+        <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6 lg:gap-8">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Featured</a>
-        <a href="#events" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Events</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Contact</a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+        <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-pink text-sm px-3 py-1.5">WhatsApp</a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -145,27 +146,28 @@
       </button>
     </header>
 
-     <!-- Mobile Menu -->
-<nav id="mobileMenu" class="hidden md:hidden bg-black/40 backdrop-blur-sm text-white border-t border-white/20 px-6 py-4 flex flex-col gap-4">
-  <a href="#collections" class="hover:text-pink-300 transition-colors">Collections</a>
-  <a href="#featured" class="hover:text-pink-300 transition-colors">Featured</a>
-  <a href="#events" class="hover:text-pink-300 transition-colors">Events</a>
-  <a href="#contact" class="hover:text-pink-300 transition-colors">Contact</a>
-  <a href="https://wa.me/85269346630" class="btn btn-pink w-fit text-sm px-4 py-2">WhatsApp</a>
-</nav>
+    <!-- Mobile Menu (Transparent) -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-black/40 backdrop-blur-sm text-white border-t border-white/20 px-6 py-4 flex flex-col gap-4">
+      <a href="#collections" class="hover:text-pink-300 transition-colors">Collections</a>
+      <a href="#featured" class="hover:text-pink-300 transition-colors">Featured</a>
+      <a href="#events" class="hover:text-pink-300 transition-colors">Events</a>
+      <a href="#contact" class="hover:text-pink-300 transition-colors">Contact</a>
+      <a href="https://wa.me/85269346630" class="btn btn-pink w-fit text-sm px-4 py-2">WhatsApp</a>
+    </nav>
+  </div>
 
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
-    <div class="max-w-4xl mx-auto reveal on">
-      <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif leading-tight text-white mb-4">
+    <div class="max-w-3xl mx-auto reveal on">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
-      <p class="text-lg sm:text-xl text-white mb-6 max-w-xl mx-auto">
+      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
         Premium wines, whiskeys, and brandies curated for discerning palates.
       </p>
-      <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <a href="#collections" class="btn btn-purple text-white text-sm sm:text-base px-5 py-2.5">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-sm sm:text-base px-5 py-2.5">Get in Touch</a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -772,3 +774,4 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
