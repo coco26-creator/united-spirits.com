@@ -124,50 +124,50 @@
 
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
-    <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto">
-        <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3">
+        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-8 sm:h-10 w-auto">
+        <span class="font-serif text-lg sm:text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
-        <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
-        <a href="https://wa.me/85269346630" class="btn btn-pink">WhatsApp</a>
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Featured</a>
+        <a href="#events" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Events</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Contact</a>
+        <a href="https://wa.me/85269346630" class="btn btn-pink text-xs sm:text-sm px-3 py-1.5">WhatsApp</a>
       </nav>
 
       <!-- Mobile Menu Button -->
       <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
-        <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+        <i data-lucide="menu" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
       </button>
     </header>
 
     <!-- Mobile Menu -->
-    <nav id="mobileMenu" class="hidden md:hidden bg-black/80 text-white border-t border-gray-700 px-6 py-4 flex flex-col gap-4">
-      <a href="#collections" class="hover:text-pink-300">Collections</a>
-      <a href="#featured" class="hover:text-pink-300">Featured</a>
-      <a href="#events" class="hover:text-pink-300">Events</a>
-      <a href="#contact" class="hover:text-pink-300">Contact</a>
-      <a href="https://wa.me/85269346630" class="btn btn-pink w-fit">WhatsApp</a>
+    <nav id="mobileMenu" class="hidden md:hidden bg-black/90 text-white px-4 py-3 flex flex-col gap-3 text-sm">
+      <a href="#collections" class="hover:text-pink-300 py-2 border-b border-gray-700">Collections</a>
+      <a href="#featured" class="hover:text-pink-300 py-2 border-b border-gray-700">Featured</a>
+      <a href="#events" class="hover:text-pink-300 py-2 border-b border-gray-700">Events</a>
+      <a href="#contact" class="hover:text-pink-300 py-2 border-b border-gray-700">Contact</a>
+      <a href="https://wa.me/85269346630" class="btn btn-pink w-fit mx-auto px-4 py-2 text-xs">WhatsApp</a>
     </nav>
   </div>
 
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif leading-tight text-white mb-4">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+      <p class="text-lg sm:text-xl text-white mb-6 max-w-xl mx-auto">
         Premium wines, whiskeys, and brandies curated for discerning palates.
       </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <a href="#collections" class="btn btn-purple text-white text-sm sm:text-base px-5 py-2.5">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-sm sm:text-base px-5 py-2.5">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -580,9 +580,15 @@
     <!-- Location -->
     <div>
       <h3 class="text-lg font-semibold mb-6">Our Location</h3>
-      <p class="text-gray-400 mb-4">Hong Kong • hong Kong</p>
+      <p class="text-gray-400 mb-4">
+        ROOM 1002, 10/F<br>
+        EASEY COMMERCIAL BUILDING,<br>
+        253-261 HENNESSY ROAD,<br>
+        WANCHAI,<br>
+        HONG KONG
+      </p>
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37950.46732700157!2d114.1719462!3d22.3185697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e1a53c7b89%3A0x8130550006672c5a!2sHong%20Kong!5e0!3m2!1sen!2sus!4v1714880000000!5m2!1sen!2sus" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.278571866072!2d114.17930467515414!3d22.281556037114364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e1a53c7b89%3A0x8130550006672c5a!2sEasey%20Commercial%20Building!5e0!3m2!1sen!2sus!4v1714880000000!5m2!1sen!2sus" 
         width="100%" 
         height="300" 
         style="border:0; border-radius: 1rem;" 
@@ -590,6 +596,13 @@
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+      <div class="mt-4 text-center">
+        <a href="https://www.google.com/maps/place/Easey+Commercial+Building/@22.281556,114.1793047,17z/data=!3m1!4b1!4m6!3m5!1s0x340401e1a53c7b89:0x8130550006672c5a!8m2!3d22.281556!4d114.181885!16s%2Fg%2F11c5yqjx8q?entry=ttu" 
+           target="_blank" 
+           class="text-sm text-pink-400 hover:underline">
+           Open in Google Maps
+        </a>
+      </div>
     </div>
   </div>
 
@@ -757,6 +770,7 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
 
