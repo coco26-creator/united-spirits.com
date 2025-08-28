@@ -664,14 +664,9 @@
     </div>
   </div>
 
- <!-- ===================== SCRIPTS ===================== -->
-      <script>
-  // Initialize Lucide Icons
-  lucide.createIcons();
-
- <!-- JavaScript for Mobile Menu -->
+<!-- ===================== SCRIPTS ===================== -->
 <script>
-  // Initialize Lucide Icons
+  // Initialize Lucide Icons (only once)
   lucide.createIcons();
 
   // Mobile Menu Toggle
@@ -712,7 +707,6 @@
       });
     });
   }
-</script>
 
   // Chatbot
   const chatOpen = document.getElementById('chat-open');
@@ -826,8 +820,3 @@
   // Initial scroll
   scrollToBottom();
 </script>
-
-
-
-
-
