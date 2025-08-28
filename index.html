@@ -124,22 +124,35 @@
 
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
-    <header class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8">
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-2 sm:gap-3">
         <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-8 sm:h-10 w-auto">
         <span class="font-serif text-lg sm:text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
-      <!-- Navigation Links (Always Visible) -->
-      <nav class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm sm:text-base">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
-        <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Featured</a>
+        <a href="#events" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Events</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-sm sm:text-base">Contact</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+      </button>
     </header>
-  </div>
+
+     <!-- Mobile Menu -->
+<nav id="mobileMenu" class="hidden md:hidden bg-black/40 backdrop-blur-sm text-white border-t border-white/20 px-6 py-4 flex flex-col gap-4">
+  <a href="#collections" class="hover:text-pink-300 transition-colors">Collections</a>
+  <a href="#featured" class="hover:text-pink-300 transition-colors">Featured</a>
+  <a href="#events" class="hover:text-pink-300 transition-colors">Events</a>
+  <a href="#contact" class="hover:text-pink-300 transition-colors">Contact</a>
+  <a href="https://wa.me/85269346630" class="btn btn-pink w-fit text-sm px-4 py-2">WhatsApp</a>
+</nav>
 
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
@@ -759,12 +772,3 @@
   // Initial scroll
   scrollToBottom();
 </script>
-
-
-
-
-
-
-
-
-
