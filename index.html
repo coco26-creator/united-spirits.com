@@ -130,10 +130,10 @@
 <section class="relative min-h-screen flex items-center overflow-hidden"
   style="background-image: url('united-spirits-site/assets/img/hero 3.jpeg');
          background-size: cover;
-         background-position: center top;
+         background-position: center;
          background-repeat: no-repeat;">
   <!-- Dark Overlay for Readability -->
-  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
@@ -141,7 +141,7 @@
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
         <img src="united-spirits-site/assets/img/logo 1.png" alt="United Spirits Logo" class="h-10 w-auto">
-        <span class="font-serif text-xl tracking-wide text-white">United <span class="text-purple-500">Spirits</span></span>
+        <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
       <!-- Desktop Nav -->
@@ -150,7 +150,6 @@
         <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
         <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
         <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
-      </nav>
 
       <!-- Mobile Menu Button -->
       <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
@@ -159,7 +158,7 @@
     </header>
 
     <!-- Mobile Menu (Slides in from the right) -->
-    <nav id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 w-80 h-full bg-black/90 backdrop-blur-sm z-50 flex flex-col gap-6 px-6 py-12 transform translate-x-full transition-transform duration-300">
+    <nav id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 w-80 h-full bg-black/40 backdrop-blur-sm z-50 flex flex-col gap-6 px-6 py-12 transform translate-x-full transition-transform duration-300">
       <div class="flex justify-end">
         <button id="closeMobileMenu" class="text-white hover:text-pink-300">
           <i data-lucide="x" class="w-6 h-6"></i>
@@ -177,10 +176,10 @@
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6 drop-shadow-md">
-        Crafting <span class="text-purple-500">Spirits</span> of Distinction
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto drop-shadow-sm">
+      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
         Premium wines, whiskeys, and brandies curated for discerning palates.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
@@ -834,5 +833,6 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
