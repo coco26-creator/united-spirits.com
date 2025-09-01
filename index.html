@@ -109,7 +109,16 @@
     .animate-scroll:hover {
       animation-play-state: paused;
     }
-  </style>
+
+    <style>
+  /* Adjust hero image for mobile devices */
+  @media (max-width: 768px) {
+    section[style*="background-image"] {
+      background-size: contain; /* or 'auto' */
+      background-position: center top;
+    }
+  }
+</style>
 </head>
 <body class="text-black">
   
@@ -821,28 +830,3 @@
   // Initial scroll
   scrollToBottom();
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
