@@ -120,8 +120,7 @@
          background-position: center top;
          background-repeat: no-repeat;
          background-color: #f9f9f9;">
-  <!-- Dark Overlay for Readability -->
-  <div class="absolute inset-0 bg-black/60"></div>
+  <!-- No Overlay - Let the image shine -->
 
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
@@ -129,35 +128,35 @@
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
         <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto">
-        <span class="font-serif text-xl tracking-wide text-white">United <span class="text-purple-500">Spirits</span></span>
+        <span class="font-serif text-xl tracking-wide text-black">United <span class="text-purple-600">Spirits</span></span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
-        <a href="#events" class="text-white hover:text-pink-300 transition-colors">Events</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+        <a href="#collections" class="text-black hover:text-pink-600 transition-colors">Collections</a>
+        <a href="#featured" class="text-black hover:text-pink-600 transition-colors">Featured</a>
+        <a href="#events" class="text-black hover:text-pink-600 transition-colors">Events</a>
+        <a href="#contact" class="text-black hover:text-pink-600 transition-colors">Contact</a>
       </nav>
 
       <!-- Mobile Menu Button -->
       <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
-        <i data-lucide="menu" class="w-6 h-6 text-purple-500"></i>
+        <i data-lucide="menu" class="w-6 h-6 text-black"></i>
       </button>
     </header>
 
     <!-- Mobile Menu (Slides in from the right) -->
-    <nav id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 w-80 h-full bg-black/40 backdrop-blur-sm z-50 flex flex-col gap-6 px-6 py-12 transform translate-x-full transition-transform duration-300">
+    <nav id="mobileMenu" class="hidden md:hidden fixed top-0 right-0 w-80 h-full bg-white/95 backdrop-blur-sm z-50 flex flex-col gap-6 px-6 py-12 transform translate-x-full transition-transform duration-300">
       <div class="flex justify-end">
-        <button id="closeMobileMenu" class="text-white hover:text-pink-300">
+        <button id="closeMobileMenu" class="text-black hover:text-pink-600">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="flex flex-col items-center space-y-8">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-xl">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-xl">Featured</a>
-        <a href="#events" class="text-white hover:text-pink-300 transition-colors text-xl">Events</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-xl">Contact</a>
+        <a href="#collections" class="text-black hover:text-pink-600 transition-colors text-xl">Collections</a>
+        <a href="#featured" class="text-black hover:text-pink-600 transition-colors text-xl">Featured</a>
+        <a href="#events" class="text-black hover:text-pink-600 transition-colors text-xl">Events</a>
+        <a href="#contact" class="text-black hover:text-pink-600 transition-colors text-xl">Contact</a>
       </div>
     </nav>
   </div>
@@ -165,15 +164,15 @@
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
-        Crafting <span class="text-purple-500">Spirits</span> of Distinction
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-black mb-6 drop-shadow-md">
+        Crafting <span class="text-purple-600">Spirits</span> of Distinction
       </h1>
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+      <p class="text-xl text-black mb-8 max-w-xl mx-auto drop-shadow-sm">
         Premium wines, whiskeys, and brandies curated for discerning palates.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">Get in Touch</a>
+        <a href="#contact" class="btn btn-outline border-black text-black hover:bg-black hover:text-white">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -822,6 +821,7 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
 
