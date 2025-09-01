@@ -113,16 +113,22 @@
 </head>
 <body class="text-black">
   
-  <!-- Mobile Fix CSS -->
   <style>
-    /* Adjust hero image for mobile devices */
-    @media (max-width: 1279px) {
-      section[style*="background-image"] {
-        background-size: contain;
-        background-position: center top;
-      }
+  /* Default (Desktop) Hero Image Style */
+  section[style*="background-image"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Mobile Hero Image Style (for screens 1279px and smaller) */
+  @media (max-width: 1279px) {
+    section[style*="background-image"] {
+      background-size: contain;
+      background-position: center top;
     }
-  </style>
+  }
+</style>
 </head>
 <body class="text-black">
   
@@ -833,6 +839,7 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
 
