@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>United Spirits — Premium Wines, Whiskeys & Brandies</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag (GTM) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B0883F7XN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,18 +12,19 @@
     gtag('config', 'G-9B0883F7XN');
   </script>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (Critical) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons (Async) -->
+  <script async src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Marked.js for Markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Marked.js for Markdown rendering (Async) -->
+  <script async src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- Fonts -->
+  <!-- Fonts (Preload) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="preload" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
 
   <style>
     :root {
@@ -134,7 +133,6 @@
     }
   </style>
 </head>
-<body class="text-black">
   
 <!-- ===================== HEADER + HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden"
@@ -847,6 +845,7 @@
   // Initial scroll
   scrollToBottom();
 </script>
+
 
 
 
