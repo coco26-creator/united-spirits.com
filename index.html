@@ -39,7 +39,7 @@
   "@type": "Organization",
   "name": "United Spirits",
   "url": "https://www.unitedspiritshk.com",
-  "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo2.jpg",
+  "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo 1.png",
   "description": "Premium wines, whiskeys, and brandies curated for discerning palates. Partnering with elite producers to bring you the finest spirits from around the world.",
   "address": {
     "@type": "PostalAddress",
@@ -188,7 +188,7 @@
     <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto glow-logo">
+        <img src="united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-auto glow-logo">
         <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
@@ -211,28 +211,14 @@
     </header>
 
     <!-- Mobile Menu (Dropdown from top) -->
-    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/90 backdrop-blur-sm z-50 flex flex-col -translate-y-full transition-transform duration-300">
-      <div class="max-w-7xl mx-auto px-6 py-4 w-full">
-        <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <a href="index.html" class="flex items-center gap-3">
-            <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto glow-logo" />
-            <span class="text-white font-serif text-xl">United <span class="accent-text">Spirits</span></span>
-          </a>
-          <!-- Close Button -->
-          <button id="closeMobileMenu" class="text-white hover:text-pink-300 p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
+    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/95 backdrop-blur-md z-50 flex flex-col -translate-y-full transition-transform duration-300">
+      <div class="max-w-7xl mx-auto w-full py-12">
         <!-- Navigation Links -->
-        <div class="flex flex-col items-center mt-6 space-y-6 w-full">
-          <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-xl py-2 w-full text-center">Collections</a>
-          <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-xl py-2 w-full text-center">Featured</a>
-          <a href="#events" class="text-white hover:text-pink-300 transition-colors text-xl py-2 w-full text-center">Events</a>
-          <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-xl py-2 w-full text-center">Contact</a>
+        <div class="flex flex-col items-center space-y-8 w-full px-6">
+          <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Collections</a>
+          <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Featured</a>
+          <a href="#events" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Events</a>
+          <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Contact</a>
         </div>
       </div>
     </nav>
@@ -921,17 +907,6 @@
     });
   }
 
-  // Close the menu (using the X button)
-  if (closeMenuButton && mobileMenu) {
-    closeMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.add('-translate-y-full');
-      // Wait for animation to finish before hiding
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
-    });
-  }
-
   // Close menu when a link is clicked
   if (mobileMenu) {
     mobileMenu.querySelectorAll('a').forEach(link => {
@@ -1124,4 +1099,5 @@
 </script>
 </body>
 </html>
+
 
