@@ -4,43 +4,43 @@
   
   <!-- Web Pages -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/index.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/wines.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/collections/wines</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/brandy.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/collections/brandy</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/whiskey.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/collections/whiskey</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/events.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/events</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/about.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/about</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/contact.html</loc>
+    <loc>https://coco26-creator.github.io/united-spirits.com/contact</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -258,14 +258,6 @@
       <image:title>Wine Showcase</image:title>
       <image:caption>Product showcase event</image:caption>
     </image:image>
-  </url>
-
-  <!-- Google Verification File -->
-  <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/google5ac6afe4fa2e82f1.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
   </url>
 
 </urlset>
