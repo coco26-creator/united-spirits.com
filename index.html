@@ -201,7 +201,7 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuButton" class="md:hidden p-2" aria-label="Toggle menu">
+      <button id="mobileMenuButton" class="md:hidden p-2 relative z-50" aria-label="Toggle menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -210,15 +210,15 @@
       </button>
     </header>
 
-    <!-- Mobile Menu (Dropdown from top) -->
-    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-gray-900 z-50 flex flex-col -translate-y-full transition-transform duration-300">
-      <div class="max-w-7xl mx-auto w-full py-12">
+    <!-- Mobile Menu (Compact dropdown) -->
+    <nav id="mobileMenu" class="hidden absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50 min-w-[120px] overflow-hidden transition-all duration-300 opacity-0 translate-y-2 pointer-events-none">
+      <div class="py-2">
         <!-- Navigation Links -->
-        <div class="flex flex-col items-center space-y-4 w-full px-6">
-          <a href="#collections" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Collections</a>
-          <a href="#featured" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Featured</a>
-          <a href="#events" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Events</a>
-          <a href="#contact" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Contact</a>
+        <div class="flex flex-col items-end space-y-1 px-4 py-1">
+          <a href="#collections" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+          <a href="#featured" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+          <a href="#events" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Events</a>
+          <a href="#contact" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
         </div>
       </div>
     </nav>
@@ -898,10 +898,12 @@
 
   if (menuButton && mobileMenu) {
     // Toggle the menu (open/close)
-    menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (menuOpen) {
         // Close the menu
-        mobileMenu.classList.add('-translate-y-full');
+        mobileMenu.classList.add('opacity-0', 'translate-y-2');
+        mobileMenu.classList.remove('pointer-events-auto');
         setTimeout(() => {
           mobileMenu.classList.add('hidden');
         }, 300);
@@ -911,7 +913,9 @@
         mobileMenu.classList.remove('hidden');
         // Trigger reflow to ensure the initial state is applied
         void mobileMenu.offsetWidth;
-        mobileMenu.classList.remove('-translate-y-full');
+        // Show with animation
+        mobileMenu.classList.remove('opacity-0', 'translate-y-2');
+        mobileMenu.classList.add('pointer-events-auto');
         menuOpen = true;
       }
     });
@@ -921,7 +925,8 @@
   if (mobileMenu) {
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('-translate-y-full');
+        mobileMenu.classList.add('opacity-0', 'translate-y-2');
+        mobileMenu.classList.remove('pointer-events-auto');
         setTimeout(() => {
           mobileMenu.classList.add('hidden');
         }, 300);
@@ -935,32 +940,12 @@
     if (menuOpen && mobileMenu && menuButton && 
         !mobileMenu.contains(event.target) && 
         !menuButton.contains(event.target)) {
-      mobileMenu.classList.add('-translate-y-full');
+      mobileMenu.classList.add('opacity-0', 'translate-y-2');
+      mobileMenu.classList.remove('pointer-events-auto');
       setTimeout(() => {
         mobileMenu.classList.add('hidden');
       }, 300);
       menuOpen = false;
-    }
-  });
-
-  // Close menu when scrolling
-  let lastScrollY = 0;
-  const scrollThreshold = 5;
-
-  window.addEventListener('scroll', () => {
-    if (menuOpen && mobileMenu) {
-      const currentScrollY = window.scrollY;
-      const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-      
-      if (scrollDifference > scrollThreshold) {
-        mobileMenu.classList.add('-translate-y-full');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-        menuOpen = false;
-      }
-      
-      lastScrollY = currentScrollY;
     }
   });
 
