@@ -211,14 +211,14 @@
     </header>
 
     <!-- Mobile Menu (Dropdown from top) -->
-    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-gradient-to-b from-black/95 to-black z-50 flex flex-col -translate-y-full transition-transform duration-300">
+    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md z-50 flex flex-col -translate-y-full transition-transform duration-300">
       <div class="max-w-7xl mx-auto w-full py-12">
         <!-- Navigation Links -->
         <div class="flex flex-col items-center space-y-8 w-full px-6">
-          <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Collections</a>
-          <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Featured</a>
-          <a href="#events" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Events</a>
-          <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center rounded-lg hover:bg-white/10">Contact</a>
+          <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Collections</a>
+          <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Featured</a>
+          <a href="#events" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Events</a>
+          <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Contact</a>
         </div>
       </div>
     </nav>
@@ -889,12 +889,14 @@
   </div>
 </div>
   
- <!-- ===================== SCRIPTS ===================== -->
+<!-- ===================== SCRIPTS ===================== -->
 <script>
+  // Initialize mobile menu state
+  let menuOpen = false;
+  
   // Mobile Menu Toggle
   const menuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
-  let menuOpen = false;
 
   if (menuButton && mobileMenu) {
     // Toggle the menu (open/close)
@@ -930,10 +932,21 @@
     });
   }
 
+  // Close menu when clicking outside the menu
+  document.addEventListener('click', (event) => {
+    if (menuOpen && !mobileMenu?.contains(event.target) && !menuButton?.contains(event.target)) {
+      mobileMenu.classList.add('-translate-y-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+      menuOpen = false;
+    }
+  });
+
   // Close menu when scrolling
   let lastScrollY = 0;
   const scrollThreshold = 5;
-  
+
   window.addEventListener('scroll', () => {
     if (menuOpen) {
       const currentScrollY = window.scrollY;
@@ -1131,7 +1144,3 @@
 </script>
 </body>
 </html>
-
-
-
-
