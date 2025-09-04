@@ -209,7 +209,7 @@
     </header>
 
     <!-- Mobile Menu (Dropdown from top) -->
-    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/90 backdrop-blur-sm z-50 flex flex-col transform -translate-y-full transition-transform duration-300">
+    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/90 backdrop-blur-sm z-50 flex flex-col -translate-y-full transition-transform duration-300">
       <div class="max-w-7xl mx-auto px-6 py-4 w-full">
         <div class="flex items-center justify-between">
           <!-- Logo -->
@@ -901,7 +901,7 @@
   </div>
 </div>
   
-  <!-- ===================== SCRIPTS ===================== -->
+ <!-- ===================== SCRIPTS ===================== -->
 <script>
   // Mobile Menu Toggle
   const menuButton = document.getElementById('mobileMenuButton');
@@ -1078,9 +1078,6 @@
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const closeLightbox = document.getElementById('close-lightbox');
-  const lightboxCaption = document.getElementById('lightbox-caption');
-  const lightboxPrev = document.getElementById('lightbox-prev');
-  const lightboxNext = document.getElementById('lightbox-next');
 
   // Add click event to all product images
   document.querySelectorAll('.card img, .reveal img').forEach(img => {
@@ -1090,10 +1087,6 @@
       lightboxImg.src = img.src;
       // Set alt text
       lightboxImg.alt = img.alt || 'Product Image';
-      // Set caption if available
-      if (lightboxCaption && img.alt) {
-        lightboxCaption.textContent = img.alt;
-      }
       // Show the lightbox
       lightbox.classList.remove('hidden');
       // Prevent scrolling on the body
