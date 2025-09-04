@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
+
   <!-- Web Pages -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/</loc>
+    <loc>https://www.unitedspiritshk.com/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/wines</loc>
+    <loc>https://www.unitedspiritshk.com/collections/wines</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/brandy</loc>
+    <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/collections/whiskey</loc>
+    <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/events</loc>
+    <loc>https://www.unitedspiritshk.com/events</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/about</loc>
+    <loc>https://www.unitedspiritshk.com/about</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/contact</loc>
+    <loc>https://www.unitedspiritshk.com/contact</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -48,13 +48,13 @@
 
   <!-- Additional Pages -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/products.json</loc>
+    <loc>https://www.unitedspiritshk.com/products.json</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/google5ac6afe4fa2e82f1.html</loc>
+    <loc>https://www.unitedspiritshk.com/google5ac6afe4fa2e82f1.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -62,33 +62,33 @@
 
   <!-- Key Product Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</image:loc>
       <image:title>Anderra Reserva Cabernet Sauvignon Blanc 2023</image:title>
       <image:caption>Premium white wine from Anderra collection</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</image:loc>
       <image:title>Lolita RTD Red Wine Cans</image:title>
       <image:caption>Premium red wine in convenient cans</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</image:loc>
       <image:title>Honey Conti VSOP Brandy</image:title>
       <image:caption>Colorful presentation of premium brandy</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</image:loc>
       <image:title>Sunny Land Single Malt Whiskey</image:title>
       <image:caption>25-year-old premium single malt whiskey</image:caption>
     </image:image>
@@ -96,25 +96,25 @@
 
   <!-- Brand Collaboration Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg</image:loc>
       <image:title>European Diplomatic Meeting</image:title>
       <image:caption>Brand collaboration event with European partners</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg</image:loc>
       <image:title>Honey Conti Launch Event</image:title>
       <image:caption>Product launch celebration</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg</image:loc>
       <image:title>Planet1 Cognac Partnership</image:title>
       <image:caption>Partnership announcement with Planet1</image:caption>
     </image:image>
@@ -122,17 +122,17 @@
 
   <!-- Diplomatic Visit Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</image:loc>
       <image:title>Chile Ambassador Arrival</image:title>
       <image:caption>Diplomatic visit by Chilean ambassador</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</image:loc>
       <image:title>Chile Ambassador Visit to Hocha</image:title>
       <image:caption>Official visit to production facility</image:caption>
     </image:image>
@@ -140,17 +140,17 @@
 
   <!-- Education Event Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</image:loc>
       <image:title>Beidu Wine Tasting Event</image:title>
       <image:caption>Wine appreciation seminar</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</image:loc>
       <image:title>Bernard Magrez Wine Tasting</image:title>
       <image:caption>Expert-led wine tasting session</image:caption>
     </image:image>
@@ -158,25 +158,25 @@
 
   <!-- Facility Tour Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg</image:loc>
       <image:title>Chile Ambassador at Production Line</image:title>
       <image:caption>Guided tour of manufacturing facility</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</image:loc>
       <image:title>Bottling Process</image:title>
       <image:caption>Video of the bottling operation</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</image:loc>
       <image:title>Production Line</image:title>
       <image:caption>Video of the production line</image:caption>
     </image:image>
@@ -184,17 +184,17 @@
 
   <!-- Meetings & Events Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</image:loc>
       <image:title>Honey Conti Planet1 Signing</image:title>
       <image:caption>Strategic partnership agreement signing</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</image:loc>
       <image:title>Trade Show Product Review</image:title>
       <image:caption>Client meeting at trade show</image:caption>
     </image:image>
@@ -202,25 +202,25 @@
 
   <!-- Partner Logos -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/apwg.png</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/apwg.png</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/apwg.png</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/apwg.png</image:loc>
       <image:title>Australian Premium Wine Group</image:title>
       <image:caption>Premium wine partner</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</image:loc>
       <image:title>Baron Philippe de Rothschild</image:title>
       <image:caption>Prestigious wine partner</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/louis-xiii.png</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/louis-xiii.png</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/partners/louis-xiii.png</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/louis-xiii.png</image:loc>
       <image:title>Louis XIII</image:title>
       <image:caption>Premium cognac partner</image:caption>
     </image:image>
@@ -228,33 +228,33 @@
 
   <!-- Hero & About Images -->
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/hero 3.webp</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/hero 3.webp</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/hero 3.webp</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/hero 3.webp</image:loc>
       <image:title>Hero Image</image:title>
       <image:caption>Main banner image for the website</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</image:loc>
       <image:title>Supply Chain</image:title>
       <image:caption>Hong Kong and China supply chain network</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/team-visit-2025.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/team-visit-2025.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</image:loc>
       <image:title>Team Visit 2025</image:title>
       <image:caption>Global team collaboration event</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/wine-showcase-final.jpg</loc>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/wine-showcase-final.jpg</loc>
     <image:image>
-      <image:loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/wine-showcase-final.jpg</image:loc>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/wine-showcase-final.jpg</image:loc>
       <image:title>Wine Showcase</image:title>
       <image:caption>Product showcase event</image:caption>
     </image:image>
