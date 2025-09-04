@@ -46,6 +46,20 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Additional Pages -->
+  <url>
+    <loc>https://coco26-creator.github.io/united-spirits.com/products.json</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://coco26-creator.github.io/united-spirits.com/google5ac6afe4fa2e82f1.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Key Product Images -->
   <url>
     <loc>https://coco26-creator.github.io/united-spirits.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</loc>
@@ -244,6 +258,14 @@
       <image:title>Wine Showcase</image:title>
       <image:caption>Product showcase event</image:caption>
     </image:image>
+  </url>
+
+  <!-- Google Verification File -->
+  <url>
+    <loc>https://coco26-creator.github.io/united-spirits.com/google5ac6afe4fa2e82f1.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
   </url>
 
 </urlset>
