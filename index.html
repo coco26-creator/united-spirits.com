@@ -211,14 +211,14 @@
     </header>
 
     <!-- Mobile Menu (Dropdown from top) -->
-    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md z-50 flex flex-col -translate-y-full transition-transform duration-300">
+    <nav id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-gray-900 z-50 flex flex-col -translate-y-full transition-transform duration-300">
       <div class="max-w-7xl mx-auto w-full py-12">
         <!-- Navigation Links -->
-        <div class="flex flex-col items-center space-y-8 w-full px-6">
-          <a href="#collections" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Collections</a>
-          <a href="#featured" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Featured</a>
-          <a href="#events" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Events</a>
-          <a href="#contact" class="text-white hover:text-pink-300 transition-colors text-2xl font-medium py-3 w-full text-center">Contact</a>
+        <div class="flex flex-col items-center space-y-4 w-full px-6">
+          <a href="#collections" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Collections</a>
+          <a href="#featured" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Featured</a>
+          <a href="#events" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Events</a>
+          <a href="#contact" class="accent-text transition-colors text-2xl font-medium py-2 w-full text-center">Contact</a>
         </div>
       </div>
     </nav>
@@ -891,12 +891,10 @@
   
 <!-- ===================== SCRIPTS ===================== -->
 <script>
-  // Initialize mobile menu state
-  let menuOpen = false;
-  
   // Mobile Menu Toggle
   const menuButton = document.getElementById('mobileMenuButton');
   const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
 
   if (menuButton && mobileMenu) {
     // Toggle the menu (open/close)
@@ -934,7 +932,9 @@
 
   // Close menu when clicking outside the menu
   document.addEventListener('click', (event) => {
-    if (menuOpen && !mobileMenu?.contains(event.target) && !menuButton?.contains(event.target)) {
+    if (menuOpen && mobileMenu && menuButton && 
+        !mobileMenu.contains(event.target) && 
+        !menuButton.contains(event.target)) {
       mobileMenu.classList.add('-translate-y-full');
       setTimeout(() => {
         mobileMenu.classList.add('hidden');
@@ -948,7 +948,7 @@
   const scrollThreshold = 5;
 
   window.addEventListener('scroll', () => {
-    if (menuOpen) {
+    if (menuOpen && mobileMenu) {
       const currentScrollY = window.scrollY;
       const scrollDifference = Math.abs(currentScrollY - lastScrollY);
       
@@ -1102,45 +1102,45 @@
   const closeLightbox = document.getElementById('close-lightbox');
 
   // Add click event to all product images
-  document.querySelectorAll('.card img, .reveal img').forEach(img => {
-    img.classList.add('cursor-pointer');
-    img.addEventListener('click', () => {
-      // Get the image source
-      lightboxImg.src = img.src;
-      // Set alt text
-      lightboxImg.alt = img.alt || 'Product Image';
-      // Show the lightbox
-      lightbox.classList.remove('hidden');
-      // Prevent scrolling on the body
-      document.body.style.overflow = 'hidden';
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll('.card img, .reveal img').forEach(img => {
+      img.classList.add('cursor-pointer');
+      img.addEventListener('click', () => {
+        // Get the image source
+        lightboxImg.src = img.src;
+        // Set alt text
+        lightboxImg.alt = img.alt || 'Product Image';
+        // Show the lightbox
+        lightbox.classList.remove('hidden');
+        // Prevent scrolling on the body
+        document.body.style.overflow = 'hidden';
+      });
     });
-  });
 
-  // Close the lightbox when clicking the X button
-  if (closeLightbox && lightbox) {
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = ''; // Re-enable scrolling
-    });
-  }
+    // Close the lightbox when clicking the X button
+    if (closeLightbox) {
+      closeLightbox.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = ''; // Re-enable scrolling
+      });
+    }
 
-  // Close the lightbox when clicking outside the image
-  if (lightbox) {
+    // Close the lightbox when clicking outside the image
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.classList.add('hidden');
         document.body.style.overflow = ''; // Re-enable scrolling
       }
     });
-  }
 
-  // Close the lightbox with the Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = ''; // Re-enable scrolling
-    }
-  });
+    // Close the lightbox with the Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = ''; // Re-enable scrolling
+      }
+    });
+  }
 </script>
 </body>
 </html>
