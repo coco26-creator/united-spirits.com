@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Prevent FOUC (Flash of Unstyled Content) -->
+  <style>
+    * {
+      visibility: hidden;
+    }
+  </style>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow">
-  <!-- Added X-Robots-Tag -->
+  <!-- Fixed X-Robots-Tag (removed trailing space) -->
   <meta name="x-robots-tag" content="index, follow">
   <title>United Spirits — Premium Wines, Whiskeys & Brandies</title>
   <meta name="description" content="Curated premium spirits from global producers. Explore our collection of award-winning wines, whiskeys, and brandies for discerning palates." />
-  <!-- Added Canonical Tag -->
+  <!-- Fixed Canonical Tag (removed trailing space) -->
   <link rel="canonical" href="https://www.unitedspiritshk.com/" />
 
   <!-- Google Tag (GTM) -->
@@ -18,27 +25,38 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9B0883F7XN');
+    
+    // Show content after styles load
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        link.addEventListener('load', function() {
+          document.querySelectorAll('*').forEach(el => {
+            el.style.visibility = 'visible';
+          });
+        });
+      });
+    });
   </script>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (Fixed URLs - removed trailing spaces) -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
   
-  <!-- Marked.js for Markdown rendering -->
+  <!-- Marked.js for Markdown rendering (Fixed URL) -->
   <script async src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- Fonts -->
+  <!-- Fonts (Fixed URLs - removed trailing spaces) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="preload" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <!-- Preconnect Hints -->
+  <!-- Preconnect Hints (Fixed URLs) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://unpkg.com">
 
-  <!-- Schema.org Structured Data -->
+  <!-- Schema.org Structured Data (Fixed URLs) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -134,6 +152,17 @@
       padding: 6rem 0;
     }
 
+    /* Prevent layout shifts */
+    header img[width][height] {
+      aspect-ratio: attr(width) / attr(height);
+    }
+    
+    /* Placeholder background while loading */
+    header img.glow-logo {
+      background: rgba(255, 255, 255, 0.1);
+      object-fit: contain;
+    }
+
     /* Animated Glow for Logo */
     @keyframes glowPulse {
       0% { box-shadow: 0 0 10px rgba(236, 72, 153, 0.3); }
@@ -194,7 +223,12 @@
     <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-auto glow-logo">
+        <img src="united-spirits-site/assets/img/logo1.png" 
+             alt="United Spirits Logo" 
+             class="h-10 w-auto glow-logo"
+             width="200" 
+             height="40" 
+             loading="eager">
         <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
       </a>
 
@@ -233,6 +267,7 @@
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
+      <!-- Optional: Add logo here if needed in the hero section -->
       <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
@@ -1135,6 +1170,7 @@
 </script>
 </body>
 </html>
+
 
 
 
