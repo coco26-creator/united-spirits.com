@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Prevent FOUC (Flash of Unstyled Content) -->
-  <style>
-    * {
-      visibility: hidden;
-    }
-  </style>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index, follow">
-  <!-- Fixed X-Robots-Tag (removed trailing space) -->
-  <meta name="x-robots-tag" content="index, follow">
+  <meta name="robots" content="index, follow" />
   <title>United Spirits — Premium Wines, Whiskeys & Brandies</title>
   <meta name="description" content="Curated premium spirits from global producers. Explore our collection of award-winning wines, whiskeys, and brandies for discerning palates." />
-  <!-- Fixed Canonical Tag (removed trailing space) -->
-  <link rel="canonical" href="https://www.unitedspiritshk.com/" />
+  <link rel="canonical" href="https://www.unitedspiritshk.com/  " />
+  <meta name="theme-color" content="#ffffff" />
 
-  <!-- Google Tag (GTM) -->
+  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B0883F7XN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9B0883F7XN');
-    
-    // Show content after styles load
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-        link.addEventListener('load', function() {
-          document.querySelectorAll('*').forEach(el => {
-            el.style.visibility = 'visible';
-          });
-        });
-      });
-    });
   </script>
 
-  <!-- Tailwind CSS (Fixed URLs - removed trailing spaces) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+  <!-- Tailwind CSS -->
+  <link rel="preload" href="  https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css  " as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css  " media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css  "></noscript>
   
-  <!-- Marked.js for Markdown rendering (Fixed URL) -->
-  <script async src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Marked.js (optional, load deferred for performance) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js  " defer></script>
 
-  <!-- Fonts (Fixed URLs - removed trailing spaces) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="preload" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com  " />
+  <link rel="preconnect" href="https://fonts.gstatic.com  " crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Preconnect Hints (Fixed URLs) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://unpkg.com">
+  <!-- Preconnect Hints -->
+  <link rel="preconnect" href="  https://cdn.jsdelivr.net  " />
+  <link rel="preconnect" href="https://unpkg.com  " />
 
-  <!-- Schema.org Structured Data (Fixed URLs) -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org  ",
     "@type": "Organization",
     "name": "United Spirits",
-    "url": "https://www.unitedspiritshk.com",
-    "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png",
+    "url": "https://www.unitedspiritshk.com  ",
+    "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png  ",
     "description": "Premium wines, whiskeys, and brandies curated for discerning palates. Partnering with elite producers to bring you the finest spirits from around the world.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road",
       "addressLocality": "Wanchai",
       "addressRegion": "Hong Kong",
-      "postalCode": "",
       "addressCountry": "HK"
     },
     "contactPoint": {
@@ -78,19 +56,19 @@
       "telephone": "+852 6934 6630",
       "contactType": "customer service",
       "areaServed": "HK",
-      "availableLanguage": "English"
+      "availableLanguage": "English",
+      "email": "info@unitedspiritshk.com"
     },
-    "email": "info@unitedspiritshk.com",
     "sameAs": [
-      "https://x.com/unitedspiritshk",
+      "https://x.com/unitedspiritshk  ",
       "https://www.facebook.com/profile.php?id=61579254602509",
-      "https://www.instagram.com/united_spiritshk/",
-      "https://www.youtube.com",
-      "https://www.tiktok.com/@unitedspiritshk"
+      "  https://www.instagram.com/united_spiritshk/  ",
+      "https://www.youtube.com  ",
+      "https://www.tiktok.com/@unitedspiritshk  "
     ]
   }
   </script>
-  
+
   <style>
     :root {
       --pink: #ec4899;
@@ -135,6 +113,21 @@
       color: white;
     }
 
+    /* Added btn-outline styles */
+    .btn-outline {
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: all 0.3s ease;
+      padding: 0.8rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: #000;
+    }
+
     .card {
       border-radius: 1rem;
       background: white;
@@ -150,17 +143,6 @@
 
     .section {
       padding: 6rem 0;
-    }
-
-    /* Prevent layout shifts */
-    header img[width][height] {
-      aspect-ratio: attr(width) / attr(height);
-    }
-    
-    /* Placeholder background while loading */
-    header img.glow-logo {
-      background: rgba(255, 255, 255, 0.1);
-      object-fit: contain;
     }
 
     /* Animated Glow for Logo */
@@ -210,10 +192,9 @@
   </style>
 </head>
 <body class="text-black">
-  
 <!-- ===================== HEADER + HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat" 
-  style="background-image: url('united-spirits-site/assets/img/hero3.jpeg');">
+  style="background-image: url('united-spirits-site/assets/img/hero3.webp');">
   
   <!-- Dark Overlay for Readability -->
   <div class="absolute inset-0 bg-black/50"></div>
@@ -228,8 +209,12 @@
              class="h-10 w-auto glow-logo"
              width="200" 
              height="40" 
-             loading="eager">
-        <span class="font-serif text-xl tracking-wide text-white">United <span class="accent-text">Spirits</span></span>
+             loading="eager" 
+             decoding="async" 
+             fetchpriority="high">
+        <span class="font-serif text-xl tracking-wide text-white">
+          United <span class="accent-text">Spirits</span>
+        </span>
       </a>
 
       <!-- Desktop Nav -->
@@ -241,8 +226,12 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuButton" class="md:hidden p-2 relative z-50" aria-label="Toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+      <button id="mobileMenuButton" class="md:hidden p-2 relative z-50" 
+              aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+             class="text-white">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -251,14 +240,14 @@
     </header>
 
     <!-- Mobile Menu (Compact dropdown) -->
-    <nav id="mobileMenu" class="hidden absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50 min-w-[120px] overflow-hidden transition-all duration-300 opacity-0 translate-y-2 pointer-events-none">
+    <nav id="mobileMenu" class="hidden absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50 min-w-[140px] overflow-hidden transition-all duration-300 opacity-0 translate-y-2 pointer-events-none">
       <div class="py-2">
         <!-- Navigation Links -->
         <div class="flex flex-col items-end space-y-1 px-4 py-1">
-          <a href="#collections" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
-          <a href="#featured" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
-          <a href="#events" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Events</a>
-          <a href="#contact" class="accent-text transition-colors text-xs font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
+          <a href="#collections" class="accent-text transition-colors text-sm font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+          <a href="#featured" class="accent-text transition-colors text-sm font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+          <a href="#events" class="accent-text transition-colors text-sm font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Events</a>
+          <a href="#contact" class="accent-text transition-colors text-sm font-medium py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
         </div>
       </div>
     </nav>
@@ -267,7 +256,6 @@
   <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
-      <!-- Optional: Add logo here if needed in the hero section -->
       <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
@@ -276,7 +264,7 @@
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-outline border-white bg-white text-black">Get in Touch</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -932,246 +920,256 @@
   
 <!-- ===================== SCRIPTS ===================== -->
 <script>
-  // Mobile Menu Toggle
-  const menuButton = document.getElementById('mobileMenuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
-  let menuOpen = false;
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
 
-  if (menuButton && mobileMenu) {
-    // Toggle the menu (open/close)
-    menuButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (menuOpen) {
-        // Close the menu
+    if (menuButton && mobileMenu) {
+      // Toggle the menu (open/close)
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (menuOpen) {
+          // Close the menu
+          mobileMenu.classList.add('opacity-0', 'translate-y-2');
+          mobileMenu.classList.remove('pointer-events-auto');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          menuOpen = false;
+        } else {
+          // Open the menu
+          mobileMenu.classList.remove('hidden');
+          // Trigger reflow to ensure the initial state is applied
+          void mobileMenu.offsetWidth;
+          // Show with animation
+          mobileMenu.classList.remove('opacity-0', 'translate-y-2');
+          mobileMenu.classList.add('pointer-events-auto');
+          menuOpen = true;
+        }
+      });
+    }
+
+    // Close menu when a link is clicked
+    if (mobileMenu) {
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('opacity-0', 'translate-y-2');
+          mobileMenu.classList.remove('pointer-events-auto');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          menuOpen = false;
+        });
+      });
+    }
+
+    // Close menu when clicking outside the menu
+    document.addEventListener('click', (event) => {
+      if (menuOpen && mobileMenu && menuButton && 
+          !mobileMenu.contains(event.target) && 
+          !menuButton.contains(event.target)) {
         mobileMenu.classList.add('opacity-0', 'translate-y-2');
         mobileMenu.classList.remove('pointer-events-auto');
         setTimeout(() => {
           mobileMenu.classList.add('hidden');
         }, 300);
         menuOpen = false;
-      } else {
-        // Open the menu
-        mobileMenu.classList.remove('hidden');
-        // Trigger reflow to ensure the initial state is applied
-        void mobileMenu.offsetWidth;
-        // Show with animation
-        mobileMenu.classList.remove('opacity-0', 'translate-y-2');
-        mobileMenu.classList.add('pointer-events-auto');
-        menuOpen = true;
       }
     });
-  }
 
-  // Close menu when a link is clicked
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('opacity-0', 'translate-y-2');
-        mobileMenu.classList.remove('pointer-events-auto');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-        }, 300);
-        menuOpen = false;
+    // Chatbot
+    const chatOpen = document.getElementById('chat-open');
+    const chatClose = document.getElementById('chat-close');
+    const chat = document.getElementById('chat');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatText = document.getElementById('chat-text');
+    const chatSend = document.getElementById('chat-send');
+
+    if (chatOpen && chat) {
+      chatOpen.addEventListener('click', () => {
+        chat.classList.remove('hidden');
+        if (chatText) chatText.focus();
       });
-    });
-  }
+    }
 
-  // Close menu when clicking outside the menu
-  document.addEventListener('click', (event) => {
-    if (menuOpen && mobileMenu && menuButton && 
-        !mobileMenu.contains(event.target) && 
-        !menuButton.contains(event.target)) {
-      mobileMenu.classList.add('opacity-0', 'translate-y-2');
-      mobileMenu.classList.remove('pointer-events-auto');
+    if (chatClose && chat) {
+      chatClose.addEventListener('click', () => {
+        chat.classList.add('hidden');
+      });
+    }
+
+    function sendMessage() {
+      if (!chatText || !chatMessages) return;
+      
+      const text = chatText.value.trim();
+      if (!text) return;
+
+      addMessage('user', text);
+      chatText.value = '';
+
       setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
-      menuOpen = false;
+        const response = getBotResponse(text.toLowerCase());
+        addMessage('bot', response);
+      }, 600);
     }
-  });
 
-  // Chatbot
-  const chatOpen = document.getElementById('chat-open');
-  const chatClose = document.getElementById('chat-close');
-  const chat = document.getElementById('chat');
-  const chatMessages = document.getElementById('chat-messages');
-  const chatText = document.getElementById('chat-text');
-  const chatSend = document.getElementById('chat-send');
-
-  if (chatOpen && chat) {
-    chatOpen.addEventListener('click', () => {
-      chat.classList.remove('hidden');
-      if (chatText) chatText.focus();
-    });
-  }
-
-  if (chatClose && chat) {
-    chatClose.addEventListener('click', () => {
-      chat.classList.add('hidden');
-    });
-  }
-
-  function sendMessage() {
-    if (!chatText || !chatMessages) return;
+    if (chatSend) {
+      chatSend.addEventListener('click', sendMessage);
+    }
     
-    const text = chatText.value.trim();
-    if (!text) return;
+    if (chatText) {
+      chatText.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+      });
+    }
 
-    addMessage('user', text);
-    chatText.value = '';
+    function addMessage(sender, text) {
+      if (!chatMessages) return;
+      
+      const msg = document.createElement('div');
+      msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
+        sender === 'user' 
+          ? 'ml-auto bg-purple-600 text-white' 
+          : 'bg-white text-gray-800 shadow'
+      }`;
+      msg.innerHTML = marked.parse(text);
+      
+      msg.querySelectorAll('a').forEach(link => {
+        link.target = '_blank';
+        link.rel = 'noopener';
+        // Fix any URLs with extra spaces
+        link.href = link.href.trim();
+      });
+      
+      chatMessages.appendChild(msg);
+      scrollToBottom();
+    }
 
-    setTimeout(() => {
-      const response = getBotResponse(text.toLowerCase());
-      addMessage('bot', response);
-    }, 600);
-  }
+    function scrollToBottom() {
+      if (chatMessages) {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
 
-  if (chatSend) {
-    chatSend.addEventListener('click', sendMessage);
-  }
-  
-  if (chatText) {
-    chatText.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') sendMessage();
-    });
-  }
+    function getBotResponse(input) {
+      const has = (keywords) => keywords.some(kw => input.includes(kw));
 
-  function addMessage(sender, text) {
-    if (!chatMessages) return;
-    
-    const msg = document.createElement('div');
-    msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
-      sender === 'user' 
-        ? 'ml-auto bg-purple-600 text-white' 
-        : 'bg-white text-gray-800 shadow'
-    }`;
-    msg.innerHTML = marked.parse(text);
-    
-    msg.querySelectorAll('a').forEach(link => {
-      link.target = '_blank';
-      link.rel = 'noopener';
-      // Fix any URLs with extra spaces
-      link.href = link.href.trim();
-    });
-    
-    chatMessages.appendChild(msg);
-    scrollToBottom();
-  }
+      // ===================== GREETINGS =====================
+      if (has(['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'])) {
+        return `Hello! 👋 I'm your Spirit Assistant. How can I help you today?\n\nAsk me about our wines, whiskeys, brandies, partners, or how to visit.`;
+      }
 
-  function scrollToBottom() {
+      // ===================== GOODBYE =====================
+      if (has(['bye', 'goodbye', 'see you', 'thanks', 'thank you'])) {
+        return `You're very welcome! 🥂 If you have any more questions about our spirits, partners, or how to schedule a visit, feel free to ask. Have a wonderful day!`;
+      }
+
+      // ===================== COMPANY INFO =====================
+      if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
+        return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
+      }
+
+      // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
+      if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
+        return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
+      }
+
+      // ===================== PRODUCTS =====================
+      if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
+        return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex\n- **Planet1**: Premium RTD cocktail\n- **Caribbean Blaze Bourbon 18 Box**: Collector's edition\n- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
+      }
+
+      // ===================== BRAND PARTNERS =====================
+      if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
+        return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines**`;
+      }
+
+      // ===================== EVENTS & VISITS =====================
+      if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
+        return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
+      }
+
+      // ===================== CONTACT & SOCIALS =====================
+      if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
+        return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@unitedspiritshk](https://www.tiktok.com/@unitedspiritshk)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
+      }
+
+      // ===================== LOCATION =====================
+      if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
+        return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
+      }
+
+      // ===================== DEFAULT RESPONSE =====================
+      return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
+    }
+
+    // Initial scroll
     if (chatMessages) {
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-  }
-
-  function getBotResponse(input) {
-    const has = (keywords) => keywords.some(kw => input.includes(kw));
-
-    // ===================== GREETINGS =====================
-    if (has(['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'])) {
-      return `Hello! 👋 I'm your Spirit Assistant. How can I help you today?\n\nAsk me about our wines, whiskeys, brandies, partners, or how to visit.`;
+      scrollToBottom();
     }
 
-    // ===================== GOODBYE =====================
-    if (has(['bye', 'goodbye', 'see you', 'thanks', 'thank you'])) {
-      return `You're very welcome! 🥂 If you have any more questions about our spirits, partners, or how to schedule a visit, feel free to ask. Have a wonderful day!`;
-    }
+    // ===================== LIGHTBOX SCRIPT =====================
+    // Lightbox functionality for product images
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.getElementById('close-lightbox');
 
-    // ===================== COMPANY INFO =====================
-    if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
-      return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
-    }
-
-    // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
-    if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
-      return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
-    }
-
-    // ===================== PRODUCTS =====================
-    if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
-      return `Our featured products:\n\n- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting\n- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel\n- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet\n- **Corazón de Lolita**: Vibrant red wine with berry notes\n- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex\n- **Planet1**: Premium RTD cocktail\n- **Caribbean Blaze Bourbon 18 Box**: Collector's edition\n- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
-    }
-
-    // ===================== BRAND PARTNERS =====================
-    if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
-      return `We partner with world-class producers:\n\n- **Louis XIII**\n- **Baron Philippe de Rothschild**\n- **Groupe Bernard Lucien Bernard**\n- **Bernard Mayet**\n- **Wickham Estate**\n- **Kingston Estate**\n- **Vinous Australis**\n- **U.C.I.**\n- **Grand Cru Classé en 1855**\n- **MW Wines Spain**\n- **Australian Premium Wine Group (APWG)**\n- **Eurovins**\n- **T. Wines**`;
-    }
-
-    // ===================== EVENTS & VISITS =====================
-    if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
-      return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
-    }
-
-    // ===================== CONTACT & SOCIALS =====================
-    if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
-      return `Get in touch:\n\n- **WhatsApp**: [chat with us](https://wa.me/85269346630)\n- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)\n- **TikTok**: [@unitedspiritshk](https://www.tiktok.com/@unitedspiritshk)\n- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)\n- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
-    }
-
-    // ===================== LOCATION =====================
-    if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
-      return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
-    }
-
-    // ===================== DEFAULT RESPONSE =====================
-    return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
-  }
-
-  // Initial scroll
-  if (chatMessages) {
-    scrollToBottom();
-  }
-
-  // ===================== LIGHTBOX SCRIPT =====================
-  // Lightbox functionality for product images
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeLightbox = document.getElementById('close-lightbox');
-
-  // Add click event to all product images
-  if (lightbox && lightboxImg) {
-    document.querySelectorAll('.card img, .reveal img').forEach(img => {
-      img.classList.add('cursor-pointer');
-      img.addEventListener('click', () => {
-        // Get the image source
-        lightboxImg.src = img.src;
-        // Set alt text
-        lightboxImg.alt = img.alt || 'Product Image';
-        // Show the lightbox
-        lightbox.classList.remove('hidden');
-        // Prevent scrolling on the body
-        document.body.style.overflow = 'hidden';
+    // Add click event to all product images
+    if (lightbox && lightboxImg) {
+      document.querySelectorAll('.card img, .reveal img').forEach(img => {
+        img.classList.add('cursor-pointer');
+        img.addEventListener('click', () => {
+          // Get the image source
+          lightboxImg.src = img.src;
+          // Set alt text
+          lightboxImg.alt = img.alt || 'Product Image';
+          // Show the lightbox
+          lightbox.classList.remove('hidden');
+          // Prevent scrolling on the body
+          document.body.style.overflow = 'hidden';
+        });
       });
-    });
 
-    // Close the lightbox when clicking the X button
-    if (closeLightbox) {
-      closeLightbox.addEventListener('click', () => {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = ''; // Re-enable scrolling
+      // Close the lightbox when clicking the X button
+      if (closeLightbox) {
+        closeLightbox.addEventListener('click', () => {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        });
+      }
+
+      // Close the lightbox when clicking outside the image
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        }
+      });
+
+      // Close the lightbox with the Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        }
       });
     }
-
-    // Close the lightbox when clicking outside the image
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = ''; // Re-enable scrolling
-      }
-    });
-
-    // Close the lightbox with the Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = ''; // Re-enable scrolling
-      }
-    });
-  }
+    
+    // Fix logo visibility during load
+    const logo = document.querySelector('header img.glow-logo');
+    if (logo) {
+      logo.style.visibility = 'visible';
+    }
+    
+    // Show body content after critical resources load
+    setTimeout(() => {
+      document.querySelectorAll('*').forEach(el => {
+        el.style.visibility = 'visible';
+      });
+    }, 50);
+  });
 </script>
 </body>
 </html>
-
-
-
-
-
