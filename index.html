@@ -152,15 +152,6 @@
       100% { box-shadow: 0 0 10px rgba(236, 72, 153, 0.3); }
     }
 
-    .glow-logo:hover,
-    .glow-logo:focus {
-      animation: glowPulse 2s infinite;
-    }
-
-    .glow-logo:hover {
-      animation-play-state: paused;
-    }
-
     /* Infinite Scroll Animation */
     @keyframes scroll {
       0% { transform: translateX(0); }
@@ -189,6 +180,39 @@
         background-position: center;
       }
     }
+    /* Prevent layout shifts */
+header img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+  object-fit: contain;
+}
+
+/* Placeholder background while loading */
+header img {
+  background: rgba(255, 255, 255, 0.1);
+  min-width: 2.5rem; /* Ensures proper spacing */
+}
+
+/* Fix for button consistency */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  color: white;
+}
+
+/* Ensure consistent button styling */
+.btn-purple, 
+.btn.bg-white {
+  border: 2px solid transparent;
+}
   </style>
 </head>
 <body class="text-black">
@@ -203,16 +227,18 @@
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-40">
     <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
+      <!-- Logo - FIXED WITH NO LAYOUT SHIFT -->
       <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo1.png" 
-             alt="United Spirits Logo" 
-             class="h-10 w-auto glow-logo"
-             width="200" 
-             height="40" 
-             loading="eager" 
-             decoding="async" 
-             fetchpriority="high">
+        <div class="w-10 h-10 bg-gray-900/10 rounded-lg flex items-center justify-center">
+          <img src="united-spirits-site/assets/img/logo1.png" 
+               alt="United Spirits Logo" 
+               class="h-8 w-auto" 
+               width="200" 
+               height="40"
+               loading="eager"
+               decoding="async"
+               fetchpriority="high">
+        </div>
         <span class="font-serif text-xl tracking-wide text-white">
           United <span class="accent-text">Spirits</span>
         </span>
@@ -254,10 +280,9 @@
     </nav>
   </div>
 
-    <!-- Hero Content -->
+  <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
     <div class="max-w-3xl mx-auto reveal on">
-      <!-- Optional: Add logo here if needed in the hero section -->
       <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
@@ -266,7 +291,8 @@
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn btn-white text-black">Get in Touch</a>
+        <!-- FIXED BUTTON WITH PERMANENT WHITE BACKGROUND -->
+        <a href="#contact" class="btn bg-white text-black border-white">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -1175,6 +1201,7 @@
 </script>
 </body>
 </html>
+
 
 
 
