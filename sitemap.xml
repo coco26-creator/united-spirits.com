@@ -1,144 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- Homepage -->
-  <url>
-    <loc>https://www.unitedspiritshk.com</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<!-- Homepage -->
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
 
-  <!-- Logo -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</image:loc>
-      <image:title>United Spirits Logo</image:title>
-      <image:caption>Official logo of United Spirits - premium spirits curator</image:caption>
-    </image:image>
-  </url>
+<!-- Logo -->
+<url>
+  <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</image:loc>
+    <image:title>United Spirits Logo</image:title>
+    <image:caption>Official logo of United Spirits - premium spirits curator</image:caption>
+  </image:image>
+</url>
 
-  <!-- Core Web Pages -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/collections/wines</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/events</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/about</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/contact</loc>
-    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<!-- Core Web Pages -->
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/wines</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/events</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/about</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/contact</loc>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 
-  <!-- Product Images -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</image:loc>
-      <image:title>Anderra Reserva Cabernet Sauvignon Blanc 2023</image:title>
-      <image:caption>Premium white wine from Anderra collection</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</image:loc>
-      <image:title>Lolita RTD Red Wine Cans</image:title>
-      <image:caption>Premium red wine in convenient cans</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</image:loc>
-      <image:title>Honey Conti VSOP Brandy</image:title>
-      <image:caption>Colorful presentation of premium brandy</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</image:loc>
-      <image:title>Sunny Land Single Malt Whiskey</image:title>
-      <image:caption>25-year-old premium single malt whiskey</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png</image:loc>
-      <image:title>Honey Conti XO Royal Brandy</image:title>
-      <image:caption>Luxurious cognac, perfect for gifting</image:caption>
-    </image:image>
-  </url>
+<!-- Product Images -->
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/wines</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</image:loc>
+    <image:title>Anderra Reserva Cabernet Sauvignon Blanc 2023</image:title>
+    <image:caption>Premium white wine from Anderra collection</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/wines</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png</image:loc>
+    <image:title>Lolita RTD Red Wine Cans</image:title>
+    <image:caption>Premium red wine in convenient cans</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png</image:loc>
+    <image:title>Honey Conti VSOP Brandy</image:title>
+    <image:caption>Colorful presentation of premium brandy</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg</image:loc>
+    <image:title>Sunny Land Single Malt Whiskey</image:title>
+    <image:caption>25-year-old premium single malt whiskey</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png</image:loc>
+    <image:title>Honey Conti XO Royal Brandy</image:title>
+    <image:caption>Luxurious cognac, perfect for gifting</image:caption>
+  </image:image>
+</url>
 
-  <!-- Video Assets -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</loc>
-    <video:video>
-      <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:content_loc>
-      <video:player_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:player_loc>
-      <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/bottling.jpg</video:thumbnail_loc>
-      <video:title>Bottling Process</video:title>
-      <video:description>Video of the bottling operation</video:description>
-      <video:duration>180</video:duration>
-      <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
-    </video:video>
-  </url>
+<!-- Videos on Homepage -->
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <video:video>
+    <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:content_loc>
+    <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/production-line.jpg</video:thumbnail_loc>
+    <video:title>Production Line Overview</video:title>
+    <video:description>Video showcasing the production line process at United Spirits.</video:description>
+    <video:duration>200</video:duration>
+    <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
+  </video:video>
+</url>
 
-  <!-- Events, Team, Partners, Location -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</image:loc>
-      <image:title>Team Visit 2025</image:title>
-      <image:caption>Global team collaboration event</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</image:loc>
-      <image:title>Baron Philippe de Rothschild</image:title>
-      <image:caption>Prestigious wine partner</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/location-map.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/location-map.jpg</image:loc>
-      <image:title>Our Location</image:title>
-      <image:caption>Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road, Wanchai, Hong Kong</image:caption>
-    </image:image>
-  </url>
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <video:video>
+    <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:content_loc>
+    <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/bottling.jpg</video:thumbnail_loc>
+    <video:title>Bottling Process</video:title>
+    <video:description>Video of the bottling operation at United Spirits.</video:description>
+    <video:duration>180</video:duration>
+    <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
+  </video:video>
+</url>
+
+<!-- Team, Partners, Location Images -->
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</image:loc>
+    <image:title>Team Visit 2025</image:title>
+    <image:caption>Global team collaboration event</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png</image:loc>
+    <image:title>Baron Philippe de Rothschild</image:title>
+    <image:caption>Prestigious wine partner</image:caption>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.unitedspiritshk.com</loc>
+  <image:image>
+    <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/location-map.jpg</image:loc>
+    <image:title>Our Location</image:title>
+    <image:caption>Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road, Wanchai, Hong Kong</image:caption>
+  </image:image>
+</url>
 
 </urlset>
