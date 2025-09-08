@@ -3,13 +3,25 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- Web Pages -->
+  <!-- Homepage -->
   <url>
     <loc>https://www.unitedspiritshk.com</loc>
     <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Logo -->
+  <url>
+    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</loc>
+    <image:image>
+      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/logo1.png</image:loc>
+      <image:title>United Spirits Logo</image:title>
+      <image:caption>Official logo of United Spirits - premium spirits curator</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Core Web Pages -->
   <url>
     <loc>https://www.unitedspiritshk.com/collections/wines</loc>
     <lastmod>2024-10-25T12:00:00+00:00</lastmod>
@@ -47,7 +59,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Key Product Images -->
+  <!-- Product Images -->
   <url>
     <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg</loc>
     <image:image>
@@ -88,22 +100,6 @@
       <image:caption>Luxurious cognac, perfect for gifting</image:caption>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18.jpg</image:loc>
-      <image:title>Caribbean Blaze Bourbon 18</image:title>
-      <image:caption>Aged 18 years, rich oak & caramel</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-planet1.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/products/product-planet1.jpg</image:loc>
-      <image:title>Planet1 Premium RTD Cocktail</image:title>
-      <image:caption>Premium ready-to-drink cocktail</image:caption>
-    </image:image>
-  </url>
 
   <!-- Video Assets -->
   <url>
@@ -118,110 +114,14 @@
       <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
     </video:video>
   </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</loc>
-    <video:video>
-      <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:content_loc>
-      <video:player_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:player_loc>
-      <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/production-line.jpg</video:thumbnail_loc>
-      <video:title>Production Line</video:title>
-      <video:description>Video of the production line</video:description>
-      <video:duration>240</video:duration>
-      <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
-    </video:video>
-  </url>
 
-  <!-- Hero & About Images -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/hero3.jpeg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/hero3.jpeg</image:loc>
-      <image:title>Hero Image</image:title>
-      <image:caption>Main banner image for the website</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/supply-chain-hongkong-china.jpg</image:loc>
-      <image:title>Supply Chain</image:title>
-      <image:caption>Hong Kong and China supply chain network</image:caption>
-    </image:image>
-  </url>
+  <!-- Events, Team, Partners, Location -->
   <url>
     <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</loc>
     <image:image>
       <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/team-visit-2025.jpg</image:loc>
       <image:title>Team Visit 2025</image:title>
       <image:caption>Global team collaboration event</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/wine-showcase-final.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/wine-showcase-final.jpg</image:loc>
-      <image:title>Wine Showcase</image:title>
-      <image:caption>Product showcase event</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Event Images -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg</image:loc>
-      <image:title>Chile Ambassador Arrival</image:title>
-      <image:caption>Diplomatic visit by Chilean ambassador</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg</image:loc>
-      <image:title>Chile Ambassador Visit to Hocha</image:title>
-      <image:caption>Official visit to production facility</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg</image:loc>
-      <image:title>Beidu Wine Tasting Event</image:title>
-      <image:caption>Wine appreciation seminar</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg</image:loc>
-      <image:title>Bernard Magrez Wine Tasting</image:title>
-      <image:caption>Expert-led wine tasting session</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg</image:loc>
-      <image:title>Honey Conti Planet1 Signing</image:title>
-      <image:caption>Strategic partnership agreement signing</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/meetings/trade-show-product-review.jpg</image:loc>
-      <image:title>Trade Show Product Review</image:title>
-      <image:caption>Client meeting at trade show</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Partner Logos -->
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/apwg.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/apwg.png</image:loc>
-      <image:title>Australian Premium Wine Group</image:title>
-      <image:caption>Premium wine partner</image:caption>
     </image:image>
   </url>
   <url>
@@ -232,32 +132,6 @@
       <image:caption>Prestigious wine partner</image:caption>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/louis-xiii.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/louis-xiii.png</image:loc>
-      <image:title>Louis XIII</image:title>
-      <image:caption>Premium cognac partner</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/eurovins.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/eurovins.png</image:loc>
-      <image:title>Eurovins</image:title>
-      <image:caption>Global wine and spirits partner</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/mw-wines-spain.png</loc>
-    <image:image>
-      <image:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/partners/mw-wines-spain.png</image:loc>
-      <image:title>MW Wines Spain</image:title>
-      <image:caption>Spanish wine partner</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Location Map -->
   <url>
     <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/location-map.jpg</loc>
     <image:image>
