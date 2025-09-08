@@ -6,43 +6,43 @@
   <!-- Web Pages -->
   <url>
     <loc>https://www.unitedspiritshk.com</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/collections/wines</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/events</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/about</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/contact</loc>
-    <lastmod>2024-10-25</lastmod>
+    <lastmod>2024-10-25T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -109,17 +109,25 @@
   <url>
     <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</loc>
     <video:video>
-      <video:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:loc>
+      <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:content_loc>
+      <video:player_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/bottling.mp4</video:player_loc>
+      <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/bottling.jpg</video:thumbnail_loc>
       <video:title>Bottling Process</video:title>
       <video:description>Video of the bottling operation</video:description>
+      <video:duration>180</video:duration>
+      <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
     </video:video>
   </url>
   <url>
     <loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</loc>
     <video:video>
-      <video:loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:loc>
+      <video:content_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:content_loc>
+      <video:player_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/facility-tours/production-line.mp4</video:player_loc>
+      <video:thumbnail_loc>https://www.unitedspiritshk.com/united-spirits-site/assets/img/video-thumbnails/production-line.jpg</video:thumbnail_loc>
       <video:title>Production Line</video:title>
       <video:description>Video of the production line</video:description>
+      <video:duration>240</video:duration>
+      <video:publication_date>2024-10-25T12:00:00+00:00</video:publication_date>
     </video:video>
   </url>
 
