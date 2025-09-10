@@ -70,6 +70,7 @@
       border: 1px solid #e0e0e0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
     }
 
     .card:hover {
@@ -79,6 +80,36 @@
 
     .section {
       padding: 6rem 0;
+    }
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--purple);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .details-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 999px;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      transition: all 0.2s ease;
+    }
+
+    .details-btn:hover {
+      background: var(--purple);
+      color: white;
     }
   </style>
 </head>
@@ -105,92 +136,68 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <!-- Honney Conti VSOP Colorful -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" data-title="Honney Conti VSOP">
+          <span class="badge">VSOP</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
-          <p class="text-gray-600 mt-2 text-sm">VSOP Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti VSOP</h3>
+          <p class="text-gray-600 mt-2 text-sm">Colorful • France</p>
+          <a href="../products/honney-conti-vsop.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Honney Conti Napoleon XO Royal -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" data-title="Honney Conti Napoleon XO Royal">
+          <span class="badge">XO</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" alt="Honney Conti Napoleon XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti Napoleon XO Royal</h3>
-          <p class="text-gray-600 mt-2 text-sm">XO Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti Napoleon XO Royal</h3>
+          <p class="text-gray-600 mt-2 text-sm">Luxury • France</p>
+          <a href="../products/honney-conti-napoleon-xo-royal.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Honney Conti XO Leather Box -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" data-title="Honney Conti XO Leather Box">
+          <span class="badge">XO</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" alt="Honney Conti XO Leather Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti XO Leather Box</h3>
-          <p class="text-gray-600 mt-2 text-sm">XO Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti XO Leather Box</h3>
+          <p class="text-gray-600 mt-2 text-sm">Leather Box • France</p>
+          <a href="../products/honney-conti-xo-leather-box.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Honney Conti XO Royal -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" data-title="Honney Conti XO Royal">
+          <span class="badge">XO</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti XO Royal</h3>
-          <p class="text-gray-600 mt-2 text-sm">XO Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti XO Royal</h3>
+          <p class="text-gray-600 mt-2 text-sm">Royal • France</p>
+          <a href="../products/honney-conti-xo-royal.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Honney Conti Napoleon VSOP -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" data-title="Honney Conti Napoleon VSOP">
+          <span class="badge">VSOP</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" alt="Honney Conti Napoleon VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti Napoleon VSOP</h3>
-          <p class="text-gray-600 mt-2 text-sm">VSOP Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP</h3>
+          <p class="text-gray-600 mt-2 text-sm">Napoleon • France</p>
+          <a href="../products/honney-conti-napoleon-vsop.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Honney Conti Napoleon VSOP Classic -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" data-title="Honney Conti Napoleon VSOP Classic">
+          <span class="badge">VSOP</span>
           <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" alt="Honney Conti Napoleon VSOP Classic" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Honney Conti Napoleon VSOP Classic</h3>
-          <p class="text-gray-600 mt-2 text-sm">VSOP Cognac • France</p>
+          <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP Classic</h3>
+          <p class="text-gray-600 mt-2 text-sm">Classic • France</p>
+          <a href="../products/honney-conti-napoleon-vsop-classic.html" class="details-btn">View Details</a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="max-w-7xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
-      &copy; 2025 United Spirits. <a href="../index.html" class="text-purple-600 hover:underline">Back to Home</a>
-    </div>
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
   </footer>
 
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-    <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl font-bold z-10">&times;</button>
-    <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
-  </div>
-
-  <!-- ===================== SCRIPTS ===================== -->
   <script>
     lucide.createIcons();
-
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    document.querySelectorAll('[data-img]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A' || e.target.closest('a')) return;
-        lightboxImg.src = el.getAttribute('data-img');
-        lightboxImg.alt = el.getAttribute('data-title');
-        document.body.style.overflow = 'hidden';
-        lightbox.classList.remove('hidden');
-      });
-    });
-
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = '';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox.click();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox.click();
-    });
   </script>
 </body>
 </html>
