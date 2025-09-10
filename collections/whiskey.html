@@ -70,6 +70,7 @@
       border: 1px solid #e0e0e0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
     }
 
     .card:hover {
@@ -79,6 +80,36 @@
 
     .section {
       padding: 6rem 0;
+    }
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--purple);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .details-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 999px;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      transition: all 0.2s ease;
+    }
+
+    .details-btn:hover {
+      background: var(--purple);
+      color: white;
     }
   </style>
 </head>
@@ -105,92 +136,68 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <!-- Sunny Land Single Malt S25 -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" data-title="Sunny Land Single Malt S25">
+          <span class="badge">Scotch</span>
           <img src="../united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt S25" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Sunny Land Single Malt S25</h3>
-          <p class="text-gray-600 mt-2 text-sm">25-Year-Old Scotch • Scotland</p>
+          <h3 class="text-lg font-semibold">Sunny Land Single Malt S25</h3>
+          <p class="text-gray-600 mt-2 text-sm">25-Year-Old • Scotland</p>
+          <a href="../products/sunny-land-single-malt-s25.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Sunny Land Single Malt France -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-sunny-land-single-malt-france.jpg" data-title="Sunny Land Single Malt France">
+          <span class="badge">Single Malt</span>
           <img src="../united-spirits-site/assets/img/products/product-sunny-land-single-malt-france.jpg" alt="Sunny Land Single Malt France" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Sunny Land Single Malt France</h3>
-          <p class="text-gray-600 mt-2 text-sm">Single Malt • France Finish</p>
+          <h3 class="text-lg font-semibold">Sunny Land Single Malt France</h3>
+          <p class="text-gray-600 mt-2 text-sm">France Finish</p>
+          <a href="../products/sunny-land-single-malt-france.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Caribbean Blaze Bourbon 18 Box -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" data-title="Caribbean Blaze Bourbon 18 Box">
+          <span class="badge">Bourbon</span>
           <img src="../united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" alt="Caribbean Blaze Bourbon 18 Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Caribbean Blaze Bourbon 18 Box</h3>
-          <p class="text-gray-600 mt-2 text-sm">Bourbon • USA</p>
+          <h3 class="text-lg font-semibold">Caribbean Blaze Bourbon 18 Box</h3>
+          <p class="text-gray-600 mt-2 text-sm">USA • Gift Box</p>
+          <a href="../products/caribbean-blaze-bourbon-18-box.html" class="details-btn">View Details</a>
         </article>
 
         <!-- Caribbean Blaze Bourbon 46 -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-46.jpg" data-title="Caribbean Blaze Bourbon 46">
+          <span class="badge">Bourbon</span>
           <img src="../united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-46.jpg" alt="Caribbean Blaze Bourbon 46" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">Caribbean Blaze Bourbon 46</h3>
-          <p class="text-gray-600 mt-2 text-sm">Bourbon • 46% ABV</p>
+          <h3 class="text-lg font-semibold">Caribbean Blaze Bourbon 46</h3>
+          <p class="text-gray-600 mt-2 text-sm">46% ABV</p>
+          <a href="../products/caribbean-blaze-bourbon-46.html" class="details-btn">View Details</a>
         </article>
 
         <!-- BF Kingdom BE408 Box -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-bf-kingdom-be408-box.jpg" data-title="BF Kingdom BE408 Box">
+          <span class="badge">Premium</span>
           <img src="../united-spirits-site/assets/img/products/product-bf-kingdom-be408-box.jpg" alt="BF Kingdom BE408 Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">BF Kingdom BE408 Box</h3>
-          <p class="text-gray-600 mt-2 text-sm">Premium Whiskey • Gift Box</p>
+          <h3 class="text-lg font-semibold">BF Kingdom BE408 Box</h3>
+          <p class="text-gray-600 mt-2 text-sm">Gift Box</p>
+          <a href="../products/bf-kingdom-be408-box.html" class="details-btn">View Details</a>
         </article>
 
         <!-- BF Kingdom BE708 Wood Box -->
         <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-bf-kingdom-be708-wood-box.jpg" data-title="BF Kingdom BE708 Wood Box">
+          <span class="badge">Premium</span>
           <img src="../united-spirits-site/assets/img/products/product-bf-kingdom-be708-wood-box.jpg" alt="BF Kingdom BE708 Wood Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-xl font-semibold">BF Kingdom BE708 Wood Box</h3>
-          <p class="text-gray-600 mt-2 text-sm">Premium Whiskey • Wood Box</p>
+          <h3 class="text-lg font-semibold">BF Kingdom BE708 Wood Box</h3>
+          <p class="text-gray-600 mt-2 text-sm">Wood Box</p>
+          <a href="../products/bf-kingdom-be708-wood-box.html" class="details-btn">View Details</a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="max-w-7xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
-      &copy; 2025 United Spirits. <a href="../index.html" class="text-purple-600 hover:underline">Back to Home</a>
-    </div>
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
   </footer>
 
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-    <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl font-bold z-10">&times;</button>
-    <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
-  </div>
-
-  <!-- ===================== SCRIPTS ===================== -->
   <script>
     lucide.createIcons();
-
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    document.querySelectorAll('[data-img]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A' || e.target.closest('a')) return;
-        lightboxImg.src = el.getAttribute('data-img');
-        lightboxImg.alt = el.getAttribute('data-title');
-        document.body.style.overflow = 'hidden';
-        lightbox.classList.remove('hidden');
-      });
-    });
-
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = '';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox.click();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox.click();
-    });
   </script>
 </body>
 </html>
