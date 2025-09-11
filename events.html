@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events & Visits — United Spirits</title>
+  <title>Newsroom — United Spirits</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,319 +12,256 @@
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <style>
-    :root {
-      --pink: #ec4899;
-      --purple: #a855f7;
-      --accent: linear-gradient(135deg, #ec4899, #a855f7);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: white;
-      color: #000;
-    }
-
-    .font-serif {
-      font-family: "Playfair Display", serif;
-    }
-
-    .accent-text {
-      background: var(--accent);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-
-    .btn-purple {
-      background: var(--purple);
-      color: white;
-    }
-
-    .btn-outline {
-      border: 1px solid #000;
-      color: #000;
-    }
-
-    .btn-outline:hover {
-      background: #000;
-      color: white;
-    }
-
-    .card {
-      border-radius: 1rem;
-      background: white;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      padding: 6rem 0;
-    }
-
-    .badge {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: var(--purple);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .details-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      border-radius: 999px;
-      border: 1px solid var(--purple);
-      color: var(--purple);
-      transition: all 0.2s ease;
-    }
-
-    .details-btn:hover {
-      background: var(--purple);
-      color: white;
-    }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #111; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .accent { background: linear-gradient(135deg,#ec4899,#a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .card { border-radius: 1rem; background: #fff; border:1px solid #e5e7eb; transition: transform .2s, box-shadow .2s; overflow: hidden; }
+    .card:hover { transform: translateY(-5px); box-shadow:0 12px 24px rgba(0,0,0,0.1);}
+    .card img { width:100%; height:240px; object-fit:cover; transition: transform .3s; }
+    .card:hover img { transform: scale(1.05);}
+    .category-label { font-size:.75rem; font-weight:600; text-transform:uppercase; background: linear-gradient(135deg,#ec4899,#a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .read-more { font-weight:600; color:#6d28d9; transition: color .2s; }
+    .read-more:hover { color:#a855f7; }
   </style>
 </head>
-<body class="text-black">
+<body>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-    <a href="../index.html" class="flex items-center gap-3">
-      <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
-      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
-    </a>
-    <nav class="hidden md:flex gap-8">
-      <a href="../index.html" class="hover:text-purple-600">Home</a>
-      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
-      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
-      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+  <a href="../index.html" class="flex items-center gap-3">
+    <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+    <span class="font-serif text-xl tracking-wide">United <span class="accent">Spirits</span></span>
+  </a>
+  <nav class="hidden md:flex gap-8">
+    <a href="../index.html" class="hover:text-purple-600">Home</a>
+    <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+    <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+    <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+  </nav>
+</header>
 
-  <!-- ===================== EVENTS GRID ===================== -->
-  <section class="section">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-serif text-center mb-10"><span class="accent-text">Events & Visits</span></h2>
-      <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
-        Exclusive experiences, diplomatic visits, and educational events showcasing our premium spirits.
-      </p>
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-16 text-center">
+  <h1 class="text-5xl font-serif mb-4 accent">Latest News & Events</h1>
+  <p class="text-gray-600 text-lg max-w-3xl mx-auto">Stay up to date with United Spirits' collaborations, education, tours, and exclusive events showcasing our premium spirits portfolio.</p>
+</section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        
-        <!-- European Diplomatic Meeting -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Collaboration</span>
-          <img src="../united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" 
-               alt="European Diplomatic Meeting" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">European Diplomatic Meeting</h3>
-          <p class="text-gray-600 mt-2 text-sm">May 2024 • Hong Kong</p>
-          <a href="../events/european-diplomatic-meeting.html" class="details-btn">View Details</a>
-        </article>
+<!-- NEWS GRID -->
+<section class="max-w-7xl mx-auto px-6 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Honney Conti XO Presentation -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Collaboration</span>
-          <img src="../united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" 
-               alt="Honney Conti XO Presentation" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti XO Presentation</h3>
-          <p class="text-gray-600 mt-2 text-sm">April 2024 • Hong Kong</p>
-          <a href="../events/honney-conti-xo-presentation.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Honney Conti Launch Event -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Collaboration</span>
-          <img src="../united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" 
-               alt="Honney Conti Launch Event" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti Launch Event</h3>
-          <p class="text-gray-600 mt-2 text-sm">March 2024 • Hong Kong</p>
-          <a href="../events/honney-conti-launch-event.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Planet1 Cognac Partnership -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Collaboration</span>
-          <img src="../united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" 
-               alt="Planet1 Cognac Partnership" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Planet1 Cognac Partnership</h3>
-          <p class="text-gray-600 mt-2 text-sm">February 2024 • Hong Kong</p>
-          <a href="../events/planet1-cognac-partnership.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Chile Ambassador Arrival -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Diplomatic</span>
-          <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" 
-               alt="Chile Ambassador Arrival" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Chile Ambassador Visit</h3>
-          <p class="text-gray-600 mt-2 text-sm">May 2024 • Hong Kong</p>
-          <a href="../events/chile-ambassador-arrival.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Chile Ambassador Visit HoCha -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Diplomatic</span>
-          <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" 
-               alt="Chile Ambassador Visit HoCha" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Chile Embassy Wine Tasting</h3>
-          <p class="text-gray-600 mt-2 text-sm">April 2024 • Hong Kong</p>
-          <a href="../events/chile-ambassador-visit-hocha.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Chile Ambassador Visit Suediane -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Diplomatic</span>
-          <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" 
-               alt="Chile Ambassador Visit Suediane" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Spanish Trade Delegation</h3>
-          <p class="text-gray-600 mt-2 text-sm">March 2024 • Hong Kong</p>
-          <a href="../events/chile-ambassador-visit-suediane.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Manor Suedane -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Diplomatic</span>
-          <img src="../united-spirits-site/assets/img/manor-suedane.jpg" 
-               alt="Manor Suedane" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Cultural Exchange</h3>
-          <p class="text-gray-600 mt-2 text-sm">February 2024 • Hong Kong</p>
-          <a href="../events/manor-suedane.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Beidu Wine Tasting Event -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Education</span>
-          <img src="../united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" 
-               alt="Beidu Wine Tasting Event" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">The Art of Aged Whiskey</h3>
-          <p class="text-gray-600 mt-2 text-sm">June 2024 • Hong Kong</p>
-          <a href="../events/beidu-wine-tasting-event.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- Bernard Magrez Wine Tasting -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Education</span>
-          <img src="../united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" 
-               alt="Bernard Magrez Wine Tasting" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Wine & Food Pairing Masterclass</h3>
-          <p class="text-gray-600 mt-2 text-sm">May 2024 • Hong Kong</p>
-          <a href="../events/bernard-magrez-wine-tasting.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- HoneyConti Brand Positioning Talk -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Education</span>
-          <img src="../united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" 
-               alt="HoneyConti Brand Positioning Talk" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Brandy Tasting 101</h3>
-          <p class="text-gray-600 mt-2 text-sm">April 2024 • Hong Kong</p>
-          <a href="../events/honeyconti-brand-positioning-talk.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- HoneyConti Founder Keynote -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Education</span>
-          <img src="../united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" 
-               alt="HoneyConti Founder Keynote" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Scotch vs Bourbon</h3>
-          <p class="text-gray-600 mt-2 text-sm">April 2024 • Hong Kong</p>
-          <a href="../events/honeyconti-founder-keynote.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- 2023 Chile Ambassador Factory Floor -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Facility</span>
-          <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg" 
-               alt="2023 Chile Ambassador Factory Floor" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">VIP Warehouse Tour</h3>
-          <p class="text-gray-600 mt-2 text-sm">May 2023 • Hong Kong</p>
-          <a href="../events/2023-chile-ambassador-factory-floor.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- 2023 Chile Ambassador Production Line -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Facility</span>
-          <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" 
-               alt="2023 Chile Ambassador Production Line" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Rare Bottle Archive Access</h3>
-          <p class="text-gray-600 mt-2 text-sm">April 2023 • Hong Kong</p>
-          <a href="../events/2023-chile-ambassador-production-line.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- 2023 Chile Ambassador Qingdao FTZ Tour -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Facility</span>
-          <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-qingdao-ftz-tour.jpg" 
-               alt="2023 Chile Ambassador Qingdao FTZ Tour" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Climate-Controlled Storage Tour</h3>
-          <p class="text-gray-600 mt-2 text-sm">March 2023 • Hong Kong</p>
-          <a href="../events/2023-chile-ambassador-qingdao-ftz-tour.html" class="details-btn">View Details</a>
-        </article>
-
-        <!-- 2023 Chile Cellar Visit -->
-        <article class="card p-6 text-center cursor-pointer group">
-          <span class="badge">Facility</span>
-          <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-cellar-visit.jpg" 
-               alt="2023 Chile Cellar Visit" 
-               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Private Client Visit</h3>
-          <p class="text-gray-600 mt-2 text-sm">February 2023 • Hong Kong</p>
-          <a href="../events/2023-chile-cellar-visit.html" class="details-btn">View Details</a>
-        </article>
+    <!-- ================== BRAND COLLABORATIONS ================== -->
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" alt="European Diplomatic Meeting">
+      <div class="p-4">
+        <span class="category-label">Brand Collaboration</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">European Diplomatic Meeting</h3>
+        <p class="text-gray-600 text-sm mb-4">High-level diplomatic meeting with European embassies exploring cultural exchange through premium spirits.</p>
+        <a href="../events/european-diplomatic-meeting.html" class="read-more">Read More →</a>
       </div>
     </div>
-  </section>
+    
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" alt="Honney Conti XO Presentation">
+      <div class="p-4">
+        <span class="category-label">Brand Collaboration</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Honney Conti XO Presentation</h3>
+        <p class="text-gray-600 text-sm mb-4">Exclusive launch event featuring the premium XO cognac collection with master blender insights.</p>
+        <a href="../events/honney-conti-xo-presentation.html" class="read-more">Read More →</a>
+      </div>
+    </div>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
-    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
-  </footer>
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" alt="Honney Conti Launch Event">
+      <div class="p-4">
+        <span class="category-label">Brand Collaboration</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Honney Conti Launch Event</h3>
+        <p class="text-gray-600 text-sm mb-4">Celebration introducing Honney Conti to the Hong Kong premium spirits market.</p>
+        <a href="../events/honney-conti-launch-event.html" class="read-more">Read More →</a>
+      </div>
+    </div>
 
-  <script>
-    lucide.createIcons();
-  </script>
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Planet1 Cognac Partnership">
+      <div class="p-4">
+        <span class="category-label">Brand Collaboration</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Planet1 Cognac Partnership</h3>
+        <p class="text-gray-600 text-sm mb-4">Strategic alliance signed between United Spirits and Planet1 for Asian market distribution.</p>
+        <a href="../events/planet1-cognac-partnership.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ================== DIPLOMATIC VISITS ================== -->
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="Chile Ambassador Arrival">
+      <div class="p-4">
+        <span class="category-label">Diplomatic Visit</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Chile Ambassador Visit</h3>
+        <p class="text-gray-600 text-sm mb-4">Formal visit by the Chilean Ambassador to United Spirits' Hong Kong headquarters.</p>
+        <a href="../events/chile-ambassador-arrival.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" alt="Chile Ambassador Visit HoCha">
+      <div class="p-4">
+        <span class="category-label">Diplomatic Visit</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Chile Embassy Wine Tasting</h3>
+        <p class="text-gray-600 text-sm mb-4">Exclusive tasting event hosted at the Chilean Embassy featuring premium Chilean wines.</p>
+        <a href="../events/chile-ambassador-visit-hocha.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" alt="Chile Ambassador Visit Suediane">
+      <div class="p-4">
+        <span class="category-label">Diplomatic Visit</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Spanish Trade Delegation</h3>
+        <p class="text-gray-600 text-sm mb-4">Meeting with Spanish trade representatives to explore premium spirits opportunities.</p>
+        <a href="../events/chile-ambassador-visit-suediane.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/manor-suedane.jpg" alt="Manor Suedane">
+      <div class="p-4">
+        <span class="category-label">Diplomatic Visit</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Cultural Exchange Event</h3>
+        <p class="text-gray-600 text-sm mb-4">International cultural exchange event at Manor Suedane featuring global premium spirits.</p>
+        <a href="../events/manor-suedane.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ================== EDUCATION EVENTS ================== -->
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" alt="Beidu Wine Tasting Event">
+      <div class="p-4">
+        <span class="category-label">Education Event</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">The Art of Aged Whiskey</h3>
+        <p class="text-gray-600 text-sm mb-4">Masterclass exploring the science and artistry behind whiskey maturation processes.</p>
+        <a href="../events/beidu-wine-tasting-event.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" alt="Bernard Magrez Wine Tasting">
+      <div class="p-4">
+        <span class="category-label">Education Event</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Wine & Food Pairing Masterclass</h3>
+        <p class="text-gray-600 text-sm mb-4">Guided session with Michelin-starred chef and sommelier on perfect wine and food combinations.</p>
+        <a href="../events/bernard-magrez-wine-tasting.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="HoneyConti Brand Positioning Talk">
+      <div class="p-4">
+        <span class="category-label">Education Event</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Brandy Tasting 101</h3>
+        <p class="text-gray-600 text-sm mb-4">Introductory workshop on Cognac and Armagnac production, aging, and evaluation techniques.</p>
+        <a href="../events/honeyconti-brand-positioning-talk.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" alt="HoneyConti Founder Keynote">
+      <div class="p-4">
+        <span class="category-label">Education Event</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Scotch vs Bourbon</h3>
+        <p class="text-gray-600 text-sm mb-4">Comparative tasting session exploring the distinctive characteristics of these two iconic whiskey styles.</p>
+        <a href="../events/honeyconti-founder-keynote.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ================== FACILITY TOURS ================== -->
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg" alt="2023 Chile Ambassador Factory Floor">
+      <div class="p-4">
+        <span class="category-label">Facility Tour</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">VIP Warehouse Tour</h3>
+        <p class="text-gray-600 text-sm mb-4">Behind-the-scenes access to our temperature-controlled warehouse facilities for VIP clients.</p>
+        <a href="../events/2023-chile-ambassador-factory-floor.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" alt="2023 Chile Ambassador Production Line">
+      <div class="p-4">
+        <span class="category-label">Facility Tour</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Rare Bottle Archive Access</h3>
+        <p class="text-gray-600 text-sm mb-4">Exclusive viewing of our rare and vintage spirit collections for select collectors.</p>
+        <a href="../events/2023-chile-ambassador-production-line.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-qingdao-ftz-tour.jpg" alt="2023 Chile Ambassador Qingdao FTZ Tour">
+      <div class="p-4">
+        <span class="category-label">Facility Tour</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Climate-Controlled Storage Tour</h3>
+        <p class="text-gray-600 text-sm mb-4">Specialized tour of our advanced storage facilities in Qingdao Free Trade Zone.</p>
+        <a href="../events/2023-chile-ambassador-qingdao-ftz-tour.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/facility-tours/2023-chile-cellar-visit.jpg" alt="2023 Chile Cellar Visit">
+      <div class="p-4">
+        <span class="category-label">Facility Tour</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Private Client Visit</h3>
+        <p class="text-gray-600 text-sm mb-4">Personalized tour and tasting experience for discerning collectors and high-net-worth clients.</p>
+        <a href="../events/2023-chile-cellar-visit.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- ================== MEETINGS ================== -->
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/meetings/chile-ambassador-meeting.jpg" alt="Chile Ambassador Meeting">
+      <div class="p-4">
+        <span class="category-label">Meetings</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Honney Conti Cask Selection</h3>
+        <p class="text-gray-600 text-sm mb-4">Special meeting with producers to select premium casks for Honney Conti collection.</p>
+        <a href="../events/chile-ambassador-meeting.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/meetings/chile-ambassador-welcome-meeting.jpg" alt="Chile Ambassador Welcome Meeting">
+      <div class="p-4">
+        <span class="category-label">Meetings</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Corazón de Lolita Launch Planning</h3>
+        <p class="text-gray-600 text-sm mb-4">Strategic meeting to plan the launch of Corazón de Lolita premium wine collection.</p>
+        <a href="../events/chile-ambassador-welcome-meeting.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/meetings/business-meeting-with-partners-.jpg" alt="Business Meeting with Partners">
+      <div class="p-4">
+        <span class="category-label">Meetings</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Business Strategy Meeting</h3>
+        <p class="text-gray-600 text-sm mb-4">Key discussion with international partners on market expansion and product development.</p>
+        <a href="../events/business-meeting-with-partners.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../united-spirits-site/assets/img/meetings/chile-wine-promotion-meeting.jpg" alt="Chile Wine Promotion Meeting">
+      <div class="p-4">
+        <span class="category-label">Meetings</span>
+        <h3 class="text-xl font-serif mt-2 mb-2">Sunny Land Private Tasting</h3>
+        <p class="text-gray-600 text-sm mb-4">Exclusive tasting session for distributors featuring Sunny Land premium whiskey collection.</p>
+        <a href="../events/chile-wine-promotion-meeting.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+  <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
