@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bernard Magrez Le Symbole 2020 — United Spirits</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- HEADER -->
+  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAIL -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <img src="../united-spirits-site/assets/img/products/product-bernard-magrez-le-symbole-2020.jpg" 
+             alt="Bernard Magrez Le Symbole 2020" 
+             class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div>
+        <span class="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Red Wine</span>
+        <h1 class="text-3xl font-serif font-bold mb-2">Bernard Magrez Le Symbole 2020</h1>
+        <p class="text-gray-600 mb-4">Bordeaux, France</p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Modern Bordeaux with dark fruit aromas, hints of vanilla and spice.
+          Smooth and well-structured with a lingering finish. Perfect for pairing with beef or lamb.
+        </p>
+        <a href="../collections/wines.html" class="inline-block px-5 py-2 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
+          ← Back to Wines
+        </a>
+      </div>
+    </div>
+
+    <!-- DETAILED DESCRIPTION -->
+    <div class="mt-16 prose lg:prose-xl max-w-none">
+      <h2 class="text-2xl font-serif text-gray-900 mb-4">Tasting Notes</h2>
+      <p class="text-lg text-gray-700">
+        The 2020 vintage offers a deep, intense ruby color with garnet reflections. The nose is complex and expressive, revealing aromas of ripe blackcurrant, dark cherry, and subtle notes of vanilla, tobacco, and spice. On the palate, it is full-bodied and well-structured, with smooth tannins and a refreshing acidity that leads to a long, elegant finish with lingering notes of dark fruit and oak.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Origin & Terroir</h2>
+      <p class="text-lg text-gray-700">
+        Crafted by the legendary Bernard Magrez, this wine is sourced from select vineyards in the prestigious Bordeaux region. The grapes are grown in gravelly soils with excellent drainage, which is ideal for producing concentrated, high-quality fruit. The region’s maritime climate, with warm summers and mild winters, allows the grapes to achieve optimal ripeness while retaining their natural acidity.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Food Pairing</h2>
+      <p class="text-lg text-gray-700">
+        This wine is a perfect companion to fine dining, pairing beautifully with dishes such as beef Wellington, roasted lamb, or duck confit. It also complements aged cheeses like Comté or Gruyère. For the best experience, decant for 1-2 hours and serve at 18°C (64°F) in a large Bordeaux glass.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
