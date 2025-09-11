@@ -8,9 +8,6 @@
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,54 +18,36 @@
       --purple: #a855f7;
       --accent: linear-gradient(135deg, #ec4899, #a855f7);
     }
-
     body {
       font-family: 'Inter', sans-serif;
       background: white;
       color: #000;
     }
-
     .font-serif {
       font-family: "Playfair Display", serif;
     }
-
     .accent-text {
       background: var(--accent);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.1rem;
+      padding: 0.6rem 1.1rem;
       border-radius: 999px;
       font-weight: 600;
       transition: all 0.2s ease;
     }
-
     .btn-purple {
       background: var(--purple);
       color: white;
     }
-
-    .card {
-      border-radius: 1rem;
-      background: white;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      padding: 6rem 0;
+    .btn-purple:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
     }
   </style>
 </head>
@@ -88,225 +67,210 @@
   </header>
 
   <!-- ===================== EVENTS & VISITS ===================== -->
-  <section class="section">
+  <section class="py-16 bg-gradient-to-b from-white to-purple-50" id="events">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-serif text-center mb-12"><span class="accent-text">Events & Visits</span></h2>
 
-      <!-- ===================== BRAND COLLABORATIONS ===================== -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-serif mb-6">Brand Collaborations</h2>
-        <p class="text-gray-600 mb-8">Exclusive partnerships with luxury brands and designers to launch limited-edition bottles and experiences.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" alt="Corazón de Lolita x Artisan Studio" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" />
-            <p class="text-sm text-gray-500">Corazón de Lolita x Artisan Studio • May</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" alt="Honney Conti Limited Edition" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" />
-            <p class="text-sm text-gray-500">Honney Conti VSOP Limited Edition • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" alt="Sunny Land Gold Label" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" />
-            <p class="text-sm text-gray-500">Sunny Land 25-Year Gold Label Launch • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Luxury Spirits at Fashion Week" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" />
-            <p class="text-sm text-gray-500">Luxury Spirits at Hong Kong Fashion Week • Feb</p>
-          </div>
-        </div>
+      <!-- Title -->
+      <h2 class="text-4xl font-serif text-center mb-12">
+        <span class="accent-text">Events & Visits</span>
+      </h2>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="btn btn-purple" onclick="filterEvents('all')">All</button>
+        <button class="btn btn-purple" onclick="filterEvents('collaborations')">Collaborations</button>
+        <button class="btn btn-purple" onclick="filterEvents('visits')">Diplomatic Visits</button>
+        <button class="btn btn-purple" onclick="filterEvents('education')">Education</button>
+        <button class="btn btn-purple" onclick="filterEvents('tours')">Facility Tours</button>
+        <button class="btn btn-purple" onclick="filterEvents('meetings')">Meetings</button>
       </div>
 
-      <!-- ===================== DIPLOMATIC VISITS ===================== -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-serif mb-6">Diplomatic Visits</h2>
-        <p class="text-gray-600 mb-8">Hosting embassy officials and cultural delegations for curated tastings and exchange events.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="Consul Visit" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" />
-            <p class="text-sm text-gray-500">French Consul Visit • May</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" alt="Chile Embassy Wine Tasting" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" />
-            <p class="text-sm text-gray-500">Chile Embassy Wine Tasting • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" alt="Spanish Trade Delegation" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" />
-            <p class="text-sm text-gray-500">Spanish Trade Delegation • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/manor-suedane.jpg" alt="Cultural Exchange" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/manor-suedane.jpg" />
-            <p class="text-sm text-gray-500">Cultural Exchange • February</p>
-          </div>
-        </div>
-      </div>
+      <!-- Events Grid -->
+      <div id="event-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-      <!-- ===================== EDUCATION EVENTS ===================== -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-serif mb-6">Education Events</h2>
-        <p class="text-gray-600 mb-8">Masterclasses and seminars on wine & spirit appreciation, led by sommeliers and master blenders.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" alt="The Art of Aged Whiskey" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" />
-            <p class="text-sm text-gray-500">The Art of Aged Whiskey • June</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" alt="Wine & Food Pairing Masterclass" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" />
-            <p class="text-sm text-gray-500">Wine & Food Pairing Masterclass • May</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="Brandy Tasting 101" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" />
-            <p class="text-sm text-gray-500">Brandy Tasting 101 • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" alt="Scotch vs Bourbon" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" />
-            <p class="text-sm text-gray-500">Scotch vs Bourbon • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/honney-conti-strategic-partnership-event.jpg" alt="Vintage Wine Seminar" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honney-conti-strategic-partnership-event.jpg" />
-            <p class="text-sm text-gray-500">Vintage Wine Seminar • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/honney-conti-warehouse-tour.jpg" alt="Aging Spirits" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honney-conti-warehouse-tour.jpg" />
-            <p class="text-sm text-gray-500">Aging Spirits • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/martian-wine-training.jpg" alt="Sommelier Workshop" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/martian-wine-training.jpg" />
-            <p class="text-sm text-gray-500">Sommelier Workshop • February</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/metro-wine-education-workshop.jpg" alt="Distillation Process" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/metro-wine-education-workshop.jpg" />
-            <p class="text-sm text-gray-500">Distillation Process • January</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/wine-festival-presentation.jpg" alt="Terroir & Taste" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/wine-festival-presentation.jpg" />
-            <p class="text-sm text-gray-500">Terroir & Taste • Dec</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/education-events/wine-tasting-event.jpg" alt="Rare Spirits Panel" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/wine-tasting-event.jpg" />
-            <p class="text-sm text-gray-500">Rare Spirits Panel • Nov</p>
-          </div>
+        <!-- ===================== COLLABORATIONS ===================== -->
+        <div class="event-card collaborations cursor-pointer group"
+             data-title="Corazón de Lolita x Artisan Studio"
+             data-date="May"
+             data-description="Exclusive limited-edition launch with Artisan Studio, featuring unique bottle designs."
+             data-img="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg">
+          <img src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg"
+               alt="Corazón de Lolita x Artisan Studio"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Corazón de Lolita x Artisan Studio • May</p>
         </div>
-      </div>
 
-      <!-- ===================== FACILITY TOURS ===================== -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-serif mb-6">Facility Tours</h2>
-        <p class="text-gray-600 mb-8">Private access to our temperature-controlled warehouse and rare bottle archive for VIP clients and partners.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg" alt="VIP Warehouse Tour" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg" />
-            <p class="text-sm text-gray-500">VIP Warehouse Tour • May</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" alt="Rare Bottle Archive Access" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" />
-            <p class="text-sm text-gray-500">Rare Bottle Archive Access • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-qingdao-ftz-tour.jpg" alt="Climate-Controlled Storage Tour" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-qingdao-ftz-tour.jpg" />
-            <p class="text-sm text-gray-500">Climate-Controlled Storage Tour • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-chile-cellar-visit.jpg" alt="Private Client Visit" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-chile-cellar-visit.jpg" />
-            <p class="text-sm text-gray-500">Private Client Visit • February</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-production-line.jpg" alt="Distributor Exclusive Tour" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-production-line.jpg" />
-            <p class="text-sm text-gray-500">Distributor Exclusive Tour • January</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-suediane-exterior.jpg" alt="Collector’s Archive Preview" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-suediane-exterior.jpg" />
-            <p class="text-sm text-gray-500">Collector’s Archive Preview • Dec</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-walking-campus.jpg" alt="Wine Vault Experience" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-international-delegation-walking-campus.jpg" />
-            <p class="text-sm text-gray-500">Wine Vault Experience • Nov</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/facility-tours/2023-winery-barrel-room.jpg" alt="Whiskey Cellar Tour" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/facility-tours/2023-winery-barrel-room.jpg" />
-            <p class="text-sm text-gray-500">Whiskey Cellar Tour • Oct</p>
-          </div>
+        <div class="event-card collaborations cursor-pointer group"
+             data-title="Honney Conti VSOP Limited Edition"
+             data-date="April"
+             data-description="Unveiling of Honney Conti’s special VSOP release in a glamorous showcase."
+             data-img="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg">
+          <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg"
+               alt="Honney Conti Limited Edition"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Honney Conti VSOP Limited Edition • April</p>
         </div>
-      </div>
 
-      <!-- ===================== MEETINGS ===================== -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-serif mb-6">Client & Supplier Meetings</h2>
-        <p class="text-gray-600 mb-8">One-on-one consultations with distributors, importers, and producers to curate bespoke collections.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/chile-ambassador-meeting.jpg" alt="Honney Conti Cask Selection" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/chile-ambassador-meeting.jpg" />
-            <p class="text-sm text-gray-500">Honney Conti Cask Selection • May</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/chile-ambassador-welcome-meeting.jpg" alt="Corazón de Lolita Launch Planning" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/chile-ambassador-welcome-meeting.jpg" />
-            <p class="text-sm text-gray-500">Corazón de Lolita Launch Planning • April</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/business-meeting-with-partners-.jpg" alt="Meeting at conference table" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/business-meeting-with-partners-.jpg" />
-            <p class="text-sm text-gray-500">Meeting at conference table • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/chile-wine-promotion-meeting.jpg" alt="Sunny Land Private Tasting" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/chile-wine-promotion-meeting.jpg" />
-            <p class="text-sm text-gray-500">Sunny Land Private Tasting • March</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg" alt="European Distributor Meeting" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg" />
-            <p class="text-sm text-gray-500">European Distributor Meeting • February</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/international-partnership-discussion.jpg" alt="Asian Market Strategy" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/international-partnership-discussion.jpg" />
-            <p class="text-sm text-gray-500">Asian Market Strategy • January</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meeting-with-partners.jpg" alt="African Market Strategy" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meeting-with-partners.jpg" />
-            <p class="text-sm text-gray-500">African Market Strategy • January</p>
-          </div>
-          <div class="text-center cursor-pointer group">
-            <img src="united-spirits-site/assets/img/meetings/trade-show-product-review.jpg" alt="Producer Partnership Discussion" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/meetings/trade-show-product-review.jpg" />
-            <p class="text-sm text-gray-500">Producer Partnership Discussion • Dec</p>
-          </div>
+        <div class="event-card collaborations cursor-pointer group"
+             data-title="Sunny Land 25-Year Gold Label Launch"
+             data-date="March"
+             data-description="An exclusive celebration of Sunny Land’s prestigious 25-Year Gold Label release."
+             data-img="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg">
+          <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg"
+               alt="Sunny Land Gold Label"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Sunny Land 25-Year Gold Label Launch • March</p>
         </div>
+
+        <!-- ===================== VISITS ===================== -->
+        <div class="event-card visits cursor-pointer group"
+             data-title="French Consul Visit"
+             data-date="May"
+             data-description="A diplomatic gathering with the French Consul exploring wine & spirits trade."
+             data-img="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg">
+          <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg"
+               alt="French Consul Visit"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">French Consul Visit • May</p>
+        </div>
+
+        <div class="event-card visits cursor-pointer group"
+             data-title="Chile Embassy Wine Tasting"
+             data-date="April"
+             data-description="A cultural exchange featuring Chilean wines, hosted by the Chile Embassy."
+             data-img="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg">
+          <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg"
+               alt="Chile Embassy Wine Tasting"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Chile Embassy Wine Tasting • April</p>
+        </div>
+
+        <!-- ===================== EDUCATION ===================== -->
+        <div class="event-card education cursor-pointer group"
+             data-title="The Art of Aged Whiskey"
+             data-date="June"
+             data-description="A masterclass exploring the nuances of aged whiskeys led by top experts."
+             data-img="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg">
+          <img src="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg"
+               alt="The Art of Aged Whiskey"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">The Art of Aged Whiskey • June</p>
+        </div>
+
+        <div class="event-card education cursor-pointer group"
+             data-title="Wine & Food Pairing Masterclass"
+             data-date="May"
+             data-description="An interactive workshop pairing world-class wines with curated cuisine."
+             data-img="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg">
+          <img src="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg"
+               alt="Wine & Food Pairing Masterclass"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Wine & Food Pairing Masterclass • May</p>
+        </div>
+
+        <!-- ===================== TOURS ===================== -->
+        <div class="event-card tours cursor-pointer group"
+             data-title="VIP Warehouse Tour"
+             data-date="May"
+             data-description="An exclusive behind-the-scenes tour of our climate-controlled warehouse."
+             data-img="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg">
+          <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-factory-floor.jpg"
+               alt="VIP Warehouse Tour"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">VIP Warehouse Tour • May</p>
+        </div>
+
+        <div class="event-card tours cursor-pointer group"
+             data-title="Rare Bottle Archive Access"
+             data-date="April"
+             data-description="Private access to our archive of rare and vintage bottles for VIPs."
+             data-img="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg">
+          <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg"
+               alt="Rare Bottle Archive Access"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Rare Bottle Archive Access • April</p>
+        </div>
+
+        <!-- ===================== MEETINGS ===================== -->
+        <div class="event-card meetings cursor-pointer group"
+             data-title="Honney Conti Cask Selection"
+             data-date="May"
+             data-description="Exclusive meeting with suppliers for barrel cask selection and tasting."
+             data-img="united-spirits-site/assets/img/meetings/chile-ambassador-meeting.jpg">
+          <img src="united-spirits-site/assets/img/meetings/chile-ambassador-meeting.jpg"
+               alt="Honney Conti Cask Selection"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Honney Conti Cask Selection • May</p>
+        </div>
+
+        <div class="event-card meetings cursor-pointer group"
+             data-title="Corazón de Lolita Launch Planning"
+             data-date="April"
+             data-description="A planning session with distributors for the Corazón de Lolita product launch."
+             data-img="united-spirits-site/assets/img/meetings/chile-ambassador-welcome-meeting.jpg">
+          <img src="united-spirits-site/assets/img/meetings/chile-ambassador-welcome-meeting.jpg"
+               alt="Corazón de Lolita Launch Planning"
+               class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105"/>
+          <p class="text-sm text-gray-500 text-center">Corazón de Lolita Launch Planning • April</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-    <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl font-bold z-10">&times;</button>
-    <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
+  <!-- ===================== EVENT MODAL ===================== -->
+  <div id="event-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full relative p-6">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-2xl text-gray-600 hover:text-black">&times;</button>
+      <img id="modal-img" src="" alt="" class="w-full h-64 object-contain rounded-lg mb-6">
+      <h3 id="modal-title" class="text-2xl font-serif mb-2"></h3>
+      <p id="modal-date" class="text-sm text-gray-500 mb-4"></p>
+      <p id="modal-description" class="text-gray-700"></p>
+    </div>
   </div>
 
   <!-- ===================== SCRIPTS ===================== -->
   <script>
-    lucide.createIcons();
-
-    // Lightbox Script
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-
-    document.querySelectorAll('[data-lightbox]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        if (e.target.tagName === 'IMG') {
-          lightboxImg.src = e.target.dataset.src;
-          lightboxImg.alt = e.target.alt;
-          document.body.style.overflow = 'hidden';
-          lightbox.classList.remove('hidden');
+    // Filter Events
+    function filterEvents(category) {
+      document.querySelectorAll('.event-card').forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
         }
+      });
+    }
+
+    // Modal Logic
+    const modal = document.getElementById('event-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDate = document.getElementById('modal-date');
+    const modalDesc = document.getElementById('modal-description');
+
+    document.querySelectorAll('.event-card').forEach(card => {
+      card.addEventListener('click', () => {
+        modalImg.src = card.dataset.img;
+        modalTitle.textContent = card.dataset.title;
+        modalDate.textContent = card.dataset.date;
+        modalDesc.textContent = card.dataset.description;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
       });
     });
 
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
+    function closeModal() {
+      modal.classList.add('hidden');
       document.body.style.overflow = '';
+    }
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
     });
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox.click();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox.click();
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
     });
   </script>
 </body>
