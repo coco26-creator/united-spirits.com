@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lolita RTD Red Wine Cans — United Spirits</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- HEADER -->
+  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="../index.html" class="hover:text-purple-600">Home</a>
+      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAIL -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <img src="../united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" 
+             alt="Lolita RTD Red Wine Cans" 
+             class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div>
+        <span class="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">RTD</span>
+        <h1 class="text-3xl font-serif font-bold mb-2">Lolita RTD Red Wine Cans</h1>
+        <p class="text-gray-600 mb-4">Spain</p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Ready-to-drink red wine in convenient cans. Perfect for outdoor events, picnics, or casual gatherings. Enjoy the authentic taste of Spanish wine with the portability of canned beverages.
+        </p>
+        <a href="../collections/wines.html" class="inline-block px-5 py-2 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
+          ← Back to Wines
+        </a>
+      </div>
+    </div>
+
+    <!-- DETAILED DESCRIPTION -->
+    <div class="mt-16 prose lg:prose-xl max-w-none">
+      <h2 class="text-2xl font-serif text-gray-900 mb-4">Tasting Notes</h2>
+      <p class="text-lg text-gray-700">
+        This ready-to-drink red wine offers a vibrant, fruity profile with bright notes of ripe berries and subtle hints of vanilla. The flavor is clean and refreshing, with a balanced sweetness that makes it easy to enjoy. The finish is crisp and clean, leaving a pleasant, lingering taste of fresh fruit without the metallic aftertaste often associated with canned beverages.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Origin & Production</h2>
+      <p class="text-lg text-gray-700">
+        Crafted in Spain, this innovative RTD product combines traditional winemaking with modern convenience. The wine is carefully selected from premium Spanish vineyards, then packaged using specialized canning technology that preserves freshness and flavor. The cans are lined with a protective barrier to prevent any interaction between the wine and the aluminum, ensuring the authentic taste of Spanish wine in a portable format.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Serving Suggestions</h2>
+      <p class="text-lg text-gray-700">
+        Best served chilled at 8-10°C (46-50°F). The convenient 250ml cans are perfect for outdoor events, picnics, festivals, or any occasion where portability matters. Each can provides a single serving of premium red wine without the need for glasses or corkscrews. For the best experience, pour into a glass to fully appreciate the aromas, or enjoy straight from the can for ultimate convenience.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
