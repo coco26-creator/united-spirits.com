@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunny Land Private Tasting — United Spirits</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
 
+  <!-- HEADER -->
+  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="../index.html" class="hover:text-purple-600">Home</a>
+      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+    </nav>
+  </header>
+
+  <!-- EVENT DETAIL -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <img src="../united-spirits-site/assets/img/meetings/chile-wine-promotion-meeting.jpg" 
+             alt="Chile Wine Promotion Meeting" 
+             class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div>
+        <span class="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Meetings</span>
+        <h1 class="text-3xl font-serif font-bold mb-2">Sunny Land Private Tasting</h1>
+        <p class="text-gray-600 mb-4">March 2024 • Hong Kong</p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Exclusive tasting session for distributors featuring Sunny Land premium whiskey collection. The event provided distributors with in-depth knowledge of the product line and its positioning in the premium whiskey market.
+        </p>
+        <a href="../events.html" class="inline-block px-5 py-2 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
+          ← Back to Events
+        </a>
+      </div>
+    </div>
+
+    <!-- DETAILED DESCRIPTION -->
+    <div class="mt-16 prose lg:prose-xl max-w-none">
+      <h2 class="text-2xl font-serif text-gray-900 mb-4">Event Overview</h2>
+      <p class="text-lg text-gray-700">
+        This exclusive tasting session was designed for key distributors to experience the Sunny Land premium whiskey collection in depth. The event provided distributors with comprehensive knowledge about the product line, including production methods, flavor profiles, and market positioning. The session was structured to equip distributors with the information and confidence needed to effectively present and sell the Sunny Land collection to their retail and hospitality clients.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Key Highlights</h2>
+      <p class="text-lg text-gray-700">
+        The tasting session featured a guided presentation by Sunny Land's brand ambassador, who shared the history and production philosophy behind the collection. Distributors participated in a comparative tasting of the full Sunny Land range, from the core expressions to the limited editions, with detailed explanations of each product's distinctive characteristics. The session included training on effective sales techniques and responses to common customer questions about the brand. United Spirits' sales team provided market insights on consumer preferences in the premium whiskey segment and how to position Sunny Land against competing brands. The event concluded with a Q&A session where distributors could address specific concerns and receive tailored advice for their markets.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Product Portfolio</h2>
+      <p class="text-lg text-gray-700">
+        The tasting session covered the complete Sunny Land product line:
+      </p>
+      <ul class="text-lg text-gray-700 pl-6 list-disc space-y-2">
+        <li>Sunny Land Single Malt S25 - The flagship 25-year-old expression with exceptional complexity</li>
+        <li>Sunny Land Single Malt France - A 18-year-old single malt finished in French oak barrels</li>
+        <li>Sunny Land Single Malt Sherry Cask - Matured in ex-sherry casks for rich fruit notes</li>
+        <li>BF Kingdom BE408 Box - A premium blended Scotch with distinctive character</li>
+        <li>BF Kingdom BE708 Wood Box - An even more premium expression with extended aging</li>
+        <li>Sunny Land Private Collection - Limited editions for the discerning collector</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Sales Enablement</h2>
+      <p class="text-lg text-gray-700">
+        Following the tasting session, distributors received comprehensive sales enablement materials to support their efforts in the market. These materials include detailed product guides with tasting notes and food pairing suggestions, competitive analysis comparing Sunny Land to key competitors, and sample sales scripts for different customer scenarios. United Spirits has also established a dedicated support hotline for distributors to receive immediate assistance with customer inquiries. The company will conduct follow-up training sessions in each distributor's territory to ensure consistent messaging and to address market-specific challenges. Additionally, United Spirits is implementing a co-operative marketing program that provides financial support for approved promotional activities, helping distributors maximize their investment in the Sunny Land brand.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
