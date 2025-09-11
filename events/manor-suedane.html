@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cultural Exchange Event — United Spirits</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
 
+  <!-- HEADER -->
+  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+      <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="../index.html" class="hover:text-purple-600">Home</a>
+      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+    </nav>
+  </header>
+
+  <!-- EVENT DETAIL -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <img src="../united-spirits-site/assets/img/manor-suedane.jpg" 
+             alt="Manor Suedane" 
+             class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div>
+        <span class="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">Diplomatic</span>
+        <h1 class="text-3xl font-serif font-bold mb-2">Cultural Exchange Event</h1>
+        <p class="text-gray-600 mb-4">February 2024 • Hong Kong</p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          International cultural exchange event at Manor Suedane featuring global premium spirits. The gathering brought together diplomatic representatives from various nations to celebrate the universal language of premium beverages.
+        </p>
+        <a href="../events.html" class="inline-block px-5 py-2 border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
+          ← Back to Events
+        </a>
+      </div>
+    </div>
+
+    <!-- DETAILED DESCRIPTION -->
+    <div class="mt-16 prose lg:prose-xl max-w-none">
+      <h2 class="text-2xl font-serif text-gray-900 mb-4">Event Overview</h2>
+      <p class="text-lg text-gray-700">
+        This cultural exchange event at Manor Suedane brought together diplomatic representatives from multiple countries to celebrate the universal language of premium spirits. Hosted in partnership with the Hong Kong Foreign Correspondents' Club, the event featured presentations on the distillation and winemaking traditions of different cultures, with special emphasis on how these traditions can inform modern premium spirit production. The gathering fostered meaningful dialogue about cultural appreciation through the lens of premium beverages, creating opportunities for future international collaborations.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Key Highlights</h2>
+      <p class="text-lg text-gray-700">
+        The event featured presentations from cultural representatives of France, Spain, Chile, Scotland, and Japan on their respective spirit production traditions. Attendees participated in a guided tasting session that showcased how different cultural approaches to spirit production create distinctive flavor profiles and drinking experiences. The discussion included how traditional production methods can be adapted to create innovative products that appeal to global consumers while maintaining cultural authenticity. The event concluded with a collaborative toast using a special blend created for the occasion, symbolizing the unity of diverse cultural traditions through the shared appreciation of premium spirits.
+      </p>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Featured Products</h2>
+      <p class="text-lg text-gray-700">
+        The tasting session highlighted premium spirits representing different cultural traditions:
+      </p>
+      <ul class="text-lg text-gray-700 pl-6 list-disc space-y-2">
+        <li>Honney Conti XO - Representing French cognac-making tradition with centuries of expertise</li>
+        <li>Sunny Land Single Malt S25 - Showcasing Scottish distilling heritage and aging techniques</li>
+        <li>Anderra Reserva Cabernet Sauvignon - Demonstrating Chilean excellence in winemaking</li>
+        <li>Corazón de Lolita Premium Coupage - Highlighting Spanish winemaking tradition with modern innovation</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif text-gray-900 mb-4 mt-8">Future Initiatives</h2>
+      <p class="text-lg text-gray-700">
+        Following the successful event, United Spirits has committed to organizing quarterly cultural exchange events that will rotate among different cultural traditions. The company will establish a Cultural Spirits Showcase area in its flagship tasting room, featuring rotating selections that highlight different cultural traditions in spirit production. Additionally, a joint initiative with cultural institutions will launch a "World of Spirits" educational series later this year, featuring masterclasses led by cultural experts on the history and production methods of spirits from around the world. United Spirits is also developing a special limited-edition collection that celebrates cultural fusion in spirit production, with the first release scheduled for Q3 2024 featuring a collaboration between French cognac makers and Japanese sake producers.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+  </footer>
+</body>
+</html>
