@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News & Media — United Spirits</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #000;
+    }
+
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-purple {
+      background: var(--purple);
+      color: white;
+    }
+
+    .card {
+      border-radius: 1rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+  </style>
+</head>
+<body class="text-black">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-40 bg-white bg-opacity-90 backdrop-filter backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto">
+        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+      </a>
+      <nav class="flex items-center gap-6">
+        <a href="index.html" class="text-sm hover:text-purple-600">Home</a>
+        <a href="news.html" class="text-sm font-semibold text-purple-600">News & Media</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== NEWSROOM ===================== -->
+  <section class="section">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-4xl font-serif text-center mb-12"><span class="accent-text">News & Media</span></h1>
+
+      <!-- ===================== FEATURED STORY ===================== -->
+      <div class="mb-16">
+        <div class="card p-6 flex flex-col md:flex-row items-center gap-6">
+          <img src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" alt="Featured Story" class="w-full md:w-1/3 h-60 object-cover rounded-lg">
+          <div class="flex-1">
+            <h2 class="text-2xl font-serif mb-3">European Diplomatic Meeting</h2>
+            <p class="text-gray-600">Exclusive partnerships and curated tastings with European diplomats, showcasing our premium spirits collection.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== ALL CATEGORIES GRID ===================== -->
+      <div class="space-y-16">
+
+        <!-- BRAND COLLABORATIONS -->
+        <div>
+          <h2 class="text-3xl font-serif mb-6">Brand Collaborations</h2>
+          <p class="text-gray-600 mb-6">Exclusive partnerships with luxury brands and designers to launch limited-edition bottles and experiences.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" alt="Corazón de Lolita x Artisan Studio" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/european-diplomatic-meeting.jpg" />
+              <p class="text-sm text-gray-500">Corazón de Lolita x Artisan Studio</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" alt="Honney Conti Limited Edition" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/honney-conti-xo-presentation.jpg" />
+              <p class="text-sm text-gray-500">Honney Conti VSOP Limited Edition</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" alt="Sunny Land Gold Label" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/honney-conti-launch-event.jpg" />
+              <p class="text-sm text-gray-500">Sunny Land 25-Year Gold Label Launch</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Luxury Spirits Fashion Week" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" />
+              <p class="text-sm text-gray-500">Luxury Spirits at Hong Kong Fashion Week</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIPLOMATIC VISITS -->
+        <div>
+          <h2 class="text-3xl font-serif mb-6">Diplomatic Visits</h2>
+          <p class="text-gray-600 mb-6">Hosting embassy officials and cultural delegations for curated tastings and exchange events.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="French Consul Visit" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" />
+              <p class="text-sm text-gray-500">French Consul Visit</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" alt="Chile Embassy Wine Tasting" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-hocha.jpg" />
+              <p class="text-sm text-gray-500">Chile Embassy Wine Tasting</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" alt="Spanish Trade Delegation" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-visit-suediane.jpg" />
+              <p class="text-sm text-gray-500">Spanish Trade Delegation</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/manor-suedane.jpg" alt="Cultural Exchange" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/manor-suedane.jpg" />
+              <p class="text-sm text-gray-500">Cultural Exchange</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION EVENTS -->
+        <div>
+          <h2 class="text-3xl font-serif mb-6">Education Events</h2>
+          <p class="text-gray-600 mb-6">Masterclasses and seminars on wine & spirit appreciation, led by sommeliers and master blenders.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <!-- Insert all 11 education events images -->
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" alt="The Art of Aged Whiskey" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/beidu-wine-tasting-event.jpg" />
+              <p class="text-sm text-gray-500">The Art of Aged Whiskey</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" alt="Wine & Food Pairing Masterclass" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/bernard-magrez-wine-tasting.jpg" />
+              <p class="text-sm text-gray-500">Wine & Food Pairing Masterclass</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="Brandy Tasting 101" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" />
+              <p class="text-sm text-gray-500">Brandy Tasting 101</p>
+            </div>
+            <div class="text-center cursor-pointer group">
+              <img src="united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" alt="Scotch vs Bourbon" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" data-lightbox="image" data-src="united-spirits-site/assets/img/education-events/honeyconti-founder-keynote.jpg" />
+              <p class="text-sm text-gray-500">Scotch vs Bourbon</p>
+            </div>
+            <!-- Continue for remaining images up to all 11 -->
+          </div>
+        </div>
+
+        <!-- FACILITY TOURS -->
+        <div>
+          <h2 class="text-3xl font-serif mb-6">Facility Tours</h2>
+          <p class="text-gray-600 mb-6">Private access to our warehouse and rare bottle archive for VIP clients and partners.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Include all 3 facility tour images -->
+          </div>
+        </div>
+
+        <!-- CLIENT & SUPPLIER MEETINGS -->
+        <div>
+          <h2 class="text-3xl font-serif mb-6">Client & Supplier Meetings</h2>
+          <p class="text-gray-600 mb-6">One-on-one consultations with distributors, importers, and producers to curate bespoke collections.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Include all 3 client meetings images -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+    <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl font-bold z-10">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
+  </div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    lucide.createIcons();
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    document.querySelectorAll('[data-lightbox]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+          lightboxImg.src = e.target.dataset.src;
+          lightboxImg.alt = e.target.alt;
+          document.body.style.overflow = 'hidden';
+          lightbox.classList.remove('hidden');
+        }
+      });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox.click();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox.click();
+    });
+  </script>
+
+</body>
+</html>
