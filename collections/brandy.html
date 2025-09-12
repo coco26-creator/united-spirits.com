@@ -16,24 +16,24 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    :root {
-      --pink: #ec4899;
-      --purple: #a855f7;
-      --accent: linear-gradient(135deg, #ec4899, #a855f7);
-    }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #111; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .accent { background: linear-gradient(135deg,#ec4899,#a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .card { border-radius: 1rem; background: #fff; border:1px solid #e5e7eb; transition: transform .2s, box-shadow .2s; overflow: hidden; }
+    .card:hover { transform: translateY(-5px); box-shadow:0 12px 24px rgba(0,0,0,0.1);}
+    .card img { width:100%; height:240px; object-fit:cover; transition: transform .3s; }
+    .card:hover img { transform: scale(1.05);}
+    .category-label { font-size:.75rem; font-weight:600; text-transform:uppercase; background: linear-gradient(135deg,#ec4899,#a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .read-more { font-weight:600; color:#6d28d9; transition: color .2s; }
+    .read-more:hover { color:#a855f7; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: white;
-      color: #000;
-    }
-
+    /* Preserve your original brandy page styles */
     .font-serif {
       font-family: "Playfair Display", serif;
     }
 
     .accent-text {
-      background: var(--accent);
+      background: linear-gradient(135deg, #ec4899, #a855f7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -50,7 +50,7 @@
     }
 
     .btn-purple {
-      background: var(--purple);
+      background: #a855f7;
       color: white;
     }
 
@@ -64,20 +64,6 @@
       color: white;
     }
 
-    .card {
-      border-radius: 1rem;
-      background: white;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-    }
-
     .section {
       padding: 6rem 0;
     }
@@ -86,7 +72,7 @@
       position: absolute;
       top: 1rem;
       left: 1rem;
-      background: var(--purple);
+      background: #a855f7;
       color: white;
       font-size: 0.75rem;
       font-weight: 600;
@@ -102,102 +88,106 @@
       font-size: 0.875rem;
       font-weight: 600;
       border-radius: 999px;
-      border: 1px solid var(--purple);
-      color: var(--purple);
+      border: 1px solid #a855f7;
+      color: #a855f7;
       transition: all 0.2s ease;
     }
 
     .details-btn:hover {
-      background: var(--purple);
+      background: #a855f7;
       color: white;
     }
   </style>
 </head>
-<body class="text-black">
+<body>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-    <a href="../index.html" class="font-serif text-2xl"><span class="accent-text">United Spirits</span></a>
-    <nav class="hidden md:flex gap-8">
-      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
-      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
-      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+  <a href="../index.html" class="flex items-center gap-3">
+    <img src="../united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+    <span class="font-serif text-xl tracking-wide">United <span class="accent">Spirits</span></span>
+  </a>
+  <nav class="hidden md:flex gap-8">
+    <a href="../index.html" class="hover:text-purple-600">Home</a>
+    <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
+    <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
+    <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+  </nav>
+</header>
 
-  <!-- ===================== PRODUCTS GRID ===================== -->
-  <section class="section">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-serif text-center mb-10"><span class="accent-text">Our Brandy Collection</span></h2>
-      <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
-        Luxurious brandies, perfect for gifting or savoring.
-      </p>
+<!-- ===================== PRODUCTS GRID ===================== -->
+<section class="section">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-serif text-center mb-10"><span class="accent">Our Brandy Collection</span></h2>
+    <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+      Luxurious brandies, perfect for gifting or savoring.
+    </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <!-- Honney Conti VSOP Colorful -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" data-title="Honney Conti VSOP">
-          <span class="badge">VSOP</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti VSOP</h3>
-          <p class="text-gray-600 mt-2 text-sm">Colorful • France</p>
-          <a href="../products/honney-conti-vsop.html" class="details-btn">View Details</a>
-        </article>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Honney Conti VSOP Colorful -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" data-title="Honney Conti VSOP">
+        <span class="badge">VSOP</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti VSOP</h3>
+        <p class="text-gray-600 mt-2 text-sm">Colorful • France</p>
+        <a href="../products/honney-conti-vsop.html" class="details-btn">View Details</a>
+      </article>
 
-        <!-- Honney Conti Napoleon XO Royal -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" data-title="Honney Conti Napoleon XO Royal">
-          <span class="badge">XO</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" alt="Honney Conti Napoleon XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti Napoleon XO Royal</h3>
-          <p class="text-gray-600 mt-2 text-sm">Luxury • France</p>
-          <a href="../products/honney-conti-napoleon-xo-royal.html" class="details-btn">View Details</a>
-        </article>
+      <!-- Honney Conti Napoleon XO Royal -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" data-title="Honney Conti Napoleon XO Royal">
+        <span class="badge">XO</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-xo-royal.png" alt="Honney Conti Napoleon XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti Napoleon XO Royal</h3>
+        <p class="text-gray-600 mt-2 text-sm">Luxury • France</p>
+        <a href="../products/honney-conti-napoleon-xo-royal.html" class="details-btn">View Details</a>
+      </article>
 
-        <!-- Honney Conti XO Leather Box -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" data-title="Honney Conti XO Leather Box">
-          <span class="badge">XO</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" alt="Honney Conti XO Leather Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti XO Leather Box</h3>
-          <p class="text-gray-600 mt-2 text-sm">Leather Box • France</p>
-          <a href="../products/honney-conti-xo-leather-box.html" class="details-btn">View Details</a>
-        </article>
+      <!-- Honney Conti XO Leather Box -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" data-title="Honney Conti XO Leather Box">
+        <span class="badge">XO</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-leather-box.jpg" alt="Honney Conti XO Leather Box" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti XO Leather Box</h3>
+        <p class="text-gray-600 mt-2 text-sm">Leather Box • France</p>
+        <a href="../products/honney-conti-xo-leather-box.html" class="details-btn">View Details</a>
+      </article>
 
-        <!-- Honney Conti XO Royal -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" data-title="Honney Conti XO Royal">
-          <span class="badge">XO</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti XO Royal</h3>
-          <p class="text-gray-600 mt-2 text-sm">Royal • France</p>
-          <a href="../products/honney-conti-xo-royal.html" class="details-btn">View Details</a>
-        </article>
+      <!-- Honney Conti XO Royal -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" data-title="Honney Conti XO Royal">
+        <span class="badge">XO</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti XO Royal</h3>
+        <p class="text-gray-600 mt-2 text-sm">Royal • France</p>
+        <a href="../products/honney-conti-xo-royal.html" class="details-btn">View Details</a>
+      </article>
 
-        <!-- Honney Conti Napoleon VSOP -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" data-title="Honney Conti Napoleon VSOP">
-          <span class="badge">VSOP</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" alt="Honney Conti Napoleon VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP</h3>
-          <p class="text-gray-600 mt-2 text-sm">Napoleon • France</p>
-          <a href="../products/honney-conti-napoleon-vsop.html" class="details-btn">View Details</a>
-        </article>
+      <!-- Honney Conti Napoleon VSOP -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" data-title="Honney Conti Napoleon VSOP">
+        <span class="badge">VSOP</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop.png" alt="Honney Conti Napoleon VSOP" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP</h3>
+        <p class="text-gray-600 mt-2 text-sm">Napoleon • France</p>
+        <a href="../products/honney-conti-napoleon-vsop.html" class="details-btn">View Details</a>
+      </article>
 
-        <!-- Honney Conti Napoleon VSOP Classic -->
-        <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" data-title="Honney Conti Napoleon VSOP Classic">
-          <span class="badge">VSOP</span>
-          <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" alt="Honney Conti Napoleon VSOP Classic" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
-          <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP Classic</h3>
-          <p class="text-gray-600 mt-2 text-sm">Classic • France</p>
-          <a href="../products/honney-conti-napoleon-vsop-classic.html" class="details-btn">View Details</a>
-        </article>
-      </div>
+      <!-- Honney Conti Napoleon VSOP Classic -->
+      <article class="card p-6 text-center cursor-pointer group" data-img="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" data-title="Honney Conti Napoleon VSOP Classic">
+        <span class="badge">VSOP</span>
+        <img src="../united-spirits-site/assets/img/products/product-honney-conti-napoleon-vsop-classic.png" alt="Honney Conti Napoleon VSOP Classic" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+        <h3 class="text-lg font-semibold">Honney Conti Napoleon VSOP Classic</h3>
+        <p class="text-gray-600 mt-2 text-sm">Classic • France</p>
+        <a href="../products/honney-conti-napoleon-vsop-classic.html" class="details-btn">View Details</a>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
-    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
-  </footer>
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+  <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+</footer>
 
-  <script>
-    lucide.createIcons();
-  </script>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
