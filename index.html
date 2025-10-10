@@ -1,5 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Klaviyo Onsite Tracking -->
+  <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/VLPJFb/klaviyo.js?company_id=VLPJFb'></script>
+  <script type="text/javascript"> 
+    // Initialize Klaviyo object on page load
+    !function(){
+      if(!window.klaviyo){
+        window._klOnsite = window._klOnsite || [];
+        try {
+          window.klaviyo = new Proxy({}, {
+            get: function(_, method) {
+              return method === "push" ? function() {
+                var args; (args = window._klOnsite).push.apply(args, arguments);
+              } : function() {
+                var n = arguments.length, o = new Array(n);
+                for (var i = 0; i < n; i++) o[i] = arguments[i];
+                var callback = typeof o[o.length - 1] === "function" ? o.pop() : void 0;
+                var promise = new Promise(function(resolve) {
+                  window._klOnsite.push([method].concat(o, [function(result){
+                    if(callback) callback(result);
+                    resolve(result);
+                  }]));
+                });
+                return promise;
+              };
+            }
+          });
+        } catch(e) {
+          window.klaviyo = window.klaviyo || [];
+          window.klaviyo.push = function(){
+            var args; (args = window._klOnsite).push.apply(args, arguments);
+          };
+        }
+      }
+    }();
+  </script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1113,3 +1148,4 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
