@@ -54,7 +54,7 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
-  <!-- Marked.js (optional, load deferred for performance) -->
+  <!-- Marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -129,12 +129,10 @@
       background: var(--accent);
       color: white;
     }
-    /* Prevent layout shifts */
     header img[width][height] {
       aspect-ratio: attr(width) / attr(height);
       object-fit: contain;
     }
-    /* Placeholder background while loading */
     header img {
       background: rgba(255, 255, 255, 0.1);
       min-width: 2.5rem;
@@ -153,7 +151,6 @@
     .section {
       padding: 6rem 0;
     }
-    /* Infinite Scroll Animation */
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -165,13 +162,11 @@
     .animate-scroll:hover {
       animation-play-state: paused;
     }
-    /* Default (Desktop) Hero Image Style */
     section[style*="background-image"] {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
-    /* Mobile Hero Image Style */
     @media (max-width: 1279px) {
       section[style*="background-image"] {
         background-position: center;
@@ -184,6 +179,44 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- Sirius Site SDK (with failsafe) -->
+<script type="text/javascript">
+(function(w, d, n, a, j, s) {
+  w[n] =
+    w[n] ||
+    function() {
+      return (w[n].a = w[n].a || []).push(arguments);
+    };
+  j = d.createElement('script');
+  j.async = true;
+  j.src = 'https://sirius-it-site.lx.netease.com/site-sdk.js';
+  j.onload = function() {
+    setTimeout(() => {
+      try {
+        if (typeof __siteSDK__ !== 'undefined' && __siteSDK__.setDefaultConfig) {
+          __siteSDK__.setDefaultConfig({
+            outerKey: 'key71c56c8bcccf4f1fb596d458b6e6452e',
+          });
+          __siteSDK__.init();
+        } else {
+          console.warn('Sirius SDK loaded but __siteSDK__ object not found.');
+        }
+      } catch (err) {
+        console.error('Error initializing Sirius SDK:', err);
+      }
+    }, 500);
+  };
+  j.onerror = function() {
+    console.warn('Sirius SDK failed to load.');
+  };
+  s = d.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(j, s);
+})(window, document, '__siteSDK__');
+</script>
+
+</body>
+</html>
  <!-- ===================== HEADER + HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat" 
   style="background-image: url('united-spirits-site/assets/img/hero3.jpeg');">
@@ -1148,5 +1181,6 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
 
 
