@@ -3,107 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About United Spirits — premium importer and distributor of fine wines, whiskeys, and brandies across Asia and Africa." />
-  <title>About Us | United Spirits</title>
-  <link rel="stylesheet" href="united-spirits-site/assets/css/style.css" />
-  <link rel="icon" href="united-spirits-site/assets/img/favicon.ico" type="image/x-icon" />
+  <title>About Us | United Spirits Holding</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
-  <!-- ===================== NAVIGATION ===================== -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<body class="bg-white text-gray-900">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto" />
-        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+        <img src="assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto" />
+        <span class="font-serif text-xl tracking-wide">United <span class="text-pink-600">Spirits</span></span>
       </a>
-      <nav class="space-x-8 text-gray-700 hidden md:flex">
-        <a href="index.html" class="hover:text-pink-600 transition-colors">Home</a>
-        <a href="about.html" class="text-pink-600 font-semibold">About</a>
-        <a href="index.html#collections" class="hover:text-pink-600 transition-colors">Collections</a>
-        <a href="news.html" class="hover:text-pink-600 transition-colors">News</a>
-        <a href="index.html#contact" class="hover:text-pink-600 transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm uppercase font-semibold tracking-wide">
+        <a href="index.html" class="hover:text-pink-600">Home</a>
+        <a href="about.html" class="text-pink-600">About</a>
+        <a href="index.html#collections" class="hover:text-pink-600">Collections</a>
+        <a href="news.html" class="hover:text-pink-600">News</a>
+        <a href="index.html#contact" class="hover:text-pink-600">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- ===================== MAIN CONTENT ===================== -->
-  <main class="max-w-6xl mx-auto px-6 py-20">
-    <!-- INTRO -->
+  <main class="pt-32 px-6 max-w-6xl mx-auto">
+
+    <!-- HERO -->
     <section class="text-center mb-20">
-      <h1 class="text-4xl font-serif text-black mb-6">About United Spirits</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        United Spirits is a Hong Kong–based importer and distributor of premium wines, whiskeys, and brandies.
-        We collaborate with leading producers and connect them to discerning markets across Asia and Africa.
+      <h1 class="text-4xl md:text-5xl font-serif text-black mb-6">
+        From Your Winery to Asia — and Beyond.
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        We bridge international producers with Asia’s most dynamic markets — managing customization, packaging, and export directly from Qingdao Free Trade Zone.
       </p>
     </section>
 
-    <!-- STORY -->
-    <section class="grid md:grid-cols-2 gap-12 mb-20 items-center">
+    <!-- ABOUT SECTION -->
+    <section class="mb-20 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <img src="united-spirits-site/assets/img/about-us.jpg" alt="United Spirits team" class="rounded-2xl shadow-lg" />
+        <video autoplay muted loop playsinline class="rounded-2xl shadow-lg w-full mb-6">
+          <source src="assets/videos/bottling.mp4" type="video/mp4" />
+        </video>
+        <video autoplay muted loop playsinline class="rounded-2xl shadow-lg w-full">
+          <source src="assets/videos/branding.mp4" type="video/mp4" />
+        </video>
       </div>
       <div>
-        <h2 class="text-3xl font-serif text-black mb-4">Our Story</h2>
-        <p class="text-gray-600 mb-4">
-          Founded in Hong Kong, United Spirits has built a strong reputation for excellence in sourcing, brand management, and distribution.
-          Our mission is to make exceptional beverages accessible to consumers through trusted trade partners.
+        <h2 class="text-3xl font-serif mb-4 text-black">Who We Are</h2>
+        <p class="text-gray-700 mb-4">
+          United Spirits Holding is a full-service manufacturing and customization hub based in Qingdao Free Trade Zone. We help global wineries and distilleries transform their wines and spirits for Asian and international success.
         </p>
-        <p class="text-gray-600">
-          From boutique vineyards to established distilleries, we proudly represent producers who share our commitment to quality, craftsmanship, and authenticity.
+        <p class="text-gray-700 mb-4">
+          As both a bonded manufacturer and logistics partner, we handle everything — from customs clearance, bottling, and label adaptation to storage and distribution. Our integrated setup allows seamless entry into high-potential markets while ensuring compliance and efficiency.
+        </p>
+        <p class="text-gray-700">
+          We’re more than a service provider — we’re your strategic partner in building sustainable brand growth across Asia and Africa.
         </p>
       </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="text-center mb-20">
-      <h2 class="text-3xl font-serif text-black mb-4">Our Mission</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        To connect exceptional producers with discerning consumers through transparent, reliable, and sustainable partnerships.
-        We bridge continents — from Asia to Africa — ensuring premium spirits reach the right audiences with integrity and style.
-      </p>
     </section>
 
     <!-- OUR FOOTPRINT -->
     <section class="mb-20">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-serif text-black mb-4">Our Footprint</h2>
+        <h2 class="text-3xl font-serif text-black mb-4">Our Global Footprint</h2>
         <p class="text-gray-600 max-w-xl mx-auto">
-          We provide reliable access to high-potential markets across Asia and Africa.
+          We provide reliable access to high-potential markets across Asia and Africa through our established network of partners and distributors.
         </p>
       </div>
-
-      <!-- Asian Markets -->
-      <h3 class="text-xl font-semibold text-center mb-6 text-gray-700">Asia</h3>
-      <div class="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto text-center mb-12">
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-5xl mx-auto text-center">
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">China</div>
+          <div class="text-2xl font-semibold text-pink-600">China</div>
           <div class="text-xs text-gray-500 mt-1">Core Market</div>
         </div>
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">Japan</div>
+          <div class="text-2xl font-semibold text-pink-600">Japan</div>
           <div class="text-xs text-gray-500 mt-1">Premium Focus</div>
         </div>
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">Korea</div>
+          <div class="text-2xl font-semibold text-pink-600">Korea</div>
           <div class="text-xs text-gray-500 mt-1">Growing Demand</div>
         </div>
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">ASEAN</div>
+          <div class="text-2xl font-semibold text-pink-600">ASEAN</div>
           <div class="text-xs text-gray-500 mt-1">Expanding Reach</div>
         </div>
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">HK</div>
+          <div class="text-2xl font-semibold text-pink-600">Hong Kong</div>
           <div class="text-xs text-gray-500 mt-1">Global Hub</div>
         </div>
-      </div>
-
-      <!-- African Markets -->
-      <h3 class="text-xl font-semibold text-center mb-6 text-gray-700">Africa</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
         <div class="card p-6">
-          <div class="text-2xl font-semibold accent-text">Ghana</div>
-          <div class="text-xs text-gray-500 mt-1">Strategic Distribution</div>
+          <div class="text-2xl font-semibold text-pink-600">Ghana</div>
+          <div class="text-xs text-gray-500 mt-1">African Distribution</div>
         </div>
       </div>
     </section>
@@ -112,9 +104,11 @@
     <section class="text-center">
       <h3 class="text-2xl font-serif mb-4">Let’s Work Together</h3>
       <p class="text-gray-600 max-w-md mx-auto mb-8">
-        We specialise in bringing premium beverages to licensed retailers, distributors, and on-trade partners across Asia and Africa.
+        We specialize in bringing premium beverages to licensed retailers, distributors, and on-trade partners across Asia and Africa.
       </p>
-      <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
+      <a href="index.html#for-producers" class="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+        Become a Partner
+      </a>
     </section>
   </main>
 
@@ -123,8 +117,8 @@
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
       <div>
         <a href="index.html" class="flex items-center gap-3 mb-6">
-          <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto glow-logo" />
-          <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+          <img src="assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto glow-logo" />
+          <span class="font-serif text-xl tracking-wide">United <span class="text-pink-600">Spirits</span></span>
         </a>
         <p class="text-gray-400 mb-6">
           Premium wines, whiskeys, and brandies curated for discerning palates. 
@@ -132,34 +126,13 @@
         </p>
         <div class="flex gap-4">
           <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
-          </a>
-          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.76 49.76 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.76 49.76 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
-              <path d="m10 15 5-3-5-3z"></path>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
           </a>
           <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           </a>
           <a href="https://wa.me/85269346630" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"></path>
-              <polyline points="15.5,9 9.5,15 6.5,12"></polyline>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"></path><polyline points="15.5,9 9.5,15 6.5,12"></polyline></svg>
           </a>
         </div>
       </div>
@@ -184,12 +157,10 @@
         <p class="text-gray-400 mb-4">
           <strong>Email:</strong> <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400 transition-colors">info@unitedspiritshk.com</a>
         </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.278571866072!2d114.17930467515414!3d22.281556037114364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e1a53c7b89%3A0x8130550006672c5a!2sEasey%20Commercial%20Building!5e0!3m2!1sen!2sus!4v1714880000000!5m2!1sen!2sus" 
-                width="100%" height="200" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.278571866072!2d114.17930467515414!3d22.281556037114364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e1a53c7b89%3A0x8130550006672c5a!2sEasey%20Commercial%20Building!5e0!3m2!1sen!2sus!4v1714880000000!5m2!1sen!2sus"
+          width="100%" height="200" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy"></iframe>
         <div class="mt-2 text-center">
-          <a href="https://www.google.com/maps/place/Easey+Commercial+Building/@22.281556,114.1793047,17z/data=!3m1!4b1!4m6!3m5!1s0x340401e1a53c7b89:0x8130550006672c5a!8m2!3d22.281556!4d114.181885!16s%2Fg%2F11c5yqjx8q?entry=ttu" 
-             target="_blank" class="text-sm text-pink-400 hover:underline">
+          <a href="https://www.google.com/maps/place/Easey+Commercial+Building/" target="_blank" class="text-sm text-pink-400 hover:underline">
             Open in Google Maps
           </a>
         </div>
@@ -199,8 +170,7 @@
     <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
       <p>
         <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400 transition-colors">info@unitedspiritshk.com</a>
-        &nbsp;|&nbsp;
-        &copy; 2025 United Spirits. All rights reserved. Crafted with care — Hong Kong
+        &nbsp;|&nbsp; &copy; 2025 United Spirits. All rights reserved. Crafted with care — Hong Kong
       </p>
     </div>
   </footer>
