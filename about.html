@@ -183,69 +183,91 @@
   </div>
 </section>
 
-  <!-- ===================== 🌍 OUR GLOBAL FOOTPRINT (Heading Only) ===================== -->
-    <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-8">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4 font-inter">
-          Our Global Footprint
-        </h2>
-        <p class="text-xl text-gray-600 mb-6 font-open-sans">
-          A visual representation of United Spirits' distribution network across key markets.
-        </p>
+  
+    <!-- GLOBAL FOOTPRINT WITH GEMINI SVG MAP -->
+    <section class="mb-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-serif text-black mb-4">Our Global Footprint</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Our distribution network spans Asia and Africa, ensuring reliable access to key markets worldwide.</p>
       </div>
-    </section>
-    
-    <!-- ===================== MAP SECTION (Map Only) ===================== -->
-    <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-8">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <!-- Leaflet Map Container -->
-        <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12"></div>
-      </div>
-    </section>
 
-    <!-- ===================== COUNTRY CARDS BELOW MAP (Cards Only) ===================== -->
-    <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-8">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <!-- Country Cards Below Map -->
-        <div class="flex flex-wrap justify-center gap-6">
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">China</div>
-            <div class="text-xs text-gray-500 mt-1">Core Market</div>
-          </div>
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">Japan</div>
-            <div class="text-xs text-gray-500 mt-1">Premium Focus</div>
-          </div>
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">Korea</div>
-            <div class="text-xs text-gray-500 mt-1">Growing Demand</div>
-          </div>
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">ASEAN</div>
-            <div class="text-xs text-gray-500 mt-1">Expanding Reach</div>
-          </div>
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">Hong Kong</div>
-            <div class="text-xs text-gray-500 mt-1">Global Hub</div>
-          </div>
-          <div class="card w-40 p-4 text-center">
-            <div class="text-xl font-semibold accent-text">Ghana</div>
-            <div class="text-xs text-gray-500 mt-1">Africa Distribution</div>
-          </div>
+      <!-- Gemini SVG Map -->
+      <div class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12 max-w-6xl mx-auto">
+        <svg viewBox="0 0 1000 500" class="w-full h-auto">
+          <rect width="1000" height="500" fill="#f3f4f6" />
+          <rect width="1000" height="500" fill="none" />
+          <!-- Country markers -->
+          <g class="marker group cursor-pointer" transform="translate(750, 250)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">China</text>
+            <title>China - Core Market</title>
+          </g>
+          <g class="marker group cursor-pointer" transform="translate(850, 240)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Japan</text>
+            <title>Japan - Premium Focus</title>
+          </g>
+          <g class="marker group cursor-pointer" transform="translate(820, 250)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Korea</text>
+            <title>Korea - Growing Demand</title>
+          </g>
+          <g class="marker group cursor-pointer" transform="translate(780, 320)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">ASEAN</text>
+            <title>ASEAN - Expanding Reach</title>
+          </g>
+          <g class="marker group cursor-pointer" transform="translate(770, 280)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Hong Kong</text>
+            <title>Hong Kong - Global Hub</title>
+          </g>
+          <g class="marker group cursor-pointer" transform="translate(380, 380)">
+            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
+            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Ghana</text>
+            <title>Ghana - Africa Distribution</title>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Country Cards Below Map -->
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">China</div>
+          <div class="text-xs text-gray-500 mt-1">Core Market</div>
+        </div>
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Japan</div>
+          <div class="text-xs text-gray-500 mt-1">Premium Focus</div>
+        </div>
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Korea</div>
+          <div class="text-xs text-gray-500 mt-1">Growing Demand</div>
+        </div>
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">ASEAN</div>
+          <div class="text-xs text-gray-500 mt-1">Expanding Reach</div>
+        </div>
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Hong Kong</div>
+          <div class="text-xs text-gray-500 mt-1">Global Hub</div>
+        </div>
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Ghana</div>
+          <div class="text-xs text-gray-500 mt-1">Africa Distribution</div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="text-center py-16">
+    <section class="text-center">
       <h3 class="text-2xl font-serif mb-4">Let’s Work Together</h3>
       <p class="text-gray-600 max-w-md mx-auto mb-8">
-          We specialise in bringing premium beverages to licensed retailers, distributors, and on-trade partners across Asia and Africa.
+        Partner with us to bring premium beverages to markets across Asia and Africa.
       </p>
       <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
     </section>
   </main>
-
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
