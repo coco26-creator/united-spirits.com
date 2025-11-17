@@ -81,8 +81,8 @@
     /* --- Custom Styles for Leaflet Map --- */
     #global-footprint-map {
       width: 100%;
-      height: 40vh; /* Use viewport height for better responsiveness */
-      min-height: 300px; /* Ensure a minimum height */
+      min-height: 300px;
+      height: 40vh;
       border-radius: 1rem;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -196,7 +196,7 @@
       </div>
     </section>
 
-    <!-- 🌍 OUR GLOBAL FOOTPRINT (Leaflet.js Map) -->
+    <!-- 🌍 OUR GLOBAL FOOTPRINT (Google Maps JavaScript API map integrated here) -->
     <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-16"> 
       <div class="max-w-6xl mx-auto px-6 text-center">
           <h2 class="text-4xl font-extrabold text-gray-900 mb-4 font-inter">
@@ -206,7 +206,7 @@
               A visual representation of United Spirits' distribution network across key markets.
           </p>
 
-          <!-- Leaflet Map Container -->
+          <!-- Google Maps Container -->
           <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12"></div>
 
           <!-- Market listings below map -->
@@ -322,51 +322,70 @@
     <div class="mt-12 text-center text-gray-500 text-sm">&copy; 2025 United Spirits. All rights reserved.</div>
   </footer>
 
-  <!-- Leaflet.js CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <!-- Google Maps JavaScript API -->
+  <!-- Replace 'YOUR_API_KEY' with your actual Google Maps API key -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initGlobalFootprintMap">
+  </script>
 
-  <!-- Leaflet Map Initialization Script -->
   <script>
-    // Wait for the entire page to load before initializing the map
-    window.addEventListener('load', function() {
+    function initGlobalFootprintMap() {
       // Define the locations for the markers
       const locations = [
-        { name: "Hong Kong (Global Hub)", position: [22.281556, 114.1793047] },
-        { name: "China (Core Market)", position: [36.067108, 120.382609] }, // Qingdao FTZ location
-        { name: "Japan (Premium Focus)", position: [36.2048, 138.2529] },
-        { name: "Korea (Growing Demand)", position: [35.9078, 127.7669] },
-        { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] }, // Using SE Asia centroid
-        { name: "Ghana (Africa Distribution)", position: [7.9465, -1.0254] }
+        { name: "Hong Kong (Global Hub)", position: { lat: 22.281556, lng: 114.1793047 } },
+        { name: "China (Core Market)", position: { lat: 35.8617, lng: 104.1954 } },
+        { name: "Japan (Premium Focus)", position: { lat: 36.2048, lng: 138.2529 } },
+        { name: "Korea (Growing Demand)", position: { lat: 35.9078, lng: 127.7669 } },
+        { name: "ASEAN (Expanding Reach)", position: { lat: 10.8000, lng: 106.7000 } }, // Using SE Asia centroid
+        { name: "Ghana (Africa Distribution)", position: { lat: 7.9465, lng: -1.0254 } }
       ];
 
       // Create the map centered on Asia, showing Asia and Africa
-      const map = L.map('global-footprint-map', {
-        center: [10, 100],
+      const map = new google.maps.Map(document.getElementById('global-footprint-map'), {
         zoom: 3,
-        zoomControl: true,
-        scrollWheelZoom: false // Optional: Disable zoom on scroll for better UX
+        center: { lat: 10, lng: 100 }, // Center roughly between Asia and Africa
+        mapTypeId: 'roadmap', // Options: 'roadmap', 'satellite', 'hybrid', 'terrain'
+        styles: [ // Optional: Style the map for a cleaner look
+            { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#e9e9e9" }, { "lightness": 17 } ] },
+            { "featureType": "landscape", "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" }, { "lightness": 20 } ] },
+            { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" }, { "lightness": 17 } ] },
+            { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 } ] },
+            { "featureType": "road.arterial", "elementType": "geometry", "stylers": [ { "color": "#ffffff" }, { "lightness": 18 } ] },
+            { "featureType": "road.local", "elementType": "geometry", "stylers": [ { "color": "#ffffff" }, { "lightness": 16 } ] },
+            { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" }, { "lightness": 21 } ] },
+            { "featureType": "poi.park", "elementType": "geometry", "stylers": [ { "color": "#dedede" }, { "lightness": 21 } ] }
+        ]
       });
 
-      // Add the OpenStreetMap tile layer
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 18
-      }).addTo(map);
+      // Create an info window to display marker details
+      const infoWindow = new google.maps.InfoWindow();
 
       // Add markers for each location
       locations.forEach(location => {
-        const marker = L.marker(location.position, {
-          icon: L.divIcon({
-            className: 'custom-div-icon',
-            html: "<div class='marker-pin'></div>",
-            iconSize: [30, 42],
-            iconAnchor: [15, 42]
-          })
-        }).addTo(map);
-        marker.bindPopup(`<div class="font-semibold">${location.name}</div>`);
+        const marker = new google.maps.Marker({
+          position: location.position,
+          map: map,
+          title: location.name,
+          icon: { // Use a custom icon matching your theme's accent color
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 8,
+            fillColor: "#ec4899", // --pink
+            fillOpacity: 1,
+            strokeColor: "#ffffff",
+            strokeWeight: 2,
+          },
+          // Optional: Add animation
+          animation: google.maps.Animation.DROP,
+        });
+
+        // Add click listener to open info window
+        marker.addListener("click", () => {
+          infoWindow.close(); // Close any previously opened info window
+          infoWindow.setContent(`<div class="font-semibold">${location.name}</div>`);
+          infoWindow.open(map, marker);
+        });
       });
-    });
+    }
   </script>
 </body>
 </html>
