@@ -78,38 +78,29 @@
     .marker:hover circle { r: 8; }
     .marker:hover text { fill: var(--pink); }
 
-    /* --- Custom Styles for Leaflet Map --- */
+    /* Map styling */
     #global-footprint-map {
       width: 100%;
-      height: 50vh; /* Increased from 40vh to 50vh for a bigger map */
-      min-height: 400px; /* Increased minimum height */
+      height: 50vh;
+      min-height: 400px;
       border-radius: 1rem;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
-    .leaflet-container {
-      height: 100%;
-      width: 100%;
-      border-radius: 1rem;
-    }
-
-    /* Style for the popup */
     .leaflet-popup-content {
-      font-family: 'Inter', sans-serif;
       font-size: 1rem;
       font-weight: 600;
-      padding: 0.5rem 1rem;
-      background: #ec4899;
       color: white;
-      border-radius: 0.5rem;
     }
-
+    .leaflet-popup-content-wrapper {
+      background: #ec4899;
+    }
     .leaflet-popup-tip {
-      border-top-color: #ec4899 !important;
+      background: #ec4899;
     }
   </style>
 </head>
+
 <body class="text-black">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
@@ -119,14 +110,14 @@
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" width="100" height="100">
-        <span class="font-serif text-xl tracking-wide text-black">United <span class="accent-text">Spirits</span></span>
+        <img src="united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain">
+        <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
       </a>
       <nav class="hidden md:flex items-center gap-8">
-        <a href="index.html#collections" class="text-black hover:text-pink-600">Collections</a>
-        <a href="index.html#featured" class="text-black hover:text-pink-600">Featured</a>
-        <a href="news.html" class="text-black hover:text-pink-600">News</a>
-        <a href="index.html#contact" class="text-black hover:text-pink-600">Contact</a>
+        <a href="index.html#collections" class="hover:text-pink-600">Collections</a>
+        <a href="index.html#featured" class="hover:text-pink-600">Featured</a>
+        <a href="news.html" class="hover:text-pink-600">News</a>
+        <a href="index.html#contact" class="hover:text-pink-600">Contact</a>
       </nav>
       <a href="index.html" class="btn btn-purple">Back to Home</a>
     </div>
@@ -134,90 +125,85 @@
 
   <!-- MAIN CONTENT -->
   <main class="max-w-7xl mx-auto px-6 py-12">
+
     <div class="text-center mb-16">
-      <h1 class="text-4xl sm:text-5xl font-serif text-black mb-6"><span class="accent-text">About Us</span></h1>
+      <h1 class="text-4xl sm:text-5xl font-serif mb-6"><span class="accent-text">About Us</span></h1>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
         United Spirits Holding is a Hong Kong-based manufacturer and distributor connecting global producers with Asia and Africa’s fast-growing beverage markets.
       </p>
     </div>
-    
+
     <!-- WHO WE ARE & OUR MISSION -->
-    <section class="mb-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+    <section class="mb-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
       <div class="space-y-12">
-        <!-- Who We Are -->
+
         <div>
-          <h2 class="text-3xl font-serif text-black mb-4">Who We Are</h2>
+          <h2 class="text-3xl font-serif mb-4">Who We Are</h2>
           <p class="text-lg text-gray-700 mb-4">
-            We began as a bridge between world-class distilleries and emerging Asian markets. Today, we are proud to operate as both a <strong>manufacturer</strong> and distributor — crafting, bottling, and exporting premium wines, whiskeys, and brandies under our own and our partners’ labels.
+            We began as a bridge between world-class distilleries and emerging Asian markets. Today, we are proud to operate as both a <strong>manufacturer</strong> and distributor — crafting, bottling, and exporting premium wines, whiskeys, and brandies.
           </p>
           <p class="text-lg text-gray-700">
-            Operating from the <strong>Qingdao Free Trade Zone</strong>, we manage everything from concept to delivery — blending innovation, heritage, and a passion for craftsmanship.
+            Based in the <strong>Qingdao Free Trade Zone</strong>, we oversee production, blending, bottling, export logistics, and brand development with precision and care.
           </p>
         </div>
 
-        <!-- Our Mission -->
         <div>
-          <h2 class="text-3xl font-serif text-black mb-4">Our Mission</h2>
+          <h2 class="text-3xl font-serif mb-4">Our Mission</h2>
           <p class="text-lg text-gray-700">
-            To elevate global spirits through quality, authenticity, and collaboration — connecting exceptional producers to consumers across Asia and Africa through responsible sourcing, precision manufacturing, and trusted distribution.
+            To elevate global spirits through quality, authenticity, and collaboration — connecting exceptional producers to consumers across Asia and Africa.
           </p>
         </div>
+
       </div>
 
       <!-- Video -->
-  <div class="reveal flex items-center justify-center h-full">
-    <div class="relative rounded-2xl overflow-hidden shadow-lg w-full">
-      <video
-        src="united-spirits-site/assets/img/facility-tours/warehouse.mp4"
-        alt="Qingdao Free Trade Zone facility"
-        class="w-full h-auto object-cover"
-        autoplay
-        muted
-        loop
-        playsinline
-      >
-        Your browser does not support the video tag.
-      </video>
-      <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
-    </div>
-  </div>
-</section>
-
-     <!-- 🌍 OUR GLOBAL FOOTPRINT -->
-    <section class="mb-20">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-serif text-black mb-4">Our Global Footprint</h2>
-        <p class="text-gray-600 max-w-xl mx-auto">Our distribution network spans Asia and Africa, ensuring reliable access to key markets worldwide.</p>
-      </div>
-
-        <!-- Leaflet Map Container -->
-        <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12"></div>
+      <div class="flex items-center justify-center">
+        <div class="relative rounded-2xl overflow-hidden shadow-lg w-full">
+          <video src="united-spirits-site/assets/img/facility-tours/warehouse.mp4"
+            class="w-full h-auto object-cover" autoplay muted loop playsinline></video>
+          <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
+        </div>
       </div>
     </section>
+
+    <!-- GLOBAL FOOTPRINT -->
+    <section class="mb-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-serif mb-4">Our Global Footprint</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">
+          Our distribution network spans Asia and Africa, ensuring reliable access to key markets worldwide.
+        </p>
       </div>
-      
-      <!-- Country Cards -->
+
+      <div id="global-footprint-map" class="rounded-xl shadow-2xl mb-12"></div>
+
+      <!-- Country Cards (correct position) -->
       <div class="flex flex-wrap justify-center gap-6">
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">China</div>
           <div class="text-xs text-gray-500 mt-1">Core Market</div>
         </div>
+
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">Japan</div>
           <div class="text-xs text-gray-500 mt-1">Premium Focus</div>
         </div>
+
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">Korea</div>
           <div class="text-xs text-gray-500 mt-1">Growing Demand</div>
         </div>
+
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">ASEAN</div>
           <div class="text-xs text-gray-500 mt-1">Expanding Reach</div>
         </div>
+
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">Hong Kong</div>
           <div class="text-xs text-gray-500 mt-1">Global Hub</div>
         </div>
+
         <div class="card w-40 p-4 text-center">
           <div class="text-xl font-semibold accent-text">Ghana</div>
           <div class="text-xs text-gray-500 mt-1">Africa Distribution</div>
@@ -233,71 +219,53 @@
       </p>
       <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
     </section>
+
   </main>
-  
+
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
       <div>
         <a href="index.html" class="flex items-center gap-3 mb-6">
-          <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto glow-logo" />
-          <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+          <img src="united-spirits-site/assets/img/logo2.jpg" alt="United Spirits Logo" class="h-10 w-auto" />
+          <span class="font-serif text-xl">United <span class="accent-text">Spirits</span></span>
         </a>
         <p class="text-gray-400 mb-6">
-          Premium wines, whiskeys, and brandies curated for discerning palates. 
-          We partner with elite producers to bring you the finest spirits from around the world.
+          Premium wines, whiskeys, and brandies curated for discerning palates. We partner with elite producers to bring you the finest spirits from around the world.
         </p>
         <div class="flex gap-4">
-          <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
+          <a href="https://x.com/unitedspiritshk" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
           </a>
-          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.76 49.76 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.76 49.76 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
-              <path d="m10 15 5-3-5-3z"></path>
-            </svg>
+          <a href="https://www.youtube.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 50 50 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 50 50 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3"/></svg>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
+          <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
+          <a href="https://www.instagram.com/united_spiritshk/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8z"/><circle cx="17.5" cy="6.5" r=".5"/></svg>
           </a>
-          <a href="https://wa.me/85269346630" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"></path>
-              <polyline points="15.5,9 9.5,15 6.5,12"></polyline>
-            </svg>
+          <a href="https://wa.me/85269346630" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8 8h-.5a8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5a8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9A8.48 8.48 0 0 1 21 11.5z"/><polyline points="15.5 9 9.5 15 6.5 12"/></svg>
           </a>
-          <a href="https://www.tiktok.com/@unitedspiritshk" target="_blank" aria-label="TikTok" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 12a4 4 0 1 0-4 4h4"></path>
-                <path d="M15 16a4 4 0 1 0-4-4v4"></path>
-                <circle cx="9" cy="12" r="1"></circle>
-                <circle cx="15" cy="12" r="1"></circle>
-            </svg>
+          <a href="https://www.tiktok.com/@unitedspiritshk" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0-4 4h4"/><path d="M15 16a4 4 0 1 0-4-4v4"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>
           </a>
         </div>
       </div>
+
       <div>
         <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
         <ul class="space-y-3">
-          <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition-colors">Home</a></li>
-          <li><a href="index.html#collections" class="text-gray-400 hover:text-pink-400 transition-colors">Collections</a></li>
-          <li><a href="index.html#featured" class="text-gray-400 hover:text-pink-400 transition-colors">Featured</a></li>
-          <li><a href="news.html" class="text-gray-400 hover:text-pink-400 transition-colors">News</a></li>
-          <li><a href="index.html#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contact</a></li>
+          <li><a href="index.html" class="text-gray-400 hover:text-pink-400">Home</a></li>
+          <li><a href="index.html#collections" class="text-gray-400 hover:text-pink-400">Collections</a></li>
+          <li><a href="index.html#featured" class="text-gray-400 hover:text-pink-400">Featured</a></li>
+          <li><a href="news.html" class="text-gray-400 hover:text-pink-400">News</a></li>
+          <li><a href="index.html#contact" class="text-gray-400 hover:text-pink-400">Contact</a></li>
         </ul>
       </div>
+
       <div>
         <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
         <p class="text-gray-400">Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road, Wanchai, Hong Kong</p>
@@ -305,57 +273,55 @@
         <p class="text-gray-400 mt-2">Email: <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400">info@unitedspiritshk.com</a></p>
       </div>
     </div>
-    <div class="mt-12 text-center text-gray-500 text-sm">&copy; 2025 United Spirits. All rights reserved.</div>
+
+    <div class="mt-12 text-center text-gray-500 text-sm">
+      &copy; 2025 United Spirits. All rights reserved.
+    </div>
   </footer>
 
-  <!-- Leaflet.js CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-  <!-- Leaflet Map Initialization Script -->
+  <!-- Map Script -->
   <script>
-    // Wait for the entire page to load before initializing the map
     window.addEventListener('load', function() {
-      // Define the locations for the markers
+
       const locations = [
         { name: "Hong Kong (Global Hub)", position: [22.281556, 114.1793047] },
-        { name: "China (Core Market)", position: [36.067108, 120.382609] }, // Qingdao FTZ location
+        { name: "China (Core Market)", position: [36.067108, 120.382609] },
         { name: "Japan (Premium Focus)", position: [36.2048, 138.2529] },
         { name: "Korea (Growing Demand)", position: [35.9078, 127.7669] },
-        { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] }, // Using SE Asia centroid
+        { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] },
         { name: "Ghana (Africa Distribution)", position: [7.9465, -1.0254] }
       ];
 
-      // Create the map centered on Asia, showing Asia and Africa
       const map = L.map('global-footprint-map', {
         center: [10, 100],
         zoom: 3,
-        zoomControl: true,
-        scrollWheelZoom: false // Optional: Disable zoom on scroll for better UX
+        scrollWheelZoom: false
       });
 
-      // Add the OpenStreetMap tile layer
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        attribution: '&copy; OpenStreetMap contributors',
         maxZoom: 18
       }).addTo(map);
 
-      // Add markers for each location using a simple, scalable circle
       locations.forEach(location => {
-        // Create a simple circle marker with a fixed radius in meters (this will scale with zoom)
         const marker = L.circleMarker(location.position, {
-          radius: 10, // Radius in pixels at zoom level 18, scales automatically
-          fillColor: "#ec4899", // --pink
+          radius: 10,
+          fillColor: "#ec4899",
           fillOpacity: 1,
           stroke: true,
           color: '#ffffff',
           weight: 2
         }).addTo(map);
 
-        // Bind a popup to the marker
         marker.bindPopup(`<div class="font-semibold">${location.name}</div>`);
       });
+
     });
   </script>
+
 </body>
 </html>
