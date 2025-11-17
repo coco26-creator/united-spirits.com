@@ -191,45 +191,13 @@
         <p class="text-gray-600 max-w-xl mx-auto">Our distribution network spans Asia and Africa, ensuring reliable access to key markets worldwide.</p>
       </div>
 
-      <!-- Gemini SVG Map -->
-      <div class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12 max-w-6xl mx-auto">
-        <svg viewBox="0 0 1000 500" class="w-full h-auto">
-          <rect width="1000" height="500" fill="#f3f4f6" />
-          <rect width="1000" height="500" fill="none" />
-          <!-- Country markers -->
-          <g class="marker group cursor-pointer" transform="translate(750, 250)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">China</text>
-            <title>China - Core Market</title>
-          </g>
-          <g class="marker group cursor-pointer" transform="translate(850, 240)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Japan</text>
-            <title>Japan - Premium Focus</title>
-          </g>
-          <g class="marker group cursor-pointer" transform="translate(820, 250)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Korea</text>
-            <title>Korea - Growing Demand</title>
-          </g>
-          <g class="marker group cursor-pointer" transform="translate(780, 320)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">ASEAN</text>
-            <title>ASEAN - Expanding Reach</title>
-          </g>
-          <g class="marker group cursor-pointer" transform="translate(770, 280)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Hong Kong</text>
-            <title>Hong Kong - Global Hub</title>
-          </g>
-          <g class="marker group cursor-pointer" transform="translate(380, 380)">
-            <circle r="6" fill="#ec4899" stroke="#fff" stroke-width="2" />
-            <text x="0" y="20" text-anchor="middle" font-size="14" fill="#374151" font-weight="600">Ghana</text>
-            <title>Ghana - Africa Distribution</title>
-          </g>
-        </svg>
+       <!-- MAP SECTION (Map Only) -->
+    <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <!-- Leaflet Map Container -->
+        <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12"></div>
       </div>
-
+    </section>
       <!-- Country Cards Below Map -->
       <div class="flex flex-wrap justify-center gap-6">
         <div class="card w-40 p-4 text-center">
