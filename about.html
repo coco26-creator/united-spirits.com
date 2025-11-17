@@ -77,6 +77,63 @@
     .section { padding: 6rem 0; }
     .marker:hover circle { r: 8; }
     .marker:hover text { fill: var(--pink); }
+
+    /* --- Custom Styles for Leaflet Map --- */
+    #global-footprint-map {
+      width: 100%;
+      height: 40vh; /* Use viewport height for better responsiveness */
+      min-height: 300px; /* Ensure a minimum height */
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .leaflet-container {
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    .custom-div-icon {
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    .custom-div-icon .marker-pin {
+      width: 30px;
+      height: 30px;
+      border-radius: 50% 50% 50% 0;
+      background: #ec4899;
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 50%;
+      top: 50%;
+      margin: -15px 0 0 -15px;
+    }
+
+    .custom-div-icon .marker-pin::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      margin: 3px 0 0 3px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .leaflet-popup-content {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      background: #ec4899;
+      color: white;
+      border-radius: 0.5rem;
+    }
+
+    .leaflet-popup-tip {
+      border-top-color: #ec4899 !important;
+    }
   </style>
 </head>
 <body class="text-black">
@@ -139,121 +196,58 @@
       </div>
     </section>
 
-    <!-- 🌍 OUR GLOBAL FOOTPRINT (Google Maps JavaScript API map integrated here) -->
-<section class="from-gray-50 to-gray-100 bg-gradient-to-b py-16"> 
-  <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-extrabold text-gray-900 mb-4 font-inter">
-          Our Global Footprint
-      </h2>
-      <p class="text-xl text-gray-600 mb-12 font-open-sans">
-          A visual representation of United Spirits' distribution network across key markets.
-      </p>
+    <!-- 🌍 OUR GLOBAL FOOTPRINT (Leaflet.js Map) -->
+    <section class="from-gray-50 to-gray-100 bg-gradient-to-b py-16"> 
+      <div class="max-w-6xl mx-auto px-6 text-center">
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-4 font-inter">
+              Our Global Footprint
+          </h2>
+          <p class="text-xl text-gray-600 mb-12 font-open-sans">
+              A visual representation of United Spirits' distribution network across key markets.
+          </p>
 
-      <!-- Google Maps Container -->
-      <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12" style="height: 400px;"></div>
+          <!-- Leaflet Map Container -->
+          <div id="global-footprint-map" class="relative w-full rounded-xl shadow-2xl bg-white p-2 md:p-4 overflow-hidden mb-12"></div>
 
-      <!-- Market listings below map -->
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-open-sans">
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">China</p>
-              <p class="text-sm text-gray-500">- Core Market</p>
-          </div>
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">Japan</p>
-              <p class="text-sm text-gray-500">- Premium Focus</p>
-          </div>
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">Korea</p>
-              <p class="text-sm text-gray-500">- Growing Demand</p>
-          </div>
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">ASEAN</p>
-              <p class="text-sm text-gray-500">- Expanding Reach</p>
-          </div>
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">Hong Kong</p>
-              <p class="text-sm text-gray-500">- Global Hub</p>
-          </div>
-          <div class="p-3">
-              <p class="text-lg font-semibold text-gray-900">Ghana</p>
-              <p class="text-sm text-gray-500">- Africa Distribution</p>
+          <!-- Market listings below map -->
+          <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 font-open-sans">
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">China</p>
+                  <p class="text-sm text-gray-500">- Core Market</p>
+              </div>
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">Japan</p>
+                  <p class="text-sm text-gray-500">- Premium Focus</p>
+              </div>
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">Korea</p>
+                  <p class="text-sm text-gray-500">- Growing Demand</p>
+              </div>
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">ASEAN</p>
+                  <p class="text-sm text-gray-500">- Expanding Reach</p>
+              </div>
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">Hong Kong</p>
+                  <p class="text-sm text-gray-500">- Global Hub</p>
+              </div>
+              <div class="p-3">
+                  <p class="text-lg font-semibold text-gray-900">Ghana</p>
+                  <p class="text-sm text-gray-500">- Africa Distribution</p>
+              </div>
           </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA -->
-<section class="text-center">
-  <h3 class="text-2xl font-serif mb-4">Let’s Work Together</h3>
-  <p class="text-gray-600 max-w-md mx-auto mb-8">
-      We specialise in bringing premium beverages to licensed retailers, distributors, and on-trade partners across Asia and Africa.
-  </p>
-  <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
-</section>
-
-<!-- Leaflet.js -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Define the locations for the markers
-    const locations = [
-      { name: "Hong Kong (Global Hub)", position: [22.281556, 114.1793047] },
-      { name: "China (Core Market)", position: [36.067108, 120.382609] },
-      { name: "Japan (Premium Focus)", position: [36.2048, 138.2529] },
-      { name: "Korea (Growing Demand)", position: [35.9078, 127.7669] },
-      { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] }, // Using SE Asia centroid
-      { name: "Ghana (Africa Distribution)", position: [7.9465, -1.0254] }
-    ];
-
-    // Create the map centered on Asia, showing Asia and Africa
-    const map = L.map('global-footprint-map', {
-      center: [10, 100],
-      zoom: 3
-    });
-
-    // Add the OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Add markers for each location
-    locations.forEach(location => {
-      const marker = L.marker(location.position, {
-        icon: L.divIcon({
-          className: 'custom-div-icon',
-          html: "<div style='background-color:#ec4899;' class='marker-pin'></div><i></i>",
-          iconSize: [30, 42],
-          iconAnchor: [15, 42]
-        })
-      }).addTo(map);
-      marker.bindPopup(`<div class="font-semibold">${location.name}</div>`);
-    });
-  });
-</script>
-
-<style>
-  .marker-pin {
-    width: 30px;
-    height: 30px;
-    border-radius: 50% 50% 50% 0;
-    background: #ec4899;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 50%;
-    top: 50%;
-    margin: -15px 0 0 -15px;
-  }
-  .marker-pin::after {
-    content: '';
-    width: 24px;
-    height: 24px;
-    margin: 3px 0 0 3px;
-    background: #fff;
-    border-radius: 50%;
-  }
-</style>
+    <!-- CTA -->
+    <section class="text-center">
+      <h3 class="text-2xl font-serif mb-4">Let’s Work Together</h3>
+      <p class="text-gray-600 max-w-md mx-auto mb-8">
+          We specialise in bringing premium beverages to licensed retailers, distributors, and on-trade partners across Asia and Africa.
+      </p>
+      <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-12 mt-20">
@@ -327,5 +321,52 @@
     </div>
     <div class="mt-12 text-center text-gray-500 text-sm">&copy; 2025 United Spirits. All rights reserved.</div>
   </footer>
+
+  <!-- Leaflet.js CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+  <!-- Leaflet Map Initialization Script -->
+  <script>
+    // Wait for the entire page to load before initializing the map
+    window.addEventListener('load', function() {
+      // Define the locations for the markers
+      const locations = [
+        { name: "Hong Kong (Global Hub)", position: [22.281556, 114.1793047] },
+        { name: "China (Core Market)", position: [36.067108, 120.382609] }, // Qingdao FTZ location
+        { name: "Japan (Premium Focus)", position: [36.2048, 138.2529] },
+        { name: "Korea (Growing Demand)", position: [35.9078, 127.7669] },
+        { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] }, // Using SE Asia centroid
+        { name: "Ghana (Africa Distribution)", position: [7.9465, -1.0254] }
+      ];
+
+      // Create the map centered on Asia, showing Asia and Africa
+      const map = L.map('global-footprint-map', {
+        center: [10, 100],
+        zoom: 3,
+        zoomControl: true,
+        scrollWheelZoom: false // Optional: Disable zoom on scroll for better UX
+      });
+
+      // Add the OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      // Add markers for each location
+      locations.forEach(location => {
+        const marker = L.marker(location.position, {
+          icon: L.divIcon({
+            className: 'custom-div-icon',
+            html: "<div class='marker-pin'></div>",
+            iconSize: [30, 42],
+            iconAnchor: [15, 42]
+          })
+        }).addTo(map);
+        marker.bindPopup(`<div class="font-semibold">${location.name}</div>`);
+      });
+    });
+  </script>
 </body>
 </html>
