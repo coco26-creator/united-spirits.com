@@ -54,6 +54,7 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+  <link rel="stylesheet" href="united-spirits-site/assets/css/custom.css">
   <!-- Marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
   <!-- Fonts -->
@@ -244,6 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
         <a href="about.html" class="text-white hover:text-pink-300 transition-colors">About Us</a>
+        <a href="catalogue.html" class="text-white hover:text-pink-300 transition-colors">Catalogue</a>
         <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
         <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
         <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
@@ -367,12 +369,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="font-semibold text-purple-700">You produce the wine — we handle the rest.</p>
       </div>
       <figure class="relative rounded-2xl overflow-hidden shadow-lg">
-        <img 
-          src="united-spirits-site/assets/img/qingdao-ftz.jpg" 
-          alt="Qingdao Free Trade Zone facility" 
+        <video
+          src="united-spirits-site/assets/img/facility-tours/bottling.mp4"
+          autoplay muted loop playsinline
           class="w-full h-auto object-cover"
-          loading="lazy"
-        />
+        ></video>
       </figure>
     </div>
 
@@ -478,10 +479,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mailto:info@unitedspiritshk.com?subject=Quote Request – B2B Services" class="btn border border-gray-800 text-gray-800 hover:bg-gray-100">
           Request a Quote
         </a>
-        <a href="united-spirits-site/united-spirits-catalogue.pdf" 
-           download="united-spirits-catalogue.pdf" 
-           class="btn bg-gray-100 text-gray-800 hover:bg-gray-200">
-          Download Brochure
+        <a href="united-spirits-catalogue.pdf"
+           download="united-spirits-catalogue.pdf"
+           class="rounded-full border bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 text-sm text-white shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
         </a>
       </div>
     </div>

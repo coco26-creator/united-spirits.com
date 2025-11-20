@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Catalogue — United Spirits</title>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T27QXCSD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #000;
+    }
+
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-purple {
+      background: var(--purple);
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid #000;
+      color: #000;
+    }
+
+    .btn-outline:hover {
+      background: #000;
+      color: white;
+    }
+
+    .card {
+      border-radius: 1rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--purple);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .details-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 999px;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      transition: all 0.2s ease;
+    }
+
+    .details-btn:hover {
+      background: var(--purple);
+      color: white;
+    }
+  </style>
+</head>
+<body class="text-black">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ===================== HEADER ===================== -->
+ <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+   <a href="index.html" class="flex items-center gap-3">
+     <img src="united-spirits-site/assets/img/logo1.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
+     <span class="font-serif text-xl tracking-wide">United <span class="accent-text">Spirits</span></span>
+    </a>
+   <nav class="hidden md:flex gap-8">
+     <a href="index.html" class="hover:text-purple-600">Home</a>
+     <a href="index.html#collections" class="hover:text-purple-600">Collections</a>
+     <a href="index.html#featured" class="hover:text-purple-600">Featured</a>
+     <a href="index.html#contact" class="hover:text-purple-600">Contact</a>
+   </nav>
+ </header>
+
+  <!-- ===================== PRODUCTS GRID ===================== -->
+  <section class="section">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-serif text-center mb-10"><span class="accent-text">Our Catalogue</span></h2>
+      <p class="text-center text-gray-600 mb-10 max-w-xl mx-auto">
+        Explore our curated selection of premium wines, whiskeys, and brandies from around the world.
+      </p>
+
+      <div class="flex justify-center gap-4 mb-10">
+        <button class="btn btn-outline filter-btn" data-category="all">All</button>
+        <button class="btn btn-outline filter-btn" data-category="wine">Wine</button>
+        <button class="btn btn-outline filter-btn" data-category="whiskey">Whiskey</button>
+        <button class="btn btn-outline filter-btn" data-category="brandy">Brandy</button>
+        <button class="btn btn-outline filter-btn" data-category="rtw">RTW</button>
+      </div>
+
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-50 py-10 text-center text-gray-600 text-sm">
+    <p>© 2025 United Spirits Supply Chain Co., Limited. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productGrid = document.getElementById('product-grid');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      let allProducts = [];
+
+      fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+          allProducts = products;
+          displayProducts(allProducts);
+        });
+
+      function displayProducts(products) {
+        productGrid.innerHTML = '';
+        products.forEach(product => {
+          const productCard = `
+            <article class="card p-6 text-center cursor-pointer group">
+              <span class="badge">${product.category}</span>
+              <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+              <h3 class="text-lg font-semibold">${product.name}</h3>
+              <p class="text-gray-600 mt-2 text-sm">${product.origin}</p>
+              <a href="#" class="details-btn">View Details</a>
+            </article>
+          `;
+          productGrid.innerHTML += productCard;
+        });
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.dataset.category;
+          if (category === 'all') {
+            displayProducts(allProducts);
+          } else {
+            const filteredProducts = allProducts.filter(product => product.category === category);
+            displayProducts(filteredProducts);
+          }
+        });
+      });
+
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
