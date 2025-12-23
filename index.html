@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Klaviyo Onsite Tracking -->
-  <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/VLPJFb/klaviyo.js?company_id=VLPJFb'></script>
-  <script type="text/javascript"> 
-    // Initialize Klaviyo object on page load
-    !function(){
-      if(!window.klaviyo){
-        window._klOnsite = window._klOnsite || [];
-        try {
-          window.klaviyo = new Proxy({}, {
-            get: function(_, method) {
-              return method === "push" ? function() {
-                var args; (args = window._klOnsite).push.apply(args, arguments);
-              } : function() {
-                var n = arguments.length, o = new Array(n);
-                for (var i = 0; i < n; i++) o[i] = arguments[i];
-                var callback = typeof o[o.length - 1] === "function" ? o.pop() : void 0;
-                var promise = new Promise(function(resolve) {
-                  window._klOnsite.push([method].concat(o, [function(result){
-                    if(callback) callback(result);
-                    resolve(result);
-                  }]));
-                });
-                return promise;
-              };
-            }
-          });
-        } catch(e) {
-          window.klaviyo = window.klaviyo || [];
-          window.klaviyo.push = function(){
-            var args; (args = window._klOnsite).push.apply(args, arguments);
-          };
-        }
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/VLPJFb/klaviyo.js?company_id=VLPJFb"></script>
+<script type="text/javascript">
+  !function(){
+    if(!window.klaviyo){
+      window._klOnsite = window._klOnsite || [];
+      try {
+        window.klaviyo = new Proxy({}, {
+          get: function(_, method) {
+            return method === "push" ? function() {
+              var args; (args = window._klOnsite).push.apply(args, arguments);
+            } : function() {
+              var n = arguments.length, o = new Array(n);
+              for (var i = 0; i < n; i++) o[i] = arguments[i];
+              var callback = typeof o[o.length - 1] === "function" ? o.pop() : void 0;
+              var promise = new Promise(function(resolve) {
+                window._klOnsite.push([method].concat(o, [function(result){
+                  if(callback) callback(result);
+                  resolve(result);
+                }]));
+              });
+              return promise;
+            };
+          }
+        });
+      } catch(e) {
+        window.klaviyo = window.klaviyo || [];
+        window.klaviyo.push = function(){
+          var args; (args = window._klOnsite).push.apply(args, arguments);
+        };
       }
-    }();
-  </script>
+    }
+  }();
+</script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,6 +42,10 @@
   <meta name="description" content="Curated premium spirits from global producers. Explore our collection of award-winning wines, whiskeys, and brandies for discerning palates." />
   <link rel="canonical" href="https://www.unitedspiritshk.com/" />
   <meta name="theme-color" content="#ffffff" />
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="0XT66x5om3qRNe39DmIN-ji705SM_ZGWX9kHhFr9y4s" />
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -50,19 +53,24 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T27QXCSD');</script>
   <!-- End Google Tag Manager -->
+
   <!-- Tailwind CSS -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+
   <!-- Marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <!-- Preconnect Hints -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://unpkg.com" />
+
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
@@ -96,6 +104,7 @@
     ]
   }
   </script>
+
   <style>
     :root {
       --pink: #ec4899;
@@ -175,49 +184,50 @@
   </style>
 </head>
 <body class="text-black">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-<!-- Sirius Site SDK (with failsafe) -->
-<script type="text/javascript">
-(function(w, d, n, a, j, s) {
-  w[n] =
-    w[n] ||
-    function() {
-      return (w[n].a = w[n].a || []).push(arguments);
-    };
-  j = d.createElement('script');
-  j.async = true;
-  j.src = 'https://sirius-it-site.lx.netease.com/site-sdk.js';
-  j.onload = function() {
-    setTimeout(() => {
-      try {
-        if (typeof __siteSDK__ !== 'undefined' && __siteSDK__.setDefaultConfig) {
-          __siteSDK__.setDefaultConfig({
-            outerKey: 'key71c56c8bcccf4f1fb596d458b6e6452e',
-          });
-          __siteSDK__.init();
-        } else {
-          console.warn('Sirius SDK loaded but __siteSDK__ object not found.');
+  <!-- Sirius Site SDK (with failsafe) -->
+  <script type="text/javascript">
+  (function(w, d, n, a, j, s) {
+    w[n] =
+      w[n] ||
+      function() {
+        return (w[n].a = w[n].a || []).push(arguments);
+      };
+    j = d.createElement('script');
+    j.async = true;
+    j.src = 'https://sirius-it-site.lx.netease.com/site-sdk.js';
+    j.onload = function() {
+      setTimeout(() => {
+        try {
+          if (typeof __siteSDK__ !== 'undefined' && __siteSDK__.setDefaultConfig) {
+            __siteSDK__.setDefaultConfig({
+              outerKey: 'key71c56c8bcccf4f1fb596d458b6e6452e',
+            });
+            __siteSDK__.init();
+          } else {
+            console.warn('Sirius SDK loaded but __siteSDK__ object not found.');
+          }
+        } catch (err) {
+          console.error('Error initializing Sirius SDK:', err);
         }
-      } catch (err) {
-        console.error('Error initializing Sirius SDK:', err);
-      }
-    }, 500);
-  };
-  j.onerror = function() {
-    console.warn('Sirius SDK failed to load.');
-  };
-  s = d.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(j, s);
-})(window, document, '__siteSDK__');
-</script>
+      }, 500);
+    };
+    j.onerror = function() {
+      console.warn('Sirius SDK failed to load.');
+    };
+    s = d.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(j, s);
+  })(window, document, '__siteSDK__');
+  </script>
 
 </body>
 </html>
- <!-- ===================== HEADER + HERO ===================== -->
+
+<!-- ===================== HEADER + HERO ===================== -->
 <section class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat" 
   style="background-image: url('united-spirits-site/assets/img/hg.png');">
   <!-- Dark Overlay for Readability -->
@@ -1415,4 +1425,5 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
 
