@@ -64,51 +64,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 
   <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-8">
-      <a href="../index.html#collections" class="text-black hover:text-pink-600 transition-colors">Collections</a>
-      <a href="../index.html#featured" class="text-black hover:text-pink-600 transition-colors">Featured</a>
-      <a href="../index.html" class="text-black hover:text-pink-600 transition-colors">News</a>
-      <a href="../index.html#contact" class="text-black hover:text-pink-600 transition-colors">Contact</a>
-    </nav>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+        <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
+        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+      </nav>
 
-    <!-- Mobile Menu Button -->
-    <button
-      id="mobileMenuButton"
-      class="md:hidden p-2 relative z-50"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24" height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="text-black"
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobileMenuButton"
+        class="md:hidden p-2 relative z-50"
+        aria-label="Toggle menu"
+        aria-expanded="false"
       >
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-white"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav
+      id="mobileMenu"
+      class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
+             min-w-[160px] opacity-0 translate-y-2 pointer-events-none
+             transition-all duration-300"
+    >
+      <div class="py-2 flex flex-col items-end px-4 space-y-1">
+        <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+        <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+        <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
+        <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
+      </div>
+    </nav>
   </div>
 
-  <!-- Mobile Menu (hidden by default) -->
-  <nav
-    id="mobileMenu"
-    class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50 min-w-[160px] opacity-0 translate-y-2 pointer-events-none transition-all duration-300"
-  >
-    <div class="py-2 flex flex-col items-end px-4 space-y-1">
-      <a href="../index.html#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
-      <a href="../index.html#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
-      <a href="../index.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
-      <a href="../index.html#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
-    </div>
-  </nav>
-</header>
 <!-- HERO -->
 <section class="max-w-7xl mx-auto px-6 py-16 text-center">
   <h1 class="text-5xl font-serif mb-4 accent-text">Latest News & Exclusive Events</h1>
