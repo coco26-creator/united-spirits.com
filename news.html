@@ -568,15 +568,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-  <!-- Bottom Bar -->
-  <div class="border-t border-gray-200 mt-12 pt-6 text-center text-gray-500 text-sm"> <!-- Changed border-gray-800 to border-gray-200 -->
-    <p>
-      <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-600 transition-colors">info@unitedspiritshk.com</a> <!-- Changed hover color -->
-      &nbsp;|&nbsp;
-      &copy; 2025 Spirits United Supply Chain Co., Limited. All rights reserved. Crafted with care — Hong Kong
-    </p>
+  <!-- ===================== LIGHTBOX ===================== -->
+<div id="lightbox" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+  <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+  <img id="lightbox-img" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
+</div>
+
+<!-- ===================== CHATBOT ===================== -->
+<button id="chat-open" class="fixed bottom-6 left-6 bg-purple-600 text-white p-3 rounded-full shadow-lg z-50">
+  💬
+</button>
+
+<div id="chat" class="hidden fixed bottom-24 left-6 w-80 bg-white rounded-lg shadow-xl z-50 overflow-hidden">
+  <div class="bg-gray-100 p-3 flex justify-between">
+    <span class="font-semibold">Spirit Assistant</span>
+    <button id="chat-close">✕</button>
   </div>
-</footer>
+  <div id="chat-messages" class="p-4 h-64 overflow-y-auto bg-gray-50 text-sm"></div>
+  <div class="p-3 border-t flex gap-2">
+    <input id="chat-text" class="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask me anything..." />
+    <button id="chat-send" class="bg-purple-600 text-white px-3 rounded">Send</button>
+  </div>
+</div>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Chat
+  const chatOpen = document.getElementById('chat-open');
+  const chatClose = document.getElementById('chat-close');
+  const chat = document.getElementById('chat');
+
+  chatOpen?.addEventListener('click', () => chat.classList.remove('hidden'));
+  chatClose?.addEventListener('click', () => chat.classList.add('hidden'));
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeLightbox = document.getElementById('close-lightbox');
+
+  document.querySelectorAll('.card img, .reveal img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeLightbox?.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+});
+</script>
   
   <!-- Mobile Menu Toggle Script -->
   <script>
