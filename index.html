@@ -244,12 +244,11 @@
 
 <!-- ===================== HEADER + HERO ===================== -->
 <section
-  class="relative min-h-screen flex items-start overflow-hidden bg-cover bg-center bg-no-repeat"
+  class="relative min-h-screen overflow-hidden
+         bg-contain md:bg-cover
+         bg-center bg-no-repeat"
   style="background-image: url('united-spirits-site/assets/img/hg.png');"
 >
-
-  <!-- Dark Overlay -->
-  <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
 
   <!-- ===================== HEADER ===================== -->
   <div class="absolute top-0 left-0 w-full z-50">
@@ -257,20 +256,17 @@
 
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
-        <div
-          class="w-10 h-10 overflow-hidden transform rotate-45
-                 flex items-center justify-center"
-        >
+        <div class="w-12 h-12 overflow-hidden transform rotate-45 flex items-center justify-center">
           <img
             src="united-spirits-site/assets/img/hang.png"
             alt="United Spirits Logo"
-            class="h-10 w-10 object-contain transform -rotate-45"
+            class="h-12 w-12 object-contain transform -rotate-45"
             loading="eager"
             decoding="async"
             fetchpriority="high"
           >
         </div>
-        <span class="font-serif text-xl tracking-wide text-white">
+        <span class="font-serif text-lg md:text-xl tracking-wide text-white">
           U.S.C
         </span>
       </a>
@@ -286,61 +282,49 @@
       <!-- Mobile Menu Button -->
       <button
         id="mobileMenuButton"
-        class="md:hidden p-2 relative z-50"
+        class="md:hidden p-2 text-white"
         aria-label="Toggle menu"
-        aria-expanded="false"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24" height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="text-white"
-        >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+        ☰
       </button>
     </header>
-
-    <!-- Mobile Menu -->
-    <nav
-      id="mobileMenu"
-      class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
-             min-w-[160px] opacity-0 translate-y-2 pointer-events-none
-             transition-all duration-300"
-    >
-      <div class="py-2 flex flex-col items-end px-4 space-y-1">
-        <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
-        <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
-        <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
-        <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
-      </div>
-    </nav>
   </div>
 
-  <!-- ===================== HERO CONTENT (TOP-ALIGNED) ===================== -->
-  <div class="relative max-w-7xl mx-auto px-6 pt-36 md:pt-44 w-full z-10">
+  <!-- ===================== HERO CONTENT ===================== -->
+  <div
+    class="relative max-w-7xl mx-auto px-6
+           pt-28 sm:pt-32 md:pt-44
+           w-full z-10"
+  >
     <div class="max-w-3xl">
 
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight text-white mb-4">
-        Crafting <span class="accent-text">Spirits</span> of Distinction
+      <!-- Headline -->
+      <h1
+        class="font-serif text-3xl sm:text-4xl md:text-6xl
+               leading-snug text-white mb-3 md:mb-4"
+      >
+        Crafting <span class="accent-text">Spirits</span><br class="sm:hidden">
+        <span class="hidden sm:inline"> of Distinction</span>
       </h1>
 
-      <p class="text-lg text-white mb-6 max-w-md">
-        FROM THE WORLD, FOR THE WORLD.
+      <!-- Subline -->
+      <p
+        class="text-sm sm:text-base md:text-lg
+               text-white/90 mb-5 md:mb-6 max-w-md"
+      >
+        From the world, for the world.
       </p>
 
-      <div class="flex flex-wrap gap-4">
-        <a href="#collections" class="btn btn-purple text-white">
+      <!-- Buttons -->
+      <div
+        class="flex flex-col sm:flex-row
+               gap-3 sm:gap-4
+               mt-4 md:mt-6"
+      >
+        <a href="#collections" class="btn btn-purple text-white text-center">
           Explore Collection
         </a>
-        <a href="#contact" class="btn bg-white text-black border-white">
+        <a href="#contact" class="btn bg-white text-black text-center">
           Get in Touch
         </a>
       </div>
@@ -1458,6 +1442,7 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
 
 
 
