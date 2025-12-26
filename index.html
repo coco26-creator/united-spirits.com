@@ -244,14 +244,18 @@
 
 <!-- ===================== HEADER + HERO ===================== -->
 <section
-  class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
+  class="relative min-h-screen flex items-start overflow-hidden bg-cover bg-center bg-no-repeat"
   style="background-image: url('united-spirits-site/assets/img/hg.png');"
+>
 
-  <!-- Transparent Header -->
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
+  <!-- ===================== HEADER ===================== -->
   <div class="absolute top-0 left-0 w-full z-50">
     <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <!-- Logo - ROUNDED RHOMBUS CONTAINER -->
+      <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
         <div
           class="w-12 h-12 overflow-hidden transform rotate-45
@@ -320,19 +324,27 @@
     </nav>
   </div>
 
- <!-- Hero Content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-24 w-full text-center z-10">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif leading-tight text-white mb-6">
+  <!-- ===================== HERO CONTENT (TOP-ALIGNED) ===================== -->
+  <div class="relative max-w-7xl mx-auto px-6 pt-36 md:pt-44 w-full z-10">
+    <div class="max-w-3xl">
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight text-white mb-4">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
-      <p class="text-xl text-white mb-8 max-w-xl mx-auto">
+
+      <p class="text-lg text-white mb-6 max-w-md">
         FROM THE WORLD, FOR THE WORLD.
       </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
-        <a href="#contact" class="btn bg-white text-black border-white">Get in Touch</a>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#collections" class="btn btn-purple text-white">
+          Explore Collection
+        </a>
+        <a href="#contact" class="btn bg-white text-black border-white">
+          Get in Touch
+        </a>
       </div>
+
     </div>
   </div>
 
@@ -1446,6 +1458,7 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
 
 
 
