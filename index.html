@@ -243,24 +243,22 @@
 </html>
 
 <!-- ===================== HEADER + HERO ===================== -->
-<section
-  class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
-  style="background-image: url('united-spirits-site/assets/img/hg.png');"
-
+<section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('united-spirits-site/assets/img/hg.png');">
+  
+  <!-- Dark Overlay for Readability -->
+  <div class="absolute inset-0 bg-black/50"></div>
+  
   <!-- Transparent Header -->
   <div class="absolute top-0 left-0 w-full z-50">
     <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
       <!-- Logo - ROUNDED RHOMBUS CONTAINER -->
       <a href="index.html" class="flex items-center gap-3">
-        <div
-          class="w-12 h-112 overflow-hidden transform rotate-45
-                 flex items-center justify-center"
-        >
+        <div class="w-10 h-10 overflow-hidden transform rotate-45 flex items-center justify-center">
           <img
             src="united-spirits-site/assets/img/hang.png"
             alt="United Spirits Logo"
-            class="h-12 w-12 object-contain transform -rotate-45"
+            class="h-6 w-6 object-contain transform -rotate-45"
             loading="eager"
             decoding="async"
             fetchpriority="high"
@@ -297,8 +295,8 @@
           stroke-linejoin="round"
           class="text-white"
         >
-          <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
@@ -307,9 +305,7 @@
     <!-- Mobile Menu -->
     <nav
       id="mobileMenu"
-      class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
-             min-w-[160px] opacity-0 translate-y-2 pointer-events-none
-             transition-all duration-300"
+      class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50 min-w-[160px] opacity-0 translate-y-2 pointer-events-none transition-all duration-300"
     >
       <div class="py-2 flex flex-col items-end px-4 space-y-1">
         <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
@@ -320,27 +316,18 @@
     </nav>
   </div>
 
- <!-- HERO SECTION (Reduced Size) -->
-<section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat" 
-  style="background-image: url('united-spirits-site/assets/img/hg.png');">
-  <div class="absolute inset-0 bg-black/50"></div>
-  
-  <div class="absolute top-0 left-0 w-full z-40">
-    <!-- Header content -->
-  </div>
-
-  <!-- Hero Content (less padding) -->
+  <!-- Hero Content -->
   <div class="relative max-w-7xl mx-auto px-6 py-12 md:py-16 w-full text-center z-10">
-    <div class="max-w-3xl mx-auto reveal on">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-white mb-4">
         Crafting <span class="accent-text">Spirits</span> of Distinction
       </h1>
       <p class="text-lg md:text-xl text-white mb-6">
-        Premium wines, whiskeys, and brandies curated for discerning palates.
+        FROM THE WORLD, FOR THE WORLD.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="#collections" class="btn btn-purple">Explore Collection</a>
-        <a href="#contact" class="btn bg-white text-black">Get in Touch</a>
+        <a href="#collections" class="btn btn-purple text-white">Explore Collection</a>
+        <a href="#contact" class="btn bg-white text-black border-white">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -1454,5 +1441,6 @@ Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
   </script>
 </body>
 </html>
+
 
 
