@@ -142,18 +142,65 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- HEADER -->
-  <header class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-    <a href="../index.html" class="flex items-center gap-3">
-      <img src="../united-spirits-site/assets/img/hang.png" alt="United Spirits Logo" class="h-10 w-10 rounded-full object-contain" />
-      <span class="font-serif text-xl tracking-wide">U.S.C</span>
-    </a>
-    <nav class="hidden md:flex gap-8">
-      <a href="../index.html" class="hover:text-purple-600">Home</a>
-      <a href="../index.html#collections" class="hover:text-purple-600">Collections</a>
-      <a href="../index.html#featured" class="hover:text-purple-600">Featured</a>
-      <a href="../index.html#contact" class="hover:text-purple-600">Contact</a>
+  <!-- ===================== HEADER ===================== -->
+<header class="py-6 px-6 flex justify-between items-center border-b border-gray-200 relative">
+  <!-- Logo -->
+  <a href="../index.html" class="flex items-center gap-3">
+    <img 
+      src="united-spirits-site/assets/img/hang.png" 
+      alt="United Spirits Logo" 
+      class="h-10 w-10 rounded-full object-contain" 
+    />
+    <span class="font-serif text-xl tracking-wide">
+      U.S.C
+    </span>
+  </a>
+
+  <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="text-black hover:text-purple-600 transition-colors">Home</a>
+      <a href="index.html#collections" class="text-black hover:text-purple-600 transition-colors">Collections</a>
+      <a href="index.html#featured" class="text-black hover:text-purple-600 transition-colors">Featured</a>
+      <a href="index.html#contact" class="text-black hover:text-purple-600 transition-colors">Contact</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobileMenuButton"
+      class="md:hidden p-2"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-black"
+      >
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobileMenu"
+    class="absolute top-20 right-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[160px] opacity-0 translate-y-2 pointer-events-none transition-all duration-300"
+  >
+    <div class="py-2 px-4 space-y-1">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+      <a href="index.html#collections" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Collections</a>
+      <a href="index.html#featured" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Featured</a>
+      <a href="index.html#contact" class="block py-2 text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+    </div>
+  </nav>
   </header>
 
   <!-- EVENT DETAIL -->
@@ -214,7 +261,7 @@
     <div>
       <!-- Brand -->
       <a href="index.html" class="flex items-center gap-3 mb-4">
-        <img src="united-spirits-site/assets/img/hang.png" alt="United Spirits Logo" class="h-10 w-auto" />
+        <img src="../united-spirits-site/assets/img/hang.png" alt="United Spirits Logo" class="h-10 w-auto" />
         <span class="font-serif text-xl tracking-wide">U.S.C</span>
       </a>
       <!-- Tagline -->
