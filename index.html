@@ -247,52 +247,55 @@
   class="relative min-h-screen overflow-hidden
          bg-contain md:bg-cover
          bg-center bg-no-repeat"
-  style="background-image: url('united-spirits-site/assets/img/hg.png');"
+  style="background-image: url('assets/img/hg.png');"
 >
 
-  <!-- Logo -->
-<a href="index.html" class="logo" aria-label="U.S.C — Home">
-  <img src="united-spirits-site/assets/img/微信图片_20260403164412_266_408.png"
-       class="logo-icon-img"
-       alt="United Spirits Logo" />
-  <span>U.S.C</span>
-</a>
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4">
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
-        <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
-        <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
-        <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
-      </nav>
+    <!-- Logo -->
+    <a href="index.html" class="logo flex items-center gap-2" aria-label="U.S.C — Home">
+      <img src="assets/img/logo.png"
+           class="logo-icon-img"
+           alt="United Spirits Logo" />
+      <span class="text-white font-semibold">U.S.C</span>
+    </a>
 
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobileMenuButton"
-        class="md:hidden p-2 text-white"
-        aria-label="Toggle menu"
-      >
-        ☰
-      </button>
-    </header>
-  </div>
-  
-  <!-- Mobile Menu -->
-    <nav
-      id="mobileMenu"
-      class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
-             min-w-[160px] opacity-0 translate-y-2 pointer-events-none
-             transition-all duration-300"
-    >
-      <div class="py-2 flex flex-col items-end px-4 space-y-1">
-        <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
-        <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
-        <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
-        <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
-      </div>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+      <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+      <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
+      <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
     </nav>
-  </div>
 
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobileMenuButton"
+      class="md:hidden p-2 text-white"
+      aria-label="Toggle menu"
+    >
+      ☰
+    </button>
+
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobileMenu"
+    class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
+           min-w-[160px] opacity-0 translate-y-2 pointer-events-none
+           transition-all duration-300"
+  >
+    <div class="py-2 flex flex-col items-end px-4 space-y-1">
+      <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+      <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+      <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
+      <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
+    </div>
+  </nav>
+
+</section>
   <!-- ===================== HERO CONTENT ===================== -->
   <div
     class="relative max-w-7xl mx-auto px-6
