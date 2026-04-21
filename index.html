@@ -143,6 +143,13 @@
       background: white;
       color: #000;
     }
+    /* Keep floating Klaviyo teaser/logo on the right corner */
+    iframe[src*="klaviyo"][style*="position: fixed"],
+    div[style*="position: fixed"][class*="klaviyo"],
+    div[style*="position: fixed"][id*="klaviyo"] {
+      left: auto !important;
+      right: 24px !important;
+    }
     .font-serif {
       font-family: "Playfair Display", serif;
     }
