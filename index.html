@@ -1,1687 +1,1454 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Klaviyo Onsite Tracking -->
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/VLPJFb/klaviyo.js?company_id=VLPJFb"></script>
+<script type="text/javascript">
+  !function(){
+    if(!window.klaviyo){
+      window._klOnsite = window._klOnsite || [];
+      try {
+        window.klaviyo = new Proxy({}, {
+          get: function(_, method) {
+            return method === "push" ? function() {
+              var args; (args = window._klOnsite).push.apply(args, arguments);
+            } : function() {
+              var n = arguments.length, o = new Array(n);
+              for (var i = 0; i < n; i++) o[i] = arguments[i];
+              var callback = typeof o[o.length - 1] === "function" ? o.pop() : void 0;
+              var promise = new Promise(function(resolve) {
+                window._klOnsite.push([method].concat(o, [function(result){
+                  if(callback) callback(result);
+                  resolve(result);
+                }]));
+              });
+              return promise;
+            };
+          }
+        });
+      } catch(e) {
+        window.klaviyo = window.klaviyo || [];
+        window.klaviyo.push = function(){
+          var args; (args = window._klOnsite).push.apply(args, arguments);
+        };
+      }
+    }
+  }();
+</script>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Spirits Distribution & Supply Chain to Asia | Spirits United | Hong Kong</title>
-  <meta name="description" content="Hong Kong–based premium spirits supply chain. We help European and global wineries enter China, Japan, Korea, and ASEAN — customs cleared, packaged, branded, and distributed. Request a quote.">
-  <meta name="keywords" content="spirits distribution Asia, wine export China, Hong Kong spirits supply chain, Qingdao Free Trade Zone wine import, private label spirits Asia, premium spirits distributor">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <title>Spirits United Supply Chain Co., Limited — Premium Wines, Whiskeys & Brandies</title>
+  <meta name="description" content="Curated premium spirits for global distributors and suppliers. Explore our collection of award-winning wines, whiskeys, and brandies for discerning palates." />
+  <link rel="canonical" href="https://www.unitedspiritshk.com/" />
+  <meta name="theme-color" content="#ffffff" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="0XT66x5om3qRNe39DmIN-ji705SM_ZGWX9kHhFr9y4s" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T27QXCSD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics gtag.js (NEW Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CF735TPM01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CF735TPM01');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Tailwind CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+
+  <!-- Marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Preconnect Hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://unpkg.com" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spirits United Supply Chain Co., Limited.",
+    "url": "https://www.unitedspiritshk.com",
+    "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/hang.png",
+    "description": "Premium wines, whiskeys, and brandies curated for discerning palates. Partnering with elite producers to bring you the finest spirits from around the world.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road",
+      "addressLocality": "Wanchai",
+      "addressRegion": "Hong Kong",
+      "addressCountry": "HK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+852 6934 6630",
+      "contactType": "customer service",
+      "areaServed": "HK",
+      "availableLanguage": "English",
+      "email": "info@unitedspiritshk.com"
+    },
+    "sameAs": [
+      "https://x.com/unitedspiritshk",
+      "https://www.facebook.com/profile.php?id=61579254602509",
+      "https://www.instagram.com/united_spiritshk/",
+      "https://www.youtube.com",
+      "https://www.tiktok.com/@unitedspiritshk"
+    ]
+  }
+  </script>
 
   <style>
-    /* ─── TOKENS ─── */
     :root {
-      --gold:        #C4963A;
-      --gold-light:  #E2C580;
-      --gold-dim:    rgba(196,150,58,0.18);
-      --gold-line:   rgba(196,150,58,0.25);
-      --ink:         #0E0C09;
-      --ink-mid:     #1C1812;
-      --ink-surface: #221E17;
-      --ink-card:    #2A2520;
-      --cream:       #F4EFE4;
-      --cream-mid:   #E8DFC9;
-      --muted:       #9A8E78;
-      --white:       #FFFFFF;
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --accent: linear-gradient(135deg, #ec4899, #a855f7);
     }
-
-    /* ─── RESET ─── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--ink);
-      color: var(--cream);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #000;
     }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-
-    /* ─── UTILITY ─── */
-    .serif { font-family: 'Cormorant Garamond', serif; }
-    .gold  { color: var(--gold); }
-    .muted { color: var(--muted); }
-
-    /* ─── NOISE TEXTURE OVERLAY ─── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.4;
+    .font-serif {
+      font-family: "Playfair Display", serif;
     }
-
-    /* ══════════════════════════════════════
-       NAV
-    ══════════════════════════════════════ */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 4rem;
-      height: 72px;
-      background: rgba(14,12,9,0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--gold-line);
-      transition: background 0.3s;
+    .accent-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav-logo img {
-      height: 38px;
-      width: auto;
-    }
-    .nav-logo-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      color: var(--cream);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--cream); }
-    .nav-cta {
-      background: var(--gold);
-      color: var(--ink) !important;
-      font-weight: 500;
-      padding: 9px 22px;
-      border-radius: 2px;
-      letter-spacing: 0.08em;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.1s;
-    }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-    /* Hamburger */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: var(--cream);
-      transition: all 0.3s;
-    }
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px; left: 0; right: 0;
-      background: var(--ink-mid);
-      border-bottom: 1px solid var(--gold-line);
-      padding: 2rem;
-      z-index: 99;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .mobile-menu a:hover { color: var(--cream); }
-    .mobile-cta-btn {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--ink) !important;
-      font-weight: 500;
-      padding: 12px 24px;
-      border-radius: 2px;
-      text-align: center;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-    }
-
-    /* ══════════════════════════════════════
-       HERO
-    ══════════════════════════════════════ */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding-top: 72px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 75% 50%, rgba(196,150,58,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(196,150,58,0.04) 0%, transparent 60%);
-    }
-    .hero-left {
-      position: relative;
-      z-index: 1;
-      padding: 6rem 4rem 6rem 6rem;
-    }
-    .hero-kicker {
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 2rem;
-    }
-    .hero-kicker::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 5vw, 5.5rem);
-      font-weight: 400;
-      line-height: 1.05;
-      color: var(--cream);
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 480px;
-      margin-bottom: 2.5rem;
-    }
-    .hero-sub strong { color: var(--cream); font-weight: 500; }
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--ink);
-      font-size: 0.78rem;
+      gap: 0.5rem;
+      padding: 0.8rem 1.1rem;
+      border-radius: 999px;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      border-radius: 2px;
-      transition: background 0.2s, transform 0.15s;
+      transition: all 0.2s ease;
     }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: var(--cream);
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 13px 28px;
-      border: 1px solid var(--gold-line);
-      border-radius: 2px;
-      transition: border-color 0.2s, color 0.2s;
+    .btn-purple {
+      background: var(--accent);
+      color: white;
     }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-    .hero-right {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
+    header img[width][height] {
+      aspect-ratio: attr(width) / attr(height);
+      object-fit: contain;
+     }
+    header img {
+     min-width: 2.5rem;
     }
-    .hero-right video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.55;
+    .logo-icon-img {
+     height: 2.5rem;
+     width: auto;
+     object-fit: contain;
     }
-    .hero-right::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, var(--ink) 0%, transparent 30%),
-                  linear-gradient(to top, var(--ink) 0%, transparent 30%);
+    .card {
+      border-radius: 1rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .hero-stats {
-      position: absolute;
-      bottom: 3rem;
-      left: 0;
-      right: 0;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--gold-line);
-      margin: 0 6rem;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
     }
-    .hero-stat {
-      padding: 1.5rem 1rem;
-      text-align: center;
+    .section {
+      padding: 6rem 0;
     }
-    .hero-stat + .hero-stat {
-      border-left: 1px solid var(--gold-line);
-    }
-    .hero-stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .hero-stat-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ══════════════════════════════════════
-       TRUST BAR (Partner logos)
-    ══════════════════════════════════════ */
-    .trust-bar {
-      background: var(--ink-surface);
-      border-top: 1px solid var(--gold-line);
-      border-bottom: 1px solid var(--gold-line);
-      padding: 2rem 4rem;
-      overflow: hidden;
-    }
-    .trust-bar-label {
-      text-align: center;
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-    .trust-track {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      animation: scroll-track 30s linear infinite;
-      width: max-content;
-    }
-    .trust-bar:hover .trust-track { animation-play-state: paused; }
-    @keyframes scroll-track {
-      0%   { transform: translateX(0); }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .trust-track img {
-      height: 36px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      opacity: 0.4;
-      transition: opacity 0.3s;
-    }
-    .trust-track img:hover { opacity: 0.85; }
-
-    /* ══════════════════════════════════════
-       SECTION WRAPPER
-    ══════════════════════════════════════ */
-    .section {
-      padding: 8rem 6rem;
-    }
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .section-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
-    .section-kicker::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 3.2rem);
-      font-weight: 400;
-      color: var(--cream);
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-    .section-sub {
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.75;
-    }
-
-    /* ══════════════════════════════════════
-       WHAT WE DO — 3 COLUMNS
-    ══════════════════════════════════════ */
-    .what-we-do {
-      background: var(--ink-mid);
-    }
-    .wwd-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      margin-top: 4rem;
-      border: 1px solid var(--gold-line);
-    }
-    .wwd-card {
-      background: var(--ink-card);
-      padding: 3rem 2.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-    .wwd-card:hover { background: #302b23; }
-    .wwd-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .wwd-card:hover::before { transform: scaleX(1); }
-    .wwd-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      font-weight: 300;
-      color: var(--gold-dim);
-      line-height: 1;
-      margin-bottom: 1.5rem;
-    }
-    .wwd-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 1rem;
-    }
-    .wwd-body {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-    .wwd-list {
-      margin-top: 1.25rem;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .wwd-list li {
-      font-size: 0.83rem;
-      color: var(--muted);
-      padding-left: 1.2rem;
-      position: relative;
-    }
-    .wwd-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-size: 0.7rem;
-    }
-
-    /* ══════════════════════════════════════
-       WHO WE HELP
-    ══════════════════════════════════════ */
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-    .who-card {
-      background: var(--ink-surface);
-      border: 1px solid var(--gold-line);
-      border-radius: 4px;
-      padding: 2.5rem;
-      transition: border-color 0.3s, transform 0.2s;
-    }
-    .who-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-    .who-card-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-    }
-    .who-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    .who-card-body {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    .who-card-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: gap 0.2s;
-    }
-    .who-card-link:hover { gap: 14px; }
-    .who-card-link::after { content: '→'; }
-
-    /* ══════════════════════════════════════
-       HOW IT WORKS — STEPS
-    ══════════════════════════════════════ */
-    .how-it-works {
-      background: var(--ink-mid);
-      position: relative;
-      overflow: hidden;
-    }
-    .how-it-works::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 6rem;
-      right: 6rem;
-      height: 1px;
-      background: var(--gold-line);
-      transform: translateY(-50%);
-    }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .step {
-      text-align: center;
-    }
-    .step-num {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--ink);
-      border: 1px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      color: var(--gold);
-    }
-    .step-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 0.75rem;
-    }
-    .step-body {
-      font-size: 0.83rem;
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    /* ══════════════════════════════════════
-       WHY CHOOSE US
-    ══════════════════════════════════════ */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-      margin-top: 4rem;
-    }
-    .why-left video {
-      width: 100%;
-      border-radius: 2px;
-      opacity: 0.8;
-    }
-    .why-points {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .why-point {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-    }
-    .why-point-icon {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      border: 1px solid var(--gold-line);
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1rem;
-      margin-top: 2px;
-    }
-    .why-point-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--cream);
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.03em;
-    }
-    .why-point-body {
-      font-size: 0.83rem;
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    /* ══════════════════════════════════════
-       SERVICE PACKAGES
-    ══════════════════════════════════════ */
-    .packages {
-      background: var(--ink-surface);
-      border-top: 1px solid var(--gold-line);
-      border-bottom: 1px solid var(--gold-line);
-    }
-    .packages-header {
-      max-width: 600px;
-      margin-bottom: 4rem;
-    }
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--gold-line);
-      border: 1px solid var(--gold-line);
-    }
-    .pkg-card {
-      background: var(--ink-mid);
-      padding: 2.5rem 2rem;
-      position: relative;
-      transition: background 0.3s;
-    }
-    .pkg-card:hover { background: var(--ink-card); }
-    .pkg-card.featured {
-      background: var(--ink-card);
-    }
-    .pkg-card.featured::after {
-      content: 'Most Popular';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      background: var(--gold);
-      color: var(--ink);
-      text-align: center;
-      font-size: 0.62rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 5px;
-    }
-    .pkg-card.featured { padding-top: 3.5rem; }
-    .pkg-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
-    .pkg-tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
-    .pkg-desc {
-      font-size: 0.83rem;
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-      min-height: 80px;
-    }
-    .pkg-for {
-      font-size: 0.75rem;
-      color: var(--cream);
-      font-weight: 500;
-      padding: 0.75rem 1rem;
-      background: var(--gold-dim);
-      border-left: 2px solid var(--gold);
-      border-radius: 0 2px 2px 0;
-      line-height: 1.5;
-    }
-
-    /* ══════════════════════════════════════
-       COLLECTIONS (slim version)
-    ══════════════════════════════════════ */
-    .collections-strip {
-      background: var(--ink-mid);
-    }
-    .collections-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 3rem;
-    }
-    .collections-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .col-card {
-      position: relative;
-      aspect-ratio: 3/4;
-      overflow: hidden;
-      border-radius: 2px;
-    }
-    .col-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-    .col-card:hover img { transform: scale(1.05); }
-    .col-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(14,12,9,0.9) 0%, transparent 55%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 2rem;
-    }
-    .col-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--cream);
-      margin-bottom: 0.3rem;
-    }
-    .col-card-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .col-card-link {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .col-card-link::after { content: '→'; }
-
-    /* ══════════════════════════════════════
-       NEWS
-    ══════════════════════════════════════ */
-    .news-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .news-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 2px;
-      background: var(--ink-surface);
-      border: 1px solid var(--gold-line);
-      transition: border-color 0.3s;
-    }
-    .news-card:hover { border-color: var(--gold); }
-    .news-card-img {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-    }
-    .news-card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-    .news-card:hover .news-card-img img { transform: scale(1.04); }
-    .news-card-body { padding: 1.5rem; }
-    .news-card-tag {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.6rem;
-    }
-    .news-card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--cream);
-      line-height: 1.3;
-    }
-    .news-card.featured .news-card-title { font-size: 1.7rem; }
-
-    /* ══════════════════════════════════════
-       CTA BANNER
-    ══════════════════════════════════════ */
-    .cta-banner {
-      background: var(--ink-surface);
-      border: 1px solid var(--gold-line);
-      margin: 0 6rem;
-      border-radius: 4px;
-      padding: 5rem 6rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 60% at 50% 50%, rgba(196,150,58,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-banner-kicker {
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
-    .cta-banner h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 400;
-      color: var(--cream);
-      line-height: 1.2;
-      max-width: 700px;
-      margin: 0 auto 1rem;
-    }
-    .cta-banner p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 500px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
-    }
-    .cta-banner-btns {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    /* ══════════════════════════════════════
-       CONTACT
-    ══════════════════════════════════════ */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      margin-top: 4rem;
-    }
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .contact-info-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--cream);
-      font-weight: 400;
-      line-height: 1.25;
-    }
-    .contact-info-body {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      font-size: 0.85rem;
-    }
-    .contact-detail-icon {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      border: 1px solid var(--gold-line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 0.9rem;
-      margin-top: 1px;
-    }
-    .contact-detail-label {
-      font-size: 0.63rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.2rem;
-    }
-    .contact-detail-value { color: var(--cream); line-height: 1.5; }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .form-group label {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: var(--ink-surface);
-      border: 1px solid var(--gold-line);
-      color: var(--cream);
-      padding: 12px 16px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.88rem;
-      border-radius: 2px;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C4963A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    .animate-scroll {
+      animation: scroll 60s linear infinite;
+      will-change: transform;
+    }
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+    section[style*="background-image"] {
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      background-position: right 14px center;
-      cursor: pointer;
     }
-    .form-group select option { background: var(--ink-mid); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-submit { margin-top: 0.5rem; }
-
-    /* ══════════════════════════════════════
-       FOOTER
-    ══════════════════════════════════════ */
-    .footer {
-      background: var(--ink-mid);
-      border-top: 1px solid var(--gold-line);
-      padding: 5rem 6rem 3rem;
-    }
-    .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-      padding-bottom: 4rem;
-      border-bottom: 1px solid var(--gold-line);
-    }
-    .footer-brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
-    .footer-brand-logo img { height: 32px; }
-    .footer-brand-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      color: var(--cream);
-    }
-    .footer-brand-tagline {
-      font-size: 0.83rem;
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-    }
-    .footer-cta-link {
-      display: inline-block;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border-bottom: 1px solid var(--gold-line);
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
-    }
-    .footer-cta-link:hover { border-color: var(--gold); }
-    .footer-col-title {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .footer-links a {
-      font-size: 0.83rem;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--cream); }
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .footer-legal {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-    }
-    .footer-social a {
-      width: 34px;
-      height: 34px;
-      border: 1px solid var(--gold-line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      color: var(--muted);
-      border-radius: 2px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* WhatsApp sticky */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 200;
-      width: 52px;
-      height: 52px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      transition: transform 0.2s;
-    }
-    .whatsapp-btn:hover { transform: scale(1.1); }
-    .whatsapp-btn svg { width: 26px; height: 26px; fill: #fff; }
-
-    /* ══════════════════════════════════════
-       ANIMATIONS
-    ══════════════════════════════════════ */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero-kicker  { animation: fadeUp 0.7s ease 0.1s both; }
-    .hero h1      { animation: fadeUp 0.7s ease 0.25s both; }
-    .hero-sub     { animation: fadeUp 0.7s ease 0.4s both; }
-    .hero-btns    { animation: fadeUp 0.7s ease 0.55s both; }
-
-    /* ══════════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════════ */
-    @media (max-width: 1100px) {
-      .section { padding: 6rem 3rem; }
-      .hero-left { padding: 5rem 3rem 5rem 3rem; }
-      .hero-stats { margin: 0 3rem; }
-      .cta-banner { margin: 0 3rem; padding: 4rem 3rem; }
-      .footer { padding: 4rem 3rem 2rem; }
-      .wwd-grid { grid-template-columns: 1fr; }
-      .packages-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 900px) {
-      .nav { padding: 0 2rem; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { display: none; }
-      .hero-left { padding: 4rem 2rem; min-height: calc(100vh - 72px); display: flex; flex-direction: column; justify-content: center; }
-      .hero-stats { display: none; }
-      .trust-bar { padding: 1.5rem 2rem; }
-      .section { padding: 5rem 2rem; }
-      .who-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .why-left { display: none; }
-      .steps-grid { grid-template-columns: 1fr 1fr; }
-      .how-it-works::before { display: none; }
-      .packages-grid { grid-template-columns: 1fr; }
-      .collections-grid { grid-template-columns: 1fr; }
-      .news-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .cta-banner { margin: 0 2rem; padding: 3rem 2rem; }
-      .footer { padding: 3rem 2rem 2rem; }
-    }
-    @media (max-width: 600px) {
-      .steps-grid { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.8rem; }
+    @media (max-width: 1279px) {
+      section[style*="background-image"] {
+        background-position: center;
+      }
     }
   </style>
 </head>
-<body>
+<body class="text-black">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ══ NAV ══ -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">
-      <img src="united-spirits-site/assets/img/微信图片_20260403164412_266_408.png" alt="United Spirits Logo">
-      <span class="nav-logo-text">U.S.C</span>
+  <!-- Sirius Site SDK (with failsafe) -->
+  <script type="text/javascript">
+  (function(w, d, n, a, j, s) {
+    w[n] =
+      w[n] ||
+      function() {
+        return (w[n].a = w[n].a || []).push(arguments);
+      };
+    j = d.createElement('script');
+    j.async = true;
+    j.src = 'https://sirius-it-site.lx.netease.com/site-sdk.js';
+    j.onload = function() {
+      setTimeout(() => {
+        try {
+          if (typeof __siteSDK__ !== 'undefined' && __siteSDK__.setDefaultConfig) {
+            __siteSDK__.setDefaultConfig({
+              outerKey: 'key71c56c8bcccf4f1fb596d458b6e6452e',
+            });
+            __siteSDK__.init();
+          } else {
+            console.warn('Sirius SDK loaded but __siteSDK__ object not found.');
+          }
+        } catch (err) {
+          console.error('Error initializing Sirius SDK:', err);
+        }
+      }, 500);
+    };
+    j.onerror = function() {
+      console.warn('Sirius SDK failed to load.');
+    };
+    s = d.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(j, s);
+  })(window, document, '__siteSDK__');
+  </script>
+
+</body>
+</html>
+
+<!-- ===================== HEADER + HERO ===================== -->
+<section
+  class="relative min-h-screen overflow-hidden
+         bg-contain md:bg-cover
+         bg-center bg-no-repeat"
+  style="background-image: url('united-spirits-site/assets/img/hg.png');"
+>
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo flex items-center gap-2" aria-label="U.S.C — Home">
+      <img src="united-spirits-site/assets/img/微信图片_20260403164412_266_408.png"
+           class="logo-icon-img"
+           alt="United Spirits Logo" />
+      <span class="text-white font-semibold">U.S.C</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="solutions.html">Solutions</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="mailto:info@unitedspiritshk.com" class="nav-cta">Request a Quote</a></li>
-    </ul>
-    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+      <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+      <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
+      <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobileMenuButton"
+      class="md:hidden p-2 text-white"
+      aria-label="Toggle menu"
+    >
+      ☰
+    </button>
+
+  </header>
+
+  <!-- Hero Content -->
+  <div
+    class="relative max-w-7xl mx-auto px-6
+           pt-28 sm:pt-32 md:pt-44
+           w-full z-10"
+  >
+    <div class="max-w-3xl">
+
+      <h1 class="text-2xl sm:text-5xl md:text-6xl font-serif leading-tight text-white mb-4">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg text-white mb-5 md:mb-6 max-w-md">
+        FROM THE WORLD, FOR THE WORLD.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#collections" class="btn btn-purple text-white">
+          Explore Collection
+        </a>
+        <a href="#contact" class="btn bg-white text-black border-white">
+          Get in Touch
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobileMenu"
+    class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
+           min-w-[160px] opacity-0 translate-y-2 pointer-events-none
+           transition-all duration-300"
+  >
+    <div class="py-2 flex flex-col items-end px-4 space-y-1">
+      <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+      <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+      <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
+      <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="about.html">About</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-    <a href="mailto:info@unitedspiritshk.com" class="mobile-cta-btn">Request a Quote</a>
-  </div>
+</section>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-left">
-      <div class="hero-kicker">Hong Kong · Qingdao Free Trade Zone</div>
-      <h1>Your Winery.<br><em>Asia's Shelves.</em></h1>
-      <p class="hero-sub">
-        We handle <strong>everything in between</strong> — customs clearance, premium packaging, brand localization, and distribution across <strong>China, Japan, Korea, ASEAN, and Ghana.</strong>
+<!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <div class="reveal md:pr-12">
+      <h2 class="text-4xl sm:text-5xl font-serif text-black mb-6">
+        <span class="accent-text">About Us</span>
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-xl">
+        Headquartered in Hong Kong, Spirits United Supply Chain Co., Limited. operates distilleries and wineries in Europe and Asia, crafting premium beverages for the rapidly expanding markets of Asia and Africa.
       </p>
-      <div class="hero-btns">
-        <a href="mailto:info@unitedspiritshk.com" class="btn-primary">Request a Quote</a>
-        <a href="united-spirits-site/united-spirits-catalogue.pdf" class="btn-secondary" target="_blank">Download Brochure</a>
+      <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-xl">
+        We curate award-winning wines, refined whiskeys, and exceptional brandies from storied houses around the world. We partner with distributors who share our obsession for quality, craft, and character.
+      </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 lg:gap-8 text-center max-w-lg">
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">50+</div>
+            <div class="text-xs text-gray-500 mt-1">Labels</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">12</div>
+            <div class="text-xs text-gray-500 mt-1">Origins</div>
+          </div>
+          <div class="card p-5">
+            <div class="text-2xl font-semibold accent-text">A+</div>
+            <div class="text-xs text-gray-500 mt-1">Cellar Rated</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video -->
+    <div class="flex items-center justify-center">
+      <div class="relative rounded-2xl overflow-hidden shadow-lg w-full">
+        <video
+          src="united-spirits-site/assets/img/U.S.C.mp4"
+          class="w-full h-auto object-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
       </div>
     </div>
-    <div class="hero-right">
-      <video autoplay muted loop playsinline>
-        <source src="united-spirits-site/assets/img/facility-tours/bottling.mp4" type="video/mp4">
-      </video>
+
+  </div>
+</section>
+    <!-- WHO WE ARE & OUR MISSION -->
+    <section class="mb-28 max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-20 items-start">
+      <div class="space-y-16 md:pr-12">
+
+        <div>
+          <h2 class="text-3xl font-serif mb-4">Who We Are</h2>
+          <p class="text-lg text-gray-700 mb-4">
+            We began as a bridge between world-class distilleries and emerging Asian markets. Today, we are proud to operate as both a <strong>manufacturer</strong> and distributor — crafting, bottling, and exporting premium wines, whiskeys, and brandies.
+          </p>
+          <p class="text-lg text-gray-700">
+            Based in the <strong>Qingdao Free Trade Zone</strong>, we oversee production, blending, bottling, export logistics, and brand development with precision and care.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-serif mb-4">Our Mission</h2>
+          <p class="text-lg text-gray-700">
+            To elevate global spirits through quality, authenticity, and collaboration — connecting exceptional distributor and suppliers across the World.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Video -->
+      <div class="flex items-center justify-center">
+        <div class="relative rounded-2xl overflow-hidden shadow-lg w-full">
+          <video src="united-spirits-site/assets/img/facility-tours/warehouse.mp4"
+            class="w-full h-auto object-cover" autoplay muted loop playsinline></video>
+          <div class="absolute inset-0 rounded-2xl ring-1 ring-pink-200"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL FOOTPRINT -->
+    <section class="mb-20">
+      <div class="text-center mb-16 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-serif mb-4">Our Global Footprint</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Our distribution network spans Asia and Africa, ensuring reliable access to key markets worldwide.
+        </p>
+      </div>
+
+      <div id="global-footprint-map" class="rounded-xl shadow-2xl mb-12"></div>
+
+      <!-- Country Cards (correct position) -->
+      <div class="flex flex-wrap justify-center gap-8 lg:gap-10 max-w-6xl mx-auto">
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">China</div>
+          <div class="text-xs text-gray-500 mt-1">Core Market</div>
+        </div>
+
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Japan</div>
+          <div class="text-xs text-gray-500 mt-1">Premium Focus</div>
+        </div>
+
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Korea</div>
+          <div class="text-xs text-gray-500 mt-1">Growing Demand</div>
+        </div>
+
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">ASEAN</div>
+          <div class="text-xs text-gray-500 mt-1">Expanding Reach</div>
+        </div>
+
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Hong Kong</div>
+          <div class="text-xs text-gray-500 mt-1">Global Hub</div>
+        </div>
+
+        <div class="card w-40 p-4 text-center">
+          <div class="text-xl font-semibold accent-text">Ghana</div>
+          <div class="text-xs text-gray-500 mt-1">Africa Distribution</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center">
+      <h3 class="text-2xl font-serif mb-4">Let’s Work Together</h3>
+      <p class="text-gray-600 max-w-md mx-auto mb-8">
+        Partner with us to bring premium beverages to markets across Asia and Africa.
+      </p>
+      <a href="index.html#for-producers" class="btn btn-purple">Become a Partner</a>
+    </section>
+
+  </main>
+
+<!-- ===================== B2B SERVICES & SUPPLY CHAIN ADVANTAGE ===================== -->
+<section id="b2b-services" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <header class="text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl font-serif text-black mb-4">
+        From Your Winery to Asia — <span class="accent-text">Customize, Package, and Grow with Us</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+        We transform global wines and spirits into Asian success stories — from concept to shelf, fully managed through our integrated Qingdao Free Trade Zone and Hong Kong platform.
+      </p>
+    </header>
+
+    <!-- WHAT WE OFFER -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="space-y-4">
+        <h3 class="text-2xl font-serif">What We Offer</h3>
+        <p class="text-gray-700">
+          At <strong>U.S.C</strong>, we connect international producers with Asia’s fastest-growing markets.
+          Our Customization Hub in Qingdao Free Trade Zone and logistics base in Hong Kong give producers a turnkey route into Asia.
+        </p>
+        <ul class="space-y-2 text-gray-700 mt-4">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Customs & bonded management — full documentation, clearance, and tax-optimized operations.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Packaging & bottling — transforming bulk shipments into premium retail products.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Design & branding — adapting your storytelling for Asian consumers.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Storage & logistics — bonded warehousing and seamless regional exports.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Distribution — access to retail, e-commerce, and on-trade channels across China, Japan, Korea, ASEAN, and Ghana.
+          </li>
+        </ul>
+        <p class="font-semibold text-purple-700">You produce the wine — we handle the rest.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+        <video 
+          src="united-spirits-site/assets/img/facility-tours/bottling.mp4" 
+          class="w-full h-auto object-cover" 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">50+</div>
-        <div class="hero-stat-label">Partner Labels</div>
+
+    <!-- WHERE WE OPERATE -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <figure class="relative rounded-2xl overflow-hidden shadow-lg">
+        <video 
+          src="united-spirits-site/assets/img/facility-tours/production-line.mp4"
+          autoplay muted loop playsinline
+          class="w-full h-auto object-cover"
+        ></video>
+      </figure>
+      <div class="space-y-4">
+        <h3 class="text-2xl font-serif">Where We Operate</h3>
+        <p class="text-gray-700">
+          Headquartered in <strong>Hong Kong</strong> — a global hub for trade, finance, and logistics — and operating from the
+          <strong>Qingdao Free Trade Zone</strong>, we leverage Asia’s most advanced supply-chain ecosystem to source, customize, and distribute premium wines and spirits worldwide.
+        </p>
+        <ul class="space-y-2 text-gray-700 mt-4">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            End-to-end production oversight with ISO-certified partners.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Fast turnaround & scalable output.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Private-label & co-branding programs.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Sustainable practices & quality assurance.
+          </li>
+        </ul>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">12</div>
-        <div class="hero-stat-label">Countries of Origin</div>
+    </div>
+
+    <!-- WHY IT MATTERS -->
+    <div class="mb-20 text-center">
+      <h3 class="text-3xl font-serif mb-8">Why It Matters</h3>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="card p-6">
+          <h4 class="text-xl font-semibold mb-3">Efficiency</h4>
+          <p class="text-gray-600">
+            Integrated customs, packaging, and logistics minimize time to market and reduce operational complexity.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h4 class="text-xl font-semibold mb-3">Compliance</h4>
+          <p class="text-gray-600">
+            Full customs & bonded management ensures legal, tax-optimized operations across borders.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h4 class="text-xl font-semibold mb-3">Distribution Reach</h4>
+          <p class="text-gray-600">
+            Established access to retail, e-commerce, and on-trade partners throughout Greater China, Japan, Korea, Southeast Asia, and Ghana.
+          </p>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">6</div>
-        <div class="hero-stat-label">Active Markets</div>
+    </div>
+
+    <!-- SERVICE PACKAGES -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-serif text-center mb-10">Our Service Packages</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-6 text-center hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-3">Basic</h4>
+          <p class="text-gray-600 mb-4">Pay-per-service customization and full customs handling.</p>
+          <p class="text-sm text-gray-500 italic">Best for: Wineries seeking a cost-efficient Asian entry.</p>
+        </div>
+        <div class="card p-6 text-center hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-3">Partner</h4>
+          <p class="text-gray-600 mb-4">Annual membership with marketing & distribution support.</p>
+          <p class="text-sm text-gray-500 italic">Best for: Producers exploring the Chinese market.</p>
+        </div>
+        <div class="card p-6 text-center hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-3">Premium</h4>
+          <p class="text-gray-600 mb-4">Comprehensive service — customs, packaging, e-commerce, and supermarket access.</p>
+          <p class="text-sm text-gray-500 italic">Best for: Brands ready for large-scale Asian growth.</p>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">29</div>
-        <div class="hero-stat-label">Countries Reached</div>
+    </div>
+
+    <!-- BYOB & WHY CHOOSE US -->
+    <div class="grid md:grid-cols-2 gap-12 mb-16">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+        <h4 class="text-2xl font-serif mb-3">BYOB – Build Your Own Brand</h4>
+        <p class="text-gray-700">
+          Create your own wine or spirits brand without owning a winery. We supply the product, packaging, design, customs management, and export logistics.  
+          <strong>Your idea, your brand, our execution.</strong>
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition">
+        <h4 class="text-2xl font-serif mb-3">Why Choose Us</h4>
+        <ul class="space-y-2 text-gray-700 mt-4">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Based in Qingdao Free Trade Zone — tax & logistics advantages.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Complete customs & compliance management — we simplify everything.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Asian market expertise — branding tailored to local tastes.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Established distribution network — China, Japan, Korea, ASEAN, and Ghana.
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 flex-shrink-0 mt-0.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Trusted global partner — from Europe to Latin America and Australia.
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- CALL TO ACTION -->
+    <div class="text-center">
+      <p class="text-xl mb-6 max-w-3xl mx-auto">
+        Partner with us and start expanding your brand in Asia — efficiently, legally, and beautifully.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#contact" class="btn btn-purple">Become a Partner</a>
+        <a href="mailto:info@unitedspiritshk.com?subject=Quote Request – B2B Services" class="btn border border-gray-800 text-gray-800 hover:bg-gray-100">
+          Request a Quote
+        </a>
+        <a href="united-spirits-site/united-spirits-catalogue.pdf" 
+           download="united-spirits-catalogue.pdf" 
+           class="btn bg-gray-100 text-gray-800 hover:bg-gray-200">
+          Download Brochure
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BRAND PARTNERS (INFINITE SCROLL) ===================== -->
+<section id="partners" class="section bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 id="global-partners" class="text-4xl sm:text-5xl font-serif text-black mb-6">
+        Our <span class="accent-text">Global Partners</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        We collaborate with world-class producers, wineries, and luxury brands to bring you exceptional spirits and experiences.
+      </p>
+    </div>
+    <div class="overflow-hidden relative">
+      <div class="flex animate-scroll gap-15 whitespace-nowrap">
+        <!-- Partner Logos (Repeat Twice) -->
+        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" />
+        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <!-- Duplicate for seamless loop -->
+        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard Lucien Bernard" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I." class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classe en 1855" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines" class="h-16 w-auto object-contain hover:opacity-80 transition-all duration-300" loading="lazy"/>
+      </div>
+    </div>
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <a href="#contact" class="btn btn-purple">Become a Partner</a>
+    </div>
+  </div>
+</section>
+<!-- ===================== COLLECTIONS ===================== -->
+<section id="collections" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-serif"><span class="accent-text">Our Collections</span></h2>
+      <p class="text-gray-600 mt-4 max-w-xl mx-auto">
+        Discover our curated selection of world-class spirits.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Premium Wines -->
+      <a href="collections/wines.html" class="block">
+        <article class="card reveal p-6 text-center cursor-pointer group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" 
+               alt="Premium Wines - Anderra Reserva Cabernet Sauvignon Blanc" 
+               loading="lazy"
+               class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Premium Wines</h3>
+          <p class="text-gray-600 mt-2 text-sm">Rare white Cabernet — crisp, aromatic, and exquisitely balanced.</p>
+          <div class="mt-4">
+            <span class="btn btn-purple inline-block w-auto px-4 py-2 text-sm">Explore</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Whiskey Collection -->
+      <a href="collections/whiskey.html" class="block">
+        <article class="card reveal p-6 text-center cursor-pointer group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" 
+               alt="Whiskey Collection - Caribbean Blaze Bourbon 18" 
+               loading="lazy"
+               class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Whiskey Collection</h3>
+          <p class="text-gray-600 mt-2 text-sm">Rich, spicy bourbon — aged 18 years for deep oak and caramel notes.</p>
+          <div class="mt-4">
+            <span class="btn btn-purple inline-block w-auto px-4 py-2 text-sm">Explore</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Brandy Selection -->
+      <a href="collections/brandy.html" class="block">
+        <article class="card reveal p-6 text-center cursor-pointer group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" 
+               alt="Brandy Selection - Honney Conti XO Royal" 
+               loading="lazy"
+               class="w-full h-36 object-contain rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Brandy Selection</h3>
+          <p class="text-gray-600 mt-2 text-sm">XO Cognac — luxurious, complex, and perfect for gifting.</p>
+          <div class="mt-4">
+            <span class="btn btn-purple inline-block w-auto px-4 py-2 text-sm">Explore</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </div>
+</section>
+  <!-- ===================== FEATURED BOTTLES ===================== -->
+  <section id="featured" class="section">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-serif text-center mb-10"><span class="accent-text">Featured Bottles</span></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Corazón de Lolita White Wine -->
+        <a href="products/corazon-de-lolita-white-wine.html" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Corazón de Lolita White Wine</h3>
+          <p class="text-gray-600 text-sm">Silky texture with ripe berry notes and a long finish.</p>
+        </a>
+        <!-- Honney Conti VSOP -->
+        <a href="products/honney-conti-vsop.html" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Honney Conti VSOP</h3>
+          <p class="text-gray-600 text-sm">Vibrant, smooth, with fruity notes — perfect for gifting.</p>
+        </a>
+        <!-- Sunny Land Single Malt -->
+        <a href="products/sunny-land-single-malt.html" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Sunny Land Single Malt</h3>
+          <p class="text-gray-600 text-sm">25-year-old Scotch — smoky, oaky, and deeply complex.</p>
+        </a>
+        <!-- Lolita RTDs -->
+        <a href="products/lolita-rtd-spain.html" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-lolita-rtd-red-wine-cans.png" alt="Lolita RTDs" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Lolita RTDs</h3>
+          <p class="text-gray-600 text-sm">Ready-to-Drink red wine — convenient, refreshing, and authentic.</p>
+        </a>
+        <!-- Royal Honney Conti Soda Water -->
+        <a href="index.html#collections" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-soda-water.png" alt="Royal Honney Conti Soda Water" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Royal Honney Conti Soda Water</h3>
+          <p class="text-gray-600 text-sm">Premium mixer — crisp, clean, perfect for highballs and cocktails.</p>
+        </a>
+        <!-- Royal Honney Conti Mixologist Spirits -->
+        <a href="index.html#collections" class="block reveal text-center group">
+          <img src="united-spirits-site/assets/img/products/product-royal-honney-conti-mixologist-spirits.jpg" alt="Royal Honney Conti Mixologist Spirits" class="w-full h-36 object-contain rounded-lg mx-auto mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Royal Honney Conti Mixologist Spirits</h3>
+          <p class="text-gray-600 text-sm">Craft spirits for cocktail enthusiasts — bold, balanced, bar-ready.</p>
+        </a>
       </div>
     </div>
   </section>
+ <!-- ===================== EVENTS & VISITS ===================== -->
+<section id="events" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-serif text-center mb-12"><span class="accent-text">Latest News & Exclusive Events</span></h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Brand Collaborations Tile -->
+      <a href="news.html" class="block">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Brand Collaborations" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Brand Collaborations</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Exclusive partnerships with luxury brands and designers.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+      <!-- Diplomatic Visits Tile -->
+      <a href="news.html" class="block">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="Diplomatic Visits" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Diplomatic Visits</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Hosting embassy officials and cultural delegations.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+      <!-- Education Events Tile -->
+      <a href="news.html" class="block">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="Education Events" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Education Events</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Masterclasses and seminars on spirit appreciation.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+      <!-- Facility Tours Tile -->
+      <a href="news.html" class="block">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/facility-tours/2023-chile-ambassador-production-line.jpg" alt="Facility Tours" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Facility Tours</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Private access to our temperature-controlled warehouse.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+      <!-- Global Partnerships Tile -->
+      <a href="news.html" class="block">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/team-visit-2025.jpg" alt="Global Partnerships" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Global Partnerships</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            Connecting world-class producers, distributors, and collectors through exclusive collaborations and experiences.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+      <!-- Client & Supplier Meetings Tile -->
+      <a href="news.html" class="block md:col-span-2 lg:col-span-1">
+        <article class="card p-6 reveal group hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+          <img src="united-spirits-site/assets/img/meetings/honney-conti-planet1-signing.jpg" alt="Client & Supplier Meetings" loading="lazy" class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 group-hover:scale-105" />
+          <h3 class="text-xl font-semibold">Client & Supplier Meetings</h3>
+          <p class="text-gray-600 mt-2 text-sm">
+            One-on-one consultations with distributors and producers.
+          </p>
+          <div class="text-xs text-purple-600 font-medium mt-3">Featured</div>
+        </article>
+      </a>
+    </div>
+    <div class="text-center mt-10">
+      <a href="news.html" class="btn btn-purple inline-flex items-center gap-2">
+        View All News & Events
+      </a>
+    </div>
+  </div>
+</section>
 
-  <!-- ══ TRUST BAR ══ -->
-  <div class="trust-bar">
-    <div class="trust-bar-label">Trusted by leading producers worldwide</div>
-    <div style="overflow:hidden;">
-      <div class="trust-track">
-        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild">
-        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII">
-        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classé en 1855">
-        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate">
-        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate">
-        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard">
-        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis">
-        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group">
-        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins">
-        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain">
-        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet">
-        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I.">
-        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines">
-        <!-- duplicate for seamless loop -->
-        <img src="united-spirits-site/assets/img/partners/baron-philippe-de-rothschild.png" alt="Baron Philippe de Rothschild">
-        <img src="united-spirits-site/assets/img/partners/louis-xiii.png" alt="Louis XIII">
-        <img src="united-spirits-site/assets/img/partners/grand-cru-classe-en-1855.png" alt="Grand Cru Classé en 1855">
-        <img src="united-spirits-site/assets/img/partners/kingston-estate.png" alt="Kingston Estate">
-        <img src="united-spirits-site/assets/img/partners/wickham-estate.png" alt="Wickham Estate">
-        <img src="united-spirits-site/assets/img/partners/groupe-bernard-lucien-bernard.png" alt="Groupe Bernard">
-        <img src="united-spirits-site/assets/img/partners/vinous-australis.png" alt="Vinous Australis">
-        <img src="united-spirits-site/assets/img/partners/apwg.png" alt="Australian Premium Wine Group">
-        <img src="united-spirits-site/assets/img/partners/eurovins.png" alt="Eurovins">
-        <img src="united-spirits-site/assets/img/partners/mw-wines-spain.png" alt="MW Wines Spain">
-        <img src="united-spirits-site/assets/img/partners/bernard-mayet.png" alt="Bernard Mayet">
-        <img src="united-spirits-site/assets/img/partners/uci.png" alt="U.C.I.">
-        <img src="united-spirits-site/assets/img/partners/t-wines.png" alt="T. Wines">
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div class="reveal">
+      <h2 class="text-3xl sm:text-4xl font-serif">Let’s Talk <span class="accent-text">Cellar-worthy</span> Bottles</h2>
+      <p class="mt-4 text-gray-600">
+        We’ll help you find the perfect bottle for any occasion.
+      </p>
+      <ul class="mt-6 space-y-3 text-gray-600">
+        <!-- Phone -->
+        <li class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.7 15.9 15.9 0 0 1 1.1 8.25 15.9 15.9 0 0 1-1.1 8.25 2 2 0 0 1-2 1.7H4.11z"></path>
+          </svg>
+          <a href="https://wa.me/85269346630" class="hover:underline">+852 6934 6630</a>
+        </li>
+        <!-- Location -->
+        <li class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Hong Kong • Worldwide
+        </li>
+        <!-- Hours -->
+        <li class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Mon–Fri, 08:30–17:00 HKT
+        </li>
+      </ul>
+      <div class="mt-6 flex gap-4">
+        <!-- X (Twitter) -->
+        <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@unitedspiritshk" target="_blank" aria-label="TikTok" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12a4 4 0 1 0-4 4h4"></path>
+            <path d="M15 16a4 4 0 1 0-4-4v4"></path>
+            <circle cx="9" cy="12" r="1"></circle>
+            <circle cx="15" cy="12" r="1"></circle>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.76 49.76 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.76 49.76 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+            <path d="m10 15 5-3-5-3z"></path>
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/85269346630" target="_blank" aria-label="WhatsApp" class="hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"></path>
+            <polyline points="15.5,9 9.5,15 6.5,12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+<!-- ===================== FORMSPREE CONTACT FORM ===================== -->
+    <form 
+      class="reveal card p-6 space-y-4" 
+      action="https://formspree.io/f/mkgqadqr" 
+      method="POST"
+      onsubmit="alert('Thank you! We’ll be in touch.');"
+    >
+      <input type="hidden" name="_replyto" value="info@unitedspiritshk.com" />
+      
+      <div>
+        <label for="name" class="text-sm text-gray-600">Name</label>
+        <input 
+          id="name" 
+          type="text" 
+          name="name" 
+          required 
+          class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" 
+        />
+      </div>
+      <div>
+        <label for="email" class="text-sm text-gray-600">Email</label>
+        <input 
+          id="email" 
+          type="email" 
+          name="email" 
+          required 
+          class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none" 
+        />
+      </div>
+      <div>
+        <label for="message" class="text-sm text-gray-600">Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="4" 
+          required 
+          class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-pink-200 focus:outline-none"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-purple w-full">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <!-- Company Info + Socials -->
+    <div>
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-3 mb-4">
+        <img src="united-spirits-site/assets/img/hang.png" alt="United Spirits Logo" class="h-12 w-auto" />
+        <span class="font-serif text-xl tracking-wide">U.S.C</span>
+      </a>
+      <!-- Tagline -->
+      <p class="text-gray-400 mb-6 tracking-widest text-sm uppercase leading-relaxed">
+        From the world<br>for the world
+      </p>
+      <!-- Social Icons -->
+      <div class="flex gap-4">
+        <a href="https://x.com/unitedspiritshk" target="_blank" aria-label="X" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.76 49.76 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.76 49.76 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+            <path d="m10 15 5-3-5-3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://wa.me/85269346630" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"></path>
+            <polyline points="15.5,9 9.5,15 6.5,12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+      <ul class="space-y-3">
+        <li><a href="#collections" class="text-gray-400 hover:text-pink-400 transition-colors">Collections</a></li>
+        <li><a href="#featured" class="text-gray-400 hover:text-pink-400 transition-colors">Featured Bottles</a></li>
+        <li><a href="news.html" class="text-gray-400 hover:text-pink-400 transition-colors">News</a></li>
+        <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold mb-6">Get in Touch</h3>
+      <p class="text-gray-400 mb-4">
+        Room 1002, 10/F, Easey Commercial Building,<br>
+        253-261 Hennessy Road, Wanchai, Hong Kong
+      </p>
+      <p class="text-gray-400 mb-4">
+        <strong>Email:</strong> <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400 transition-colors">info@unitedspiritshk.com</a>
+      </p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.278571866072!2d114.17930467515414!3d22.281556037114364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e1a53c7b89%3A0x8130550006672c5a!2sEasey%20Commercial%20Building!5e0!3m2!1sen!2sus!4v1714880000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius: 1rem;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="mt-4 text-center">
+        <a href="https://www.google.com/maps/place/Easey+Commercial+Building/@22.281556,114.1793047,17z/data=!3m1!4b1!4m6!3m5!1s0x340401e1a53c7b89:0x8130550006672c5a!8m2!3d22.281556!4d114.181885!16s%2Fg%2F11c5yqjx8q?entry=ttu" 
+           target="_blank" 
+           class="text-sm text-pink-400 hover:underline">
+          Open in Google Maps
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ══ WHAT WE DO ══ -->
-  <section class="section what-we-do" id="solutions">
-    <div class="section-inner">
-      <div class="section-kicker">Full-Stack Supply Chain</div>
-      <h2 class="section-title">Three pillars.<br>One complete solution.</h2>
-      <p class="section-sub">We are the operational bridge between world-class producers and Asia's fastest-growing markets — manufacturing, warehousing, and distribution under one roof.</p>
-      <div class="wwd-grid">
-        <div class="wwd-card">
-          <div class="wwd-num">01</div>
-          <div class="wwd-title">Manufacturing &amp; Customization</div>
-          <p class="wwd-body">From bulk import to bottled product — we handle blending, bottling, labeling, and full packaging design adapted for Asian consumers. Based in the Qingdao Free Trade Zone.</p>
-          <ul class="wwd-list">
-            <li>Private-label &amp; co-branding programs</li>
-            <li>Asian market packaging &amp; label design</li>
-            <li>Bulk-to-bottle processing</li>
-            <li>ISO-certified production partners</li>
-          </ul>
-        </div>
-        <div class="wwd-card">
-          <div class="wwd-num">02</div>
-          <div class="wwd-title">Bonded Warehouse &amp; Logistics</div>
-          <p class="wwd-body">Tax-optimized bonded storage in the Qingdao Free Trade Zone. Products stay duty-free until sold domestically — maximizing cash flow and compliance.</p>
-          <ul class="wwd-list">
-            <li>Temperature-controlled bonded storage</li>
-            <li>Real-time inventory monitoring</li>
-            <li>Full customs &amp; CIQ compliance</li>
-            <li>ZG Zhong Gang Logistics partnership</li>
-          </ul>
-        </div>
-        <div class="wwd-card">
-          <div class="wwd-num">03</div>
-          <div class="wwd-title">Distribution &amp; Market Access</div>
-          <p class="wwd-body">Our established network across 29 countries in Asia and Africa provides immediate access to importers, distributors, retailers, and e-commerce channels.</p>
-          <ul class="wwd-list">
-            <li>Retail, e-commerce &amp; on-trade channels</li>
-            <li>China, Japan, Korea, ASEAN &amp; Ghana</li>
-            <li>Brand representation &amp; market development</li>
-            <li>Led by a future Master of Wine</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ WHO WE HELP ══ -->
-  <section class="section" id="industries">
-    <div class="section-inner">
-      <div class="section-kicker">Who We Serve</div>
-      <h2 class="section-title">Built for producers.<br>Scaled for brands.</h2>
-      <p class="section-sub">Whether you're shipping your first container into China or scaling across the region, we have a model built for your stage.</p>
-      <div class="who-grid">
-        <div class="who-card">
-          <div class="who-card-label">Wineries &amp; Distilleries</div>
-          <div class="who-card-title">You produce the wine. We take it to market.</div>
-          <p class="who-card-body">You have the product and the ambition. We have the infrastructure, the regulatory knowledge, and the local relationships. From your cellar door to a retail shelf in Shanghai — fully managed, fully compliant.</p>
-          <a href="solutions.html" class="who-card-link">Our Services</a>
-        </div>
-        <div class="who-card">
-          <div class="who-card-label">Importers &amp; Distributors</div>
-          <div class="who-card-title">Expand your portfolio with confidence.</div>
-          <p class="who-card-body">Access our curated portfolio of global producers or leverage our bonded warehouse and logistics infrastructure to move your own inventory across Asia more efficiently than going it alone.</p>
-          <a href="solutions.html#importers" class="who-card-link">Distributor Solutions</a>
-        </div>
-        <div class="who-card">
-          <div class="who-card-label">Private Label &amp; Investors</div>
-          <div class="who-card-title">Build your own brand — without a winery.</div>
-          <p class="who-card-body">Our BYOB program gives entrepreneurs, retailers, and hospitality groups access to our bulk inventory, packaging, design, compliance, and distribution. Your brand, built on our infrastructure.</p>
-          <a href="solutions.html#byob" class="who-card-link">BYOB Program</a>
-        </div>
-        <div class="who-card">
-          <div class="who-card-label">Alcohol Brands</div>
-          <div class="who-card-title">Enter Asia without an Asian office.</div>
-          <p class="who-card-body">We represent your brand as if it were our own — introducing it to the right buyers, at the right price point, in the right venues across China, Japan, Korea, ASEAN, and Ghana.</p>
-          <a href="contact.html" class="who-card-link">Start a Conversation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ HOW IT WORKS ══ -->
-  <section class="section how-it-works">
-    <div class="section-inner">
-      <div class="section-kicker">The Process</div>
-      <h2 class="section-title">From your cellar to Asia's shelves.<br>Five steps.</h2>
-      <div class="steps-grid">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-title">Pickup &amp; Transport</div>
-          <p class="step-body">ZG Zhong Gang Logistics coordinates door-to-door pickup from your winery or distillery — documentation, freight, and insurance fully managed.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-title">Customs &amp; Bonded Entry</div>
-          <p class="step-body">Our bonded team handles import declaration, CIQ inspection, and compliance. Products remain duty-free inside our Qingdao FTZ facility until sold.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-title">Customization &amp; Packaging</div>
-          <p class="step-body">We design and produce labels, boxes, and packaging adapted for the Asian market — positioning your brand for local consumers and retail environments.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-title">Bonded Storage</div>
-          <p class="step-body">Temperature-controlled bonded warehouses with real-time stock monitoring. Your inventory is secure, compliant, and ready to move when orders arrive.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <div class="step-title">Distribution &amp; Sales</div>
-          <p class="step-body">Our sales team manages regional distribution through retail chains, e-commerce platforms, and hospitality partners across 29 countries in Asia and Africa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ WHY CHOOSE US ══ -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <div class="why-grid">
-        <div class="why-left">
-          <video autoplay muted loop playsinline>
-            <source src="united-spirits-site/assets/img/facility-tours/warehouse.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div>
-          <div class="section-kicker">Why Choose Us</div>
-          <h2 class="section-title">The closest thing to having your own Asian office.</h2>
-          <div class="why-points">
-            <div class="why-point">
-              <div class="why-point-icon">⬡</div>
-              <div>
-                <div class="why-point-title">Qingdao Free Trade Zone Advantage</div>
-                <p class="why-point-body">Operating inside the FTZ gives your products tax-deferred bonded status and access to China's most advanced trade infrastructure — cutting time-to-market significantly.</p>
-              </div>
-            </div>
-            <div class="why-point">
-              <div class="why-point-icon">⬡</div>
-              <div>
-                <div class="why-point-title">Complete Compliance Management</div>
-                <p class="why-point-body">Customs, CIQ inspection, import documentation, and ongoing regulatory compliance — we handle every step, so you don't have to navigate a market you don't yet know.</p>
-              </div>
-            </div>
-            <div class="why-point">
-              <div class="why-point-icon">⬡</div>
-              <div>
-                <div class="why-point-title">29-Country Distribution Network</div>
-                <p class="why-point-body">Immediate access to our established network of importers, distributors, and retailers across China, Japan, Korea, ASEAN, and Ghana — relationships built over years.</p>
-              </div>
-            </div>
-            <div class="why-point">
-              <div class="why-point-icon">⬡</div>
-              <div>
-                <div class="why-point-title">Expert-Led Sales Team</div>
-                <p class="why-point-body">Our team, led by a future Master of Wine, combines credibility, cultural expertise, and commercial networks to represent your brand at the right level in every market.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ SERVICE PACKAGES ══ -->
-  <section class="section packages" id="packages">
-    <div class="section-inner">
-      <div class="packages-header">
-        <div class="section-kicker">Service Packages</div>
-        <h2 class="section-title">Choose the model that fits your stage.</h2>
-        <p class="section-sub">Every package is built around a distinct buyer profile — from first container to full-scale Asian expansion.</p>
-      </div>
-      <div class="packages-grid">
-        <div class="pkg-card">
-          <div class="pkg-name">Basic</div>
-          <div class="pkg-tag">Market Entry</div>
-          <p class="pkg-desc">Pay-per-service customs handling, import documentation, and basic bonded storage. No long-term commitment — ideal for your first container into China or Japan.</p>
-          <div class="pkg-for">Best for: Producers testing the Asian market for the first time.</div>
-        </div>
-        <div class="pkg-card featured">
-          <div class="pkg-name">Partner</div>
-          <div class="pkg-tag">Growth</div>
-          <p class="pkg-desc">Annual partnership with active distribution support, e-commerce channel management, and regional marketing. We represent your brand as if it were our own.</p>
-          <div class="pkg-for">Best for: Brands ready to build a real presence in Asia.</div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-name">Premium</div>
-          <div class="pkg-tag">Full-Service Expansion</div>
-          <p class="pkg-desc">End-to-end management — customs, bonded warehousing, packaging localization, multi-channel distribution, and dedicated account management. Your Asian office without the overhead.</p>
-          <div class="pkg-for">Best for: Established labels targeting large-scale Asian growth.</div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-name">BYOB</div>
-          <div class="pkg-tag">Build Your Own Brand</div>
-          <p class="pkg-desc">Don't have a winery — but have a vision? We create the product, design the packaging, manage compliance, and distribute under your label. Your brand, built on our infrastructure.</p>
-          <div class="pkg-for">Best for: Investors, retailers, and hospitality groups entering private-label spirits.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ COLLECTIONS ══ -->
-  <section class="section collections-strip" id="collections">
-    <div class="section-inner">
-      <div class="collections-header">
-        <div>
-          <div class="section-kicker">Our Collections</div>
-          <h2 class="section-title">World-class spirits,<br>curated for Asia.</h2>
-        </div>
-        <a href="collections/wines.html" class="btn-secondary">View All</a>
-      </div>
-      <div class="collections-grid">
-        <a href="collections/wines.html" class="col-card">
-          <img src="united-spirits-site/assets/img/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" alt="Premium Wines" loading="lazy">
-          <div class="col-card-overlay">
-            <div class="col-card-title">Premium Wines</div>
-            <div class="col-card-sub">Rare &amp; award-winning from Europe, Australia &amp; beyond</div>
-            <span class="col-card-link">Explore</span>
-          </div>
-        </a>
-        <a href="collections/whiskey.html" class="col-card">
-          <img src="united-spirits-site/assets/img/products/product-caribbean-blaze-bourbon-18-box.jpg" alt="Whiskey Collection" loading="lazy">
-          <div class="col-card-overlay">
-            <div class="col-card-title">Whiskey Collection</div>
-            <div class="col-card-sub">Rich, aged single malts and premium blends</div>
-            <span class="col-card-link">Explore</span>
-          </div>
-        </a>
-        <a href="collections/brandy.html" class="col-card">
-          <img src="united-spirits-site/assets/img/products/product-honney-conti-xo-royal.png" alt="Brandy Selection" loading="lazy">
-          <div class="col-card-overlay">
-            <div class="col-card-title">Brandy &amp; Cognac</div>
-            <div class="col-card-sub">XO and VSOP expressions for the discerning buyer</div>
-            <span class="col-card-link">Explore</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ NEWS ══ -->
-  <section class="section" id="news">
-    <div class="section-inner">
-      <div class="collections-header">
-        <div>
-          <div class="section-kicker">Latest News &amp; Events</div>
-          <h2 class="section-title">From partnerships<br>to the trade floor.</h2>
-        </div>
-        <a href="news.html" class="btn-secondary">All News</a>
-      </div>
-      <div class="news-grid">
-        <a href="news.html" class="news-card featured">
-          <div class="news-card-img">
-            <img src="united-spirits-site/assets/img/brand-collaborations/planet1-cognac-partnership.jpg" alt="Brand Collaborations" loading="lazy">
-          </div>
-          <div class="news-card-body">
-            <div class="news-card-tag">Brand Collaborations</div>
-            <div class="news-card-title">Exclusive partnerships with luxury brands and designers across Asia and Europe</div>
-          </div>
-        </a>
-        <a href="news.html" class="news-card">
-          <div class="news-card-img">
-            <img src="united-spirits-site/assets/img/diplomatic-visits/chile-ambassador-arrival.jpg" alt="Diplomatic Visits" loading="lazy">
-          </div>
-          <div class="news-card-body">
-            <div class="news-card-tag">Diplomatic Visits</div>
-            <div class="news-card-title">Hosting embassy officials and cultural delegations</div>
-          </div>
-        </a>
-        <a href="news.html" class="news-card">
-          <div class="news-card-img">
-            <img src="united-spirits-site/assets/img/education-events/honeyconti-brand-positioning-talk.jpg" alt="Education Events" loading="lazy">
-          </div>
-          <div class="news-card-body">
-            <div class="news-card-tag">Education Events</div>
-            <div class="news-card-title">Masterclasses and seminars on spirit appreciation</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ CTA BANNER ══ -->
-  <div style="padding: 5rem 0;">
-    <div class="cta-banner">
-      <div class="cta-banner-kicker">Ready to Enter Asia?</div>
-      <h2>Let's map the route together.</h2>
-      <p>Whether you're shipping your first container into China or scaling across the region, we'll walk you through the full process — timeline, costs, and market fit — with no obligation. Most enquiries receive a personalised response within 24 hours.</p>
-      <div class="cta-banner-btns">
-        <a href="mailto:info@unitedspiritshk.com" class="btn-primary">Request a Quote</a>
-        <a href="https://wa.me/85269346630" class="btn-secondary" target="_blank">WhatsApp Us</a>
-        <a href="united-spirits-site/united-spirits-catalogue.pdf" class="btn-secondary" target="_blank">Download Brochure</a>
-      </div>
-    </div>
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
+    <p>
+      <a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400 transition-colors">info@unitedspiritshk.com</a>
+      &nbsp;|&nbsp;
+      &copy; 2025 Spirits United Supply Chain Co., Limited. All rights reserved. Crafted with care — Hong Kong
+    </p>
   </div>
+</footer>
 
-  <!-- ══ CONTACT ══ -->
-  <section class="section" id="contact">
-    <div class="section-inner">
-      <div class="section-kicker">Get in Touch</div>
-      <h2 class="section-title">Start your<br>Asian expansion.</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p class="contact-info-body">Prefer to explore first? Download our brochure or book a 30-minute introductory call with our team in Hong Kong. We're available Monday–Friday, 08:30–17:00 HKT.</p>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">✆</div>
-            <div>
-              <div class="contact-detail-label">Phone / WhatsApp</div>
-              <div class="contact-detail-value"><a href="https://wa.me/85269346630">+852 6934 6630</a></div>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">@</div>
-            <div>
-              <div class="contact-detail-label">Email</div>
-              <div class="contact-detail-value"><a href="mailto:info@unitedspiritshk.com">info@unitedspiritshk.com</a></div>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">⌂</div>
-            <div>
-              <div class="contact-detail-label">Hong Kong Office</div>
-              <div class="contact-detail-value">Room 1002, 10/F, Easey Commercial Building<br>253–261 Hennessy Road, Wanchai, Hong Kong</div>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">◈</div>
-            <div>
-              <div class="contact-detail-label">Production Hub</div>
-              <div class="contact-detail-value">Qingdao Free Trade Zone, China</div>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" placeholder="Your name">
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" placeholder="Your winery or company">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@company.com">
-          </div>
-          <div class="form-group">
-            <label for="inquiry">Inquiry Type</label>
-            <select id="inquiry">
-              <option value="" disabled selected>Select your inquiry</option>
-              <option>Market Entry — First container into Asia</option>
-              <option>Distribution Partnership</option>
-              <option>BYOB — Private Label Program</option>
-              <option>Bonded Warehouse / Logistics</option>
-              <option>General Inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Tell us about your product and what you're looking for..."></textarea>
-          </div>
-          <div class="form-submit">
-            <a href="mailto:info@unitedspiritshk.com" class="btn-primary" style="display:inline-block;">Send Message</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ===================== LIGHTBOX ===================== -->
+<div id="lightbox" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+  <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+  <img id="lightbox-img" class="max-w-4xl max-h-96 object-contain rounded-lg shadow-2xl" />
+</div>
 
-  <!-- ══ FOOTER ══ -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-logo">
-          <img src="united-spirits-site/assets/img/hang.png" alt="USC Logo">
-          <span class="footer-brand-text">U.S.C</span>
-        </div>
-        <p class="footer-brand-tagline">Spirits United Supply Chain Co., Limited.<br>The complete route into Asia for premium wines and spirits.</p>
-        <a href="mailto:info@unitedspiritshk.com" class="footer-cta-link">Start your expansion into Asia →</a>
-      </div>
-      <div>
-        <div class="footer-col-title">Solutions</div>
-        <ul class="footer-links">
-          <li><a href="solutions.html">All Solutions</a></li>
-          <li><a href="solutions.html#manufacturing">Manufacturing</a></li>
-          <li><a href="solutions.html#warehouse">Bonded Warehouse</a></li>
-          <li><a href="solutions.html#distribution">Distribution</a></li>
-          <li><a href="solutions.html#byob">BYOB Program</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Company</div>
-        <ul class="footer-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="news.html">News &amp; Events</a></li>
-          <li><a href="collections/wines.html">Collections</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-links">
-          <li><a href="https://wa.me/85269346630">+852 6934 6630</a></li>
-          <li><a href="mailto:info@unitedspiritshk.com">info@unitedspiritshk.com</a></li>
-          <li><a href="https://maps.google.com" target="_blank">Wanchai, Hong Kong</a></li>
-          <li><a href="#">Qingdao FTZ, China</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">© 2025 Spirits United Supply Chain Co., Limited. All rights reserved. · Hong Kong</div>
-      <div class="footer-social">
-        <a href="#" title="Facebook">f</a>
-        <a href="#" title="Instagram">in</a>
-        <a href="#" title="LinkedIn">Li</a>
-        <a href="#" title="WeChat">W</a>
-      </div>
-    </div>
-  </footer>
+<!-- ===================== CHATBOT ===================== -->
+<button id="chat-open" class="fixed bottom-6 right-6 left-auto bg-purple-600 text-white p-3 rounded-full shadow-lg z-50">
+  💬
+</button>
 
-  <!-- WhatsApp sticky -->
-  <a href="https://wa.me/85269346630" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
-
+<div id="chat" class="hidden fixed bottom-24 right-6 left-auto w-80 bg-white rounded-lg shadow-xl z-50 overflow-hidden">
+  <div class="bg-gray-100 p-3 flex justify-between">
+    <span class="font-semibold">Spirit Assistant</span>
+    <button id="chat-close">✕</button>
+  </div>
+  <div id="chat-messages" class="p-4 h-64 overflow-y-auto bg-gray-50 text-sm"></div>
+  <div class="p-3 border-t flex gap-2">
+    <input id="chat-text" class="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask me anything..." />
+    <button id="chat-send" class="bg-purple-600 text-white px-3 rounded">Send</button>
+  </div>
+</div>
+<!-- ===================== SCRIPTS ===================== -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('open');
-    }
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.remove('open');
-      });
-    });
-
-    // Nav background on scroll
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('nav');
-      if (window.scrollY > 60) {
-        nav.style.background = 'rgba(14,12,9,0.97)';
-      } else {
-        nav.style.background = 'rgba(14,12,9,0.85)';
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle
+      const menuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      let menuOpen = false;
+      if (menuButton && mobileMenu) {
+        // Toggle the menu (open/close)
+        menuButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (menuOpen) {
+            // Close the menu
+            mobileMenu.classList.add('opacity-0', 'translate-y-2');
+            mobileMenu.classList.remove('pointer-events-auto');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            menuOpen = false;
+          } else {
+            // Open the menu
+            mobileMenu.classList.remove('hidden');
+            // Trigger reflow to ensure the initial state is applied
+            void mobileMenu.offsetWidth;
+            // Show with animation
+            mobileMenu.classList.remove('opacity-0', 'translate-y-2');
+            mobileMenu.classList.add('pointer-events-auto');
+            menuOpen = true;
+          }
+        });
       }
+      // Close menu when a link is clicked
+      if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'translate-y-2');
+            mobileMenu.classList.remove('pointer-events-auto');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            menuOpen = false;
+          });
+        });
+      }
+      // Close menu when clicking outside the menu
+      document.addEventListener('click', (event) => {
+        if (menuOpen && mobileMenu && menuButton && 
+            !mobileMenu.contains(event.target) && 
+            !menuButton.contains(event.target)) {
+          mobileMenu.classList.add('opacity-0', 'translate-y-2');
+          mobileMenu.classList.remove('pointer-events-auto');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          menuOpen = false;
+        }
+      });
+      // Close menu when scrolling
+      let lastScrollY = 0;
+      const scrollThreshold = 5;
+      window.addEventListener('scroll', () => {
+        if (menuOpen) {
+          const currentScrollY = window.scrollY;
+          const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+          if (scrollDifference > scrollThreshold) {
+            mobileMenu.classList.add('opacity-0', 'translate-y-2');
+            mobileMenu.classList.remove('pointer-events-auto');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            menuOpen = false;
+          }
+          lastScrollY = currentScrollY;
+        }
+      });
+      // Chatbot
+      const chatOpen = document.getElementById('chat-open');
+      const chatClose = document.getElementById('chat-close');
+      const chat = document.getElementById('chat');
+      const chatMessages = document.getElementById('chat-messages');
+      const chatText = document.getElementById('chat-text');
+      const chatSend = document.getElementById('chat-send');
+      if (chatOpen && chat) {
+        chatOpen.addEventListener('click', () => {
+          chat.classList.remove('hidden');
+          if (chatText) chatText.focus();
+        });
+      }
+      if (chatClose && chat) {
+        chatClose.addEventListener('click', () => {
+          chat.classList.add('hidden');
+        });
+      }
+      function sendMessage() {
+        if (!chatText || !chatMessages) return;
+        const text = chatText.value.trim();
+        if (!text) return;
+        addMessage('user', text);
+        chatText.value = '';
+        setTimeout(() => {
+          const response = getBotResponse(text.toLowerCase());
+          addMessage('bot', response);
+        }, 600);
+      }
+      if (chatSend) {
+        chatSend.addEventListener('click', sendMessage);
+      }
+      if (chatText) {
+        chatText.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') sendMessage();
+        });
+      }
+      function addMessage(sender, text) {
+        if (!chatMessages) return;
+        const msg = document.createElement('div');
+        msg.className = `msg ${sender} text-sm p-2 rounded-lg max-w-[80%] ${
+          sender === 'user' 
+            ? 'ml-auto bg-purple-600 text-white' 
+            : 'bg-white text-gray-800 shadow'
+        }`;
+        msg.innerHTML = marked.parse(text);
+        msg.querySelectorAll('a').forEach(link => {
+          link.target = '_blank';
+          link.rel = 'noopener';
+          // Fix any URLs with extra spaces
+          link.href = link.href.trim();
+        });
+        chatMessages.appendChild(msg);
+        scrollToBottom();
+      }
+      function scrollToBottom() {
+        if (chatMessages) {
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+      }
+      function getBotResponse(input) {
+        const has = (keywords) => keywords.some(kw => input.includes(kw));
+        // ===================== GREETINGS =====================
+        if (has(['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'])) {
+          return `Hello! 👋 I'm your Spirit Assistant. How can I help you today?
+Ask me about our wines, whiskeys, brandies, partners, or how to visit.`;
+        }
+        // ===================== GOODBYE =====================
+        if (has(['bye', 'goodbye', 'see you', 'thanks', 'thank you'])) {
+          return `You're very welcome! 🥂 If you have any more questions about our spirits, partners, or how to schedule a visit, feel free to ask. Have a wonderful day!`;
+        }
+        // ===================== COMPANY INFO =====================
+        if (has(['about', 'company', 'us', 'who are you', 'what is', 'united spirits'])) {
+          return `**United Spirits** is a premium spirits curator headquartered in **Hong Kong**, with production facilities in **mainland China**. We source, produce, and distribute award-winning wines, whiskeys, and brandies globally. Our partners include Louis XIII, Baron Philippe de Rothschild, and MW Wines Spain.`;
+        }
+        // ===================== BUSINESS MODEL & SUPPLY CHAIN =====================
+        if (has(['supply', 'chain', 'china', 'hong kong', 'factory', 'production', 'business model', 'how do you work', 'platform'])) {
+          return `We leverage **Hong Kong** as a global trade platform and **China's complete supply chain** for end-to-end oversight. This allows fast turnaround, custom bottling, co-branding, private label, and ISO-certified quality. Products are distributed worldwide from HK.`;
+        }
+        // ===================== PRODUCTS =====================
+        if (has(['product', 'products', 'bottle', 'wine', 'whiskey', 'brandy', 'spirits', 'collection'])) {
+          return `Our featured products:
+- **Honney Conti XO Royal**: Luxurious cognac, perfect for gifting
+- **Caribbean Blaze Bourbon 18**: Aged 18 years, rich oak & caramel
+- **Anderra Reserva Cabernet Sauvignon Blanc 2023**: Rare white Cabernet
+- **Corazón de Lolita**: Vibrant red wine with berry notes
+- **Sunny Land Single Malt S25**: 25-year-old Scotch, smoky & complex
+- **Planet1**: Premium RTD cocktail
+- **Caribbean Blaze Bourbon 18 Box**: Collector's edition
+- **Honney Conti VSOP**: Smooth, fruity, and colorful`;
+        }
+        // ===================== BRAND PARTNERS =====================
+        if (has(['partner', 'partners', 'collaborate', 'work with', 'groupe', 'louis xiii', 'rothschild', 'apwg', 'eurovins'])) {
+          return `We partner with world-class producers:
+- **Louis XIII**
+- **Baron Philippe de Rothschild**
+- **Groupe Bernard Lucien Bernard**
+- **Bernard Mayet**
+- **Wickham Estate**
+- **Kingston Estate**
+- **Vinous Australis**
+- **U.C.I.**
+- **Grand Cru Classé en 1855**
+- **MW Wines Spain**
+- **Australian Premium Wine Group (APWG)**
+- **Eurovins**
+- **T. Wines**`;
+        }
+        // ===================== EVENTS & VISITS =====================
+        if (has(['event', 'visit', 'tasting', 'tour', 'experience', 'private', 'diplomatic'])) {
+          return `We host private tastings, VIP events, and facility tours in Hong Kong and China. We also organize brand collaborations and diplomatic visits. DM us on WhatsApp to schedule an exclusive experience.`;
+        }
+        // ===================== CONTACT & SOCIALS =====================
+        if (has(['contact', 'whatsapp', 'phone', 'email', 'message', 'social', 'instagram', 'tiktok'])) {
+          return `Get in touch:
+- **WhatsApp**: [chat with us](https://wa.me/85269346630)
+- **Instagram**: [@united_spiritshk](https://www.instagram.com/united_spiritshk/)
+- **TikTok**: [@unitedspiritshk](https://www.tiktok.com/@unitedspiritshk)
+- **X (Twitter)**: [@unitedspiritshk](https://x.com/unitedspiritshk)
+- **Facebook**: [United Spirits HK](https://www.facebook.com/profile.php?id=61579254602509)`;
+        }
+        // ===================== LOCATION =====================
+        if (has(['location', 'where', 'office', 'hq', 'map', 'address'])) {
+          return `We are headquartered in **Hong Kong**, a global hub for trade and finance. Our production facilities are located in **mainland China**, leveraging its world-class supply chain.`;
+        }
+        // ===================== DEFAULT RESPONSE =====================
+        return `I'm not sure. Try asking about our **products**, **partners**, **supply chain**, **events**, or **contact info**.`;
+      }
+      // Initial scroll
+      if (chatMessages) {
+        scrollToBottom();
+      }
+      // ===================== LIGHTBOX SCRIPT =====================
+      // Lightbox functionality for product images
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeLightbox = document.getElementById('close-lightbox');
+      // Add click event to all product images
+      if (lightbox && lightboxImg) {
+        document.querySelectorAll('.card img, .reveal img').forEach(img => {
+          img.classList.add('cursor-pointer');
+          img.addEventListener('click', () => {
+            // Get the image source
+            lightboxImg.src = img.src;
+            // Set alt text
+            lightboxImg.alt = img.alt || 'Product Image';
+            // Show the lightbox
+            lightbox.classList.remove('hidden');
+            // Prevent scrolling on the body
+            document.body.style.overflow = 'hidden';
+          });
+        });
+        // Close the lightbox when clicking the X button
+        if (closeLightbox) {
+          closeLightbox.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+          });
+        }
+        // Close the lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+          }
+        });
+        // Close the lightbox with the Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Re-enable scrolling
+          }
+        });
+      }
+      // Fix logo visibility during load
+      const logo = document.querySelector('header img');
+      if (logo) {
+        logo.style.visibility = 'visible';
+      }
+      // Show body content after critical resources load
+      setTimeout(() => {
+        document.querySelectorAll('*').forEach(el => {
+          el.style.visibility = 'visible';
+        });
+      }, 50);
     });
   </script>
 </body>
 </html>
+
+
+
+
