@@ -1,11 +1,11 @@
-﻿<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
 <!-- Homepage -->
 <url>
   <loc>https://www.unitedspiritshk.com</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
 </url>
@@ -23,73 +23,73 @@
 <!-- Core Web Pages -->
 <url>
   <loc>https://www.unitedspiritshk.com/collections/wines</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/collections/brandy</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/collections/whiskey</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/events</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/about</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/contact</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2024-10-25T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/services/basic.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/services/partner.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/services/premium.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/services/byob.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/products/royal-honney-conti-mixologist-spirits.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.unitedspiritshk.com/products/royal-honney-conti-soda-water.html</loc>
-  <lastmod>2026-04-27T00:00:00+00:00</lastmod>
+  <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
@@ -188,4 +188,3 @@
 </url>
 
 </urlset>
-
