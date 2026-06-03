@@ -1,0 +1,72 @@
+<section id="supplier" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      <div class="lg:order-2">
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Partner as a <span class="accent-text">Supplier</span></h2>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Scale your winery or distillery internationally. We provide the bridge to high-growth markets and handle the complexities of compliance and export.
+        </p>
+        
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+             Full customs and bonded management
+          </li>
+          <li class="flex items-center gap-3">
+             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+             Regional brand adaptation and design
+          </li>
+          <li class="flex items-center gap-3">
+             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
+             Direct path to Tier-1 distributors
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:order-1 bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100">
+        <form id="supplierForm" class="space-y-6">
+          <div class="space-y-2">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Winery / Distillery Name</label>
+            <input type="text" required id="sup-name" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Country</label>
+              <input type="text" required id="sup-country" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email Address</label>
+              <input type="email" required id="sup-email" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Product Type</label>
+              <select id="sup-product" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
+                <option>Wine</option>
+                <option>Whiskey</option>
+                <option>Brandy/Cognac</option>
+                <option>Other Spirits</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Annual Capacity</label>
+              <input type="text" required id="sup-capacity" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all" placeholder="e.g. 50k Liters">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Certifications (e.g. Organic, ISO)</label>
+            <input type="text" id="sup-certs" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
+          </div>
+
+          <button type="submit" class="w-full btn btn-purple bg-pink-600 hover:bg-pink-700 py-5 text-lg justify-center mt-4 border-none">
+            Become a Supplier
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

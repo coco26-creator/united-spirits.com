@@ -1,0 +1,82 @@
+<section id="distributor" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Become a <span class="accent-text">Distributor</span></h2>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Join our elite network of Tier-1 partners. We provide the portfolio, logistics, and data; you provide the local market excellence.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="text-purple-600 font-bold text-xs">1</span>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Portfolio Access</h4>
+              <p class="text-gray-500 text-sm">Exclusive rights to award-winning global spirits.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="text-purple-600 font-bold text-xs">2</span>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Logistics Support</h4>
+              <p class="text-gray-500 text-sm">End-to-end customs and shipment handling.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
+              <span class="text-purple-600 font-bold text-xs">3</span>
+            </div>
+            <div>
+              <h4 class="font-bold mb-1">Market Intel</h4>
+              <p class="text-gray-500 text-sm">Regular insights on consumer trends and pricing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100">
+        <form id="distributorForm" class="space-y-6">
+          <div class="space-y-2">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Company Name</label>
+            <input type="text" required id="dist-company" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Country/Region</label>
+              <input type="text" required id="dist-region" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email Address</label>
+              <input type="email" required id="dist-email" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Primary Channels</label>
+              <select id="dist-channels" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
+                <option>Retail/Supermarket</option>
+                <option>HoReCa (Hotels/Bars)</option>
+                <option>E-commerce</option>
+                <option>Multi-Channel</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Annual Volume (Cases)</label>
+              <input type="text" required id="dist-volume" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all" placeholder="e.g. 5,000+">
+            </div>
+          </div>
+
+          <button type="submit" class="w-full btn btn-purple py-5 text-lg justify-center mt-4">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
