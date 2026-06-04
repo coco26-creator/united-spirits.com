@@ -1,61 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-<url>
-<loc>https://www.unitedspiritshk.com/</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/news.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/services/basic.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/services/partner.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/services/premium.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/services/byob.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/products/royal-honney-conti-mixologist-spirits.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://www.unitedspiritshk.com/products/royal-honney-conti-soda-water.html</loc>
-<lastmod>2026-05-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.unitedspiritshk.com/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/products/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/private-label/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/distribution/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/suppliers/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/case-studies/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/insights/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/contact/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/assets/lead-magnet/market-entry-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/africa-distribution-opportunities.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/alcohol-compliance-requirements.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/alcohol-distribution-opportunities-in-africa.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/beverage-market-outlook-2026.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/beverage-trade-regulations-explained.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/building-international-beverage-brands.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/china-alcohol-import-trends.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/choosing-the-right-beverage-distribution-partner.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/cost-breakdown-of-private-label-alcohol.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/distribution-network-best-practices.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/emerging-spirits-categories.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/exporting-wine-to-africa.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/global-alcohol-industry-trends.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/how-to-find-alcohol-distributors-in-asia.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/how-to-launch-a-private-label-wine-brand.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/importing-alcohol-into-china.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/market-entry-strategies-for-wine-brands.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/packaging-requirements-for-beverage-brands.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/premium-liquor-consumer-trends.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/premium-wine-categories.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/private-label-business-model.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/private-label-spirits-complete-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog/whisky-market-trends.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/blog.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/news.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/services/basic.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/services/partner.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/services/premium.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unitedspiritshk.com/services/byob.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
