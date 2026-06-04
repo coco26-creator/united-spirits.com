@@ -1,57 +1,16 @@
-<section id="lead-magnet" class="section bg-gray-900 border-t border-white/5 relative overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 blur-[120px] rounded-full"></div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">
-          Free <span class="accent-text">Market Entry</span> Guide
-        </h2>
-        <p class="text-xl text-gray-400 mb-10 leading-relaxed">
-          Navigate the complexities of the Asia and Africa alcohol markets. Download our 2024 guide covering regulatory frameworks, distribution trends, and consumer insights.
-        </p>
-        
-        <ul class="space-y-4 mb-12">
-          <li class="flex items-center gap-3 text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            China Import Duty Breakdown (2024 Updates)
-          </li>
-          <li class="flex items-center gap-3 text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Emerging Consumer Profiles in ASEAN
-          </li>
-          <li class="flex items-center gap-3 text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Africa Distribution Hub Strategy
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-[3rem] p-12">
-        <form id="leadMagnetForm" class="space-y-6">
-          <div class="space-y-2">
-            <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
-            <input 
-              type="email" 
-              required 
-              id="magnet-email"
-              class="w-full bg-white/5 border border-white/10 focus:border-purple-500 rounded-2xl px-6 py-4 text-white outline-none transition-all"
-              placeholder="work@company.com"
-            >
-          </div>
-          <button 
-            type="submit" 
-            class="w-full btn btn-purple py-5 text-lg justify-center shadow-2xl shadow-purple-900/40"
-          >
-            Get My Free Guide
-          </button>
-          <p class="text-center text-xs text-gray-500 mt-4">
-            You'll receive the PDF guide via email. No spam, just market data.
-          </p>
-        </form>
-      </div>
+<section id="lead-magnet" class="section bg-gray-900 text-white">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-center">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-widest text-pink-300">Lead magnet</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl">Free Market Entry Guide</h2>
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-200">Get practical insights for alcohol market entry across Asia and Africa, including distributor readiness, import considerations, private label positioning, and supply chain planning.</p>
+      <a href="assets/lead-magnet/market-entry-guide.pdf" download class="mt-8 inline-flex text-pink-200 underline brochure-download" data-event="BrochureDownloadClick">Download the guide directly</a>
     </div>
+    <form class="lead-form rounded-3xl bg-white p-8 text-gray-900 shadow-2xl" data-klaviyo-list="Market Entry Guide Leads" data-klaviyo-tags="market-entry-guide,lead-magnet" data-gtm-event="LeadMagnetSubmit" data-download="assets/lead-magnet/market-entry-guide.pdf">
+      <label for="lead-email" class="block text-sm font-semibold text-gray-700">Business email</label>
+      <input id="lead-email" name="email" type="email" required placeholder="you@company.com" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-200" />
+      <button type="submit" class="btn btn-purple mt-5 w-full justify-center">Send Me the Guide</button>
+      <p class="form-status mt-4 text-sm text-gray-600" aria-live="polite">You will be tagged for the Market Entry Guide Leads list.</p>
+    </form>
   </div>
 </section>

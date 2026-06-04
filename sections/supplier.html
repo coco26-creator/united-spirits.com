@@ -1,72 +1,19 @@
-<section id="supplier" class="section bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      <div class="lg:order-2">
-        <h2 class="text-4xl md:text-5xl font-serif mb-6">Partner as a <span class="accent-text">Supplier</span></h2>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-          Scale your winery or distillery internationally. We provide the bridge to high-growth markets and handle the complexities of compliance and export.
-        </p>
-        
-        <ul class="space-y-4">
-          <li class="flex items-center gap-3">
-             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
-             Full customs and bonded management
-          </li>
-          <li class="flex items-center gap-3">
-             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
-             Regional brand adaptation and design
-          </li>
-          <li class="flex items-center gap-3">
-             <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
-             Direct path to Tier-1 distributors
-          </li>
-        </ul>
-      </div>
-
-      <div class="lg:order-1 bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100">
-        <form id="supplierForm" class="space-y-6">
-          <div class="space-y-2">
-            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Winery / Distillery Name</label>
-            <input type="text" required id="sup-name" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
-          </div>
-          
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Country</label>
-              <input type="text" required id="sup-country" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
-            </div>
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email Address</label>
-              <input type="email" required id="sup-email" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Product Type</label>
-              <select id="sup-product" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
-                <option>Wine</option>
-                <option>Whiskey</option>
-                <option>Brandy/Cognac</option>
-                <option>Other Spirits</option>
-              </select>
-            </div>
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Annual Capacity</label>
-              <input type="text" required id="sup-capacity" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all" placeholder="e.g. 50k Liters">
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Certifications (e.g. Organic, ISO)</label>
-            <input type="text" id="sup-certs" class="w-full bg-gray-50 border border-gray-100 focus:border-pink-500 rounded-2xl px-6 py-4 outline-none transition-all">
-          </div>
-
-          <button type="submit" class="w-full btn btn-purple bg-pink-600 hover:bg-pink-700 py-5 text-lg justify-center mt-4 border-none">
-            Become a Supplier
-          </button>
-        </form>
-      </div>
+<section id="supplier" class="section bg-gray-50">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-start">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-widest text-pink-500">Supplier onboarding</p>
+      <h2 class="mt-3 font-serif text-4xl text-gray-900 sm:text-5xl">List your winery or distillery</h2>
+      <p class="mt-5 text-lg leading-8 text-gray-600">Share your production capabilities and certifications so we can evaluate sourcing, distribution, or private label opportunities.</p>
     </div>
+    <form class="lead-form card grid gap-5 p-8" data-klaviyo-list="Supplier Leads" data-klaviyo-tags="supplier" data-gtm-event="SupplierFormSubmit">
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-name">Winery / Distillery Name</label><input id="supplier-name" name="winery_distillery_name" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-country">Country</label><input id="supplier-country" name="country" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-product">Product Type</label><input id="supplier-product" name="product_type" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="Wine, whisky, brandy, RTD..." /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-capacity">Production Capacity</label><input id="supplier-capacity" name="production_capacity" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-certifications">Certifications</label><textarea id="supplier-certifications" name="certifications" required rows="3" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="ISO, HACCP, organic, export licenses..."></textarea></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-email">Email</label><input id="supplier-email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <button type="submit" class="btn btn-purple justify-center">Submit Supplier Profile</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Supplier Leads with tag supplier.</p>
+    </form>
   </div>
 </section>

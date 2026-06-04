@@ -1,82 +1,18 @@
-<section id="distributor" class="section bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-serif mb-6">Become a <span class="accent-text">Distributor</span></h2>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-          Join our elite network of Tier-1 partners. We provide the portfolio, logistics, and data; you provide the local market excellence.
-        </p>
-        
-        <div class="space-y-6">
-          <div class="flex items-start gap-4">
-            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-purple-600 font-bold text-xs">1</span>
-            </div>
-            <div>
-              <h4 class="font-bold mb-1">Portfolio Access</h4>
-              <p class="text-gray-500 text-sm">Exclusive rights to award-winning global spirits.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-purple-600 font-bold text-xs">2</span>
-            </div>
-            <div>
-              <h4 class="font-bold mb-1">Logistics Support</h4>
-              <p class="text-gray-500 text-sm">End-to-end customs and shipment handling.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-purple-600 font-bold text-xs">3</span>
-            </div>
-            <div>
-              <h4 class="font-bold mb-1">Market Intel</h4>
-              <p class="text-gray-500 text-sm">Regular insights on consumer trends and pricing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100">
-        <form id="distributorForm" class="space-y-6">
-          <div class="space-y-2">
-            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Company Name</label>
-            <input type="text" required id="dist-company" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
-          </div>
-          
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Country/Region</label>
-              <input type="text" required id="dist-region" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
-            </div>
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email Address</label>
-              <input type="email" required id="dist-email" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Primary Channels</label>
-              <select id="dist-channels" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all">
-                <option>Retail/Supermarket</option>
-                <option>HoReCa (Hotels/Bars)</option>
-                <option>E-commerce</option>
-                <option>Multi-Channel</option>
-              </select>
-            </div>
-            <div class="space-y-2">
-              <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Annual Volume (Cases)</label>
-              <input type="text" required id="dist-volume" class="w-full bg-gray-50 border border-gray-100 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-all" placeholder="e.g. 5,000+">
-            </div>
-          </div>
-
-          <button type="submit" class="w-full btn btn-purple py-5 text-lg justify-center mt-4">
-            Submit Application
-          </button>
-        </form>
-      </div>
+<section id="distributor" class="section bg-white">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-start">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-widest text-pink-500">Distributor funnel</p>
+      <h2 class="mt-3 font-serif text-4xl text-gray-900 sm:text-5xl">Become a distributor partner</h2>
+      <p class="mt-5 text-lg leading-8 text-gray-600">Tell us where you operate, which channels you serve, and your expected case volume so our team can qualify fit and follow up quickly.</p>
     </div>
+    <form class="lead-form card grid gap-5 p-8" data-klaviyo-list="Distributor Leads" data-klaviyo-tags="distributor" data-gtm-event="DistributorFormSubmit">
+      <div><label class="block text-sm font-semibold text-gray-700" for="distributor-company">Company Name</label><input id="distributor-company" name="company_name" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="distributor-region">Country/Region</label><input id="distributor-region" name="country_region" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="distributor-channels">Distribution Channels</label><textarea id="distributor-channels" name="distribution_channels" required rows="3" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="Retail, HoReCa, wholesale, ecommerce..."></textarea></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="distributor-volume">Annual Volume (cases)</label><input id="distributor-volume" name="annual_volume_cases" type="number" min="0" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="distributor-email">Email</label><input id="distributor-email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <button type="submit" class="btn btn-purple justify-center">Submit Distributor Application</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Distributor Leads with tag distributor.</p>
+    </form>
   </div>
 </section>

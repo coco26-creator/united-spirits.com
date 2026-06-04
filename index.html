@@ -3,95 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spirits United — Gateway to Asia & Africa’s Alcohol Markets</title>
-  <meta name="description" content="Modular B2B lead generation system for alcohol distribution, private label manufacturing, and global sourcing." />
-  
-  <!-- GTM & Klaviyo (Existing) -->
+  <meta name="robots" content="index, follow" />
+  <title>United Spirits HK — Asia & Africa Alcohol Distribution, Private Label & Sourcing</title>
+  <meta name="description" content="A conversion-focused B2B lead generation hub for alcohol distributors, private label clients, suppliers, wineries, and distilleries entering Asia and Africa markets." />
+  <link rel="canonical" href="https://www.unitedspiritshk.com/" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="google-site-verification" content="0XT66x5om3qRNe39DmIN-ji705SM_ZGWX9kHhFr9y4s" />
+
+  <!-- Klaviyo Onsite Tracking -->
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/VLPJFb/klaviyo.js?company_id=VLPJFb"></script>
+  <script type="text/javascript">
+    !function(){
+      if(!window.klaviyo){
+        window._klOnsite = window._klOnsite || [];
+        try {
+          window.klaviyo = new Proxy({}, {
+            get: function(_, method) {
+              return method === "push" ? function() {
+                var args; (args = window._klOnsite).push.apply(args, arguments);
+              } : function() {
+                var n = arguments.length, o = new Array(n);
+                for (var i = 0; i < n; i++) o[i] = arguments[i];
+                var callback = typeof o[o.length - 1] === "function" ? o.pop() : void 0;
+                var promise = new Promise(function(resolve) {
+                  window._klOnsite.push([method].concat(o, [function(result){
+                    if(callback) callback(result);
+                    resolve(result);
+                  }]));
+                });
+                return promise;
+              };
+            }
+          });
+        } catch(e) {
+          window.klaviyo = window.klaviyo || [];
+          window.klaviyo.push = function(){
+            var args; (args = window._klOnsite).push.apply(args, arguments);
+          };
+        }
+      }
+    }();
+  </script>
+
+  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T27QXCSD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics gtag.js -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CF735TPM01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CF735TPM01');
+  </script>
 
   <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spirits United Supply Chain Co., Limited.",
+    "url": "https://www.unitedspiritshk.com",
+    "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/hang.png",
+    "description": "Alcohol distribution, private label development, and supplier sourcing for Asia and Africa markets.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road",
+      "addressLocality": "Wanchai",
+      "addressRegion": "Hong Kong",
+      "addressCountry": "HK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+852 6934 6630",
+      "contactType": "sales",
+      "areaServed": ["Asia", "Africa", "HK"],
+      "availableLanguage": "English",
+      "email": "info@unitedspiritshk.com"
+    }
+  }
+  </script>
 
   <style>
-    :root {
-      --pink: #ec4899;
-      --purple: #a855f7;
-      --accent: linear-gradient(135deg, #ec4899, #a855f7);
-    }
-    body { font-family: 'Inter', sans-serif; background: white; color: #000; overflow-x: hidden; }
+    :root { --pink: #ec4899; --purple: #a855f7; --accent: linear-gradient(135deg, #ec4899, #a855f7); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #111827; }
     .font-serif { font-family: "Playfair Display", serif; }
     .accent-text { background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.2rem; border-radius: 999px; font-weight: 700; transition: all .25s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(236, 72, 153, .25); }
     .btn-purple { background: var(--accent); color: white; }
-    
-    .section { padding: 8rem 0; }
-    
-    .card {
-      border-radius: 1.5rem;
-      background: white;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .card { border-radius: 1.5rem; background: white; border: 1px solid rgba(17, 24, 39, .08); box-shadow: 0 14px 36px rgba(17, 24, 39, .06); transition: all .25s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 24px 48px rgba(17, 24, 39, .1); }
+    .section { padding: 6rem 0; }
+    input:focus, textarea:focus { border-color: var(--pink); outline: none; box-shadow: 0 0 0 3px rgba(236, 72, 153, .14); }
   </style>
 </head>
 <body>
-  <!-- GTM (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Modular Sections -->
-  <div id="header"></div>
-  <main>
-    <div id="hero"></div>
-    <div id="solutions"></div>
-    <div id="lead-magnet"></div>
-    <div id="case-studies"></div>
-    <div id="distributor"></div>
-    <div id="supplier"></div>
-    <div id="testimonials"></div>
-    <div id="insights"></div>
-  </main>
-  <div id="footer"></div>
-
-  <!-- Component Loader -->
-  <script src="assets/js/component-loader.js"></script>
-  <!-- Tracking & Funnel Engine -->
-  <script src="assets/js/tracking-engine.js"></script>
+  <main id="section-root" aria-live="polite"></main>
 
   <script>
-    // Reveal Observer setup
-    window.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
+    const sectionManifest = [
+      'hero',
+      'solutions',
+      'lead-magnet',
+      'case-studies',
+      'distributor',
+      'supplier',
+      'testimonials',
+      'insights',
+      'footer'
+    ];
+
+    const pushGtmEvent = (eventName, payload = {}) => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: eventName, ...payload });
+    };
+
+    const trackKlaviyoLead = (form, formData) => {
+      const email = formData.get('email');
+      const list = form.dataset.klaviyoList;
+      const tags = (form.dataset.klaviyoTags || '').split(',').map((tag) => tag.trim()).filter(Boolean);
+      const properties = Object.fromEntries(formData.entries());
+      const profile = { email, $email: email, list, tags, ...properties };
+      const eventPayload = { list, tags, properties };
+
+      if (window.klaviyo) {
+        if (typeof window.klaviyo.identify === 'function') window.klaviyo.identify(profile);
+        if (typeof window.klaviyo.track === 'function') window.klaviyo.track('Lead Captured', eventPayload);
+        if (typeof window.klaviyo.push === 'function') {
+          window.klaviyo.push(['identify', profile]);
+          window.klaviyo.push(['track', 'Lead Captured', eventPayload]);
         }
+      }
+
+      document.dispatchEvent(new CustomEvent('UnitedSpiritsLeadCaptured', { detail: eventPayload }));
+    };
+
+    const bindConversionHooks = () => {
+      document.querySelectorAll('.lead-form').forEach((form) => {
+        if (form.dataset.bound === 'true') return;
+        form.dataset.bound = 'true';
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const formData = new FormData(form);
+          const gtmEvent = form.dataset.gtmEvent;
+          trackKlaviyoLead(form, formData);
+          if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags });
+          const status = form.querySelector('.form-status');
+          if (status) status.textContent = 'Thanks — your details have been captured and our team will follow up.';
+          const downloadUrl = form.dataset.download;
+          if (downloadUrl) window.open(downloadUrl, '_blank', 'noopener');
+          form.reset();
+        });
       });
-    }, { threshold: 0.1 });
+
+      document.querySelectorAll('.brochure-download').forEach((link) => {
+        if (link.dataset.bound === 'true') return;
+        link.dataset.bound = 'true';
+        link.addEventListener('click', () => pushGtmEvent(link.dataset.event || 'BrochureDownloadClick', { href: link.getAttribute('href') }));
+      });
+    };
+
+    const sectionErrorMarkup = (section, message) => `
+      <section class="section bg-white" data-section-error="${section}">
+        <div class="mx-auto max-w-3xl px-6 text-center">
+          <h2 class="font-serif text-3xl text-gray-900">United Spirits HK</h2>
+          <p class="mt-4 text-gray-600">The ${section} section could not be loaded. Please refresh the page or contact info@unitedspiritshk.com.</p>
+          <p class="mt-2 text-xs text-gray-400">${message}</p>
+        </div>
+      </section>`;
+
+    const loadSection = async (section) => {
+      const sectionUrl = new URL(`sections/${section}.html`, window.location.href);
+      const response = await fetch(sectionUrl.href, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status} for ${sectionUrl.pathname}`);
+      return response.text();
+    };
+
+    const loadSections = async () => {
+      const root = document.getElementById('section-root');
+      const fragments = await Promise.all(sectionManifest.map(async (section) => {
+        try {
+          return await loadSection(section);
+        } catch (error) {
+          console.error(`Unable to load ${section}.html`, error);
+          return sectionErrorMarkup(section, error.message);
+        }
+      }));
+      root.innerHTML = fragments.join('\n');
+      bindConversionHooks();
+    };
+
+    document.addEventListener('DOMContentLoaded', loadSections);
+  </script>
+
+  <!-- Sirius Site SDK (with failsafe) -->
+  <script type="text/javascript">
+  (function(w, d, n, a, j, s) {
+    w[n] = w[n] || function() { return (w[n].a = w[n].a || []).push(arguments); };
+    j = d.createElement('script');
+    j.async = true;
+    j.src = 'https://sirius-it-site.lx.netease.com/site-sdk.js';
+    j.onload = function() {
+      setTimeout(() => {
+        try {
+          if (typeof __siteSDK__ !== 'undefined' && __siteSDK__.setDefaultConfig) {
+            __siteSDK__.setDefaultConfig({ outerKey: 'key71c56c8bcccf4f1fb596d458b6e6452e' });
+            __siteSDK__.init();
+          }
+        } catch (err) { console.error('Error initializing Sirius SDK:', err); }
+      }, 500);
+    };
+    j.onerror = function() { console.warn('Sirius SDK failed to load.'); };
+    s = d.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(j, s);
+  })(window, document, '__siteSDK__');
   </script>
 </body>
 </html>
