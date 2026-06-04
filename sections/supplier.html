@@ -1,0 +1,19 @@
+<section id="supplier" class="section bg-gray-50">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-start">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-widest text-pink-500">Supplier onboarding</p>
+      <h2 class="mt-3 font-serif text-4xl text-gray-900 sm:text-5xl">List your winery or distillery</h2>
+      <p class="mt-5 text-lg leading-8 text-gray-600">Share your production capabilities and certifications so we can evaluate sourcing, distribution, or private label opportunities.</p>
+    </div>
+    <form class="lead-form card grid gap-5 p-8" data-klaviyo-list="Supplier Leads" data-klaviyo-tags="supplier" data-gtm-event="SupplierFormSubmit" data-klaviyo-flow="Supplier Application" data-lead-score="20" data-pipeline-stage="Qualified Lead">
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-name">Winery / Distillery Name</label><input id="supplier-name" name="winery_distillery_name" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-country">Country</label><input id="supplier-country" name="country" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-product">Product Type</label><input id="supplier-product" name="product_type" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="Wine, whisky, brandy, RTD..." /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-capacity">Production Capacity</label><input id="supplier-capacity" name="production_capacity" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-certifications">Certifications</label><textarea id="supplier-certifications" name="certifications" required rows="3" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="ISO, HACCP, organic, export licenses..."></textarea></div>
+      <div><label class="block text-sm font-semibold text-gray-700" for="supplier-email">Email</label><input id="supplier-email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <button type="submit" class="btn btn-purple justify-center">Submit Supplier Profile</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Supplier Leads with tag supplier.</p>
+    </form>
+  </div>
+</section>
