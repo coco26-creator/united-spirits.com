@@ -4,17 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <title>United Spirits HK | Global Wine &amp; Spirits Distribution, Private Label &amp; Sourcing</title>
-  <meta name="description" content="United Spirits HK helps distributors, retailers, and beverage brands source premium wines and spirits, develop private-label products, and expand into Asia and Africa." />
-  <meta name="keywords" content="alcohol distributor Asia, wine distributor China, spirits distribution Africa, beverage distribution partner, global alcohol distribution, private label spirits, private label wine supplier, custom alcohol manufacturing, beverage brand development, wine sourcing company, spirits sourcing partner, alcohol import export company, beverage sourcing solutions" />
+  <title>United Spirits HK — Asia & Africa Alcohol Distribution, Private Label & Sourcing</title>
+  <meta name="description" content="A conversion-focused B2B lead generation hub for alcohol distributors, private label clients, suppliers, wineries, and distilleries entering Asia and Africa markets." />
   <link rel="canonical" href="https://www.unitedspiritshk.com/" />
   <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="United Spirits HK" />
-  <meta property="og:description" content="Global Distribution &amp; Private Label Solutions" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.unitedspiritshk.com/" />
-  <meta property="og:image" content="https://www.unitedspiritshk.com/united-spirits-site/assets/img/hang.png" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -90,10 +83,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "United Spirits HK",
+    "name": "Spirits United Supply Chain Co., Limited.",
     "url": "https://www.unitedspiritshk.com",
     "logo": "https://www.unitedspiritshk.com/united-spirits-site/assets/img/hang.png",
-    "description": "Global wine and spirits distribution, private label development, beverage sourcing, and alcohol import-export support for Asia and Africa markets.",
+    "description": "Alcohol distribution, private label development, and supplier sourcing for Asia and Africa markets.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Room 1002, 10/F, Easey Commercial Building, 253-261 Hennessy Road",
@@ -139,9 +132,6 @@
       'hero',
       'solutions',
       'lead-magnet',
-      'global-reach',
-      'why-us',
-      'downloads',
       'case-studies',
       'distributor',
       'supplier',
@@ -160,11 +150,8 @@
       const list = form.dataset.klaviyoList;
       const tags = (form.dataset.klaviyoTags || '').split(',').map((tag) => tag.trim()).filter(Boolean);
       const properties = Object.fromEntries(formData.entries());
-      const flow = form.dataset.klaviyoFlow;
-      const leadScore = Number(form.dataset.leadScore || 0);
-      const pipelineStage = form.dataset.pipelineStage || 'New Lead';
-      const profile = { email, $email: email, list, tags, flow, lead_score: leadScore, pipeline_stage: pipelineStage, ...properties };
-      const eventPayload = { list, tags, flow, lead_score: leadScore, pipeline_stage: pipelineStage, properties };
+      const profile = { email, $email: email, list, tags, ...properties };
+      const eventPayload = { list, tags, properties };
 
       if (window.klaviyo) {
         if (typeof window.klaviyo.identify === 'function') window.klaviyo.identify(profile);
@@ -187,7 +174,7 @@
           const formData = new FormData(form);
           const gtmEvent = form.dataset.gtmEvent;
           trackKlaviyoLead(form, formData);
-          if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags, lead_score: Number(form.dataset.leadScore || 0), flow: form.dataset.klaviyoFlow });
+          if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags });
           const status = form.querySelector('.form-status');
           if (status) status.textContent = 'Thanks — your details have been captured and our team will follow up.';
           const downloadUrl = form.dataset.download;
@@ -196,14 +183,10 @@
         });
       });
 
-      document.querySelectorAll('a[data-event], button[data-event]').forEach((element) => {
-        if (element.dataset.bound === 'true') return;
-        element.dataset.bound = 'true';
-        element.addEventListener('click', () => {
-          const eventName = element.dataset.event || 'BrochureDownload';
-          pushGtmEvent(eventName, { href: element.getAttribute('href') || '', lead_score: Number(element.dataset.leadScore || 0) });
-          if (eventName === 'BrochureDownload') pushGtmEvent('BrochureDownloadClick', { href: element.getAttribute('href') || '' });
-        });
+      document.querySelectorAll('.brochure-download').forEach((link) => {
+        if (link.dataset.bound === 'true') return;
+        link.dataset.bound = 'true';
+        link.addEventListener('click', () => pushGtmEvent(link.dataset.event || 'BrochureDownloadClick', { href: link.getAttribute('href') }));
       });
     };
 
