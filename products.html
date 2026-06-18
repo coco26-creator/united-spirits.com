@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <title>Our Products — United Spirits HK | Premium Wines, Cognac & Spirits</title>
+  <meta name="description" content="Explore United Spirits HK's curated portfolio of premium wines, cognacs, whiskies, and RTD spirits sourced from Europe for Asia and Africa distribution." />
+  <link rel="canonical" href="https://www.unitedspiritshk.com/products.html" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="google-site-verification" content="0XT66x5om3qRNe39DmIN-ji705SM_ZGWX9kHhFr9y4s" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T27QXCSD');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+
+  <style>
+    :root { --pink: #ec4899; --purple: #a855f7; --accent: linear-gradient(135deg, #ec4899, #a855f7); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #111827; }
+    .font-serif { font-family: "Playfair Display", serif; }
+    .accent-text { background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.75rem; border-radius: 999px; font-weight: 700; transition: all .25s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(236,72,153,.25); }
+    .btn-purple { background: var(--accent); color: white; }
+    .btn-outline { border: 2px solid #e5e7eb; color: #374151; background: white; }
+    .btn-outline:hover { border-color: var(--pink); color: #ec4899; box-shadow: 0 10px 24px rgba(236,72,153,.15); }
+
+    /* Header */
+    header.scrolled { background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+    /* Product card */
+    .product-card { border-radius: 1.5rem; background: white; border: 1px solid rgba(17,24,39,.08); box-shadow: 0 8px 24px rgba(17,24,39,.05); transition: all .3s cubic-bezier(0.4,0,0.2,1); overflow: hidden; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(17,24,39,.12); }
+    .product-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .4s ease; }
+    .product-card:hover img { transform: scale(1.05); }
+
+    /* Filter pills */
+    .filter-pill { display: inline-flex; align-items: center; padding: .5rem 1.25rem; border-radius: 999px; font-size: .85rem; font-weight: 600; cursor: pointer; transition: all .2s ease; border: 2px solid #e5e7eb; background: white; color: #6b7280; }
+    .filter-pill:hover, .filter-pill.active { background: var(--accent); color: white; border-color: transparent; box-shadow: 0 4px 14px rgba(168,85,247,.3); }
+
+    /* Video section */
+    .video-wrapper { border-radius: 2rem; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,.2); }
+    video { display: block; width: 100%; }
+
+    /* Category badge */
+    .category-badge { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .25rem .75rem; border-radius: 999px; display: inline-block; }
+    .badge-wine { background: #fdf2f8; color: #9d174d; }
+    .badge-cognac { background: #fffbeb; color: #92400e; }
+    .badge-whisky { background: #f0fdf4; color: #14532d; }
+    .badge-rtd { background: #eff6ff; color: #1e40af; }
+
+    /* Hero gradient */
+    .hero-bg { background: linear-gradient(160deg, #1a0533 0%, #2d1b4e 40%, #1f0a2e 100%); }
+
+    /* Hidden product card */
+    .product-card[data-hidden="true"] { display: none; }
+
+    /* CTA section */
+    .cta-section { background: linear-gradient(135deg, #1a0533 0%, #2d1b4e 100%); }
+  </style>
+</head>
+<body>
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T27QXCSD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header" class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-all duration-300">
+    <a href="index.html" class="flex items-center gap-2" aria-label="United Spirits — Home">
+      <img src="assets/images/微信图片_20260403164412_266_408.png" style="height:2.5rem;width:auto;" alt="United Spirits Logo" />
+      <span class="text-white font-semibold" id="header-brand">U.S.C</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="index.html#solutions" class="text-white hover:text-pink-300 transition-colors nav-link">Solutions</a>
+      <a href="products.html" class="text-white font-bold nav-link" aria-current="page">Products</a>
+      <a href="news.html" class="text-white hover:text-pink-300 transition-colors nav-link">News & Events</a>
+      <a href="blog.html" class="text-white hover:text-pink-300 transition-colors nav-link">Insights</a>
+      <a href="index.html#distributor" class="btn btn-purple py-2 px-6 text-sm">Join Network</a>
+    </nav>
+    <button id="mobileMenuBtn" class="md:hidden p-2 text-white" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900/95 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-8">
+    <button id="mobileMenuClose" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+    <a href="index.html#solutions" class="text-white text-2xl font-serif">Solutions</a>
+    <a href="products.html" class="text-pink-400 text-2xl font-serif font-bold">Products</a>
+    <a href="news.html" class="text-white text-2xl font-serif">News & Events</a>
+    <a href="blog.html" class="text-white text-2xl font-serif">Insights</a>
+    <a href="index.html#distributor" class="btn btn-purple mt-4">Join Network</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero-bg pt-36 pb-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, #ec4899 0%, transparent 60%), radial-gradient(circle at 80% 20%, #a855f7 0%, transparent 60%);"></div>
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <span class="text-pink-400 font-bold uppercase tracking-widest text-xs mb-4 block">Our Portfolio</span>
+      <h1 class="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight">
+        Premium <span class="accent-text">Spirits</span><br>from World to Asia
+      </h1>
+      <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-10">
+        Curated wines, cognacs, whiskies and RTDs sourced from leading European producers — built for Asia & Africa distribution.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#product-grid" class="btn btn-purple">Browse All Products</a>
+        <a href="index.html#distributor" class="btn btn-outline" style="border-color:rgba(255,255,255,.3);color:white;">Become a Distributor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO SHOWCASE ============ -->
+  <section class="py-24 bg-gray-950" id="video-showcase">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="text-pink-500 font-bold uppercase tracking-widest text-xs mb-3 block">Brand Story</span>
+        <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">See Our Spirits in Action</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">A glimpse into the world of United Spirits — our products, partnerships, and passion.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Main brand video -->
+        <div class="video-wrapper">
+          <video
+            id="brand-video"
+            controls
+            preload="metadata"
+            poster="assets/images/hero 0.jpg"
+            aria-label="United Spirits brand video"
+          >
+            <source src="assets/images/U.S.C.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <!-- Side content -->
+        <div class="text-white">
+          <h3 class="text-3xl font-serif mb-6">From Producers<br><span class="accent-text">to Your Market</span></h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            We partner directly with wineries, distilleries, and cognac houses across France, Spain, Chile, and Australia — bringing their finest expressions to Asia and Africa.
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex-shrink-0 mt-0.5" style="background: var(--accent);"></span>
+              <span class="text-gray-300">Direct producer relationships — no middlemen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex-shrink-0 mt-0.5" style="background: var(--accent);"></span>
+              <span class="text-gray-300">Private label & OEM options available</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex-shrink-0 mt-0.5" style="background: var(--accent);"></span>
+              <span class="text-gray-300">30+ SKUs across wines, cognac, whisky & RTD</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex-shrink-0 mt-0.5" style="background: var(--accent);"></span>
+              <span class="text-gray-300">Bonded warehouse logistics via Qingdao FTZ</span>
+            </li>
+          </ul>
+          <a href="index.html#distributor" class="btn btn-purple">Request a Catalogue</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <section id="product-grid" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-pink-500 font-bold uppercase tracking-widest text-xs mb-3 block">Full Portfolio</span>
+        <h2 class="text-4xl md:text-5xl font-serif mb-4">Our <span class="accent-text">Collections</span></h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">Filter by category to find the right fit for your market.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-3 justify-center mb-14" role="group" aria-label="Filter products by category">
+        <button class="filter-pill active" data-filter="all" onclick="filterProducts('all', this)">All Products</button>
+        <button class="filter-pill" data-filter="wine" onclick="filterProducts('wine', this)">Wines</button>
+        <button class="filter-pill" data-filter="cognac" onclick="filterProducts('cognac', this)">Cognac & Brandy</button>
+        <button class="filter-pill" data-filter="whisky" onclick="filterProducts('whisky', this)">Whisky</button>
+        <button class="filter-pill" data-filter="rtd" onclick="filterProducts('rtd', this)">RTD</button>
+      </div>
+
+      <!-- Grid -->
+      <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+        <!-- WINES -->
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-corazon-de-lolita-front.jpg" alt="Corazón de Lolita 2020 Red Wine" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Spain</span>
+            <h3 class="font-serif text-lg mb-1">Corazón de Lolita 2020</h3>
+            <p class="text-gray-500 text-sm mb-4">Elegant Spanish red with notes of dark cherry and vanilla oak.</p>
+            <a href="products/corazon-de-lolita-2020.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-corazon-de-lolita-premium-coupage.jpg" alt="Corazón de Lolita Premium Coupage" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Spain</span>
+            <h3 class="font-serif text-lg mb-1">Corazón de Lolita Premium Coupage</h3>
+            <p class="text-gray-500 text-sm mb-4">Silky blend of Tempranillo and Garnacha with herbaceous character.</p>
+            <a href="products/corazon-de-lolita-premium-coupage.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Spain</span>
+            <h3 class="font-serif text-lg mb-1">Corazón de Lolita White Wine</h3>
+            <p class="text-gray-500 text-sm mb-4">Crisp and aromatic Spanish white with citrus and floral notes.</p>
+            <a href="products/corazon-de-lolita-white-wine.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-anderra-merlot-2023.jpg" alt="Anderra Merlot 2023" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Anderra Merlot 2023</h3>
+            <p class="text-gray-500 text-sm mb-4">Smooth Chilean merlot with plum, chocolate, and cedar nuances.</p>
+            <a href="products/anderra-merlot-2023.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-2022.jpg" alt="Anderra Reserva Cabernet Sauvignon 2022" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Anderra Reserva Cab. Sauv. 2022</h3>
+            <p class="text-gray-500 text-sm mb-4">Bold Cabernet with blackcurrant, tobacco, and structured tannins.</p>
+            <a href="products/anderra-reserva-cabernet-sauvignon-2022.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-2023.jpg" alt="Anderra Reserva Cabernet Sauvignon 2023" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Anderra Reserva Cab. Sauv. 2023</h3>
+            <p class="text-gray-500 text-sm mb-4">Current vintage — intense, fruit-forward with great cellar potential.</p>
+            <a href="products/anderra-reserva-cabernet-sauvignon-2023.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" alt="Anderra Reserva Cabernet Sauvignon Blanc 2023" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Anderra Reserva Cab. Sauv. Blanc 2023</h3>
+            <p class="text-gray-500 text-sm mb-4">Refreshing white with stone fruit and lively acidity.</p>
+            <a href="products/anderra-reserva-cabernet-sauvignon-blanc-2023.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-anderra-reserva-carmenere-2021.jpg" alt="Anderra Reserva Carménère 2021" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Anderra Reserva Carménère 2021</h3>
+            <p class="text-gray-500 text-sm mb-4">Chile's signature grape — velvety, spiced with green pepper finish.</p>
+            <a href="products/anderra-reserva-carmenere-2021.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-el-rey-cisne-2022-red.jpg" alt="El Rey Cisne 2022 Red" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · Spain</span>
+            <h3 class="font-serif text-lg mb-1">El Rey Cisne 2022 Red</h3>
+            <p class="text-gray-500 text-sm mb-4">Regal Spanish red — deep colour, structured and complex.</p>
+            <a href="products/el-rey-cisne-2022-red.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-bernard-magrez-cotes-du-rhone-2019.jpg" alt="Bernard Magrez Côtes du Rhône 2019" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · France</span>
+            <h3 class="font-serif text-lg mb-1">Bernard Magrez Côtes du Rhône 2019</h3>
+            <p class="text-gray-500 text-sm mb-4">Classic southern Rhône blend — aromatic, full-bodied and elegant.</p>
+            <a href="products/bernard-magrez-cotes-du-rhone-2019.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-bernard-magrez-le-symbole-2018.jpg" alt="Bernard Magrez Le Symbole 2018" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · France</span>
+            <h3 class="font-serif text-lg mb-1">Bernard Magrez Le Symbole 2018</h3>
+            <p class="text-gray-500 text-sm mb-4">Prestigious Bordeaux-style red — powerful and age-worthy.</p>
+            <a href="products/bernard-magrez-le-symbole-2018.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-bernard-magrez-le-symbole-2020.jpg" alt="Bernard Magrez Le Symbole 2020" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · France</span>
+            <h3 class="font-serif text-lg mb-1">Bernard Magrez Le Symbole 2020</h3>
+            <p class="text-gray-500 text-sm mb-4">2020 release — exceptional vintage with silky depth and finesse.</p>
+            <a href="products/bernard-magrez-le-symbole-2020.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="wine">
+          <div class="overflow-hidden"><img src="assets/images/products/product-chateau-cabannieux-2019.jpg" alt="Château Cabannieux 2019" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-wine mb-3">Wine · France</span>
+            <h3 class="font-serif text-lg mb-1">Château Cabannieux 2019</h3>
+            <p class="text-gray-500 text-sm mb-4">Bordeaux Graves AOC — mineral-driven with plum and cedar complexity.</p>
+            <a href="products/chateau-cabannieux-2019.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <!-- COGNAC -->
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-napoleon-vsop.png" alt="Honney Conti Napoleon VSOP" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti Napoleon VSOP</h3>
+            <p class="text-gray-500 text-sm mb-4">Rich and warming cognac with honeyed oak and dried fruit layers.</p>
+            <a href="products/honney-conti-napoleon-vsop.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-napoleon-vsop-classic.png" alt="Honney Conti Napoleon VSOP Classic" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti Napoleon VSOP Classic</h3>
+            <p class="text-gray-500 text-sm mb-4">Classic expression — smooth entry, spiced mid-palate, long finish.</p>
+            <a href="products/honney-conti-napoleon-vsop-classic.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti XO Royal</h3>
+            <p class="text-gray-500 text-sm mb-4">Premium XO expression — dark chocolate, rancio, and toasted nuts.</p>
+            <a href="products/honney-conti-xo-royal.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-xo-leather-box.jpg" alt="Honney Conti XO Leather Box" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti XO Leather Box</h3>
+            <p class="text-gray-500 text-sm mb-4">Luxury gifting edition — XO cognac in hand-crafted leather presentation box.</p>
+            <a href="products/honney-conti-xo-leather-box.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-napoleon-xo-royal.png" alt="Honney Conti Napoleon XO Royal" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti Napoleon XO Royal</h3>
+            <p class="text-gray-500 text-sm mb-4">Supreme reserve — layered complexity for the true connoisseur.</p>
+            <a href="products/honney-conti-napoleon-xo-royal.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Cognac · France</span>
+            <h3 class="font-serif text-lg mb-1">Honney Conti VSOP</h3>
+            <p class="text-gray-500 text-sm mb-4">Approachable VSOP — floral and fruity with gentle spice.</p>
+            <a href="products/honney-conti-vsop.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-bf-kingdom-be408-box.jpg" alt="BF Kingdom BE408 Box" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Brandy · France</span>
+            <h3 class="font-serif text-lg mb-1">BF Kingdom BE408 Box</h3>
+            <p class="text-gray-500 text-sm mb-4">Premium brandy gifting set — elegantly packaged for corporate gifting.</p>
+            <a href="products/bf-kingdom-be408-box.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cognac">
+          <div class="overflow-hidden"><img src="assets/images/products/product-bf-kingdom-be708-wood-box.jpg" alt="BF Kingdom BE708 Wood Box" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-cognac mb-3">Brandy · France</span>
+            <h3 class="font-serif text-lg mb-1">BF Kingdom BE708 Wood Box</h3>
+            <p class="text-gray-500 text-sm mb-4">Aged brandy in premium wooden box — a statement gift piece.</p>
+            <a href="products/bf-kingdom-be708-wood-box.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <!-- WHISKY -->
+        <div class="product-card" data-category="whisky">
+          <div class="overflow-hidden"><img src="assets/images/products/product-sunny-land-single-malt-france.jpg" alt="Sunny Land Single Malt France" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-whisky mb-3">Whisky · France</span>
+            <h3 class="font-serif text-lg mb-1">Sunny Land Single Malt France</h3>
+            <p class="text-gray-500 text-sm mb-4">French single malt — honeyed barley, light peat and vanilla.</p>
+            <a href="products/sunny-land-single-malt-france.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="whisky">
+          <div class="overflow-hidden"><img src="assets/images/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt S25" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-whisky mb-3">Whisky · France</span>
+            <h3 class="font-serif text-lg mb-1">Sunny Land Single Malt S25</h3>
+            <p class="text-gray-500 text-sm mb-4">25-year aged expression — rare, rich and extraordinarily smooth.</p>
+            <a href="products/sunny-land-single-malt-s25.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="whisky">
+          <div class="overflow-hidden"><img src="assets/images/products/product-caribbean-blaze-bourbon-46.jpg" alt="Caribbean Blaze Bourbon 46" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-whisky mb-3">Bourbon · Caribbean</span>
+            <h3 class="font-serif text-lg mb-1">Caribbean Blaze Bourbon 46°</h3>
+            <p class="text-gray-500 text-sm mb-4">Bold bourbon at 46% ABV — caramel, vanilla, and tropical spice.</p>
+            <a href="products/caribbean-blaze-bourbon-46.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="whisky">
+          <div class="overflow-hidden"><img src="assets/images/products/product-caribbean-blaze-bourbon-18-box.jpg" alt="Caribbean Blaze Bourbon 18 Box" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-whisky mb-3">Bourbon · Caribbean</span>
+            <h3 class="font-serif text-lg mb-1">Caribbean Blaze Bourbon 18 Box</h3>
+            <p class="text-gray-500 text-sm mb-4">18-year aged bourbon in luxury presentation box — collector's edition.</p>
+            <a href="products/caribbean-blaze-bourbon-18-box.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <!-- RTD -->
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-lolita-rtd-red-wine-cans.png" alt="Lolita RTD Red Wine Cans" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · Spain</span>
+            <h3 class="font-serif text-lg mb-1">Lolita RTD Red Wine Cans</h3>
+            <p class="text-gray-500 text-sm mb-4">Convenient canned Spanish red — perfect for on-the-go occasions.</p>
+            <a href="products/lolita-rtd-red-wine-cans.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-lolita-rtd-spain.jpg" alt="Lolita RTD Spain" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · Spain</span>
+            <h3 class="font-serif text-lg mb-1">Lolita RTD Spain</h3>
+            <p class="text-gray-500 text-sm mb-4">Spain origin RTD — fresh, fruity and ready to serve.</p>
+            <a href="products/lolita-rtd-spain.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-lolita-rtd-chile.jpg" alt="Lolita RTD Chile" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · Chile</span>
+            <h3 class="font-serif text-lg mb-1">Lolita RTD Chile</h3>
+            <p class="text-gray-500 text-sm mb-4">Chilean expression — light, crisp and highly accessible.</p>
+            <a href="products/lolita-rtd-chile.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-lolita-rtd-australia.jpg" alt="Lolita RTD Australia" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · Australia</span>
+            <h3 class="font-serif text-lg mb-1">Lolita RTD Australia</h3>
+            <p class="text-gray-500 text-sm mb-4">Australian shiraz-based RTD — bold berry and warm spice notes.</p>
+            <a href="products/lolita-rtd-australia.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-royal-honney-conti-mixologist-spirits.jpg" alt="Royal Honney Conti Mixologist Spirits" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · France</span>
+            <h3 class="font-serif text-lg mb-1">Royal HC Mixologist Spirits</h3>
+            <p class="text-gray-500 text-sm mb-4">Bartender-ready cognac-based spirit designed for premium cocktails.</p>
+            <a href="products/royal-honney-conti-mixologist-spirits.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="rtd">
+          <div class="overflow-hidden"><img src="assets/images/products/product-royal-honney-conti-soda-water.png" alt="Royal Honney Conti Soda Water" loading="lazy"></div>
+          <div class="p-5">
+            <span class="category-badge badge-rtd mb-3">RTD · France</span>
+            <h3 class="font-serif text-lg mb-1">Royal HC Soda Water</h3>
+            <p class="text-gray-500 text-sm mb-4">Cognac & soda pre-mix — effervescent, light and refreshing.</p>
+            <a href="products/royal-honney-conti-soda-water.html" class="text-purple-600 font-semibold text-sm hover:text-pink-500 transition-colors">View Details →</a>
+          </div>
+        </div>
+
+      </div><!-- end grid -->
+
+      <!-- No results message -->
+      <p id="no-results" class="hidden text-center text-gray-400 text-lg mt-12 py-16">No products found in this category.</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-section py-24 mx-6 rounded-[3rem] my-16 overflow-hidden relative">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 50%, #ec4899 0%, transparent 55%), radial-gradient(circle at 80% 30%, #a855f7 0%, transparent 55%);"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Ready to Partner With Us?</h2>
+      <p class="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
+        Whether you're a distributor, importer, or retailer — we have the portfolio and logistics to grow your business in Asia and Africa.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="index.html#distributor" class="btn btn-purple">Request Product Catalogue</a>
+        <a href="mailto:info@unitedspiritshk.com" class="btn" style="background:rgba(255,255,255,.1);color:white;border:2px solid rgba(255,255,255,.2);">Email Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-4">
+          <img src="assets/images/微信图片_20260403164412_266_408.png" alt="U.S.C Logo" style="height:2.5rem;width:auto;" />
+          <span class="font-serif text-xl tracking-wide">U.S.C</span>
+        </a>
+        <p class="text-gray-400 mb-6 text-sm leading-relaxed">Spirits United Supply Chain Co., Limited<br>Room 1002, 10/F, Easey Commercial Building,<br>253-261 Hennessy Road, Wanchai, Hong Kong</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-6">Navigate</h3>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition-colors">Home</a></li>
+          <li><a href="products.html" class="text-pink-400 font-semibold">Products</a></li>
+          <li><a href="news.html" class="text-gray-400 hover:text-pink-400 transition-colors">News & Events</a></li>
+          <li><a href="blog.html" class="text-gray-400 hover:text-pink-400 transition-colors">Insights</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-pink-400 transition-colors">About Us</a></li>
+          <li><a href="index.html#distributor" class="text-gray-400 hover:text-pink-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-6">Get in Touch</h3>
+        <p class="text-gray-400 mb-3"><a href="mailto:info@unitedspiritshk.com" class="hover:text-pink-400 transition-colors">info@unitedspiritshk.com</a></p>
+        <p class="text-gray-400 mb-6"><a href="tel:+85269346630" class="hover:text-pink-400 transition-colors">+852 6934 6630</a></p>
+        <div class="flex gap-4">
+          <a href="https://www.instagram.com/united_spiritshk/" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61579254602509" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/85269346630" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.7z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
+      <p>&copy; 2025 Spirits United Supply Chain Co., Limited. All rights reserved. Hong Kong</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('site-header');
+    const brand = document.getElementById('header-brand');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+        header.querySelectorAll('.text-white.nav-link').forEach(el => el.classList.replace('text-white', 'text-gray-800'));
+        brand.classList.replace('text-white', 'text-gray-900');
+      } else {
+        header.classList.remove('scrolled');
+        header.querySelectorAll('.text-gray-800.nav-link').forEach(el => el.classList.replace('text-gray-800', 'text-white'));
+        brand.classList.replace('text-gray-900', 'text-white');
+      }
+    });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    mobileMenuClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+    // Product filter
+    function filterProducts(category, btn) {
+      // Update active pill
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#products-container .product-card');
+      let visible = 0;
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.getElementById('no-results').classList.toggle('hidden', visible > 0);
+
+      // GTM tracking
+      if (window.dataLayer) window.dataLayer.push({ event: 'ProductFilterClick', filter: category });
+    }
+  </script>
+</body>
+</html>
