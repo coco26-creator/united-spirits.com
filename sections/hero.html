@@ -1,32 +1,83 @@
-<section id="hero" class="relative min-h-screen overflow-hidden bg-gray-900 text-white">
-  <div class="absolute inset-0 bg-cover bg-center opacity-35" style="background-image: url('united-spirits-site/assets/img/hero 0.jpg');"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30"></div>
+<!-- ===================== HEADER + HERO ===================== -->
+<section
+  id="hero"
+  class="relative min-h-screen overflow-hidden
+         bg-contain md:bg-cover
+         bg-center bg-no-repeat"
+  style="background-image: url('united-spirits-site/assets/img/hg.png');"
+>
 
-  <header class="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-    <a href="index.html" class="flex items-center gap-3" aria-label="United Spirits HK home">
-      <img src="united-spirits-site/assets/img/usc.png" alt="United Spirits HK" class="h-11 w-11 rounded-full object-cover" />
-      <span class="font-semibold tracking-wide">U.S.C</span>
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo flex items-center gap-2" aria-label="U.S.C — Home">
+      <img src="united-spirits-site/assets/img/微信图片_20260403164412_266_408.png"
+           class="logo-icon-img h-11 w-11 rounded-full object-cover"
+           alt="United Spirits Logo" />
+      <span class="text-white font-semibold">U.S.C</span>
     </a>
-    <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
-      <a href="about.html" class="hover:text-pink-300">About</a>
-      <a href="products.html" class="hover:text-pink-300">Products</a>
-      <a href="#solutions" class="hover:text-pink-300">Solutions</a>
-      <a href="#partners" class="hover:text-pink-300">Partners</a>
-      <a href="news.html" class="hover:text-pink-300">News & Events</a>
-      <a href="#insights" class="hover:text-pink-300">Insights</a>
-      <a href="#contact" class="hover:text-pink-300">Contact</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#collections" class="text-white hover:text-pink-300 transition-colors">Collections</a>
+      <a href="#featured" class="text-white hover:text-pink-300 transition-colors">Featured</a>
+      <a href="news.html" class="text-white hover:text-pink-300 transition-colors">News</a>
+      <a href="#contact" class="text-white hover:text-pink-300 transition-colors">Contact</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobileMenuButton"
+      class="md:hidden p-2 text-white"
+      aria-label="Toggle menu"
+    >
+      ☰
+    </button>
+
   </header>
 
-  <div class="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-7xl items-center px-6 py-20">
+  <!-- Hero Content -->
+  <div
+    class="relative max-w-7xl mx-auto px-6
+           pt-28 sm:pt-32 md:pt-44
+           w-full z-10"
+  >
     <div class="max-w-3xl">
-      <p class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-pink-100 backdrop-blur">B2B alcohol market entry</p>
-      <h1 class="font-serif text-4xl leading-tight sm:text-6xl lg:text-7xl">Your Gateway to Asia &amp; Africa’s Alcohol Markets</h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-100">United Spirits HK connects premium alcohol brands, distributors, and private label clients through market-ready distribution, tailored brand development, and resilient cross-border supply chain execution.</p>
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-        <a href="assets/lead-magnet/market-entry-guide.pdf" download class="btn btn-purple justify-center brochure-download" data-event="BrochureDownloadClick">Download Market Entry Guide</a>
-        <a href="#distributor" class="btn justify-center border border-white/40 bg-white text-gray-900 hover:bg-pink-50">Become Distributor</a>
+
+      <h1 class="text-2xl sm:text-5xl md:text-6xl font-serif leading-tight text-white mb-4">
+        Crafting <span class="accent-text">Spirits</span> of Distinction
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg text-white mb-5 md:mb-6 max-w-md">
+        FROM THE WORLD, FOR THE WORLD.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#collections" class="btn btn-purple text-white">
+          Explore Collection
+        </a>
+        <a href="#contact" class="btn bg-white text-black border-white">
+          Get in Touch
+        </a>
       </div>
+
     </div>
   </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobileMenu"
+    class="absolute top-16 right-6 bg-gray-900 rounded-lg shadow-xl z-50
+           min-w-[160px] opacity-0 translate-y-2 pointer-events-none
+           transition-all duration-300"
+  >
+    <div class="py-2 flex flex-col items-end px-4 space-y-1">
+      <a href="#collections" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Collections</a>
+      <a href="#featured" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Featured</a>
+      <a href="news.html" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">News</a>
+      <a href="#contact" class="accent-text text-sm py-1 w-full text-right hover:bg-white/10 rounded px-2">Contact</a>
+    </div>
+  </nav>
+
 </section>
