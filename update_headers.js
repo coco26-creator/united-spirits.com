@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Success Stories & Case Studies �?United Spirits</title>
-  <meta name="description" content="Explore real-world examples of how United Spirits helps brands succeed in the Asian spirits market." />
-  
-  <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+const fs = require('fs');
+const path = require('path');
 
-  <style>
-    :root {
-      --pink: #ec4899;
-      --purple: #a855f7;
-      --accent: linear-gradient(135deg, #ec4899, #a855f7);
-    }
-    body { font-family: 'Inter', sans-serif; background: white; color: #111; }
-    .font-serif { font-family: "Playfair Display", serif; }
-    .accent-text { background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .btn-purple { background: var(--accent); color: white; }
-    .case-card { border-radius: 2rem; overflow: hidden; background: white; border: 1px solid #f3f4f6; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-  </style>
-</head>
-<body>
+const targetFiles = [
+  'about.html',
+  'blog.html',
+  'case-studies.html',
+  'news.html',
+  'products.html'
+];
 
-  <!-- Header (Simplified) -->
-    <header id="site-header" class="bg-gray-900 absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-all duration-300">
+const headerReplacement = `  <header id="site-header" class="bg-gray-900 absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-all duration-300">
     <!-- Logo -->
     <a href="index.html" class="logo flex items-center gap-2" aria-label="U.S.C — Home">
       <img src="united-spirits-site/assets/img/微信图片_20260403164412_266_408.png"
@@ -52,50 +34,9 @@
     >
       ☰
     </button>
-  </header>
+  </header>`;
 
-  <!-- Hero -->
-  <section class="py-20 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-5xl md:text-7xl font-serif mb-8">Success <span class="accent-text">Stories</span></h1>
-      <p class="text-xl text-gray-600">
-        From supply chain optimization to brand management, see how we translate global quality into Asian market leadership.
-      </p>
-    </div>
-  </section>
-
-  <!-- Main Case Studies -->
-  <main class="max-w-7xl mx-auto px-6 space-y-24 pb-32">
-    
-    <!-- Case Study 1 -->
-    <section id="logistics" class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="case-card">
-        <img src="assets/images/facility-tours/2023-international-delegation-production-line.jpg" class="w-full h-[500px] object-cover" alt="Qingdao FTZ">
-      </div>
-      <div>
-        <div class="flex items-center gap-3 mb-6">
-          <span class="bg-purple-100 text-purple-600 text-xs font-bold px-3 py-1 rounded-full px-4">OPERATIONS</span>
-          <span class="text-gray-400 text-sm">2023-2024</span>
-        </div>
-        <h2 class="text-4xl font-serif mb-6 leading-tight">Qingdao FTZ Logistics Optimization: A Turnkey Solution for European Producers</h2>
-        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-          The challenge was simple but difficult: How to reduce the astronomical shipping and tax costs for medium-scale European wineries entering China. Our solution involved leveraging the Qingdao Free Trade Zone for bonded storage and custom bottling.
-        </p>
-        
-        <div class="grid grid-cols-2 gap-8 mb-10">
-          <div>
-            <p class="text-3xl font-bold text-black mb-1">35%</p>
-            <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Time Reduction</p>
-          </div>
-          <div>
-            <p class="text-3xl font-bold text-black mb-1">20%</p>
-            <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Cost Savings</p>
-          </div>
-        </div>
-        
-        <blockquote class="border-l-4 border-purple-500 pl-6 py-2 italic text-gray-700 mb-8 bg-gray-50 rounded-r-xl">
-          "United Spirits transformed our approach to Asia. What used to be a logistical nightmare is now our most efficient distribution channel."
-            <footer class="bg-gray-900 text-white py-12 mt-auto">
+const footerReplacement = `  <footer class="bg-gray-900 text-white py-12 mt-auto">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
       <!-- Company Info + Socials -->
       <div>
@@ -188,59 +129,23 @@
         &copy; 2025 Spirits United Supply Chain Co., Limited. All rights reserved. Crafted with care — Hong Kong
       </p>
     </div>
-  </footer>
-        </blockquote>
-      </div>
-    </section>
+  </footer>`;
 
-    <!-- Case Study 2 -->
-    <section id="partnership" class="grid lg:grid-cols-2 gap-16 items-center flex-row-reverse">
-       <div class="lg:order-2 case-card">
-        <img src="assets/images/diplomatic-visits/chile-ambassador-arrival.jpg" class="w-full h-[500px] object-cover" alt="Chilean Ambassador">
-      </div>
-      <div class="lg:order-1">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="bg-pink-100 text-pink-600 text-xs font-bold px-3 py-1 rounded-full px-4">BRAND MANAGEMENT</span>
-          <span class="text-gray-400 text-sm">2023</span>
-        </div>
-        <h2 class="text-4xl font-serif mb-6 leading-tight">The Chilean Connection: Diplomatic Branding & Market Penetration</h2>
-        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-          By aligning premium Chilean labels with high-level diplomatic events and cultural exchanges, we positioned our partners as the definitive choice for sophisticated Chinese consumers. This strategy bypassed traditional saturated channels and built brand authority from the top down.
-        </p>
-        
-        <div class="grid grid-cols-2 gap-8 mb-10">
-          <div>
-            <p class="text-3xl font-bold text-black mb-1">400k+</p>
-            <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Reach</p>
-          </div>
-          <div>
-            <p class="text-3xl font-bold text-black mb-1">12+</p>
-            <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">New Distros</p>
-          </div>
-        </div>
-        
-        <a href="index.html#distributor" class="btn btn-purple px-8 py-4 rounded-full font-bold inline-block">Start Your Story</a>
-      </div>
-    </section>
-
-  </main>
-
-  <section class="bg-gray-50 py-24">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-serif mb-8">Your Success is Our Mission</h2>
-      <p class="text-xl text-gray-600 mb-12">
-        Whether you are a producer or a distributor, we provide the infrastructure and expertise to thrive.
-      </p>
-      <div class="flex flex-wrap justify-center gap-6">
-         <a href="mailto:info@unitedspiritshk.com" class="btn bg-black text-white px-10 py-4 rounded-full font-bold">Email for Quote</a>
-         <a href="https://wa.me/85269346630" class="btn border border-gray-300 text-black px-10 py-4 rounded-full font-bold">WhatsApp Inquiry</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-12 text-center text-gray-400 text-sm">
-    <p>&copy; 2024 Spirits United Supply Chain Co., Limited.</p>
-  </footer>
-
-</body>
-</html>
+for (const file of targetFiles) {
+  const filePath = path.join(__dirname, file);
+  if (!fs.existsSync(filePath)) continue;
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Replace header block
+  content = content.replace(/<header[\s\S]*?<\/header>/i, headerReplacement);
+  
+  // Replace footer block
+  content = content.replace(/<footer[\s\S]*?<\/footer>/i, footerReplacement);
+  
+  // Also fix padding if the absolute header overlaps the content because it needs pt-24 at the top of the main wrap
+  // But we'll just replace the tags.
+  
+  fs.writeFileSync(filePath, content, 'utf8');
+  console.log('Updated ' + file);
+}
