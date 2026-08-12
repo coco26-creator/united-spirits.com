@@ -1,0 +1,59 @@
+{
+  "leadScoring": {
+    "downloadedGuide": 5,
+    "openedThreeEmails": 10,
+    "visitedProductPage": 15,
+    "distributorApplication": 20,
+    "supplierApplication": 20,
+    "bookedCall": 30
+  },
+  "pipelineStages": [
+    "New Lead",
+    "Engaged Lead",
+    "Qualified Lead",
+    "Meeting Scheduled",
+    "Proposal Sent",
+    "Negotiation",
+    "Closed Won",
+    "Closed Lost"
+  ],
+  "flows": [
+    {
+      "name": "Lead Magnet Download",
+      "trigger": "Downloaded Market Entry Guide",
+      "emails": [
+        { "delay": "Immediate", "subject": "Your Market Entry Guide is Ready", "cta": "Schedule a consultation" },
+        { "delay": "Day 2", "subject": "The Biggest Mistake Beverage Brands Make", "cta": "Book a call" },
+        { "delay": "Day 5", "subject": "Case Study: Successful Market Expansion", "cta": "Discuss expansion plans" },
+        { "delay": "Day 8", "subject": "Are You Planning Market Expansion This Year?", "cta": "Complete distributor form" }
+      ]
+    },
+    {
+      "name": "Distributor Application",
+      "trigger": "Distributor application submitted",
+      "emails": [
+        { "delay": "Immediate", "subject": "Thank You for Your Application" },
+        { "delay": "Day 2", "subject": "Distributor Partnership Benefits" },
+        { "delay": "Day 4", "subject": "Schedule a Partnership Discussion" }
+      ]
+    },
+    {
+      "name": "Supplier Application",
+      "trigger": "Supplier application submitted",
+      "emails": [
+        { "delay": "Immediate", "subject": "Supplier Application Received" },
+        { "delay": "Day 2", "subject": "What We Look for in Supplier Partners" },
+        { "delay": "Day 5", "subject": "Next Steps for Partnership Evaluation" }
+      ]
+    },
+    {
+      "name": "Private Label Leads",
+      "trigger": "Private label inquiry",
+      "emails": [
+        { "delay": "Immediate", "subject": "How Our Private Label Process Works" },
+        { "delay": "Day 3", "subject": "Private Label Success Story" },
+        { "delay": "Day 6", "subject": "Let's Discuss Your Brand Vision" }
+      ]
+    }
+  ]
+}
