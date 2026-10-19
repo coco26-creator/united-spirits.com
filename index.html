@@ -205,7 +205,7 @@
             try {
               const payload = Object.fromEntries(formData.entries());
               payload.type = form.dataset.leadType;
-              const response = await fetch('api/lead.php', {
+              const response = await fetch('/api/lead', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(payload),
