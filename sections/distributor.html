@@ -11,6 +11,10 @@
       <div><label class="block text-sm font-semibold text-gray-700" for="distributor-channels">Distribution Channels</label><textarea id="distributor-channels" name="distribution_channels" required rows="3" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="Retail, HoReCa, wholesale, ecommerce..."></textarea></div>
       <div><label class="block text-sm font-semibold text-gray-700" for="distributor-volume">Annual Volume (cases)</label><input id="distributor-volume" name="annual_volume_cases" type="number" min="0" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
       <div><label class="block text-sm font-semibold text-gray-700" for="distributor-email">Email</label><input id="distributor-email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+      <label class="flex items-start gap-3 text-sm text-gray-600"><input type="checkbox" name="contact_consent" value="yes" required class="mt-1" /><span>I agree that United Spirits HK may use these details to respond to my enquiry.</span></label>
+      <button type="submit" class="btn btn-purple justify-center">Submit Distributor Application</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Distributor Leads with tag distributor.</p>
       <div class="flex items-start gap-3">
         <input id="distributor-contact-consent" name="contact_consent" type="checkbox" value="yes" required class="mt-1" />
         <label for="distributor-contact-consent" class="text-sm text-gray-600">I agree that United Spirits HK may use these details to review my application, respond to this enquiry, and contact me about relevant business opportunities.</label>

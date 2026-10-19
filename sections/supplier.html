@@ -12,6 +12,10 @@
       <div><label class="block text-sm font-semibold text-gray-700" for="supplier-capacity">Production Capacity</label><input id="supplier-capacity" name="production_capacity" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
       <div><label class="block text-sm font-semibold text-gray-700" for="supplier-certifications">Certifications</label><textarea id="supplier-certifications" name="certifications" required rows="3" class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" placeholder="ISO, HACCP, organic, export licenses..."></textarea></div>
       <div><label class="block text-sm font-semibold text-gray-700" for="supplier-email">Email</label><input id="supplier-email" name="email" type="email" required class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3" /></div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+      <label class="flex items-start gap-3 text-sm text-gray-600"><input type="checkbox" name="contact_consent" value="yes" required class="mt-1" /><span>I agree that United Spirits HK may use these details to respond to my enquiry.</span></label>
+      <button type="submit" class="btn btn-purple justify-center">Submit Supplier Profile</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Supplier Leads with tag supplier.</p>
       <div class="flex items-start gap-3">
         <input id="supplier-contact-consent" name="contact_consent" type="checkbox" value="yes" required class="mt-1" />
         <label for="supplier-contact-consent" class="text-sm text-gray-600">I agree that United Spirits HK may use these details to review my profile, respond to this enquiry, and contact me about relevant business opportunities.</label>
