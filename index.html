@@ -184,17 +184,45 @@
       document.querySelectorAll('.lead-form').forEach((form) => {
         if (form.dataset.bound === 'true') return;
         form.dataset.bound = 'true';
-        form.addEventListener('submit', (event) => {
+        form.addEventListener('submit', async (event) => {
           event.preventDefault();
           const formData = new FormData(form);
-          const gtmEvent = form.dataset.gtmEvent;
-          trackKlaviyoLead(form, formData);
-          if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags, lead_score: Number(form.dataset.leadScore || 0), flow: form.dataset.klaviyoFlow });
           const status = form.querySelector('.form-status');
-          if (status) status.textContent = 'Thanks — your details have been captured and our team will follow up.';
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton ? submitButton.textContent : '';
           const downloadUrl = form.dataset.download;
-          if (downloadUrl) window.open(downloadUrl, '_blank', 'noopener');
-          form.reset();
+          if (downloadUrl) {
+            trackKlaviyoLead(form, formData);
+            const gtmEvent = form.dataset.gtmEvent;
+            if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags, lead_score: Number(form.dataset.leadScore || 0), flow: form.dataset.klaviyoFlow });
+            if (status) status.textContent = 'Thanks — your details have been captured.';
+            window.open(downloadUrl, '_blank', 'noopener');
+            form.reset();
+            return;
+          }
+
+          const payload = Object.fromEntries(formData.entries());
+          payload.type = form.dataset.leadType;
+          if (submitButton) { submitButton.disabled = true; submitButton.textContent = 'Submitting…'; }
+          if (status) status.textContent = 'Submitting your enquiry…';
+          try {
+            const response = await fetch('/api/lead', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.ok) throw new Error(result.message || 'We could not submit your enquiry. Please try again.');
+            trackKlaviyoLead(form, formData);
+            const gtmEvent = form.dataset.gtmEvent;
+            if (gtmEvent) pushGtmEvent(gtmEvent, { lead_type: payload.type, lead_score: Number(form.dataset.leadScore || 0), flow: form.dataset.klaviyoFlow });
+            if (status) status.textContent = result.message || 'Thank you. Our team will follow up.';
+            form.reset();
+          } catch (error) {
+            if (status) status.textContent = error.message || 'Submission failed. Please email info@unitedspiritshk.com.';
+          } finally {
+            if (submitButton) { submitButton.disabled = false; submitButton.textContent = originalButtonText; }
+          }
         });
       });
 
