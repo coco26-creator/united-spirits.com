@@ -15,6 +15,16 @@
       <label class="flex items-start gap-3 text-sm text-gray-600"><input type="checkbox" name="contact_consent" value="yes" required class="mt-1" /><span>I agree that United Spirits HK may use these details to respond to my enquiry.</span></label>
       <button type="submit" class="btn btn-purple justify-center">Submit Distributor Application</button>
       <p class="form-status text-sm text-gray-600" aria-live="polite">Submissions are routed to Klaviyo list: Distributor Leads with tag distributor.</p>
+      <div class="flex items-start gap-3">
+        <input id="distributor-contact-consent" name="contact_consent" type="checkbox" value="yes" required class="mt-1" />
+        <label for="distributor-contact-consent" class="text-sm text-gray-600">I agree that United Spirits HK may use these details to review my application, respond to this enquiry, and contact me about relevant business opportunities.</label>
+      </div>
+      <div aria-hidden="true" class="absolute -left-[10000px] top-auto h-px w-px overflow-hidden">
+        <label for="distributor-website">Leave this field empty</label>
+        <input id="distributor-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <button type="submit" class="btn btn-purple justify-center">Submit Distributor Application</button>
+      <p class="form-status text-sm text-gray-600" aria-live="polite">Your application will be sent to our team and recorded after successful submission.</p>
     </form>
   </div>
 </section>

@@ -1,0 +1,44 @@
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-all duration-300">
+  <!-- Logo -->
+  <a href="index.html" class="logo flex items-center gap-2" aria-label="U.S.C �?Home">
+    <img src="assets/images/微信图片_20260403164412_266_408.png"
+         class="logo-icon-img"
+         style="height: 2.5rem; width: auto; visibility: visible;"
+         alt="United Spirits Logo" />
+    <span class="text-white font-semibold">U.S.C</span>
+  </a>
+
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a href="#solutions" class="text-white hover:text-pink-300 transition-colors">Solutions</a>
+    <a href="#case-studies" class="text-white hover:text-pink-300 transition-colors">Case Studies</a>
+    <a href="blog.html" class="text-white hover:text-pink-300 transition-colors">Insights</a>
+    <a href="#distributor" class="btn btn-purple py-2 px-6 text-sm">Join Network</a>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button
+    id="mobileMenuButton"
+    class="md:hidden p-2 text-white"
+    aria-label="Toggle menu"
+  >
+    �?  </button>
+</header>
+
+<script>
+  // Quick script for mobile menu in component
+  (function() {
+    const btn = document.getElementById('mobileMenuButton');
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled', 'bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+        header.querySelectorAll('.text-white').forEach(el => el.classList.replace('text-white', 'text-black'));
+      } else {
+        header.classList.remove('scrolled', 'bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+        header.querySelectorAll('.text-black').forEach(el => el.classList.replace('text-black', 'text-white'));
+      }
+    });
+  })();
+</script>
