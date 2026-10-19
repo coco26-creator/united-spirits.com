@@ -184,13 +184,67 @@
       document.querySelectorAll('.lead-form').forEach((form) => {
         if (form.dataset.bound === 'true') return;
         form.dataset.bound = 'true';
-        form.addEventListener('submit', (event) => {
+        form.addEventListener('submit', async (event) => {
           event.preventDefault();
           const formData = new FormData(form);
           const gtmEvent = form.dataset.gtmEvent;
-          trackKlaviyoLead(form, formData);
-          if (gtmEvent) pushGtmEvent(gtmEvent, { klaviyo_list: form.dataset.klaviyoList, klaviyo_tags: form.dataset.klaviyoTags, lead_score: Number(form.dataset.leadScore || 0), flow: form.dataset.klaviyoFlow });
           const status = form.querySelector('.form-status');
+          const submitButton = form.querySelector('button[type="submit"]');
+
+          // Distributor and Supplier applications must reach the server before
+          // the UI reports success. Other legacy lead forms retain their current flow.
+          if (form.dataset.leadType) {
+            const originalButtonText = submitButton ? submitButton.textContent : '';
+            if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.setAttribute('aria-busy', 'true');
+              submitButton.textContent = 'Submitting…';
+            }
+            if (status) status.textContent = 'Submitting your enquiry securely…';
+
+            try {
+              const payload = Object.fromEntries(formData.entries());
+              payload.type = form.dataset.leadType;
+              const response = await fetch('api/lead.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload),
+                credentials: 'same-origin'
+              });
+              const result = await response.json().catch(() => ({}));
+              if (!response.ok || result.ok !== true) {
+                throw new Error(result.message || 'We could not submit your enquiry. Please try again or email info@unitedspiritshk.com.');
+              }
+
+              trackKlaviyoLead(form, formData);
+              if (gtmEvent) pushGtmEvent(gtmEvent, {
+                lead_type: form.dataset.leadType,
+                klaviyo_list: form.dataset.klaviyoList,
+                lead_score: Number(form.dataset.leadScore || 0),
+                flow: form.dataset.klaviyoFlow
+              });
+              if (status) status.textContent = result.message || 'Thank you. Your enquiry has been sent to our team.';
+              form.reset();
+            } catch (error) {
+              console.error('Lead form submission failed', error);
+              if (status) status.textContent = error.message || 'We could not submit your enquiry. Please try again or email info@unitedspiritshk.com.';
+            } finally {
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.removeAttribute('aria-busy');
+                submitButton.textContent = originalButtonText;
+              }
+            }
+            return;
+          }
+
+          trackKlaviyoLead(form, formData);
+          if (gtmEvent) pushGtmEvent(gtmEvent, {
+            klaviyo_list: form.dataset.klaviyoList,
+            klaviyo_tags: form.dataset.klaviyoTags,
+            lead_score: Number(form.dataset.leadScore || 0),
+            flow: form.dataset.klaviyoFlow
+          });
           if (status) status.textContent = 'Thanks — your details have been captured and our team will follow up.';
           const downloadUrl = form.dataset.download;
           if (downloadUrl) window.open(downloadUrl, '_blank', 'noopener');
