@@ -53,7 +53,7 @@
     .mobile-nav a { display: block; padding: 10px 0; color: #f4f0e5; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; font-size: 12px; }
     .catalogue-hero { position: relative; isolation: isolate; background: radial-gradient(circle at 78% 45%, rgba(132,91,27,.38), transparent 28%), linear-gradient(120deg, #171611, #282217 65%, #332618); color: #fffdf8; overflow: hidden; }
     .catalogue-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(14,13,10,.12), rgba(14,13,10,.1)); pointer-events: none; }
-    .hero-grid { min-height: 330px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .75fr); align-items: center; gap: clamp(24px, 5vw, 76px); padding-block: 36px; }
+    .hero-grid { min-height: 260px; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; padding-block: 42px; }
     .eyebrow { margin: 0 0 14px; color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
     h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
     .hero-copy h1 { margin: 0; max-width: 720px; font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -.035em; }
@@ -62,8 +62,7 @@
     .button-gold { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 11px 17px; background: linear-gradient(135deg, #b98a27, #e6cf8e); color: #21190b; border: 1px solid #d9b65d; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; transition: transform .2s ease, filter .2s ease; }
     .button-gold:hover { transform: translateY(-2px); filter: brightness(1.04); }
     .button-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 11px 17px; border: 1px solid rgba(231,211,154,.6); color: #fffdf8; text-decoration: none; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; }
-    .hero-product { justify-self: end; width: min(100%, 445px); height: 250px; display: grid; place-items: center; overflow: hidden; background: #d6d3ce; border: 1px solid rgba(231,211,154,.45); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
-    .hero-product img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    
     .catalogue-main { padding: 40px 0 66px; background: linear-gradient(180deg, var(--paper), #fbf9f2); }
     .catalogue-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
     .catalogue-head h2 { margin: 0; font-size: clamp(27px, 3vw, 38px); line-height: 1.1; }
@@ -122,9 +121,9 @@
       .main-nav, .header-cta { display: none; }
       .menu-toggle { display: inline-block; }
       .mobile-nav.open { display: block; }
-      .hero-grid { grid-template-columns: 1fr; gap: 24px; padding-block: 42px; }
+      .hero-grid { grid-template-columns: 1fr; padding-block: 42px; }
       .hero-copy h1 { font-size: clamp(38px, 10vw, 56px); }
-      .hero-product { justify-self: start; width: min(100%, 420px); height: 220px; }
+
       .catalogue-main { padding-top: 30px; }
       .catalogue-head { align-items: flex-start; flex-direction: column; }
       .toolbar { grid-template-columns: 1fr 1fr; }
@@ -186,9 +185,6 @@
             <a class="button-gold" href="#all-products">Browse All Products <span aria-hidden="true">↓</span></a>
             <a class="button-outline" href="../index.html#contact">Discuss Your Market</a>
           </div>
-        </div>
-        <div class="hero-product">
-          <img src="../united-spirits-site/assets/img/hg.png" alt="United Spirits HK wine and spirits bottle collection" fetchpriority="high" decoding="async" />
         </div>
       </div>
     </section>
