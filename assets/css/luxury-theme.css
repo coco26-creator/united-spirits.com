@@ -30,6 +30,12 @@ h1, h2, h3, h4, .font-serif {
 a { text-underline-offset: .22em; }
 a:not(.btn):not(.details-btn):hover { color: var(--usc-gold) !important; }
 header, nav { border-color: var(--usc-line); }
+#site-header { background: var(--usc-cream) !important; color: var(--usc-ink) !important; border-bottom: 1px solid var(--usc-line) !important; }
+#site-header a { color: var(--usc-wine) !important; }
+#site-header a:hover { color: var(--usc-gold) !important; }
+#site-header .text-white { color: var(--usc-wine) !important; }
+.accent, .accent-text, .gradient-text { background: none !important; background-image: none !important; color: var(--usc-wine) !important; -webkit-text-fill-color: currentColor !important; }
+.bg-gradient-to-r, .bg-gradient-to-br { background-image: none !important; background-color: var(--usc-wine) !important; }
 body > header {
   background-color: var(--usc-cream) !important;
   color: var(--usc-ink) !important;
