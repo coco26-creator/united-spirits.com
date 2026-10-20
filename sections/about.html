@@ -94,7 +94,7 @@
       </p>
     </div>
 
-    <div id="global-footprint-map" class="rounded-xl shadow-2xl mb-12"></div>
+    <div id="global-footprint-map" class="rounded-xl shadow-2xl mb-12" style="height:360px; min-height:280px;" role="img" aria-label="Map showing United Spirits HK distribution markets in Asia and Africa"></div>
 
     <!-- Country Cards -->
     <div class="flex flex-wrap justify-center gap-8 lg:gap-10 max-w-6xl mx-auto">
@@ -139,45 +139,3 @@
     </div>
   </div>
 </section>
-
-<!-- Leaflet.js for the map -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script>
-  (function initMap() {
-    const mapEl = document.getElementById('global-footprint-map');
-    if (!mapEl) return;
-
-    const locations = [
-      { name: "Hong Kong (Global Hub)", position: [22.281556, 114.1793047] },
-      { name: "China (Core Market)", position: [36.067108, 120.382609] },
-      { name: "Japan (Premium Focus)", position: [36.2048, 138.2529] },
-      { name: "Korea (Growing Demand)", position: [35.9078, 127.7669] },
-      { name: "ASEAN (Expanding Reach)", position: [10.8000, 106.7000] },
-      { name: "Ghana (Africa Distribution)", position: [7.9465, -1.0254] }
-    ];
-
-    const map = L.map('global-footprint-map', {
-      center: [10, 100],
-      zoom: 3,
-      scrollWheelZoom: false
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 18
-    }).addTo(map);
-
-    locations.forEach(location => {
-      const marker = L.circleMarker(location.position, {
-        radius: 10,
-        fillColor: "#ec4899",
-        fillOpacity: 1,
-        stroke: true,
-        color: '#ffffff',
-        weight: 2
-      }).addTo(map);
-      marker.bindPopup(`<div class="font-semibold">${location.name}</div>`);
-    });
-  })();
-</script>
