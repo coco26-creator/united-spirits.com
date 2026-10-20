@@ -1,17 +1,17 @@
 /* United Spirits HK — shared premium product and collection styling */
 :root {
-  --usc-gold: #c9a227;
-  --usc-gold-light: #e7d39a;
-  --usc-gold-dark: #8d6a18;
-  --usc-ink: #1b1914;
-  --usc-charcoal: #1c1a15;
-  --usc-paper: #f7f4ec;
-  --usc-surface: #fffdf8;
-  --usc-muted: #6d675b;
-  --usc-line: rgba(141, 106, 24, .22);
+  --usc-gold: #a88645;
+  --usc-gold-light: #d9c59a;
+  --usc-gold-dark: #735b31;
+  --usc-ink: #20282d;
+  --usc-charcoal: #172b3a;
+  --usc-paper: #f6f3ec;
+  --usc-surface: #fffefb;
+  --usc-muted: #62676b;
+  --usc-line: rgba(168, 134, 69, .24);
   --pink: var(--usc-gold);
   --purple: var(--usc-gold);
-  --accent: linear-gradient(135deg, var(--usc-gold-dark), var(--usc-gold-light));
+  --accent: var(--usc-gold);
 }
 html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
 body {
@@ -40,12 +40,12 @@ footer, .bg-gray-900, .bg-gray-950 {
   color: var(--usc-surface);
 }
 .hero-bg, .cta-section {
-  background: linear-gradient(115deg, #171611 0%, #282217 58%, #3a2b17 100%) !important;
+  background: var(--usc-charcoal) !important;
 }
 .hero-bg::before { opacity: .16 !important; }
 header .text-pink-300, header .text-pink-400 { color: var(--usc-gold-light) !important; }
 .bg-white { background-color: var(--usc-surface) !important; }
-.bg-gray-50 { background-color: #f1ede2 !important; }
+.bg-gray-50 { background-color: #eee9df !important; }
 .text-gray-900 { color: var(--usc-ink) !important; }
 .text-gray-800, .text-gray-700 { color: #403b31 !important; }
 .text-gray-600 { color: #625c50 !important; }
@@ -60,10 +60,9 @@ header .text-pink-300, header .text-pink-400 { color: var(--usc-gold-light) !imp
   border-color: var(--usc-gold) !important;
 }
 .accent-text {
-  background: var(--accent) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+  background: none !important;
+  color: var(--usc-gold-dark) !important;
+  -webkit-text-fill-color: currentColor;
 }
 .btn, .details-btn, button.bg-purple-600 {
   border-radius: .45rem !important;
@@ -72,13 +71,13 @@ header .text-pink-300, header .text-pink-400 { color: var(--usc-gold-light) !imp
 .btn-purple, .details-btn, a.bg-purple-600, button.bg-purple-600 {
   background: var(--accent) !important;
   color: #21190b !important;
-  border: 1px solid rgba(141,106,24,.52) !important;
+  border: 1px solid var(--usc-gold-dark) !important;
   font-weight: 700;
   text-decoration: none;
 }
 .btn:hover, .details-btn:hover, button.bg-purple-600:hover {
   filter: brightness(1.03);
-  box-shadow: 0 8px 20px rgba(27,25,20,.12);
+  box-shadow: 0 5px 14px rgba(23,43,58,.12);
   transform: translateY(-1px);
 }
 .border-gray-200, .border-gray-300 { border-color: #ded7c8 !important; }
@@ -97,16 +96,16 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(201,162,39,.2) !important;
 }
 .card, article.product-card, .product-card {
-  border: 1px solid rgba(141,106,24,.18);
+  border: 1px solid rgba(168,134,69,.2);
   background: var(--usc-surface);
-  box-shadow: 0 8px 22px rgba(27,25,20,.055);
+  box-shadow: 0 5px 18px rgba(23,43,58,.045);
 }
 .card:hover, article.product-card:hover, .product-card:hover {
-  border-color: rgba(201,162,39,.48);
-  box-shadow: 0 16px 34px rgba(27,25,20,.10);
+  border-color: rgba(168,134,69,.5);
+  box-shadow: 0 12px 28px rgba(23,43,58,.08);
 }
 .badge, .category-badge {
-  background: #f0e6c7;
+  background: #eee5d3;
   color: var(--usc-gold-dark);
   border-color: rgba(201,162,39,.4);
 }
