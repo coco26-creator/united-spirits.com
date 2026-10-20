@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <title>Collections | United Spirits HK — Premium Wines & Spirits</title>
+  <meta name="description" content="Explore the United Spirits HK collection of premium wines, brandies, cognac, whisky, and ready-to-drink products. Search and filter the catalogue, then open individual product details." />
+  <link rel="canonical" href="https://www.unitedspiritshk.com/collections.html" />
+  <meta name="theme-color" content="#1c1a15" />
+  <meta property="og:title" content="Collections | United Spirits HK" />
+  <meta property="og:description" content="Explore our full selection of premium wines and spirits." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.unitedspiritshk.com/collections.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #c9a227;
+      --gold-light: #e7d39a;
+      --gold-dark: #8d6a18;
+      --ink: #1b1914;
+      --charcoal: #171611;
+      --paper: #f7f4ec;
+      --paper-deep: #efeadf;
+      --surface: #fffdf8;
+      --muted: #696456;
+      --line: rgba(141, 106, 24, .22);
+      --shadow: 0 12px 32px rgba(27, 25, 20, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, Arial, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-underline-offset: .22em; }
+    button, input, select { font: inherit; }
+    button, select { cursor: pointer; }
+    .container { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 30; top: 0; background: rgba(23, 22, 17, .96); color: #fffdf8; border-bottom: 1px solid rgba(201,162,39,.32); backdrop-filter: blur(14px); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; min-width: 150px; }
+    .brand img { width: 42px; height: 42px; object-fit: contain; }
+    .brand-name { display: grid; line-height: 1; }
+    .brand-name strong { font-family: "Playfair Display", Georgia, serif; font-size: 25px; letter-spacing: .09em; font-weight: 600; color: var(--gold-light); }
+    .brand-name span { margin-top: 5px; font-size: 9px; letter-spacing: .17em; color: #d8c27c; }
+    .main-nav { display: flex; align-items: center; justify-content: center; gap: clamp(15px, 2.4vw, 34px); }
+    .main-nav a { font-size: 11px; text-transform: uppercase; letter-spacing: .13em; text-decoration: none; color: #f4f0e5; transition: color .2s ease; }
+    .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--gold-light); }
+    .header-cta { padding: 10px 15px; color: var(--gold-light); border: 1px solid rgba(201,162,39,.75); text-decoration: none; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: transparent; color: #fff; padding: 8px 10px; }
+    .mobile-nav { display: none; padding: 0 0 18px; }
+    .mobile-nav a { display: block; padding: 10px 0; color: #f4f0e5; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; font-size: 12px; }
+    .catalogue-hero { position: relative; isolation: isolate; background: radial-gradient(circle at 78% 45%, rgba(132,91,27,.38), transparent 28%), linear-gradient(120deg, #171611, #282217 65%, #332618); color: #fffdf8; overflow: hidden; }
+    .catalogue-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(14,13,10,.12), rgba(14,13,10,.1)); pointer-events: none; }
+    .hero-grid { min-height: 330px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .75fr); align-items: center; gap: clamp(24px, 5vw, 76px); padding-block: 36px; }
+    .eyebrow { margin: 0 0 14px; color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+    .hero-copy h1 { margin: 0; max-width: 720px; font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -.035em; }
+    .hero-copy p:not(.eyebrow) { max-width: 610px; margin: 18px 0 0; color: #e5dfd2; font-size: 15px; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button-gold { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 11px 17px; background: linear-gradient(135deg, #b98a27, #e6cf8e); color: #21190b; border: 1px solid #d9b65d; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; transition: transform .2s ease, filter .2s ease; }
+    .button-gold:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .button-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 11px 17px; border: 1px solid rgba(231,211,154,.6); color: #fffdf8; text-decoration: none; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; }
+    .hero-product { justify-self: end; width: min(100%, 390px); height: 284px; display: grid; place-items: center; overflow: hidden; background: #d6d3ce; border: 1px solid rgba(231,211,154,.45); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+    .hero-product img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center 43%; }
+    .catalogue-main { padding: 40px 0 66px; background: linear-gradient(180deg, var(--paper), #fbf9f2); }
+    .catalogue-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+    .catalogue-head h2 { margin: 0; font-size: clamp(27px, 3vw, 38px); line-height: 1.1; }
+    .catalogue-head p { margin: 8px 0 0; max-width: 650px; font-size: 13px; color: var(--muted); }
+    .product-count { color: var(--gold-dark); font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 0 19px; margin: 0 0 20px; border-bottom: 1px solid #ded7c8; }
+    .filter-tab { min-height: 39px; padding: 10px 15px; border: 1px solid transparent; background: transparent; color: #343126; font-size: 11px; font-weight: 700; letter-spacing: .065em; text-transform: uppercase; transition: background .18s ease, color .18s ease, border-color .18s ease; }
+    .filter-tab:hover { border-color: var(--line); }
+    .filter-tab[aria-pressed="true"] { background: linear-gradient(135deg, #b98a27, #d8bb69); color: #21190b; border-color: #c9a227; }
+    .toolbar { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(160px, 220px) auto; gap: 12px; align-items: center; margin-bottom: 25px; }
+    .search-field, .sort-field { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 13px; border: 1px solid #d8d1c2; background: rgba(255,253,248,.92); box-shadow: 0 1px 2px rgba(20,18,12,.02); }
+    .search-field svg { width: 17px; height: 17px; flex: none; color: #665f51; }
+    .search-field input { width: 100%; min-width: 0; padding: 10px 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 13px; }
+    .sort-field { padding-right: 8px; }
+    .sort-field label { color: #777061; font-size: 11px; white-space: nowrap; }
+    .sort-field select { width: 100%; min-width: 0; padding: 10px 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 12px; }
+    .clear-button { min-height: 44px; padding: 9px 15px; border: 1px solid #c8b16b; background: transparent; color: #7c5d18; font-size: 11px; font-weight: 700; }
+    .clear-button:hover { background: #f0e8d2; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+    .product-card { min-width: 0; display: flex; flex-direction: column; background: var(--surface); border: 1px solid rgba(141,106,24,.14); box-shadow: 0 6px 20px rgba(27,25,20,.04); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .product-card:hover { transform: translateY(-3px); border-color: rgba(201,162,39,.54); box-shadow: var(--shadow); }
+    .product-card[hidden] { display: none !important; }
+    .product-image { display: grid; place-items: center; aspect-ratio: 1.15 / 1; margin: 9px 9px 0; overflow: hidden; background: linear-gradient(145deg, #eeebe3, #f8f6f0); }
+    .product-image img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 7px; transition: transform .25s ease; }
+    .product-card:hover .product-image img { transform: scale(1.035); }
+    .product-info { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 14px 16px 16px; }
+    .product-category { margin: 0 0 5px; color: var(--gold-dark); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .product-info h2 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
+    .product-description { margin: 8px 0 17px; color: var(--muted); font-size: 11px; line-height: 1.65; flex: 1; }
+    .product-detail { display: flex; width: 100%; align-items: center; justify-content: center; gap: 10px; min-height: 36px; margin-top: auto; border: 1px solid #cdb36e; color: #3a2e14; text-decoration: none; font-size: 11px; font-weight: 600; transition: background .18s ease, color .18s ease; }
+    .product-detail:hover { background: #ede1bd; }
+    .empty-state { margin: 26px 0 0; padding: 50px 20px; text-align: center; border: 1px dashed #d7cdb3; color: var(--muted); }
+    .empty-state[hidden] { display: none; }
+    .partner-cta { padding: 38px 0; color: #fffdf8; background: linear-gradient(115deg, #221d12, #37301e 70%, #201b10); border-top: 1px solid rgba(201,162,39,.3); border-bottom: 1px solid rgba(201,162,39,.3); }
+    .partner-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .partner-cta h2 { margin: 0; font-size: clamp(25px, 3vw, 34px); }
+    .partner-cta p { margin: 8px 0 0; color: #ded7c7; font-size: 13px; }
+    .site-footer { padding: 28px 0; color: #e7e0d1; background: #171611; font-size: 11px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { text-decoration: none; color: #e7d39a; }
+    :focus-visible { outline: 3px solid rgba(201,162,39,.7); outline-offset: 3px; }
+    @media (max-width: 1020px) {
+      .product-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .main-nav { gap: 15px; }
+      .main-nav a { font-size: 10px; }
+      .hero-grid { grid-template-columns: minmax(0,1fr) minmax(250px,.72fr); }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, 620px); }
+      .header-inner { min-height: 68px; }
+      .main-nav, .header-cta { display: none; }
+      .menu-toggle { display: inline-block; }
+      .mobile-nav.open { display: block; }
+      .hero-grid { grid-template-columns: 1fr; gap: 24px; padding-block: 42px; }
+      .hero-copy h1 { font-size: clamp(38px, 10vw, 56px); }
+      .hero-product { justify-self: start; width: min(100%, 420px); height: 220px; }
+      .catalogue-main { padding-top: 30px; }
+      .catalogue-head { align-items: flex-start; flex-direction: column; }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .search-field { grid-column: 1 / -1; }
+      .clear-button { grid-column: 1 / -1; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+      .product-image { margin: 6px 6px 0; }
+      .product-info { padding: 11px 11px 12px; }
+      .product-info h2 { font-size: 16px; }
+      .product-description { font-size: 10px; }
+      .partner-cta-inner { align-items: flex-start; flex-direction: column; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 390px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .product-image { aspect-ratio: 1.35 / 1; }
+      .filter-tab { padding-inline: 10px; font-size: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="United Spirits HK home">
+        <img src="united-spirits-site/assets/img/usc.png" alt="" />
+        <span class="brand-name"><strong>U.S.C</strong><span>UNITED SPIRITS HK</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="collections.html" aria-current="page">Collections</a>
+        <a href="index.html#solutions">Solutions</a>
+        <a href="index.html#insights">Insights</a>
+      </nav>
+      <a class="header-cta" href="index.html#contact">Get in Touch</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+    <nav class="container mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="collections.html" aria-current="page">Collections</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#insights">Insights</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalogue-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Our Collections</p>
+          <h1>Premium Spirits from Around the World</h1>
+          <p>Explore our catalogue of 31 wines, brandies, whiskies, and ready-to-drink products. Search by name or filter by product family to find the right bottle for your market.</p>
+          <div class="hero-actions">
+            <a class="button-gold" href="#all-products">Browse All Products <span aria-hidden="true">↓</span></a>
+            <a class="button-outline" href="index.html#contact">Discuss Your Market</a>
+          </div>
+        </div>
+        <div class="hero-product">
+          <img src="assets/images/products/product-bernard-magrez-le-symbole-2020.jpg" alt="Bernard Magrez Le Symbole 2020 wine bottles" fetchpriority="high" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="catalogue-main" id="all-products">
+      <div class="container">
+        <div class="catalogue-head">
+          <div>
+            <p class="eyebrow" style="color:var(--gold-dark); margin-bottom:8px;">The Catalogue</p>
+            <h2>Explore the Collection</h2>
+            <p>Browse the product range using category filters, search, or alphabetical sorting. Select any product to open its detail page.</p>
+          </div>
+          <p class="product-count" id="product-count" aria-live="polite">Showing 31 of 31 products</p>
+        </div>
+
+        <div class="filter-tabs" role="group" aria-label="Filter products by category">
+          <button class="filter-tab" type="button" data-filter="all" aria-pressed="true">All Products</button>
+          <button class="filter-tab" type="button" data-filter="wine" aria-pressed="false">Wine</button>
+          <button class="filter-tab" type="button" data-filter="cognac" aria-pressed="false">Brandy &amp; Cognac</button>
+          <button class="filter-tab" type="button" data-filter="whisky" aria-pressed="false">Whisky</button>
+          <button class="filter-tab" type="button" data-filter="rtd" aria-pressed="false">RTD &amp; Mixers</button>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"></circle><path d="m16 16 4.4 4.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>
+            <input id="product-search" type="search" placeholder="Search products, brands, or descriptions…" autocomplete="off" aria-label="Search products" />
+          </label>
+          <div class="sort-field">
+            <label for="product-sort">Sort by</label>
+            <select id="product-sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="name-asc">Name: A–Z</option>
+              <option value="name-desc">Name: Z–A</option>
+              <option value="category">Category</option>
+            </select>
+          </div>
+          <button class="clear-button" type="button" id="clear-filters">Clear Filters</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+        <article class="product-card" data-category="wine" data-name="corazón de lolita 2020" data-search="corazón de lolita 2020 elegant spanish red with notes of dark cherry and vanilla oak. wine" data-index="0">
+          <a class="product-image" href="products/corazon-de-lolita-2020.html" aria-label="View Corazón de Lolita 2020 details">
+            <img src="assets/images/products/product-corazon-de-lolita-front.jpg" alt="Corazón de Lolita 2020 Red Wine" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Corazón de Lolita 2020</h2>
+            <p class="product-description">Elegant Spanish red with notes of dark cherry and vanilla oak.</p>
+            <a class="product-detail" href="products/corazon-de-lolita-2020.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="corazón de lolita premium coupage" data-search="corazón de lolita premium coupage silky blend of tempranillo and garnacha with herbaceous character. wine" data-index="1">
+          <a class="product-image" href="products/corazon-de-lolita-premium-coupage.html" aria-label="View Corazón de Lolita Premium Coupage details">
+            <img src="assets/images/products/product-corazon-de-lolita-premium-coupage.jpg" alt="Corazón de Lolita Premium Coupage" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Corazón de Lolita Premium Coupage</h2>
+            <p class="product-description">Silky blend of Tempranillo and Garnacha with herbaceous character.</p>
+            <a class="product-detail" href="products/corazon-de-lolita-premium-coupage.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="corazón de lolita white wine" data-search="corazón de lolita white wine crisp and aromatic spanish white with citrus and floral notes. wine" data-index="2">
+          <a class="product-image" href="products/corazon-de-lolita-white-wine.html" aria-label="View Corazón de Lolita White Wine details">
+            <img src="assets/images/products/product-corazon-de-lolita-white-wine-front.jpg" alt="Corazón de Lolita White Wine" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Corazón de Lolita White Wine</h2>
+            <p class="product-description">Crisp and aromatic Spanish white with citrus and floral notes.</p>
+            <a class="product-detail" href="products/corazon-de-lolita-white-wine.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="anderra merlot 2023" data-search="anderra merlot 2023 smooth chilean merlot with plum, chocolate, and cedar nuances. wine" data-index="3">
+          <a class="product-image" href="products/anderra-merlot-2023.html" aria-label="View Anderra Merlot 2023 details">
+            <img src="assets/images/products/product-anderra-merlot-2023.jpg" alt="Anderra Merlot 2023" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Anderra Merlot 2023</h2>
+            <p class="product-description">Smooth Chilean merlot with plum, chocolate, and cedar nuances.</p>
+            <a class="product-detail" href="products/anderra-merlot-2023.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="anderra reserva cab. sauv. 2022" data-search="anderra reserva cab. sauv. 2022 bold cabernet with blackcurrant, tobacco, and structured tannins. wine" data-index="4">
+          <a class="product-image" href="products/anderra-reserva-cabernet-sauvignon-2022.html" aria-label="View Anderra Reserva Cab. Sauv. 2022 details">
+            <img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-2022.jpg" alt="Anderra Reserva Cabernet Sauvignon 2022" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Anderra Reserva Cab. Sauv. 2022</h2>
+            <p class="product-description">Bold Cabernet with blackcurrant, tobacco, and structured tannins.</p>
+            <a class="product-detail" href="products/anderra-reserva-cabernet-sauvignon-2022.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="anderra reserva cab. sauv. 2023" data-search="anderra reserva cab. sauv. 2023 current vintage — intense, fruit-forward with great cellar potential. wine" data-index="5">
+          <a class="product-image" href="products/anderra-reserva-cabernet-sauvignon-2023.html" aria-label="View Anderra Reserva Cab. Sauv. 2023 details">
+            <img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-2023.jpg" alt="Anderra Reserva Cabernet Sauvignon 2023" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Anderra Reserva Cab. Sauv. 2023</h2>
+            <p class="product-description">Current vintage — intense, fruit-forward with great cellar potential.</p>
+            <a class="product-detail" href="products/anderra-reserva-cabernet-sauvignon-2023.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="anderra reserva cab. sauv. blanc 2023" data-search="anderra reserva cab. sauv. blanc 2023 refreshing white with stone fruit and lively acidity. wine" data-index="6">
+          <a class="product-image" href="products/anderra-reserva-cabernet-sauvignon-blanc-2023.html" aria-label="View Anderra Reserva Cab. Sauv. Blanc 2023 details">
+            <img src="assets/images/products/product-anderra-reserva-cabernet-sauvignon-blanc-2023.jpg" alt="Anderra Reserva Cabernet Sauvignon Blanc 2023" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Anderra Reserva Cab. Sauv. Blanc 2023</h2>
+            <p class="product-description">Refreshing white with stone fruit and lively acidity.</p>
+            <a class="product-detail" href="products/anderra-reserva-cabernet-sauvignon-blanc-2023.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="anderra reserva carménère 2021" data-search="anderra reserva carménère 2021 chile&#39;s signature grape — velvety, spiced with green pepper finish. wine" data-index="7">
+          <a class="product-image" href="products/anderra-reserva-carmenere-2021.html" aria-label="View Anderra Reserva Carménère 2021 details">
+            <img src="assets/images/products/product-anderra-reserva-carmenere-2021.jpg" alt="Anderra Reserva Carménère 2021" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Anderra Reserva Carménère 2021</h2>
+            <p class="product-description">Chile&#39;s signature grape — velvety, spiced with green pepper finish.</p>
+            <a class="product-detail" href="products/anderra-reserva-carmenere-2021.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="el rey cisne 2022 red" data-search="el rey cisne 2022 red regal spanish red — deep colour, structured and complex. wine" data-index="8">
+          <a class="product-image" href="products/el-rey-cisne-2022-red.html" aria-label="View El Rey Cisne 2022 Red details">
+            <img src="assets/images/products/product-el-rey-cisne-2022-red.jpg" alt="El Rey Cisne 2022 Red" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>El Rey Cisne 2022 Red</h2>
+            <p class="product-description">Regal Spanish red — deep colour, structured and complex.</p>
+            <a class="product-detail" href="products/el-rey-cisne-2022-red.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="bernard magrez côtes du rhône 2019" data-search="bernard magrez côtes du rhône 2019 classic southern rhône blend — aromatic, full-bodied and elegant. wine" data-index="9">
+          <a class="product-image" href="products/bernard-magrez-cotes-du-rhone-2019.html" aria-label="View Bernard Magrez Côtes du Rhône 2019 details">
+            <img src="assets/images/products/product-bernard-magrez-cotes-du-rhone-2019.jpg" alt="Bernard Magrez Côtes du Rhône 2019" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Bernard Magrez Côtes du Rhône 2019</h2>
+            <p class="product-description">Classic southern Rhône blend — aromatic, full-bodied and elegant.</p>
+            <a class="product-detail" href="products/bernard-magrez-cotes-du-rhone-2019.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="bernard magrez le symbole 2018" data-search="bernard magrez le symbole 2018 prestigious bordeaux-style red — powerful and age-worthy. wine" data-index="10">
+          <a class="product-image" href="products/bernard-magrez-le-symbole-2018.html" aria-label="View Bernard Magrez Le Symbole 2018 details">
+            <img src="assets/images/products/product-bernard-magrez-le-symbole-2018.jpg" alt="Bernard Magrez Le Symbole 2018" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Bernard Magrez Le Symbole 2018</h2>
+            <p class="product-description">Prestigious Bordeaux-style red — powerful and age-worthy.</p>
+            <a class="product-detail" href="products/bernard-magrez-le-symbole-2018.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="bernard magrez le symbole 2020" data-search="bernard magrez le symbole 2020 2020 release — exceptional vintage with silky depth and finesse. wine" data-index="11">
+          <a class="product-image" href="products/bernard-magrez-le-symbole-2020.html" aria-label="View Bernard Magrez Le Symbole 2020 details">
+            <img src="assets/images/products/product-bernard-magrez-le-symbole-2020.jpg" alt="Bernard Magrez Le Symbole 2020" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Bernard Magrez Le Symbole 2020</h2>
+            <p class="product-description">2020 release — exceptional vintage with silky depth and finesse.</p>
+            <a class="product-detail" href="products/bernard-magrez-le-symbole-2020.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="wine" data-name="château cabannieux 2019" data-search="château cabannieux 2019 bordeaux graves aoc — mineral-driven with plum and cedar complexity. wine" data-index="12">
+          <a class="product-image" href="products/chateau-cabannieux-2019.html" aria-label="View Château Cabannieux 2019 details">
+            <img src="assets/images/products/product-chateau-cabannieux-2019.jpg" alt="Château Cabannieux 2019" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Wine</p>
+            <h2>Château Cabannieux 2019</h2>
+            <p class="product-description">Bordeaux Graves AOC — mineral-driven with plum and cedar complexity.</p>
+            <a class="product-detail" href="products/chateau-cabannieux-2019.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti napoleon vsop" data-search="honney conti napoleon vsop rich and warming cognac with honeyed oak and dried fruit layers. brandy &amp; cognac" data-index="13">
+          <a class="product-image" href="products/honney-conti-napoleon-vsop.html" aria-label="View Honney Conti Napoleon VSOP details">
+            <img src="assets/images/products/product-honney-conti-napoleon-vsop.png" alt="Honney Conti Napoleon VSOP" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti Napoleon VSOP</h2>
+            <p class="product-description">Rich and warming cognac with honeyed oak and dried fruit layers.</p>
+            <a class="product-detail" href="products/honney-conti-napoleon-vsop.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti napoleon vsop classic" data-search="honney conti napoleon vsop classic classic expression — smooth entry, spiced mid-palate, long finish. brandy &amp; cognac" data-index="14">
+          <a class="product-image" href="products/honney-conti-napoleon-vsop-classic.html" aria-label="View Honney Conti Napoleon VSOP Classic details">
+            <img src="assets/images/products/product-honney-conti-napoleon-vsop-classic.png" alt="Honney Conti Napoleon VSOP Classic" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti Napoleon VSOP Classic</h2>
+            <p class="product-description">Classic expression — smooth entry, spiced mid-palate, long finish.</p>
+            <a class="product-detail" href="products/honney-conti-napoleon-vsop-classic.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti xo royal" data-search="honney conti xo royal premium xo expression — dark chocolate, rancio, and toasted nuts. brandy &amp; cognac" data-index="15">
+          <a class="product-image" href="products/honney-conti-xo-royal.html" aria-label="View Honney Conti XO Royal details">
+            <img src="assets/images/products/product-honney-conti-xo-royal.png" alt="Honney Conti XO Royal" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti XO Royal</h2>
+            <p class="product-description">Premium XO expression — dark chocolate, rancio, and toasted nuts.</p>
+            <a class="product-detail" href="products/honney-conti-xo-royal.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti xo leather box" data-search="honney conti xo leather box luxury gifting edition — xo cognac in hand-crafted leather presentation box. brandy &amp; cognac" data-index="16">
+          <a class="product-image" href="products/honney-conti-xo-leather-box.html" aria-label="View Honney Conti XO Leather Box details">
+            <img src="assets/images/products/product-honney-conti-xo-leather-box.jpg" alt="Honney Conti XO Leather Box" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti XO Leather Box</h2>
+            <p class="product-description">Luxury gifting edition — XO cognac in hand-crafted leather presentation box.</p>
+            <a class="product-detail" href="products/honney-conti-xo-leather-box.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti napoleon xo royal" data-search="honney conti napoleon xo royal supreme reserve — layered complexity for the true connoisseur. brandy &amp; cognac" data-index="17">
+          <a class="product-image" href="products/honney-conti-napoleon-xo-royal.html" aria-label="View Honney Conti Napoleon XO Royal details">
+            <img src="assets/images/products/product-honney-conti-napoleon-xo-royal.png" alt="Honney Conti Napoleon XO Royal" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti Napoleon XO Royal</h2>
+            <p class="product-description">Supreme reserve — layered complexity for the true connoisseur.</p>
+            <a class="product-detail" href="products/honney-conti-napoleon-xo-royal.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="honney conti vsop" data-search="honney conti vsop approachable vsop — floral and fruity with gentle spice. brandy &amp; cognac" data-index="18">
+          <a class="product-image" href="products/honney-conti-vsop.html" aria-label="View Honney Conti VSOP details">
+            <img src="assets/images/products/product-honney-conti-vsop-colorful.png" alt="Honney Conti VSOP" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>Honney Conti VSOP</h2>
+            <p class="product-description">Approachable VSOP — floral and fruity with gentle spice.</p>
+            <a class="product-detail" href="products/honney-conti-vsop.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="bf kingdom be408 box" data-search="bf kingdom be408 box premium brandy gifting set — elegantly packaged for corporate gifting. brandy &amp; cognac" data-index="19">
+          <a class="product-image" href="products/bf-kingdom-be408-box.html" aria-label="View BF Kingdom BE408 Box details">
+            <img src="assets/images/products/product-bf-kingdom-be408-box.jpg" alt="BF Kingdom BE408 Box" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>BF Kingdom BE408 Box</h2>
+            <p class="product-description">Premium brandy gifting set — elegantly packaged for corporate gifting.</p>
+            <a class="product-detail" href="products/bf-kingdom-be408-box.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="cognac" data-name="bf kingdom be708 wood box" data-search="bf kingdom be708 wood box aged brandy in premium wooden box — a statement gift piece. brandy &amp; cognac" data-index="20">
+          <a class="product-image" href="products/bf-kingdom-be708-wood-box.html" aria-label="View BF Kingdom BE708 Wood Box details">
+            <img src="assets/images/products/product-bf-kingdom-be708-wood-box.jpg" alt="BF Kingdom BE708 Wood Box" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Brandy &amp; Cognac</p>
+            <h2>BF Kingdom BE708 Wood Box</h2>
+            <p class="product-description">Aged brandy in premium wooden box — a statement gift piece.</p>
+            <a class="product-detail" href="products/bf-kingdom-be708-wood-box.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="whisky" data-name="sunny land single malt france" data-search="sunny land single malt france french single malt — honeyed barley, light peat and vanilla. whisky" data-index="21">
+          <a class="product-image" href="products/sunny-land-single-malt-france.html" aria-label="View Sunny Land Single Malt France details">
+            <img src="assets/images/products/product-sunny-land-single-malt-france.jpg" alt="Sunny Land Single Malt France" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Whisky</p>
+            <h2>Sunny Land Single Malt France</h2>
+            <p class="product-description">French single malt — honeyed barley, light peat and vanilla.</p>
+            <a class="product-detail" href="products/sunny-land-single-malt-france.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="whisky" data-name="sunny land single malt s25" data-search="sunny land single malt s25 25-year aged expression — rare, rich and extraordinarily smooth. whisky" data-index="22">
+          <a class="product-image" href="products/sunny-land-single-malt-s25.html" aria-label="View Sunny Land Single Malt S25 details">
+            <img src="assets/images/products/product-sunny-land-single-malt-s25.jpg" alt="Sunny Land Single Malt S25" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Whisky</p>
+            <h2>Sunny Land Single Malt S25</h2>
+            <p class="product-description">25-year aged expression — rare, rich and extraordinarily smooth.</p>
+            <a class="product-detail" href="products/sunny-land-single-malt-s25.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="whisky" data-name="caribbean blaze bourbon 46°" data-search="caribbean blaze bourbon 46° bold bourbon at 46% abv — caramel, vanilla, and tropical spice. whisky" data-index="23">
+          <a class="product-image" href="products/caribbean-blaze-bourbon-46.html" aria-label="View Caribbean Blaze Bourbon 46° details">
+            <img src="assets/images/products/product-caribbean-blaze-bourbon-46.jpg" alt="Caribbean Blaze Bourbon 46" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Whisky</p>
+            <h2>Caribbean Blaze Bourbon 46°</h2>
+            <p class="product-description">Bold bourbon at 46% ABV — caramel, vanilla, and tropical spice.</p>
+            <a class="product-detail" href="products/caribbean-blaze-bourbon-46.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="whisky" data-name="caribbean blaze bourbon 18 box" data-search="caribbean blaze bourbon 18 box 18-year aged bourbon in luxury presentation box — collector&#39;s edition. whisky" data-index="24">
+          <a class="product-image" href="products/caribbean-blaze-bourbon-18-box.html" aria-label="View Caribbean Blaze Bourbon 18 Box details">
+            <img src="assets/images/products/product-caribbean-blaze-bourbon-18-box.jpg" alt="Caribbean Blaze Bourbon 18 Box" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">Whisky</p>
+            <h2>Caribbean Blaze Bourbon 18 Box</h2>
+            <p class="product-description">18-year aged bourbon in luxury presentation box — collector&#39;s edition.</p>
+            <a class="product-detail" href="products/caribbean-blaze-bourbon-18-box.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="lolita rtd red wine cans" data-search="lolita rtd red wine cans convenient canned spanish red — perfect for on-the-go occasions. rtd &amp; mixers" data-index="25">
+          <a class="product-image" href="products/lolita-rtd-red-wine-cans.html" aria-label="View Lolita RTD Red Wine Cans details">
+            <img src="assets/images/products/product-lolita-rtd-red-wine-cans.png" alt="Lolita RTD Red Wine Cans" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Lolita RTD Red Wine Cans</h2>
+            <p class="product-description">Convenient canned Spanish red — perfect for on-the-go occasions.</p>
+            <a class="product-detail" href="products/lolita-rtd-red-wine-cans.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="lolita rtd spain" data-search="lolita rtd spain spain origin rtd — fresh, fruity and ready to serve. rtd &amp; mixers" data-index="26">
+          <a class="product-image" href="products/lolita-rtd-spain.html" aria-label="View Lolita RTD Spain details">
+            <img src="assets/images/products/product-lolita-rtd-spain.jpg" alt="Lolita RTD Spain" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Lolita RTD Spain</h2>
+            <p class="product-description">Spain origin RTD — fresh, fruity and ready to serve.</p>
+            <a class="product-detail" href="products/lolita-rtd-spain.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="lolita rtd chile" data-search="lolita rtd chile chilean expression — light, crisp and highly accessible. rtd &amp; mixers" data-index="27">
+          <a class="product-image" href="products/lolita-rtd-chile.html" aria-label="View Lolita RTD Chile details">
+            <img src="assets/images/products/product-lolita-rtd-chile.jpg" alt="Lolita RTD Chile" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Lolita RTD Chile</h2>
+            <p class="product-description">Chilean expression — light, crisp and highly accessible.</p>
+            <a class="product-detail" href="products/lolita-rtd-chile.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="lolita rtd australia" data-search="lolita rtd australia australian shiraz-based rtd — bold berry and warm spice notes. rtd &amp; mixers" data-index="28">
+          <a class="product-image" href="products/lolita-rtd-australia.html" aria-label="View Lolita RTD Australia details">
+            <img src="assets/images/products/product-lolita-rtd-australia.jpg" alt="Lolita RTD Australia" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Lolita RTD Australia</h2>
+            <p class="product-description">Australian shiraz-based RTD — bold berry and warm spice notes.</p>
+            <a class="product-detail" href="products/lolita-rtd-australia.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="royal hc mixologist spirits" data-search="royal hc mixologist spirits bartender-ready cognac-based spirit designed for premium cocktails. rtd &amp; mixers" data-index="29">
+          <a class="product-image" href="products/royal-honney-conti-mixologist-spirits.html" aria-label="View Royal HC Mixologist Spirits details">
+            <img src="assets/images/products/product-royal-honney-conti-mixologist-spirits.jpg" alt="Royal Honney Conti Mixologist Spirits" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Royal HC Mixologist Spirits</h2>
+            <p class="product-description">Bartender-ready cognac-based spirit designed for premium cocktails.</p>
+            <a class="product-detail" href="products/royal-honney-conti-mixologist-spirits.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="rtd" data-name="royal hc soda water" data-search="royal hc soda water cognac &amp; soda pre-mix — effervescent, light and refreshing. rtd &amp; mixers" data-index="30">
+          <a class="product-image" href="products/royal-honney-conti-soda-water.html" aria-label="View Royal HC Soda Water details">
+            <img src="assets/images/products/product-royal-honney-conti-soda-water.png" alt="Royal Honney Conti Soda Water" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-info">
+            <p class="product-category">RTD &amp; Mixers</p>
+            <h2>Royal HC Soda Water</h2>
+            <p class="product-description">Cognac &amp; soda pre-mix — effervescent, light and refreshing.</p>
+            <a class="product-detail" href="products/royal-honney-conti-soda-water.html">View Details <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        </div>
+        <div class="empty-state" id="empty-state" hidden>
+          <h2>No matching products</h2>
+          <p>Try another search term or clear the filters to see the full catalogue.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-cta">
+      <div class="container partner-cta-inner">
+        <div>
+          <p class="eyebrow">Customisation &amp; Supply Chain</p>
+          <h2>From Winery to Market</h2>
+          <p>Our Hong Kong and Qingdao platform supports sourcing, packaging, bottling, and distribution.</p>
+        </div>
+        <a class="button-gold" href="index.html#about">Discover Our Capabilities <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> United Spirits HK. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html#contact">Contact</a>
+        <a href="mailto:info@unitedspiritshk.com">info@unitedspiritshk.com</a>
+        <a href="tel:+85269346630">+852 6934 6630</a>
+        <a href="products.html">Legacy Product Catalogue</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const grid = document.getElementById('product-grid');
+      const cards = Array.from(grid.querySelectorAll('.product-card'));
+      const tabs = Array.from(document.querySelectorAll('[data-filter]'));
+      const search = document.getElementById('product-search');
+      const sort = document.getElementById('product-sort');
+      const count = document.getElementById('product-count');
+      const emptyState = document.getElementById('empty-state');
+      const clearButton = document.getElementById('clear-filters');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      let activeCategory = 'all';
+
+      cards.forEach((card, index) => { card.dataset.index = String(index); });
+
+      function applyFilters() {
+        const query = search.value.trim().toLocaleLowerCase();
+        const visibleCards = cards.filter((card) => {
+          const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+          const queryMatch = !query || card.dataset.search.includes(query);
+          const show = categoryMatch && queryMatch;
+          card.hidden = !show;
+          return show;
+        });
+
+        visibleCards.sort((a, b) => {
+          if (sort.value === 'name-asc') return a.dataset.name.localeCompare(b.dataset.name);
+          if (sort.value === 'name-desc') return b.dataset.name.localeCompare(a.dataset.name);
+          if (sort.value === 'category') {
+            const catCompare = a.dataset.category.localeCompare(b.dataset.category);
+            return catCompare || a.dataset.name.localeCompare(b.dataset.name);
+          }
+          return Number(a.dataset.index) - Number(b.dataset.index);
+        });
+        visibleCards.forEach((card) => grid.appendChild(card));
+
+        count.textContent = query || activeCategory !== 'all' || sort.value !== 'featured'
+          ? `Showing ${visibleCards.length} of ${cards.length} products`
+          : `Showing all ${cards.length} products`;
+        emptyState.hidden = visibleCards.length > 0;
+      }
+
+      tabs.forEach((tab) => tab.addEventListener('click', () => {
+        activeCategory = tab.dataset.filter;
+        tabs.forEach((item) => item.setAttribute('aria-pressed', String(item === tab)));
+        applyFilters();
+      }));
+      search.addEventListener('input', applyFilters);
+      sort.addEventListener('change', applyFilters);
+      clearButton.addEventListener('click', () => {
+        activeCategory = 'all';
+        search.value = '';
+        sort.value = 'featured';
+        tabs.forEach((tab) => tab.setAttribute('aria-pressed', String(tab.dataset.filter === 'all')));
+        applyFilters();
+        search.focus();
+      });
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+          const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!expanded));
+          mobileNav.classList.toggle('open', !expanded);
+        });
+        mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }));
+      }
+      document.getElementById('current-year').textContent = String(new Date().getFullYear());
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
