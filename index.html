@@ -268,6 +268,7 @@
       #hero .font-serif { line-height: 1.12; }
     }
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -429,6 +430,61 @@
         </div>
       </section>`;
 
+    const initGlobalFootprintMap = () => {
+      const mapEl = document.getElementById('global-footprint-map');
+      if (!mapEl || mapEl.dataset.initialized === 'true') return;
+
+      const renderMap = () => {
+        if (!window.L || !mapEl.isConnected || mapEl.dataset.initialized === 'true') return;
+        mapEl.dataset.initialized = 'true';
+        const map = window.L.map(mapEl, {
+          center: [20, 82],
+          zoom: 2,
+          scrollWheelZoom: false
+        });
+        window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 18
+        }).addTo(map);
+
+        const locations = [
+          { name: 'Hong Kong — Global Hub', position: [22.281556, 114.1793047] },
+          { name: 'Qingdao, China — Customisation Hub', position: [36.067108, 120.382609] },
+          { name: 'Japan — Premium Focus', position: [36.2048, 138.2529] },
+          { name: 'South Korea — Growing Demand', position: [35.9078, 127.7669] },
+          { name: 'ASEAN — Regional Markets', position: [10.8, 106.7] },
+          { name: 'Ghana — Africa Distribution', position: [7.9465, -1.0254] }
+        ];
+
+        locations.forEach((location) => {
+          window.L.circleMarker(location.position, {
+            radius: 8,
+            fillColor: '#c9a227',
+            fillOpacity: 1,
+            color: '#ffffff',
+            weight: 2
+          }).addTo(map).bindPopup('<strong>' + location.name + '</strong>');
+        });
+        window.setTimeout(() => map.invalidateSize(), 100);
+      };
+
+      if (window.L) {
+        renderMap();
+        return;
+      }
+      if (document.querySelector('script[data-leaflet-loader="true"]')) return;
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.js';
+      script.async = true;
+      script.dataset.leafletLoader = 'true';
+      script.onload = renderMap;
+      script.onerror = () => {
+        mapEl.textContent = 'Map unavailable. Our distribution network includes Hong Kong, China, Japan, South Korea, ASEAN, and Ghana.';
+        mapEl.setAttribute('role', 'status');
+      };
+      document.head.appendChild(script);
+    };
+
     const loadSection = async (section) => {
       const sectionUrl = new URL(`sections/${section}.html`, window.location.href);
       const response = await fetch(sectionUrl.href, { cache: 'no-cache' });
@@ -447,6 +503,7 @@
         }
       }));
       root.innerHTML = fragments.join('\n');
+      initGlobalFootprintMap();
       bindConversionHooks();
     };
 
