@@ -1,0 +1,119 @@
+/* United Spirits HK — shared premium product and collection styling */
+:root {
+  --usc-gold: #c9a227;
+  --usc-gold-light: #e7d39a;
+  --usc-gold-dark: #8d6a18;
+  --usc-ink: #1b1914;
+  --usc-charcoal: #1c1a15;
+  --usc-paper: #f7f4ec;
+  --usc-surface: #fffdf8;
+  --usc-muted: #6d675b;
+  --usc-line: rgba(141, 106, 24, .22);
+  --pink: var(--usc-gold);
+  --purple: var(--usc-gold);
+  --accent: linear-gradient(135deg, var(--usc-gold-dark), var(--usc-gold-light));
+}
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body {
+  background: var(--usc-paper) !important;
+  color: var(--usc-ink) !important;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, .font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: -.018em;
+}
+a { text-underline-offset: .22em; }
+a:not(.btn):not(.details-btn):hover { color: var(--usc-gold-dark) !important; }
+header, nav { border-color: var(--usc-line); }
+body > header {
+  background-color: var(--usc-charcoal) !important;
+  color: var(--usc-surface) !important;
+  border-color: rgba(201,162,39,.35) !important;
+}
+body > header a { color: var(--usc-surface); }
+body > header a:hover { color: var(--usc-gold-light) !important; }
+footer, .bg-gray-900, .bg-gray-950 {
+  background-color: var(--usc-charcoal) !important;
+  color: var(--usc-surface);
+}
+.bg-white { background-color: var(--usc-surface) !important; }
+.bg-gray-50 { background-color: #f1ede2 !important; }
+.text-gray-900 { color: var(--usc-ink) !important; }
+.text-gray-800, .text-gray-700 { color: #403b31 !important; }
+.text-gray-600 { color: #625c50 !important; }
+.text-gray-500 { color: #797264 !important; }
+.text-purple-600, .text-purple-700, .text-purple-800,
+.text-pink-400, .text-pink-500, .text-pink-600 { color: var(--usc-gold-dark) !important; }
+.bg-purple-600, .bg-purple-700, .bg-pink-500 {
+  background: var(--accent) !important;
+  color: #21190b !important;
+}
+.border-purple-600, .border-purple-700, .border-pink-400, .border-pink-500 {
+  border-color: var(--usc-gold) !important;
+}
+.accent-text {
+  background: var(--accent) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+.btn, .details-btn, button.bg-purple-600 {
+  border-radius: .45rem !important;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.btn-purple, .details-btn, a.bg-purple-600, button.bg-purple-600 {
+  background: var(--accent) !important;
+  color: #21190b !important;
+  border: 1px solid rgba(141,106,24,.52) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn:hover, .details-btn:hover, button.bg-purple-600:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 8px 20px rgba(27,25,20,.12);
+  transform: translateY(-1px);
+}
+.border-gray-200, .border-gray-300 { border-color: #ded7c8 !important; }
+.shadow-lg, .shadow-xl, .shadow-2xl {
+  --tw-shadow: 0 12px 30px rgba(27,25,20,.09);
+  box-shadow: var(--tw-shadow) !important;
+}
+.rounded-xl, .rounded-2xl { border-radius: .85rem !important; }
+input, textarea, select {
+  border-color: #d9d1bf;
+  border-radius: .45rem;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--usc-gold) !important;
+  box-shadow: 0 0 0 3px rgba(201,162,39,.2) !important;
+}
+.card, article.product-card, .product-card {
+  border: 1px solid rgba(141,106,24,.18);
+  background: var(--usc-surface);
+  box-shadow: 0 8px 22px rgba(27,25,20,.055);
+}
+.card:hover, article.product-card:hover, .product-card:hover {
+  border-color: rgba(201,162,39,.48);
+  box-shadow: 0 16px 34px rgba(27,25,20,.10);
+}
+.badge, .category-badge {
+  background: #f0e6c7;
+  color: var(--usc-gold-dark);
+  border-color: rgba(201,162,39,.4);
+}
+img { max-width: 100%; }
+main img { height: auto; }
+main > .max-w-5xl, main > .max-w-7xl { padding-bottom: 3.5rem; }
+::selection { background: rgba(201,162,39,.25); color: var(--usc-ink); }
+:focus-visible { outline: 3px solid rgba(201,162,39,.7); outline-offset: 3px; }
+@media (max-width: 640px) {
+  main > .max-w-5xl, main > .max-w-7xl { padding-top: 2rem; }
+  .btn, .details-btn { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
