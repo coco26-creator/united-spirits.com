@@ -211,21 +211,15 @@
     #hero { isolation: isolate; position: relative; background: var(--brand-charcoal); }
     .hero-backdrop {
       position: absolute; inset: 0; z-index: 0; opacity: 1;
-      background: radial-gradient(circle at 72% 38%, rgba(163, 113, 29, .28), transparent 32%),
-                  linear-gradient(110deg, #171611 0%, #211d14 64%, #302516 100%);
+      background-color: #171611;
+      background-size: cover;
+      background-position: center 58%;
+      background-repeat: no-repeat;
     }
     .hero-overlay {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background: linear-gradient(90deg, rgba(12, 11, 8, .22) 0%, rgba(12, 11, 8, .06) 55%, rgba(12, 11, 8, .02) 100%);
     }
-    .hero-art {
-      position: absolute; z-index: 2; top: 7.5rem; right: max(24px, calc((100vw - 80rem) / 2));
-      bottom: 2rem; width: min(36vw, 30rem); overflow: hidden;
-      display: grid; place-items: center; background: #d6d3ce;
-      border: 1px solid rgba(228, 207, 131, .45);
-      box-shadow: 0 26px 72px rgba(0, 0, 0, .36);
-    }
-    .hero-art img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center 43%; }
     #hero .hero-copy { position: relative; z-index: 10; max-width: min(58%, 46rem); }
     #hero .hero-copy h1 { max-width: 12ch; }
     #hero .btn:not(.btn-purple) {
@@ -241,8 +235,8 @@
       #hero { min-height: auto; }
       #hero .hero-copy { max-width: 100%; }
       #hero .hero-copy h1 { max-width: 14ch; }
-      .hero-art { display: none; }
-      .hero-backdrop { background: radial-gradient(circle at 85% 20%, rgba(163, 113, 29, .2), transparent 34%), linear-gradient(110deg, #171611, #302516); }
+      .hero-backdrop { background-position: 62% center; }
+      .hero-overlay { background: linear-gradient(90deg, rgba(12, 11, 8, .76), rgba(12, 11, 8, .38)); }
     }
 
     input:focus, textarea:focus, select:focus {
