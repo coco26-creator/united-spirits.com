@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <title>Spirits United Supply Chain Co., Limited — Premium Wines, Whiskeys &amp; Brandies</title>
-  <meta name="description" content="Curated premium spirits for global distributors and suppliers. Explore our collection of award-winning wines, whiskeys, and brandies for discerning palates." />
+  <meta name="description" content="We make it easier for distributors and partners to work with trusted wine and spirits producers. Talk to U.S.C. about your market and product needs." />
   <meta name="keywords" content="alcohol distributor Asia, wine distributor China, spirits distribution Africa, beverage distribution partner, global alcohol distribution, private label spirits, private label wine supplier, custom alcohol manufacturing, beverage brand development, wine sourcing company, spirits sourcing partner, alcohol import export company, beverage sourcing solutions" />
   <link rel="canonical" href="https://www.unitedspiritshk.com/" />
-  <meta name="theme-color" content="#1c1a15" />
+  <meta name="theme-color" content="#FAF6EF" />
   <meta property="og:title" content="Spirits United Supply Chain Co., Limited — Premium Wines, Whiskeys &amp; Brandies" />
-  <meta property="og:description" content="Curated premium spirits for global distributors and suppliers." />
+  <meta property="og:description" content="We make it easier for distributors and partners to work with trusted wine and spirits producers." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.unitedspiritshk.com/" />
   <meta property="og:image" content="https://www.unitedspiritshk.com/united-spirits-site/assets/img/hang.png" />
@@ -82,7 +82,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
   <!-- Schema.org Structured Data -->
@@ -114,18 +114,18 @@
 
   <style>
     :root {
-      --brand-gold: #a88645;
-      --brand-gold-light: #d9c59a;
-      --brand-gold-deep: #735b31;
-      --brand-ink: #20282d;
-      --brand-charcoal: #172b3a;
-      --brand-paper: #f6f3ec;
-      --brand-surface: #fffefb;
-      --brand-muted: #62676b;
-      --pink: var(--brand-gold);
-      --purple: var(--brand-gold-light);
-      --accent: var(--brand-gold);
-      --focus-ring: rgba(201, 162, 39, .22);
+      --brand-gold: #C49A45;
+      --brand-gold-light: #C49A45;
+      --brand-gold-deep: #6B2230;
+      --brand-ink: #2B2724;
+      --brand-charcoal: #6B2230;
+      --brand-paper: #FAF6EF;
+      --brand-surface: #FFFCF7;
+      --brand-muted: #655E58;
+      --pink: var(--brand-wine, #6B2230);
+      --purple: var(--brand-wine, #6B2230);
+      --accent: var(--brand-wine, #6B2230);
+      --focus-ring: rgba(196, 154, 69, .2);
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
@@ -137,7 +137,7 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
-    .font-serif { font-family: 'Playfair Display', serif; letter-spacing: -.025em; }
+    .font-serif, h1, h2, h3, h4 { font-family: 'Lora', Georgia, serif; letter-spacing: -.015em; }
     .accent-text {
       background: none;
       color: var(--brand-gold-deep);
@@ -266,7 +266,38 @@
       .card:hover { transform: none; }
       #hero .font-serif { line-height: 1.12; }
     }
-  </style>
+
+    /* Brand direction: warm cream, deep wine, restrained gold, human typography. */
+    :root {
+      --brand-cream: #FAF6EF;
+      --brand-wine: #6B2230;
+      --brand-gold: #C49A45;
+      --brand-ink: #2B2724;
+      --brand-paper: #FAF6EF;
+      --brand-surface: #FFFCF7;
+      --brand-muted: #655E58;
+    }
+    body { background: var(--brand-cream) !important; color: var(--brand-ink) !important; font-family: Inter, "Noto Sans TC", Arial, sans-serif; }
+    h1, h2, h3, h4, .font-serif { font-family: Lora, Georgia, serif; font-weight: 500; }
+    .bg-gray-50 { background-color: #F2EBE1 !important; }
+    .bg-white { background-color: #FFFCF7 !important; }
+    .text-gray-900, .text-gray-800, .text-gray-700 { color: var(--brand-ink) !important; }
+    .text-gray-600, .text-gray-500 { color: var(--brand-muted) !important; }
+    .text-pink-500, .text-pink-600, .text-purple-600, .text-purple-700 { color: var(--brand-wine) !important; }
+    .border-yellow-600, .border-pink-400, .border-pink-500 { border-color: var(--brand-gold) !important; }
+    .btn { border-radius: .35rem; box-shadow: none !important; }
+    .btn:hover, .card:hover { transform: none !important; box-shadow: none !important; }
+    .btn-purple { background: var(--brand-wine) !important; color: var(--brand-cream) !important; border-color: var(--brand-wine) !important; }
+    .card { border-radius: .5rem; box-shadow: none; border-color: rgba(43,39,36,.12); }
+    .card:hover { border-color: rgba(107,34,48,.35); }
+    #hero { background: var(--brand-wine); }
+    .hero-overlay { background: rgba(43, 20, 24, .48) !important; }
+    #hero nav a:hover { color: var(--brand-gold) !important; }
+    #contact form { border-radius: .5rem; }
+    input, textarea, select { border-radius: .35rem !important; }
+    input:focus, textarea:focus, select:focus { border-color: var(--brand-gold) !important; box-shadow: 0 0 0 2px rgba(196,154,69,.2) !important; }
+    ::selection { background: rgba(196,154,69,.25); color: var(--brand-ink); }
+\n  </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
