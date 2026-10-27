@@ -8,7 +8,7 @@
   <meta name="description" content="We make it easier for distributors and partners to work with trusted wine and spirits producers. Talk to U.S.C. about your market and product needs." />
   <meta name="keywords" content="alcohol distributor Asia, wine distributor China, spirits distribution Africa, beverage distribution partner, global alcohol distribution, private label spirits, private label wine supplier, custom alcohol manufacturing, beverage brand development, wine sourcing company, spirits sourcing partner, alcohol import export company, beverage sourcing solutions" />
   <link rel="canonical" href="https://www.unitedspiritshk.com/" />
-  <meta name="theme-color" content="#FAF6EF" />
+  <meta name="theme-color" content="#FFFFFF" />
   <meta property="og:title" content="Spirits United Supply Chain Co., Limited — Premium Wines, Whiskeys &amp; Brandies" />
   <meta property="og:description" content="We make it easier for distributors and partners to work with trusted wine and spirits producers." />
   <meta property="og:type" content="website" />
@@ -114,18 +114,18 @@
 
   <style>
     :root {
-      --brand-gold: #C49A45;
-      --brand-gold-light: #C49A45;
-      --brand-gold-deep: #6B2230;
-      --brand-ink: #2B2724;
-      --brand-charcoal: #6B2230;
-      --brand-paper: #FAF6EF;
-      --brand-surface: #FFFCF7;
-      --brand-muted: #655E58;
-      --pink: var(--brand-wine, #6B2230);
-      --purple: var(--brand-wine, #6B2230);
-      --accent: var(--brand-wine, #6B2230);
-      --focus-ring: rgba(196, 154, 69, .2);
+      --brand-gold: #808080;
+      --brand-gold-light: #808080;
+      --brand-gold-deep: #000000;
+      --brand-ink: #000000;
+      --brand-charcoal: #000000;
+      --brand-paper: #FFFFFF;
+      --brand-surface: #FFFFFF;
+      --brand-muted: #595959;
+      --pink: var(--brand-wine, #000000);
+      --purple: var(--brand-wine, #000000);
+      --accent: var(--brand-wine, #000000);
+      --focus-ring: rgba(0, 0, 0, .12);
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
@@ -210,7 +210,7 @@
     #hero { isolation: isolate; position: relative; background: var(--brand-charcoal); }
     .hero-backdrop {
       position: absolute; inset: 0; z-index: 0; opacity: 1;
-      background-color: #172b3a;
+      background-color: #000000;
       background-size: cover;
       background-position: center 58%;
       background-repeat: no-repeat;
@@ -235,7 +235,7 @@
       #hero .hero-copy { max-width: 100%; }
       #hero .hero-copy h1 { max-width: 14ch; }
       .hero-backdrop { background-position: 62% center; }
-      .hero-overlay { background: linear-gradient(90deg, rgba(14, 30, 42, .78), rgba(14, 30, 42, .4)); }
+      .hero-overlay { background: linear-gradient(90deg, rgba(0, 0, 0, .62), rgba(0, 0, 0, .28)); }
     }
 
     input:focus, textarea:focus, select:focus {
@@ -256,7 +256,7 @@
     button:disabled { opacity: .65; cursor: wait; transform: none; }
     a { text-underline-offset: .2em; }
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-      outline: 3px solid rgba(168, 134, 69, .65);
+      outline: 3px solid rgba(0, 0, 0, .55);
       outline-offset: 3px;
     }
     ::selection { background: rgba(201, 162, 39, .28); color: var(--brand-ink); }
@@ -269,17 +269,17 @@
 
     /* Brand direction: warm cream, deep wine, restrained gold, human typography. */
     :root {
-      --brand-cream: #FAF6EF;
-      --brand-wine: #6B2230;
-      --brand-gold: #C49A45;
+      --brand-cream: #FFFFFF;
+      --brand-wine: #000000;
+      --brand-gold: #808080;
       --brand-ink: #2B2724;
-      --brand-paper: #FAF6EF;
+      --brand-paper: #FFFFFF;
       --brand-surface: #FFFCF7;
-      --brand-muted: #655E58;
+      --brand-muted: #595959;
     }
     body { background: var(--brand-cream) !important; color: var(--brand-ink) !important; font-family: Inter, "Noto Sans TC", Arial, sans-serif; }
     h1, h2, h3, h4, .font-serif { font-family: Lora, Georgia, serif; font-weight: 500; }
-    .bg-gray-50 { background-color: #F2EBE1 !important; }
+    .bg-gray-50 { background-color: #F2F2F2 !important; }
     .bg-white { background-color: #FFFCF7 !important; }
     .text-gray-900, .text-gray-800, .text-gray-700 { color: var(--brand-ink) !important; }
     .text-gray-600, .text-gray-500 { color: var(--brand-muted) !important; }
@@ -295,8 +295,8 @@
     #hero nav a:hover { color: var(--brand-gold) !important; }
     #contact form { border-radius: .5rem; }
     input, textarea, select { border-radius: .35rem !important; }
-    input:focus, textarea:focus, select:focus { border-color: var(--brand-gold) !important; box-shadow: 0 0 0 2px rgba(196,154,69,.2) !important; }
-    ::selection { background: rgba(196,154,69,.25); color: var(--brand-ink); }
+    input:focus, textarea:focus, select:focus { border-color: var(--brand-gold) !important; box-shadow: 0 0 0 2px rgba(0, 0, 0, .12) !important; }
+    ::selection { background: rgba(0, 0, 0, .12); color: var(--brand-ink); }
 \n  </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
@@ -489,7 +489,7 @@
         locations.forEach((location) => {
           window.L.circleMarker(location.position, {
             radius: 8,
-            fillColor: '#a88645',
+            fillColor: '#808080',
             fillOpacity: 1,
             color: '#ffffff',
             weight: 2
