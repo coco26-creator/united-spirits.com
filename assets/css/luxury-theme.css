@@ -1,5 +1,24 @@
 /* U.S.C. monochrome brand system: restrained, clear, product-led. */
 :root {
+  /* Legacy page variables mapped to the approved monochrome palette. */
+  --gold: #808080;
+  --gold-light: #D9D9D9;
+  --gold-dark: #000000;
+  --ink: #000000;
+  --charcoal: #000000;
+  --paper: #FFFFFF;
+  --paper-deep: #F2F2F2;
+  --surface: #FFFFFF;
+  --muted: #595959;
+  --line: #D9D9D9;
+  --shadow: none;
+  --brand-cream: #FFFFFF;
+  --brand-wine: #000000;
+  --brand-gold: #808080;
+  --brand-ink: #000000;
+  --brand-paper: #FFFFFF;
+  --brand-surface: #FFFFFF;
+  --brand-muted: #595959;
   --usc-white: #FFFFFF;
   --usc-light-gray: #F2F2F2;
   --usc-mid-light-gray: #D9D9D9;
